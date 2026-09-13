@@ -534,9 +534,11 @@ org:OrganizationalUnit rdfs:label "Einrichtung"@de .
 
 # ---- Resolve ------------------------------------------------------------
 
+# Preserve all category labels in one readable field, without normalizing them.
 :resolve a :ResolveRule ;
     :defaultStrategy :longestValue ;
     :hasOverride     [ :on schema:availableService ; :strategy :concatenateAll ] ,
+                     [ :on schema:category         ; :strategy :concatenateAll ] ,
                      [ :on schema:telephone        ; :strategy :keepAll ] ,
                      [ :on dct:language            ; :strategy :keepAll ] .
 
