@@ -7,7 +7,7 @@ ENV PATH="/opt/java/openjdk/bin:${PATH}"
 ENV GIT_TERMINAL_PROMPT=0
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git ca-certificates util-linux fontconfig \
+    && apt-get install -y --no-install-recommends git ca-certificates fontconfig \
     && rm -rf /var/lib/apt/lists/* \
     && git config --system user.name "Sosuse pipeline" \
     && git config --system user.email "sosuse-pipeline@users.noreply.github.com" \

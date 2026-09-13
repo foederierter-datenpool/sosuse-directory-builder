@@ -67,11 +67,10 @@ Then start the pipeline:
 
 ```sh
 cd /workspace/sosuse-directory-builder
-flock --verbose -n /workspace/pipeline.lock npm run publish:pages
+npm run publish:pages
 ```
 
-The lock prevents overlapping runs and reports contention without hiding pipeline
-failures. For this terminal test, keep Terminal open until the command finishes;
+For this terminal test, keep Terminal open until the command finishes;
 use a Scheduled Task below for long runs.
 The image supplies Git author name/email. The publisher reads the token at runtime;
 ordinary Git commands otherwise retain their normal authentication behavior.
@@ -91,7 +90,7 @@ After the initial test, open **Configuration → Scheduled Tasks → Add** and s
 the `pipeline` container. Use this command (without `docker exec`):
 
 ```sh
-cd /workspace/sosuse-directory-builder && flock --verbose -n /workspace/pipeline.lock npm run publish:pages
+cd /workspace/sosuse-directory-builder && npm run publish:pages
 ```
 
 Choose the intended recurring schedule and set **Timeout (seconds)** long enough
