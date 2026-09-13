@@ -33,10 +33,14 @@ In Coolify:
 2. Repository: `https://github.com/foederierter-datenpool/sosuse-directory-builder`.
 3. Branch: `main`; server: `cdl-federation`.
 4. Build Pack: **Docker Compose**; Base Directory: `/`; Compose Location: `/compose.yaml`.
-5. In **Environment Variables**, set `GITHUB_PUSH_TOKEN` to your token. Enable
+5. In **Environment Variables**, set the Production **`GH_PAGES_TOKEN`** to your token. Enable
    Runtime and disable Build Variable if those controls are shown.
 6. Deploy. The `pipeline` container should stay running. Leave domains and port
    mappings empty; the named volume is declared in the Compose file.
+
+Compose passes `GH_PAGES_TOKEN` into the container as `GITHUB_PUSH_TOKEN`.
+The separate names avoid a Coolify 4.3.1 UI bug that makes Compose environment
+keys read-only. Edit `GH_PAGES_TOKEN`; leave the managed `GITHUB_PUSH_TOKEN` row alone.
 
 Coolify checks out the repo to build the image. The next step creates the separate,
 persistent working checkout used for pipeline runs.
