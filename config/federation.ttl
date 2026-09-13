@@ -549,11 +549,10 @@ org:OrganizationalUnit rdfs:label "Einrichtung"@de .
     :geocode :adresseSchema ;
     :inherit :inheritEinrichtungToAngebot .
 
-# An Angebot points to its Einrichtung through schema:provider. Audience and
-# opening hours are fallback values: a value directly on the Angebot always
-# wins over the Einrichtung's value.
+# An Angebot points to its Einrichtung through schema:provider. Audience,
+# opening hours and service area are fallbacks; the Angebot's own values win.
 :inheritEinrichtungToAngebot a :InheritanceRule ;
     :from    :einrichtungSchema ;
     :to      :angebotSchema ;
     :through schema:provider ;
-    :on      schema:audience, schema:openingHours .
+    :on      schema:audience, schema:openingHours, schema:areaServed .
