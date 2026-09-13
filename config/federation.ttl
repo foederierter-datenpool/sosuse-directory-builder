@@ -51,7 +51,7 @@ org:OrganizationalUnit rdfs:label "Einrichtung"@de .
 :angebotSchema a :TargetSchema ;
     :targetClass schema:Service ;
     rdfs:label "Angebot"@de ;
-    :hasTargetField :t-identifier, :t-name, :t-category, :t-codeValue, :t-audience,
+    :hasTargetField :t-identifier, :t-name, :t-category, :t-bagfwId, :t-audience,
                     :t-areaServed, :t-language, :t-isAccessibleForFree,
                     :t-detailUrl, :t-provider, :t-openingHours .
 
@@ -102,7 +102,7 @@ org:OrganizationalUnit rdfs:label "Einrichtung"@de .
 # Entity link to :adresseSchema, on the Träger and Einrichtung tiers only: an
 # Angebot has no address of its own — its place is its provider's.
 :t-address              a :TargetField ; :targetPredicate schema:address .
-:t-codeValue            a :TargetField ; :targetPredicate schema:codeValue .
+:t-bagfwId              a :TargetField ; :targetPredicate cdf:bagfwId .
 :t-parentOrgClassification a :TargetField ; :targetPredicate cdf:parentOrgClassification .
 
 # Temporal fields, all unmapped for now
@@ -461,7 +461,7 @@ org:OrganizationalUnit rdfs:label "Einrichtung"@de .
     :hasFieldMapping
         [ :from :awo-svc-id           ; :to :t-identifier ] ,
         [ :from :awo-svc-bagfw-name   ; :to :t-category   ] ,
-        [ :from :awo-svc-bagfw-nummer ; :to :t-codeValue  ] ,
+        [ :from :awo-svc-bagfw-nummer ; :to :t-bagfwId    ] ,
         [ :from :awo-svc-area         ; :to :t-areaServed ] ;
     :hasRelationship
         [ :sourcePredicate :providedBy ; :toTargetField :t-provider ; :toTargetSchema :einrichtungSchema ] ,
