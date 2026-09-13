@@ -5,7 +5,16 @@ import { execFileSync } from "node:child_process"
 import { fileURLToPath } from "node:url"
 import { parseTtl } from "@directory-builder/core/utils"
 
-const PUSH_AUTOMATICALLY = false
+const PUSH_AUTOMATICALLY = true
+
+export function githubAuth(remote) {
+    if (!process.env.GITHUB_PUSH_TOKEN) return []
+    if (!/^https:\/\/github\.com\/foederierter-datenpool\/sosuse-directory-builder(?:\.git)?$/.test(remote))
+        throw new Error("GITHUB_PUSH_TOKEN requires this repository's clean HTTPS GitHub URL as origin.")
+    // Git's shell helper reads the token from the environment, never from argv.
+    return ["-c", "credential.helper=", "-c",
+        `credential.helper=!f() { if [ "$1" = get ]; then printf '%s\\n' 'username=x-access-token' "password=$GITHUB_PUSH_TOKEN" ''; fi; }; f`]
+}
 
 const roots = ["package.json", ".github/workflows/deploy.yml", "config", "data",
     "webapp/content", "webapp/exporters"]
@@ -52,8 +61,8 @@ export function prepareSnapshot(root, destination) {
 export function publishPages(root, args, execute = execFileSync) {
     if (args.includes("--help")) {
         console.log("Usage: npm run publish:pages -- [--reuse-data] [--dry-run]\n"
-            + "Default: run and validate the pipeline, then prepare a commit for a manual push.\n"
-            + "To push automatically, set PUSH_AUTOMATICALLY to true at the top of this script.\n"
+            + "Default: run and validate the pipeline, then push a single-commit gh-pages snapshot.\n"
+            + "To push manually, set PUSH_AUTOMATICALLY to false at the top of this script.\n"
             + "--reuse-data: prepare existing output without running the pipeline.\n"
             + "--dry-run: stage existing output only; no pipeline, commit or push.")
         return
@@ -69,12 +78,13 @@ export function publishPages(root, args, execute = execFileSync) {
         if (!value) throw new Error(`Missing Git ${key}. Set it in this checkout with: git config ${key} "${example}"`)
         return value
     }
-    let remote, name, email, previous
+    let remote, name, email, previous, auth
     if (!dryRun) {
         remote = git("remote", "get-url", "--push", "origin")
+        auth = githubAuth(remote)
         name = gitIdentity("user.name", "Your Name")
         email = gitIdentity("user.email", "you@example.org")
-        previous = git("ls-remote", remote, "refs/heads/gh-pages").split(/\s/)[0]
+        previous = git(...auth, "ls-remote", remote, "refs/heads/gh-pages").split(/\s/)[0]
         if (!args.includes("--reuse-data")) run("npm", ["run", "pipeline"])
         run("npm", ["run", "validate"])
     }
@@ -96,15 +106,20 @@ export function publishPages(root, args, execute = execFileSync) {
         run("git", ["add", "--force", "."], staging)
         run("git", ["-c", "commit.gpgsign=false", "commit", "-m", "Publish pipeline snapshot"], staging)
         keepStaging = true
-        const pushArgs = ["push", `--force-with-lease=refs/heads/gh-pages:${previous}`, "origin",
+        const pushArgs = [...auth, "push", `--force-with-lease=refs/heads/gh-pages:${previous}`, "origin",
             "HEAD:refs/heads/gh-pages"]
         const quote = (arg) => `'${arg.replaceAll("'", "'\\''")}'`
-        console.log("Commit prepared. To publish it, run:\n"
+        const printManualPush = () => console.log("Commit prepared. To publish it, run:\n"
             + ["git", "-C", staging, ...pushArgs].map(quote).join(" ")
             + "\nKeep this temporary directory until you have pushed; afterwards you can delete it.")
-        if (!PUSH_AUTOMATICALLY) return staging
+        if (!PUSH_AUTOMATICALLY) {
+            printManualPush()
+            return staging
+        }
 
-        run("git", pushArgs, staging)
+        console.log("Pushing the snapshot automatically...")
+        try { run("git", pushArgs, staging) }
+        catch (error) { printManualPush(); throw error }
         keepStaging = false
         console.log("Pushed the snapshot. GitHub Actions now builds and deploys the webapp; check its run for completion.")
     } finally {

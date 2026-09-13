@@ -1,0 +1,14 @@
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: deploy/pipeline.Dockerfile
+    init: true
+    restart: unless-stopped
+    environment:
+      GITHUB_PUSH_TOKEN: ${GITHUB_PUSH_TOKEN:?Set GITHUB_PUSH_TOKEN in Coolify}
+    volumes:
+      - pipeline-workspace:/workspace
+
+volumes:
+  pipeline-workspace:

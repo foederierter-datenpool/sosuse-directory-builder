@@ -4,7 +4,10 @@ import os from "node:os"
 import path from "node:path"
 import test from "node:test"
 import { execFileSync } from "node:child_process"
-import { prepareSnapshot, publishPages } from "./publish-pages.js"
+import { githubAuth, prepareSnapshot, publishPages } from "./publish-pages.js"
+
+// Publisher tests mock Git; use only synthetic tokens in this test process.
+delete process.env.GITHUB_PUSH_TOKEN
 
 function fixture(t) {
     const root = fs.mkdtempSync(path.join(os.tmpdir(), "sosuse-publisher-test-"))
@@ -87,11 +90,12 @@ test("rejects symlinks and files reaching GitHub's size limit", (t) => {
     assert.throws(() => prepareSnapshot(root, destination), /100 MiB limit/)
 })
 
-test("prepares a commit for manual pushing and retains the publication files", (t) => {
+test("pushes automatically with a lease and retains the commit if the push fails", (t) => {
     const { root } = fixture(t)
     const calls = [], messages = []
     t.mock.method(console, "log", (message) => messages.push(message))
     let staging
+    let rejectPush = false
     // Substitute all subprocesses: no real pipeline, Git commit or push.
     const execute = (command, args, options) => {
         calls.push([command, ...args])
@@ -99,13 +103,18 @@ test("prepares a commit for manual pushing and retains the publication files", (
         if (args[0] === "remote" && args[1] === "get-url") return "git@example.org:example/site.git\n"
         if (args[0] === "config" && args.length === 2) return "Test\n"
         if (args[0] === "ls-remote") return `${"a".repeat(40)}\trefs/heads/gh-pages\n`
-        if (args[0] === "push") throw new Error("Unexpected automatic push")
+        if (args[0] === "push" && rejectPush) throw new Error("Push rejected")
         return ""
     }
     t.after(() => { if (staging) fs.rmSync(staging, { recursive: true, force: true }) })
-    assert.equal(publishPages(root, ["--reuse-data"], execute), staging)
+    publishPages(root, ["--reuse-data"], execute)
     assert.equal(calls.some((call) => call.includes("commit")), true)
-    assert.equal(calls.some((call) => call[1] === "push"), false)
+    assert.ok(calls.some((call) => call[1] === "push"
+        && call.includes(`--force-with-lease=refs/heads/gh-pages:${"a".repeat(40)}`)))
+    assert.equal(fs.existsSync(staging), false)
+    assert.equal(messages.some((message) => message.includes("To publish it, run:")), false)
+    rejectPush = true
+    assert.throws(() => publishPages(root, ["--reuse-data"], execute), /Push rejected/)
     assert.equal(fs.existsSync(path.join(staging, "data/directory.ttl")), true)
     assert.equal(messages.some((message) => message.includes(staging)
         && message.includes(`--force-with-lease=refs/heads/gh-pages:${"a".repeat(40)}`)
@@ -132,4 +141,53 @@ test("missing Git identity explains the fix before processing or publication", (
             })
         }
     }
+})
+
+test("runtime token authenticates both the remote check and push without appearing in arguments", (t) => {
+    const { root } = fixture(t)
+    process.env.GITHUB_PUSH_TOKEN = "test-token-not-a-real-credential"
+    t.after(() => { delete process.env.GITHUB_PUSH_TOKEN })
+    t.mock.method(console, "log", () => {})
+    const networkCalls = []
+    const execute = (command, args) => {
+        assert.ok(!args.join(" ").includes(process.env.GITHUB_PUSH_TOKEN))
+        if (command !== "git") return ""
+        const actual = [...args]
+        while (actual[0] === "-c") actual.splice(0, 2)
+        if (actual[0] === "remote" && actual[1] === "get-url")
+            return "https://github.com/foederierter-datenpool/sosuse-directory-builder.git\n"
+        if (actual[0] === "config" && actual.length === 2) return "Test\n"
+        if (["ls-remote", "push"].includes(actual[0])) {
+            networkCalls.push(actual[0])
+            assert.ok(args.some((arg) => arg.startsWith("credential.helper=!f()")))
+        }
+        if (actual[0] === "ls-remote") return `${"a".repeat(40)}\trefs/heads/gh-pages\n`
+        return ""
+    }
+    publishPages(root, ["--reuse-data"], execute)
+    assert.deepEqual(networkCalls, ["ls-remote", "push"])
+})
+
+test("Git reads the inline helper's token without exposing it in arguments", (t) => {
+    const remote = "https://github.com/foederierter-datenpool/sosuse-directory-builder.git"
+    assert.deepEqual(githubAuth(remote), [])
+    const token = "synthetic token $literal `text` * ' %s"
+    process.env.GITHUB_PUSH_TOKEN = token
+    t.after(() => { delete process.env.GITHUB_PUSH_TOKEN })
+    const args = [...githubAuth(remote), "credential", "fill"]
+    assert.ok(args.every((arg) => !arg.includes(token)))
+    // This exercises Git's credential protocol locally, without contacting GitHub.
+    const output = execFileSync("git", args, {
+        input: `url=${remote}\n\n`, encoding: "utf8",
+        env: { ...process.env, GIT_TERMINAL_PROMPT: "0" },
+    })
+    assert.ok(output.includes("username=x-access-token\n"))
+    assert.ok(output.includes(`password=${token}\n`))
+    for (const operation of ["approve", "reject"])
+        assert.equal(execFileSync("git", [...githubAuth(remote), "credential", operation], {
+            input: `url=${remote}\nusername=x-access-token\npassword=${token}\n\n`, encoding: "utf8",
+        }), "")
+    for (const invalid of ["https://example.org/repo.git", remote + "/other",
+        remote.replace("https://", "https://user:secret@"), remote.replace("sosuse-directory-builder", "another-repo")])
+        assert.throws(() => githubAuth(invalid), /clean HTTPS GitHub URL/)
 })

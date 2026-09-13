@@ -79,14 +79,15 @@ Choose one command. Reusing output requires a complete `data/` matching the curr
 configuration. The dry run only copies selected files into a temporary folder;
 it does not run the pipeline, commit or push.
 
-**Pushing is manual.** The script creates a single parentless commit in a temporary
-repository and prints the exact push command. Run that command when ready to
-replace remote `gh-pages`. It uses your existing Git identity and GitHub access,
-and refuses to overwrite a remote update made since preparation started.
-To enable automatic pushing, change `const PUSH_AUTOMATICALLY = false` to `true`
-at the top of `scripts/publish-pages.js`.
+**Pushing is automatic.** The script creates a single parentless commit and
+replaces remote `gh-pages` using force-with-lease. It refuses to overwrite a remote
+update made since preparation started. Local runs use your existing Git access;
+the Coolify runner uses `GITHUB_PUSH_TOKEN` through a Git credential helper.
+To push manually instead, change `const PUSH_AUTOMATICALLY = true` to `false`
+at the top of `scripts/publish-pages.js`. The script then prints the push command.
 
-Keep the temporary directory until you have pushed. Stay on `main` for pipeline
+In manual mode or after a failed push, keep the temporary directory until you
+have pushed. Stay on `main` for pipeline
 work: switching to `gh-pages` and back can remove generated data from your working
 checkout.
 
@@ -101,3 +102,9 @@ the published npm core package and never runs the pipeline. Pushes to `main` do
 not deploy. Check the Actions run for completion.
 
 Run the publisher tests with `npm test`; they do not harvest, commit or push.
+
+## Run on Coolify
+The [Coolify setup guide](deploy/README.md) covers the GitHub token, Docker Compose
+deployment, cloning the repository and starting the pipeline. The runner keeps
+its checkout and output in a persistent volume; deployment itself does not run
+the pipeline.
