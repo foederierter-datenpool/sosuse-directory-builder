@@ -533,6 +533,15 @@
             "lat": "52.5263394",
             "lon": "13.3927056"
         },
+        "https://civic-data.de/federated-directory#addr-7bac7c5c09fe": {
+            "query": {
+                "street": "Platz vor dem Neuen Tor 2",
+                "postalcode": "10115",
+                "city": "Berlin"
+            },
+            "lat": "52.5289850",
+            "lon": "13.3792791"
+        },
         "https://civic-data.de/federated-directory#addr-7e6e985f6a20": {
             "query": {
                 "street": "Brienzer Straße 22",
@@ -781,6 +790,16 @@
             },
             "lat": "52.5553772",
             "lon": "13.3702144"
+        },
+        "https://civic-data.de/federated-directory#addr-b52117f83adc": {
+            "query": {
+                "street": "Friedrichstraße 231",
+                "postalcode": "10969",
+                "city": "Berlin",
+                "country": "DE"
+            },
+            "lat": "52.5029601",
+            "lon": "13.3907772"
         },
         "https://civic-data.de/federated-directory#addr-b9dbb620de58": {
             "query": {
