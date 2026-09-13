@@ -547,7 +547,7 @@ org:OrganizationalUnit rdfs:label "Einrichtung"@de .
 # lookups are cached in registry/geocache.json.
 :enrich a :EnrichRule ;
     :geocode :adresseSchema ;
-    :inherit :inheritEinrichtungToAngebot .
+    :inherit :inheritEinrichtungToAngebot, :inheritTraegerToEinrichtung .
 
 # An Angebot points to its Einrichtung through schema:provider. Audience,
 # opening hours and service area are fallbacks; the Angebot's own values win.
@@ -556,3 +556,10 @@ org:OrganizationalUnit rdfs:label "Einrichtung"@de .
     :to      :angebotSchema ;
     :through schema:provider ;
     :on      schema:audience, schema:openingHours, schema:areaServed .
+
+# An Einrichtung inherits missing contact details from its Träger.
+:inheritTraegerToEinrichtung a :InheritanceRule ;
+    :from    :traegerSchema ;
+    :to      :einrichtungSchema ;
+    :through schema:parentOrganization ;
+    :on      schema:telephone, schema:email, foaf:homepage .
