@@ -6,7 +6,7 @@ services:
     init: true
     restart: unless-stopped
     environment:
-      GITHUB_PUSH_TOKEN: ${GITHUB_PUSH_TOKEN:?Set GITHUB_PUSH_TOKEN in Coolify}
+      GITHUB_PUSH_TOKEN: ${GITHUB_PUSH_TOKEN:?}
     volumes:
       - pipeline-workspace:/workspace
 
