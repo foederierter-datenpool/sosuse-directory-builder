@@ -6,7 +6,7 @@ services:
     init: true
     restart: unless-stopped
     environment:
-      GITHUB_PUSH_TOKEN: ${GH_PAGES_TOKEN:?}
+      GITHUB_PUSH_TOKEN: ${GH_PAGES_TOKEN:-}
     volumes:
       - pipeline-workspace:/workspace
 

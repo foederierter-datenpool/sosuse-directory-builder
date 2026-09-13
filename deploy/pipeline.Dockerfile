@@ -16,4 +16,4 @@ RUN apt-get update \
 
 USER node
 WORKDIR /workspace
-CMD ["sleep", "infinity"]
+CMD ["sh", "-c", ": \"${GITHUB_PUSH_TOKEN:?Set GH_PAGES_TOKEN in Coolify runtime variables}\"; exec sleep infinity"]

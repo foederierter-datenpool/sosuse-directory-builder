@@ -35,12 +35,16 @@ In Coolify:
 4. Build Pack: **Docker Compose**; Base Directory: `/`; Compose Location: `/compose.yaml`.
 5. In **Environment Variables**, set the Production **`GH_PAGES_TOKEN`** to your token. Enable
    Runtime and disable Build Variable if those controls are shown.
-6. Deploy. The `pipeline` container should stay running. Leave domains and port
+6. Under **Advanced**, disable **Inject Build Args to Dockerfile**; this image needs no build arguments.
+7. Deploy. The `pipeline` container should stay running. Leave domains and port
    mappings empty; the named volume is declared in the Compose file.
 
 Compose passes `GH_PAGES_TOKEN` into the container as `GITHUB_PUSH_TOKEN`.
 The separate names avoid a Coolify 4.3.1 UI bug that makes Compose environment
 keys read-only. Edit `GH_PAGES_TOKEN`; leave the managed `GITHUB_PUSH_TOKEN` row alone.
+The reference allows an empty value during image builds because Coolify parses
+Compose without runtime secrets at that stage. The container checks for a nonempty
+token at startup and exits with an explanatory error if it is missing.
 
 Coolify checks out the repo to build the image. The next step creates the separate,
 persistent working checkout used for pipeline runs.
