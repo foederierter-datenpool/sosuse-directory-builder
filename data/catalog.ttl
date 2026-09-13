@@ -1,0 +1,96 @@
+@prefix schema: <http://schema.org/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/>.
+@prefix dcatap: <http://data.europa.eu/r5r/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix theme: <http://publications.europa.eu/resource/authority/data-theme/>.
+@prefix freq: <http://publications.europa.eu/resource/authority/frequency/>.
+@prefix : <https://foederierter-datenpool.github.io/sosuse-directory-builder/#>.
+
+:adresseDataset a dcat:Dataset;
+    dct:title "Adresse"@de;
+    dct:description "TODO: what is in this dataset, and what a consumer can do with it";
+    dct:publisher :publisher;
+    dcat:contactPoint :contact;
+    dcat:theme theme:GOVE;
+    dcat:keyword "TODO: keyword";
+    dct:accrualPeriodicity freq:UNKNOWN;
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL>;
+    dcat:distribution <https://foederierter-datenpool.github.io/sosuse-directory-builder/data/directory.ttl>;
+    dcat:landingPage <https://foederierter-datenpool.github.io/sosuse-directory-builder/#/download>;
+    dcatde:qualityProcessURI <https://foederierter-datenpool.github.io/sosuse-directory-builder/#/pipeline>;
+    dct:conformsTo schema:PostalAddress;
+    dct:provenance :adresseDataset-provenance.
+:adresseDataset-provenance a dct:ProvenanceStatement;
+    rdfs:label "Merged from Caritas, Sozialplattform, Deutsche Hauptstelle für Suchtfragen (DHS), Arbeiterwohlfahrt (AWO), Schuldnerberatung (Destatis) by this directory's pipeline."@en.
+:angebotDataset a dcat:Dataset;
+    dct:title "Angebot"@de;
+    dct:description "TODO: what is in this dataset, and what a consumer can do with it";
+    dct:publisher :publisher;
+    dcat:contactPoint :contact;
+    dcat:theme theme:GOVE;
+    dcat:keyword "TODO: keyword";
+    dct:accrualPeriodicity freq:UNKNOWN;
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL>;
+    dcat:distribution <https://foederierter-datenpool.github.io/sosuse-directory-builder/data/directory.ttl>;
+    dcat:landingPage <https://foederierter-datenpool.github.io/sosuse-directory-builder/#/download>;
+    dcatde:qualityProcessURI <https://foederierter-datenpool.github.io/sosuse-directory-builder/#/pipeline>;
+    dct:conformsTo schema:Service;
+    dct:provenance :angebotDataset-provenance.
+:angebotDataset-provenance a dct:ProvenanceStatement;
+    rdfs:label "Merged from Sozialplattform, Arbeiterwohlfahrt (AWO) by this directory's pipeline."@en.
+:catalog a dcat:Catalog;
+    dct:title "Federated directory of social support services in Germany";
+    dct:description "TODO: what this directory federates, for whom";
+    dct:publisher :publisher;
+    dct:language <http://publications.europa.eu/resource/authority/language/DEU>;
+    dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme>;
+    dct:modified "2026-09-13T21:03:51.435Z"^^xsd:dateTime;
+    dcat:dataset :traegerDataset, :einrichtungDataset, :angebotDataset, :adresseDataset.
+:contact a vcard:Kind;
+    vcard:fn "TODO: who to contact about this data";
+    vcard:hasEmail <mailto:TODO@example.org>.
+:einrichtungDataset a dcat:Dataset;
+    dct:title "Einrichtung"@de;
+    dct:description "TODO: what is in this dataset, and what a consumer can do with it";
+    dct:publisher :publisher;
+    dcat:contactPoint :contact;
+    dcat:theme theme:GOVE;
+    dcat:keyword "TODO: keyword";
+    dct:accrualPeriodicity freq:UNKNOWN;
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL>;
+    dcat:distribution <https://foederierter-datenpool.github.io/sosuse-directory-builder/data/directory.ttl>;
+    dcat:landingPage <https://foederierter-datenpool.github.io/sosuse-directory-builder/#/download>;
+    dcatde:qualityProcessURI <https://foederierter-datenpool.github.io/sosuse-directory-builder/#/pipeline>;
+    dct:conformsTo <http://www.w3.org/ns/org#OrganizationalUnit>;
+    dct:provenance :einrichtungDataset-provenance.
+:einrichtungDataset-provenance a dct:ProvenanceStatement;
+    rdfs:label "Merged from Caritas, Sozialplattform, Deutsche Hauptstelle für Suchtfragen (DHS), Arbeiterwohlfahrt (AWO), Schuldnerberatung (Destatis) by this directory's pipeline."@en.
+:publisher a foaf:Agent;
+    foaf:name "TODO: the organisation publishing this directory".
+:traegerDataset a dcat:Dataset;
+    dct:title "Träger"@de;
+    dct:description "TODO: what is in this dataset, and what a consumer can do with it";
+    dct:publisher :publisher;
+    dcat:contactPoint :contact;
+    dcat:theme theme:GOVE;
+    dcat:keyword "TODO: keyword";
+    dct:accrualPeriodicity freq:UNKNOWN;
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL>;
+    dcat:distribution <https://foederierter-datenpool.github.io/sosuse-directory-builder/data/directory.ttl>;
+    dcat:landingPage <https://foederierter-datenpool.github.io/sosuse-directory-builder/#/download>;
+    dcatde:qualityProcessURI <https://foederierter-datenpool.github.io/sosuse-directory-builder/#/pipeline>;
+    dct:conformsTo schema:Organization;
+    dct:provenance :traegerDataset-provenance.
+:traegerDataset-provenance a dct:ProvenanceStatement;
+    rdfs:label "Merged from Arbeiterwohlfahrt (AWO) by this directory's pipeline."@en.
+<https://foederierter-datenpool.github.io/sosuse-directory-builder/data/directory.ttl> a dcat:Distribution;
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL>;
+    dct:license <http://dcat-ap.de/def/licenses/other-closed>;
+    dcatde:licenseAttributionByText "TODO: attribution for the sources and this directory";
+    dcat:accessURL <https://foederierter-datenpool.github.io/sosuse-directory-builder/data/directory.ttl>;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>.

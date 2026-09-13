@@ -1,0 +1,84 @@
+@prefix cdp: <https://civic-data.de/pipeline#>.
+
+cdp:sp-addr-00314b833b8d cdp:matchString "drontheimerstrasse27".
+cdp:sp-addr-02c00c35215f cdp:matchString "luebeckerstrasse6".
+cdp:sp-addr-11fab7dcdfb2 cdp:matchString "brienzerstrasse22".
+cdp:sp-addr-221f56da86c4 cdp:matchString "prinzenallee3940".
+cdp:sp-addr-253096f5d97b cdp:matchString "kurfuerstenstrasse40".
+cdp:sp-addr-2e4e3c584f28 cdp:matchString "muellerstrasse146".
+cdp:sp-addr-2ec77c829975 cdp:matchString "herzbergstrasse84".
+cdp:sp-addr-3037e7c631ab cdp:matchString "altreinickendorf2324".
+cdp:sp-addr-3b184ec6b11a cdp:matchString "badstrasse35".
+cdp:sp-addr-3d7cefbd7268 cdp:matchString "gudrunstrasse4".
+cdp:sp-addr-43cf6d0f7743 cdp:matchString "genterstrasse634og".
+cdp:sp-addr-48c5b5c64bf0 cdp:matchString "muellerstrasse120".
+cdp:sp-addr-4e6e7d510f39 cdp:matchString "osloerstrasse80".
+cdp:sp-addr-54ebc6ae3e29 cdp:matchString "tieckstrasse17".
+cdp:sp-addr-5b2a7b94ad95 cdp:matchString "bornitzstrasse7375".
+cdp:sp-addr-5ec52eca4985 cdp:matchString "lehrterstrasse68".
+cdp:sp-addr-607e9bd3af5b cdp:matchString "stromstrasse47".
+cdp:sp-addr-645e8dfa9ef6 cdp:matchString "friedrichstrasse231".
+cdp:sp-addr-655b1f6479fa cdp:matchString "chausseestrasse84".
+cdp:sp-addr-663a6fb5fb8c cdp:matchString "ritterstrasse3".
+cdp:sp-addr-67cc995d4582 cdp:matchString "augustenburgerplatz1".
+cdp:sp-addr-6c22628912f6 cdp:matchString "turmstrasse34".
+cdp:sp-addr-6f5a94291572 cdp:matchString "wattstrasse9".
+cdp:sp-addr-70d105a5b407 cdp:matchString "ruetlistrasse18".
+cdp:sp-addr-7ada1b4cd41b cdp:matchString "oldenburgerstrasse47".
+cdp:sp-addr-7bbcab7ff166 cdp:matchString "grossehamburgerstrasse18";
+    cdp:prepared _:n3-669.
+cdp:sp-addr-7cd36d44f02c cdp:matchString "badstrasse22".
+cdp:sp-addr-810e5b4f261a cdp:matchString "turmstrasse35a";
+    cdp:prepared _:n3-671.
+cdp:sp-addr-83d6984a5f24 cdp:matchString "rathenowerstrasse16h";
+    cdp:prepared _:n3-670.
+cdp:sp-addr-89853c1f18b7 cdp:matchString "kopenhagenerstrasse29".
+cdp:sp-addr-8a521575b1bc cdp:matchString "hagenstrasse1".
+cdp:sp-addr-94dc9d8e488e cdp:matchString "heinzgalinskistrasse1".
+cdp:sp-addr-956ddbc2ee4e cdp:matchString "grenzstrasse15".
+cdp:sp-addr-97eb1d64551d cdp:matchString "segitzdamm46".
+cdp:sp-addr-a2d913a8dbd3 cdp:matchString "kolbergerstrasse14";
+    cdp:prepared _:n3-667.
+cdp:sp-addr-ad62efa5c2f3 cdp:matchString "arminiusstrasse24".
+cdp:sp-addr-adf6088a2667 cdp:matchString "rudidutschkestrasse9".
+cdp:sp-addr-b08134bb28c9 cdp:matchString "birkenstrasse51".
+cdp:sp-addr-b143ca72758c cdp:matchString "auguststrasse82".
+cdp:sp-addr-b660741120d0 cdp:matchString "pflugstrasse12".
+cdp:sp-addr-bddf51d1423e cdp:matchString "nazarethkirchstrasse42".
+cdp:sp-addr-c61fd64e0aed cdp:matchString "ruschestrasse103".
+cdp:sp-addr-cd2942dd616d cdp:matchString "oldenburgerstrasse2";
+    cdp:prepared _:n3-668.
+cdp:sp-addr-d50bf3ec191e cdp:matchString "obentrautstrasse57".
+cdp:sp-addr-de6f8d40f06c cdp:matchString "herzbergstrasse82".
+cdp:sp-addr-e6e5c5a54caa cdp:matchString "chausseestrasse128129".
+cdp:sp-addr-eff00386eb31 cdp:matchString "lehrterstrasse69".
+cdp:sp-addr-efff78f8a016 cdp:matchString "wartenburgstrasse8".
+cdp:sp-addr-f3d0fa5f9fd7 cdp:matchString "bornemannstrasse12".
+cdp:sp-addr-ff06e7b985af cdp:matchString "genthinerstrasse48".
+cdp:sp-org-0b9063df5a3d cdp:prepared _:n3-672.
+cdp:sp-org-31789d0bb80a cdp:prepared _:n3-673.
+cdp:sp-org-d129edc6c7c0 cdp:prepared _:n3-674.
+_:n3-667 cdp:field cdp:sp-addr-street;
+    cdp:rawValue "Kolberger Straße  14";
+    cdp:cleanValue "Kolberger Straße 14".
+_:n3-668 cdp:field cdp:sp-addr-street;
+    cdp:rawValue "Oldenburger Straße  2";
+    cdp:cleanValue "Oldenburger Straße 2".
+_:n3-669 cdp:field cdp:sp-addr-street;
+    cdp:rawValue "Große Hamburger Straße  18";
+    cdp:cleanValue "Große Hamburger Straße 18".
+_:n3-670 cdp:field cdp:sp-addr-street;
+    cdp:rawValue "Rathenower Straße 16 H";
+    cdp:cleanValue "Rathenower Straße 16H".
+_:n3-671 cdp:field cdp:sp-addr-street;
+    cdp:rawValue "Turmstraße 35 a";
+    cdp:cleanValue "Turmstraße 35a".
+_:n3-672 cdp:field "office_address_short";
+    cdp:rawValue "DE, Berlin, 13357, Kolberger Straße  14";
+    cdp:cleanValue "DE, Berlin, 13357, Kolberger Straße 14".
+_:n3-673 cdp:field "office_address_short";
+    cdp:rawValue "DE, Berlin, 10551, Oldenburger Straße  2";
+    cdp:cleanValue "DE, Berlin, 10551, Oldenburger Straße 2".
+_:n3-674 cdp:field "office_phone";
+    cdp:rawValue "030 2529 3540";
+    cdp:cleanValue "03025293540".

@@ -1,0 +1,28 @@
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX cdf: <https://civic-data.de/federated-directory#>
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+INSERT {
+    GRAPH <urn:mapped> {
+        ?entity a <http://www.w3.org/ns/org#OrganizationalUnit> ; cdp:fromSource cdp:caritasSource .
+        ?entity schema:identifier ?Guid .
+        ?entity schema:category ?LeadLine .
+        ?entity schema:mainEntityOfPage ?Link .
+        ?entity schema:alternateName ?SubTitle .
+        ?entity schema:name ?Title .
+    }
+} WHERE {
+    GRAPH <urn:source:caritas> {
+        ?entity cdp:fromSource cdp:caritasSource .
+        OPTIONAL { ?entity cdp:targetSchema ?_ts }
+        FILTER(!bound(?_ts) || ?_ts = cdp:einrichtungSchema)
+        OPTIONAL { ?entity xyz:Guid ?Guid . FILTER(isLiteral(?Guid) && REPLACE(STR(?Guid), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:LeadLine ?LeadLine . FILTER(isLiteral(?LeadLine) && REPLACE(STR(?LeadLine), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:Link ?Link . FILTER(isLiteral(?Link) && REPLACE(STR(?Link), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:SubTitle ?SubTitle . FILTER(isLiteral(?SubTitle) && REPLACE(STR(?SubTitle), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:Title ?Title . FILTER(isLiteral(?Title) && REPLACE(STR(?Title), "\\s+", "") != "") }
+    }
+}

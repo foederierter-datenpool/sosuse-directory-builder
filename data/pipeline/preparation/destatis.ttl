@@ -1,0 +1,43 @@
+@prefix cdp: <https://civic-data.de/pipeline#>.
+
+cdp:destatis-addr-5ec52eca4985 cdp:matchString "lehrterstrasse68";
+    cdp:prepared _:n3-32953, _:n3-32954.
+cdp:destatis-addr-663a6fb5fb8c cdp:matchString "ritterstrasse3";
+    cdp:prepared _:n3-32955, _:n3-32956.
+cdp:destatis-addr-6f5a94291572 cdp:matchString "wattstrasse9".
+cdp:destatis-addr-7bbcab7ff166 cdp:matchString "grossehamburgerstrasse18";
+    cdp:prepared _:n3-32961, _:n3-32962.
+cdp:destatis-addr-a103a10dd842 cdp:matchString "liebenwalderstrasse8";
+    cdp:prepared _:n3-32957, _:n3-32958.
+cdp:destatis-addr-ad62efa5c2f3 cdp:matchString "arminiusstrasse24";
+    cdp:prepared _:n3-32959, _:n3-32960.
+_:n3-32953 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Lehrter Str. 68";
+    cdp:cleanValue "Lehrter Straße 68".
+_:n3-32954 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Lehrter Str. 68";
+    cdp:cleanValue "Lehrter Straße 68".
+_:n3-32955 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Ritterstr. 3";
+    cdp:cleanValue "Ritterstraße 3".
+_:n3-32956 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Ritterstr. 3";
+    cdp:cleanValue "Ritterstraße 3".
+_:n3-32957 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Liebenwalder Str. 8";
+    cdp:cleanValue "Liebenwalder Straße 8".
+_:n3-32958 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Liebenwalder Str. 8";
+    cdp:cleanValue "Liebenwalder Straße 8".
+_:n3-32959 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Arminiusstr. 2-4";
+    cdp:cleanValue "Arminiusstraße 2-4".
+_:n3-32960 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Arminiusstr. 2-4";
+    cdp:cleanValue "Arminiusstraße 2-4".
+_:n3-32961 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Große Hamburger Str.18";
+    cdp:cleanValue "Große Hamburger Straße 18".
+_:n3-32962 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Große Hamburger Str.18";
+    cdp:cleanValue "Große Hamburger Straße 18".

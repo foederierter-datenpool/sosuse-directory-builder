@@ -1,0 +1,1780 @@
+@prefix xyz: <http://sparql.xyz/facade-x/data/>.
+@prefix cdp: <https://civic-data.de/pipeline#>.
+
+cdp:sp-addr-00314b833b8d cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "drontheimerstrasse27";
+    xyz:streetAddress "Drontheimer Straße 27";
+    xyz:postalCode "13359";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-02c00c35215f cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "luebeckerstrasse6";
+    xyz:streetAddress "Lübecker Straße 6";
+    xyz:postalCode "10559";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-11fab7dcdfb2 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "brienzerstrasse22";
+    xyz:streetAddress "Brienzer Straße 22";
+    xyz:postalCode "13407";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-221f56da86c4 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "prinzenallee3940";
+    xyz:streetAddress "Prinzenallee 39-40";
+    xyz:postalCode "13359";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-253096f5d97b cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "kurfuerstenstrasse40";
+    xyz:streetAddress "Kurfürstenstraße 40";
+    xyz:postalCode "10785";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-2e4e3c584f28 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "muellerstrasse146";
+    xyz:streetAddress "Müllerstraße 146";
+    xyz:postalCode "13353";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-2ec77c829975 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "herzbergstrasse84";
+    xyz:streetAddress "Herzbergstraße 84";
+    xyz:postalCode "10365";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-3037e7c631ab cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "altreinickendorf2324";
+    xyz:streetAddress "Alt-Reinickendorf 23-24";
+    xyz:postalCode "13407";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-3b184ec6b11a cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "badstrasse35";
+    xyz:streetAddress "Badstraße 35";
+    xyz:postalCode "13357";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-3d7cefbd7268 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "gudrunstrasse4";
+    xyz:streetAddress "Gudrunstraße 4";
+    xyz:postalCode "10365";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-43cf6d0f7743 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "genterstrasse634og";
+    xyz:streetAddress "Genter Straße 63 4.OG";
+    xyz:postalCode "13353";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-48c5b5c64bf0 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "muellerstrasse120";
+    xyz:streetAddress "Müllerstraße 120";
+    xyz:postalCode "13349";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-4e6e7d510f39 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "osloerstrasse80";
+    xyz:streetAddress "Osloer Straße 80";
+    xyz:postalCode "13359";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-54ebc6ae3e29 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "tieckstrasse17";
+    xyz:streetAddress "Tieckstraße 17";
+    xyz:postalCode "10115";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-5b2a7b94ad95 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "bornitzstrasse7375";
+    xyz:streetAddress "Bornitzstraße 73-75";
+    xyz:postalCode "10365";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-5ec52eca4985 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "lehrterstrasse68";
+    xyz:streetAddress "Lehrter Straße 68";
+    xyz:postalCode "10557";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-607e9bd3af5b cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "stromstrasse47";
+    xyz:streetAddress "Stromstraße 47";
+    xyz:postalCode "10551";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-645e8dfa9ef6 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "friedrichstrasse231";
+    xyz:streetAddress "Friedrichstraße 231";
+    xyz:postalCode "10969";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-655b1f6479fa cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "chausseestrasse84";
+    xyz:streetAddress "Chausseestraße 84";
+    xyz:postalCode "10115";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-663a6fb5fb8c cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "ritterstrasse3";
+    xyz:streetAddress "Ritterstraße 3";
+    xyz:postalCode "10969";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-67cc995d4582 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "augustenburgerplatz1";
+    xyz:streetAddress "Augustenburger Platz 1";
+    xyz:postalCode "13353";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-6c22628912f6 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "turmstrasse34";
+    xyz:streetAddress "Turmstraße 34";
+    xyz:postalCode "10551";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-6f5a94291572 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "wattstrasse9";
+    xyz:streetAddress "Wattstraße 9";
+    xyz:postalCode "13355";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-70d105a5b407 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "ruetlistrasse18";
+    xyz:streetAddress "Rütlistraße 18";
+    xyz:postalCode "13407";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-7ada1b4cd41b cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "oldenburgerstrasse47";
+    xyz:streetAddress "Oldenburger Straße 47";
+    xyz:postalCode "10551";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-7bbcab7ff166 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "grossehamburgerstrasse18";
+    xyz:streetAddress "Große Hamburger Straße 18";
+    xyz:postalCode "10115";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-7cd36d44f02c cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "badstrasse22";
+    xyz:streetAddress "Badstraße 22";
+    xyz:postalCode "13357";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-810e5b4f261a cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "turmstrasse35a";
+    xyz:streetAddress "Turmstraße 35a";
+    xyz:postalCode "10551";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-83d6984a5f24 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "rathenowerstrasse16h";
+    xyz:streetAddress "Rathenower Straße 16H";
+    xyz:postalCode "10559";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-89853c1f18b7 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "kopenhagenerstrasse29";
+    xyz:streetAddress "Kopenhagenerstraße 29";
+    xyz:postalCode "13407";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-8a521575b1bc cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "hagenstrasse1";
+    xyz:streetAddress "Hagenstraße 1";
+    xyz:postalCode "10365";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-94dc9d8e488e cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "heinzgalinskistrasse1";
+    xyz:streetAddress "Heinz-Galinski-Straße 1";
+    xyz:postalCode "13347";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-956ddbc2ee4e cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "grenzstrasse15";
+    xyz:streetAddress "Grenzstraße 1-5";
+    xyz:postalCode "13355";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-97eb1d64551d cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "segitzdamm46";
+    xyz:streetAddress "Segitzdamm 46";
+    xyz:postalCode "10969";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-a2d913a8dbd3 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "kolbergerstrasse14";
+    xyz:streetAddress "Kolberger Straße 14";
+    xyz:postalCode "13357";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-ad62efa5c2f3 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "arminiusstrasse24";
+    xyz:streetAddress "Arminiusstraße 2-4";
+    xyz:postalCode "10551";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-adf6088a2667 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "rudidutschkestrasse9";
+    xyz:streetAddress "Rudi-Dutschke-Straße 9";
+    xyz:postalCode "10969";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-b08134bb28c9 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "birkenstrasse51";
+    xyz:streetAddress "Birkenstraße 51";
+    xyz:postalCode "10559";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-b143ca72758c cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "auguststrasse82";
+    xyz:streetAddress "Auguststraße 82";
+    xyz:postalCode "10117";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-b660741120d0 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "pflugstrasse12";
+    xyz:streetAddress "Pflugstraße 12";
+    xyz:postalCode "10115";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-bddf51d1423e cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "nazarethkirchstrasse42";
+    xyz:streetAddress "Nazarethkirchstraße 42";
+    xyz:postalCode "13347";
+    xyz:addressLocality "Berlin-Wedding";
+    xyz:addressCountry "DE".
+cdp:sp-addr-c61fd64e0aed cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "ruschestrasse103";
+    xyz:streetAddress "Ruschestraße 103";
+    xyz:postalCode "10365";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-cd2942dd616d cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "oldenburgerstrasse2";
+    xyz:streetAddress "Oldenburger Straße 2";
+    xyz:postalCode "10551";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-d50bf3ec191e cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "obentrautstrasse57";
+    xyz:streetAddress "Obentrautstraße 57";
+    xyz:postalCode "10963";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-de6f8d40f06c cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "herzbergstrasse82";
+    xyz:streetAddress "Herzbergstraße 82";
+    xyz:postalCode "10365";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-e6e5c5a54caa cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "chausseestrasse128129";
+    xyz:streetAddress "Chausseestraße 128-129";
+    xyz:postalCode "10115";
+    xyz:addressLocality "Berlin-Mitte";
+    xyz:addressCountry "DE".
+cdp:sp-addr-eff00386eb31 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "lehrterstrasse69";
+    xyz:streetAddress "Lehrter Straße 69";
+    xyz:postalCode "10557";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-efff78f8a016 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "wartenburgstrasse8";
+    xyz:streetAddress "Wartenburgstraße 8";
+    xyz:postalCode "10963";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-f3d0fa5f9fd7 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "bornemannstrasse12";
+    xyz:streetAddress "Bornemannstraße 12";
+    xyz:postalCode "13357";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-addr-ff06e7b985af cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "genthinerstrasse48";
+    xyz:streetAddress "Genthiner Straße 48";
+    xyz:postalCode "10785";
+    xyz:addressLocality "Berlin";
+    xyz:addressCountry "DE".
+cdp:sp-org-06a4d554f5d1 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-2e4e3c584f28;
+    xyz:address_line1 "Müllerstraße 146";
+    xyz:postal_code "13353";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13353, Müllerstraße 146";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Soziale Wohnhilfe".
+cdp:sp-org-099477725993 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-02c00c35215f;
+    xyz:address_line1 "Lübecker Straße 6";
+    xyz:postal_code "10559";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10559, Lübecker Straße 6";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Haus Lübecker Straße (HLS6)".
+cdp:sp-org-0b1ba09a92a0 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-d50bf3ec191e;
+    xyz:address_line1 "Obentrautstraße 57";
+    xyz:postal_code "10963";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10963, Obentrautstraße 57";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Kibo – ambulante Drogentherapie".
+cdp:sp-org-0b9063df5a3d cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-a2d913a8dbd3;
+    xyz:address_line1 "Kolberger Straße  14";
+    xyz:postal_code "13357";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13357, Kolberger Straße 14";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Betreutes Einzelwohnen".
+cdp:sp-org-0e60f01a9bb6 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-11fab7dcdfb2;
+    xyz:address_line1 "Brienzer Straße 22";
+    xyz:postal_code "13407";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13407, Brienzer Straße 22";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Blaukreuz - Zentrum Schillerhöhe".
+cdp:sp-org-0fcddfa501d9 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-7cd36d44f02c;
+    xyz:address_line1 "Badstraße 22";
+    xyz:postal_code "13357";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13357, Badstraße 22";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Ambulante Wohnhilfen Wedding und Reinickendorf".
+cdp:sp-org-18da9e9e4e40 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-eff00386eb31;
+    xyz:address_line1 "Lehrter Straße 69";
+    xyz:postal_code "10557";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10557, Lehrter Straße 69";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "SPEZIALISIERTE SCHULDNER- UND INSOLVENZBERATUNGSSTELLE FÜR KLEINSTSELBSTSTÄNDIGE IN BERLIN".
+cdp:sp-org-19021420bffa cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-7bbcab7ff166;
+    xyz:address_line1 "Große Hamburger Straße 18";
+    xyz:postal_code "10115";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10115, Große Hamburger Straße 18";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Projekt HaLT".
+cdp:sp-org-190bf50de5f8 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-3b184ec6b11a;
+    xyz:address_line1 "Badstraße 35";
+    xyz:postal_code "13357";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13357, Badstraße 35";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Betreutes Wohnen".
+cdp:sp-org-1b4456a420fe cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-67cc995d4582;
+    xyz:address_line1 "Augustenburger Platz 1";
+    xyz:postal_code "13353";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13353, Augustenburger Platz 1";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Ambulanz für Suchterkrankungen und Infektionen in der Schwangerschaft".
+cdp:sp-org-1c53e2675f37 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-ff06e7b985af;
+    xyz:address_line1 "Genthiner Straße 48";
+    xyz:postal_code "10785";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10785, Genthiner Straße 48";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Drogennotdienst".
+cdp:sp-org-22bacb3e66ba cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-bddf51d1423e;
+    xyz:address_line1 "Nazarethkirchstraße 42";
+    xyz:postal_code "13347";
+    xyz:locality "Berlin-Wedding";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin-Wedding, 13347, Nazarethkirchstraße 42";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Frauenladen".
+cdp:sp-org-26d6472c1374 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-2ec77c829975;
+    xyz:address_line1 "Herzbergstraße 84";
+    xyz:postal_code "10365";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10365, Herzbergstraße 84";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Betreute Einzelwohnen Lichtenberg".
+cdp:sp-org-2994111de65b cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-5b2a7b94ad95;
+    xyz:address_line1 "Bornitzstraße 73-75";
+    xyz:postal_code "10365";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10365, Bornitzstraße 73-75";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Immanuel Beratung Lichtenberg".
+cdp:sp-org-31789d0bb80a cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-cd2942dd616d;
+    xyz:address_line1 "Oldenburger Straße  2";
+    xyz:postal_code "10551";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10551, Oldenburger Straße 2";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "sbh Wohnungslosen- & Eingliederungshilfe".
+cdp:sp-org-3426d9bbdb18 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-f3d0fa5f9fd7;
+    xyz:address_line1 "Bornemannstraße 12";
+    xyz:postal_code "13357";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13357, Bornemannstraße 12";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "FrauenbeDacht - Wohnen Plus für Frauen".
+cdp:sp-org-34bd0843df9a cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-b660741120d0;
+    xyz:address_line1 "Pflugstraße 12";
+    xyz:postal_code "10115";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10115, Pflugstraße 12";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Das Gesundheitszentrum".
+cdp:sp-org-3566553c2771 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-3d7cefbd7268;
+    xyz:address_line1 "Gudrunstraße 4";
+    xyz:postal_code "10365";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10365, Gudrunstraße 4";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "WIN/Wohn- und INtegrationshilfen".
+cdp:sp-org-3914c95a28c6 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-7ada1b4cd41b;
+    xyz:address_line1 "Oldenburger Straße 47";
+    xyz:postal_code "10551";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10551, Oldenburger Straße 47";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Ambulante Wohnungslosenhilfe Moabit".
+cdp:sp-org-3d053776eb63 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-ff06e7b985af;
+    xyz:address_line1 "Genthiner Straße 48";
+    xyz:postal_code "10785";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10785, Genthiner Straße 48";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Zuwendungen Ambulante Einrichtungen".
+cdp:sp-org-3d8240d9c4f0 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-7bbcab7ff166;
+    xyz:address_line1 "Große Hamburger Straße 18", "Große Hamburger Straße  18";
+    xyz:postal_code "10115";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10115, Große Hamburger Straße 18";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Integrative Suchtberatung Mitte".
+cdp:sp-org-3f426bb06e23 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-b08134bb28c9;
+    xyz:address_line1 "Birkenstraße 51";
+    xyz:postal_code "10559";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10559, Birkenstraße 51";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Birkenstube - Kontakt- und Anlaufstelle Mitte".
+cdp:sp-org-4240a59c4e5b cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-5ec52eca4985;
+    xyz:address_line1 "Lehrter Straße 68";
+    xyz:postal_code "10557";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10557, Lehrter Straße 68";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Ambulanz Berliner Stadtmission".
+cdp:sp-org-436bb091cce9 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-54ebc6ae3e29;
+    xyz:address_line1 "Tieckstraße 17";
+    xyz:postal_code "10115";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10115, Tieckstraße 17";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Betreutes Einzelwohnen (§ 67 SGB XII) & Appartements für wohnungslose Frauen".
+cdp:sp-org-4b116e029e4e cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-eff00386eb31;
+    xyz:address_line1 "Lehrter Straße 69";
+    xyz:postal_code "10557";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10557, Lehrter Straße 69";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Übergangshaus".
+cdp:sp-org-4e61de934830 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-ff06e7b985af;
+    xyz:address_line1 "Genthiner Straße 48";
+    xyz:postal_code "10785";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10785, Genthiner Straße 48";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Psychosoziale Betreuung für Substituierte (PSB)".
+cdp:sp-org-4fedcd7e21c7 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-5ec52eca4985;
+    xyz:address_line1 "Lehrter Straße 68";
+    xyz:postal_code "10557";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10557, Lehrter Straße 68";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Kleiderkammer".
+cdp:sp-org-59ee688f57e3 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-c61fd64e0aed;
+    xyz:address_line1 "Ruschestraße 103";
+    xyz:postal_code "10365";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10365, Ruschestraße 103";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "AID Lichtenberg".
+cdp:sp-org-5aacf2d3fe99 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-607e9bd3af5b;
+    xyz:address_line1 "Stromstraße 47";
+    xyz:postal_code "10551";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10551, Stromstraße 47";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Ambulante Suchtberatung Mitte".
+cdp:sp-org-5b015aea0669 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-8a521575b1bc;
+    xyz:address_line1 "Hagenstraße 1";
+    xyz:postal_code "10365";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10365, Hagenstraße 1";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Betreutes Wohnen casa nostra".
+cdp:sp-org-5d398166be1d cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-ad62efa5c2f3;
+    xyz:address_line1 "Arminiusstraße 2-4";
+    xyz:postal_code "10551";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10551, Arminiusstraße 2-4";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Schuldner- und Insolvenzberatung Berlin".
+cdp:sp-org-5eedb9b50f4d cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-adf6088a2667;
+    xyz:address_line1 "Rudi-Dutschke-Straße 9";
+    xyz:postal_code "10969";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "de, DE, Berlin, 10969, Rudi-Dutschke-Straße 9";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Schuldner- und Insolvenzberatung Berlin Spree-Wuhle".
+cdp:sp-org-5ffca2009b09 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-83d6984a5f24;
+    xyz:address_line1 "Rathenower Straße 16 H";
+    xyz:postal_code "10559";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10559, Rathenower Straße 16 H";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Kriesenwohnung".
+cdp:sp-org-637b892c95e5 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-810e5b4f261a;
+    xyz:address_line1 "Turmstraße 35 a";
+    xyz:postal_code "10551";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10551, Turmstraße 35 a";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Wohnhilfe Turmstraße".
+cdp:sp-org-67a2c59ed7fa cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-de6f8d40f06c;
+    xyz:address_line1 "Herzbergstraße 82";
+    xyz:postal_code "10365";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10365, Herzbergstraße 82";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Tagesstätte Lichtenberg".
+cdp:sp-org-6fb4df45f3f0 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-89853c1f18b7;
+    xyz:address_line1 "Kopenhagenerstraße 29";
+    xyz:postal_code "13407";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13407, Kopenhagenerstraße 29";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "ASOG-Wohnheim".
+cdp:sp-org-70f55007f511 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-221f56da86c4;
+    xyz:address_line1 "Prinzenallee 39-40";
+    xyz:postal_code "13359";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13359, Prinzenallee 39-40";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Wili 67".
+cdp:sp-org-716f4e5ee6bc cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-3b184ec6b11a;
+    xyz:address_line1 "Badstraße 35";
+    xyz:postal_code "13357";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13357, Badstraße 35";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "MutterKindWohnen".
+cdp:sp-org-73683d75a066 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-70d105a5b407;
+    xyz:address_line1 "Rütlistraße 18";
+    xyz:postal_code "13407";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13407, Rütlistraße 18";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Berliner Help Stiftung".
+cdp:sp-org-758b427e17fc cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-97eb1d64551d;
+    xyz:address_line1 "Segitzdamm 46";
+    xyz:postal_code "10969";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10969, Segitzdamm 46";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Alkohol- und Medikamentenberatungsstelle".
+cdp:sp-org-76a65d1e0284 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-00314b833b8d;
+    xyz:address_line1 "Drontheimer Straße 27";
+    xyz:postal_code "13359";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13359, Drontheimer Straße 27";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Übergangshaus Drontheimer Straße".
+cdp:sp-org-7b4b3e328f24 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-5ec52eca4985;
+    xyz:address_line1 "Lehrter Straße 68";
+    xyz:postal_code "10557";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10557, Lehrter Straße 68";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Logistikküche".
+cdp:sp-org-7f6633297963 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-b143ca72758c;
+    xyz:address_line1 "Auguststraße 82";
+    xyz:postal_code "10117";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10117, Auguststraße 82";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Schutz und Neustart für Menschen ohne Obdach".
+cdp:sp-org-8061a5ed1dfa cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-6c22628912f6;
+    xyz:address_line1 "Turmstraße 34";
+    xyz:postal_code "10551";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10551, Turmstraße 34";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Betreutes Wohnen Turmstraße".
+cdp:sp-org-80a9ba0e9e42 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-6f5a94291572;
+    xyz:address_line1 "Wattstraße 9";
+    xyz:postal_code "13355";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13355, Wattstraße 9";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Schuldner- und Insolvenzberatung Berlin".
+cdp:sp-org-83c38d334a74 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-eff00386eb31;
+    xyz:address_line1 "Lehrter Straße 69";
+    xyz:postal_code "10557";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10557, Lehrter Straße 69";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Wohnhilfe Lehrter Straße".
+cdp:sp-org-899db198647c cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-4e6e7d510f39;
+    xyz:address_line1 "Osloer Straße 80";
+    xyz:postal_code "13359";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13359, Osloer Straße 80";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Haus \"Panorama Nord\"".
+cdp:sp-org-8cd376cf1e9b cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-54ebc6ae3e29;
+    xyz:address_line1 "Tieckstraße 17";
+    xyz:postal_code "10115";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10115, Tieckstraße 17";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Notübernachtung Marie".
+cdp:sp-org-b13dbf846d92 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-956ddbc2ee4e;
+    xyz:address_line1 "Grenzstraße 1-5";
+    xyz:postal_code "13355";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13355, Grenzstraße 1-5";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Aufnahmewohnheim Grenzstraße".
+cdp:sp-org-b38dd9770f03 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-e6e5c5a54caa;
+    xyz:address_line1 "Chausseestraße 128-129";
+    xyz:postal_code "10115";
+    xyz:locality "Berlin-Mitte";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin-Mitte, 10115, Chausseestraße 128-129";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Fachstelle für Suchtprävention im Land Berlin".
+cdp:sp-org-ba72194fe961 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-5ec52eca4985;
+    xyz:address_line1 "Lehrter Straße 68";
+    xyz:postal_code "10557";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10557, Lehrter Straße 68";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Kältehilfe".
+cdp:sp-org-cabd526f84ee cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-48c5b5c64bf0;
+    xyz:address_line1 "Müllerstraße 120";
+    xyz:postal_code "13349";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13349, Müllerstraße 120";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Mühlenstube Kontakt- und Anlaufstelle Mitte".
+cdp:sp-org-d129edc6c7c0 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-663a6fb5fb8c;
+    xyz:address_line1 "Ritterstraße 3";
+    xyz:postal_code "10969";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "de, DE, Berlin, 10969, Ritterstraße 3";
+    xyz:office_email "inso@awo-spree-wuhle.de";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "03025293540";
+    xyz:office_title "Schuldner- und Insolvenzberatung".
+cdp:sp-org-e4ffde55a474 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-94dc9d8e488e;
+    xyz:address_line1 "Heinz-Galinski-Straße 1";
+    xyz:postal_code "13347";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13347, Heinz-Galinski-Straße 1";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Klinik für Psychiatrie und Psychotherapie".
+cdp:sp-org-e5825845ec99 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-253096f5d97b;
+    xyz:address_line1 "Kurfürstenstraße 40";
+    xyz:postal_code "10785";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10785, Kurfürstenstraße 40";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Frauentreff Olga".
+cdp:sp-org-ea4332583d89 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-54ebc6ae3e29;
+    xyz:address_line1 "Tieckstraße 17";
+    xyz:postal_code "10115";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10115, Tieckstraße 17";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Wohnraum für Frauen Tieck 17".
+cdp:sp-org-edecb73a7ccd cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-655b1f6479fa;
+    xyz:address_line1 "Chausseestraße 84";
+    xyz:postal_code "10115";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10115, Chausseestraße 84";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Neue Chance Mitte".
+cdp:sp-org-efa46a4192f8 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-43cf6d0f7743;
+    xyz:address_line1 "Genter Straße 63 4.OG";
+    xyz:postal_code "13353";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13353, Genter Straße 63 4.OG";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Betreutes Wohnen Genter Straße".
+cdp:sp-org-f0014df88f6e cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-efff78f8a016;
+    xyz:address_line1 "Wartenburgstraße 8";
+    xyz:postal_code "10963";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10963, Wartenburgstraße 8";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Cafe Beispiellos / Lost in Space Beratungsstelle für Glücksspiel-, Computerspiel- und Internetsüchtige und deren Angehörige".
+cdp:sp-org-f0686b841790 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-54ebc6ae3e29;
+    xyz:address_line1 "Tieckstraße 17";
+    xyz:postal_code "10115";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10115, Tieckstraße 17";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Notübernachtung für Frauen".
+cdp:sp-org-f8614c53870b cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-645e8dfa9ef6;
+    xyz:address_line1 "Friedrichstraße 231";
+    xyz:postal_code "10969";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 10969, Friedrichstraße 231";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "StoffBruch-Beratung".
+cdp:sp-org-fca583452123 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:sp-addr-3037e7c631ab;
+    xyz:address_line1 "Alt-Reinickendorf 23-24";
+    xyz:postal_code "13407";
+    xyz:locality "Berlin";
+    xyz:country_code "DE";
+    xyz:office_address_short "DE, Berlin, 13407, Alt-Reinickendorf 23-24";
+    xyz:office_email "";
+    xyz:office_opening_hours "";
+    xyz:office_opening_hours_notes "";
+    xyz:office_phone "";
+    xyz:office_title "Drogenhilfe Nord - NordPassage".
+cdp:sp-service-00c5e6c3-c185-4bed-9d33-53d49eb73dc1 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-80a9ba0e9e42;
+    xyz:offer_id "00c5e6c3-c185-4bed-9d33-53d49eb73dc1";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38138";
+    xyz:offer_service_area "";
+    xyz:offer_title "Schuldnerberatung";
+    xyz:offer_type "Schuldnerberatung".
+cdp:sp-service-0a120bd9-5f60-4a7f-bcfb-4cb3c72c325c cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-3d8240d9c4f0;
+    xyz:offer_id "0a120bd9-5f60-4a7f-bcfb-4cb3c72c325c";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38453";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-0d7348e9-15e0-4c99-af02-8a98823691e5 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-34bd0843df9a;
+    xyz:offer_id "0d7348e9-15e0-4c99-af02-8a98823691e5";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "42075";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-0e2ea1ff-a4aa-4ce1-b3cb-da893c215dfe cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-efa46a4192f8;
+    xyz:offer_id "0e2ea1ff-a4aa-4ce1-b3cb-da893c215dfe";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39538";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-144a067d-2556-4104-9ac2-f5f160b12f3a cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-716f4e5ee6bc;
+    xyz:offer_id "144a067d-2556-4104-9ac2-f5f160b12f3a";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39501";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-1c89ab9a-4d23-4f89-b599-3b9884b084f3 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-4fedcd7e21c7;
+    xyz:offer_id "1c89ab9a-4d23-4f89-b599-3b9884b084f3";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38116";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-2560185e-3d32-4f13-ae46-0f11d30900cf cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-ea4332583d89;
+    xyz:offer_id "2560185e-3d32-4f13-ae46-0f11d30900cf";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "40685";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-291412a2-f700-41f3-af55-add3f2caaa90 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-0b1ba09a92a0;
+    xyz:offer_id "291412a2-f700-41f3-af55-add3f2caaa90";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39768";
+    xyz:offer_service_area "";
+    xyz:offer_title "Therapie";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-2e67834c-0437-4df2-91e8-2dd22fbb9761 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-e5825845ec99;
+    xyz:offer_id "2e67834c-0437-4df2-91e8-2dd22fbb9761";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39525";
+    xyz:offer_service_area "";
+    xyz:offer_title "Alkohol, Drogen, Medikamente";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-36888454-211d-4788-86fd-cf9e24b15c47 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-5d398166be1d;
+    xyz:offer_id "36888454-211d-4788-86fd-cf9e24b15c47";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38130";
+    xyz:offer_service_area "";
+    xyz:offer_title "Schuldnerberatung";
+    xyz:offer_type "Schuldnerberatung".
+cdp:sp-service-470ab600-5b04-44af-996a-03adacf95add cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-26d6472c1374;
+    xyz:offer_id "470ab600-5b04-44af-996a-03adacf95add";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "42060";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-48e4160e-0dc7-4e02-87a7-36c7d317816c cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-2994111de65b;
+    xyz:offer_id "48e4160e-0dc7-4e02-87a7-36c7d317816c";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39642";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-4b7bd3f5-d291-4ce4-997a-76766b130c1d cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-3f426bb06e23;
+    xyz:offer_id "4b7bd3f5-d291-4ce4-997a-76766b130c1d";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39945";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-4d1f05fe-2287-450a-8173-dd0a92de409e cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-76a65d1e0284;
+    xyz:offer_id "4d1f05fe-2287-450a-8173-dd0a92de409e";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "41997";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-4ef68f96-e5fc-43da-81ec-e2218c5aa0d0 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-5eedb9b50f4d;
+    xyz:offer_id "4ef68f96-e5fc-43da-81ec-e2218c5aa0d0";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38137";
+    xyz:offer_service_area "";
+    xyz:offer_title "Schuldnerberatung";
+    xyz:offer_type "Schuldnerberatung".
+cdp:sp-service-52dc0081-be37-4a77-8aeb-a9807182db73 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-b38dd9770f03;
+    xyz:offer_id "52dc0081-be37-4a77-8aeb-a9807182db73";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39546";
+    xyz:offer_service_area "";
+    xyz:offer_title "Alkohol, Drogen, Medikamente";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-547e4ae8-86bc-4988-ba3f-3a967eb93d2c cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-d129edc6c7c0;
+    xyz:offer_id "547e4ae8-86bc-4988-ba3f-3a967eb93d2c";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "43795";
+    xyz:offer_service_area "";
+    xyz:offer_title "Schuldner- und Insolvenzberatung";
+    xyz:offer_type "Schuldnerberatung".
+cdp:sp-service-56f2dc2c-d600-4426-8283-6318e5ae193e cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-22bacb3e66ba;
+    xyz:offer_id "56f2dc2c-d600-4426-8283-6318e5ae193e";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39493";
+    xyz:offer_service_area "";
+    xyz:offer_title "Alkohol, Drogen, Medikamente";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-59463009-0dc7-4ee9-a9da-1a1586d5f758 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-0b1ba09a92a0;
+    xyz:offer_id "59463009-0dc7-4ee9-a9da-1a1586d5f758";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39767";
+    xyz:offer_service_area "";
+    xyz:offer_title "Alkohol, Drogen, Medikamente";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-5df1d43f-a1bd-4426-861a-740776bc0bf5 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-3566553c2771;
+    xyz:offer_id "5df1d43f-a1bd-4426-861a-740776bc0bf5";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "42069";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-6174c7db-3094-47af-96cd-6b311e6519d5 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-8cd376cf1e9b;
+    xyz:offer_id "6174c7db-3094-47af-96cd-6b311e6519d5";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "40687";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-65ff6fa3-50ad-42b8-8ea0-334fa21411ea cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-0b9063df5a3d;
+    xyz:offer_id "65ff6fa3-50ad-42b8-8ea0-334fa21411ea";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "42025";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-6619535c-0cba-4dd2-ac4c-8155c0e99fc1 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-5ffca2009b09;
+    xyz:offer_id "6619535c-0cba-4dd2-ac4c-8155c0e99fc1";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39535";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-6ddceda5-9cfe-4839-bbbc-72c6ca36dc42 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-b13dbf846d92;
+    xyz:offer_id "6ddceda5-9cfe-4839-bbbc-72c6ca36dc42";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "41996";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-6e36389f-e8eb-46fa-9aad-f0545a52eed9 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-fca583452123;
+    xyz:offer_id "6e36389f-e8eb-46fa-9aad-f0545a52eed9";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39966";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-734dec00-404e-4495-87da-a5b05cbe04d1 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-edecb73a7ccd;
+    xyz:offer_id "734dec00-404e-4495-87da-a5b05cbe04d1";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "42387";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-73889a10-0cb7-418a-99ae-3d00490fc2c5 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-637b892c95e5;
+    xyz:offer_id "73889a10-0cb7-418a-99ae-3d00490fc2c5";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38127";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-75d6bbf2-53a7-4e58-9cae-c39b7db04d08 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-22bacb3e66ba;
+    xyz:offer_id "75d6bbf2-53a7-4e58-9cae-c39b7db04d08";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39494";
+    xyz:offer_service_area "";
+    xyz:offer_title "Prävention";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-80504bfb-065a-4c2f-8322-1c66f2314215 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-099477725993;
+    xyz:offer_id "80504bfb-065a-4c2f-8322-1c66f2314215";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "42077";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-8781c5b4-7491-4d4e-96b3-5444320bcd62 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-190bf50de5f8;
+    xyz:offer_id "8781c5b4-7491-4d4e-96b3-5444320bcd62";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39500";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-89f72b03-57e1-49b7-92a3-5325d010c15a cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-1c53e2675f37;
+    xyz:offer_id "89f72b03-57e1-49b7-92a3-5325d010c15a";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39524";
+    xyz:offer_service_area "";
+    xyz:offer_title "Spielsucht";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-8b9a6770-9713-456d-9cbd-0e78dd57c6fc cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-3d8240d9c4f0;
+    xyz:offer_id "8b9a6770-9713-456d-9cbd-0e78dd57c6fc";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38462";
+    xyz:offer_service_area "";
+    xyz:offer_title "Drogen";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-8c9cf315-dcac-4768-ac3c-6c7904ee02f6 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-06a4d554f5d1;
+    xyz:offer_id "8c9cf315-dcac-4768-ac3c-6c7904ee02f6";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "41980";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-8cbdbb11-ad12-41af-942e-bd56ab43fdf9 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-f0014df88f6e;
+    xyz:offer_id "8cbdbb11-ad12-41af-942e-bd56ab43fdf9";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38469";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-8f3df874-b04d-4dbd-b9cb-00fa8c5fafb8 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-8061a5ed1dfa;
+    xyz:offer_id "8f3df874-b04d-4dbd-b9cb-00fa8c5fafb8";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39533";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-8fa0d6d8-7de5-480d-9f8c-9ac8fdb3a3f0 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-cabd526f84ee;
+    xyz:offer_id "8fa0d6d8-7de5-480d-9f8c-9ac8fdb3a3f0";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39963";
+    xyz:offer_service_area "";
+    xyz:offer_title "Drogen";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-9175cb15-471f-4b1a-bdc0-4b30c6564838 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-18da9e9e4e40;
+    xyz:offer_id "9175cb15-471f-4b1a-bdc0-4b30c6564838";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38111";
+    xyz:offer_service_area "";
+    xyz:offer_title "Schuldnerberatung";
+    xyz:offer_type "Schuldnerberatung".
+cdp:sp-service-9452c623-6a43-4abd-a7f9-4fd704ebf09b cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-7b4b3e328f24;
+    xyz:offer_id "9452c623-6a43-4abd-a7f9-4fd704ebf09b";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38117";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-95bb5161-c377-4ae9-8990-f7d1dee73794 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-e4ffde55a474;
+    xyz:offer_id "95bb5161-c377-4ae9-8990-f7d1dee73794";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "40857";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-9c32f9ab-0ead-4715-9a08-ab194ca20613 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-73683d75a066;
+    xyz:offer_id "9c32f9ab-0ead-4715-9a08-ab194ca20613";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "40659";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-9f9a75b1-bbfa-4ebc-a1f3-5d8e33ee0bea cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-ba72194fe961;
+    xyz:offer_id "9f9a75b1-bbfa-4ebc-a1f3-5d8e33ee0bea";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38115";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-a05abddd-8bf1-41fb-999b-cf2a203e73a9 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-4b116e029e4e;
+    xyz:offer_id "a05abddd-8bf1-41fb-999b-cf2a203e73a9";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38122";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-a176f0cd-4cab-4ef5-839c-e631205532d3 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-3914c95a28c6;
+    xyz:offer_id "a176f0cd-4cab-4ef5-839c-e631205532d3";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "42379";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-a236dca3-d753-45de-aeef-11c4abbdf8fe cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-5aacf2d3fe99;
+    xyz:offer_id "a236dca3-d753-45de-aeef-11c4abbdf8fe";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39952";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-a42b05a2-f5f9-47d5-80e4-89c59dc108f6 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-5b015aea0669;
+    xyz:offer_id "a42b05a2-f5f9-47d5-80e4-89c59dc108f6";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "42036";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-a712f7b1-c6ce-457e-a624-c20985e298e2 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-4e61de934830;
+    xyz:offer_id "a712f7b1-c6ce-457e-a624-c20985e298e2";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39528";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-a76d5b8c-dc17-4bd5-ac66-c1ebef01fd99 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-83c38d334a74;
+    xyz:offer_id "a76d5b8c-dc17-4bd5-ac66-c1ebef01fd99";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38126";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-a8363bac-47b5-434e-8030-e5a3c1b2c955 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-7f6633297963;
+    xyz:offer_id "a8363bac-47b5-434e-8030-e5a3c1b2c955";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38121";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-ab01a076-1149-4cf9-87f8-426e69fd023d cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-cabd526f84ee;
+    xyz:offer_id "ab01a076-1149-4cf9-87f8-426e69fd023d";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39964";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-b207ca50-8a53-4c80-ab1d-ffdd22c4d1b0 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-899db198647c;
+    xyz:offer_id "b207ca50-8a53-4c80-ab1d-ffdd22c4d1b0";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "42062";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-b9a1e77f-19d2-465a-b4d5-8d7500af1822 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-31789d0bb80a;
+    xyz:offer_id "b9a1e77f-19d2-465a-b4d5-8d7500af1822";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "42070";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-bcabb817-4189-4f57-a297-7633a5def138 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-6fb4df45f3f0;
+    xyz:offer_id "bcabb817-4189-4f57-a297-7633a5def138";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38123";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-bed14473-8569-4274-a883-8ff0ad18642b cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-19021420bffa;
+    xyz:offer_id "bed14473-8569-4274-a883-8ff0ad18642b";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39969";
+    xyz:offer_service_area "";
+    xyz:offer_title "Alkohol";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-c5e938a0-67be-4120-a84d-d1c665e91b08 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-f8614c53870b;
+    xyz:offer_id "c5e938a0-67be-4120-a84d-d1c665e91b08";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39496";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-c709c064-7c41-4867-97c5-c8c5b6072dc8 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-e5825845ec99;
+    xyz:offer_id "c709c064-7c41-4867-97c5-c8c5b6072dc8";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39526";
+    xyz:offer_service_area "";
+    xyz:offer_title "Prävention";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-cc6c8c5f-d188-4d58-8e52-2d71f3fb71e1 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-f0686b841790;
+    xyz:offer_id "cc6c8c5f-d188-4d58-8e52-2d71f3fb71e1";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "41988";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-cccce6c9-2579-42c3-ba8c-ebc4c1d8e1b7 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-1b4456a420fe;
+    xyz:offer_id "cccce6c9-2579-42c3-ba8c-ebc4c1d8e1b7";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "40101";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-d4d11a2b-95a9-4184-bedd-36e2029e90ef cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-3426d9bbdb18;
+    xyz:offer_id "d4d11a2b-95a9-4184-bedd-36e2029e90ef";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39729";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-d82695a4-b850-4030-a7a0-b477fe601905 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-b38dd9770f03;
+    xyz:offer_id "d82695a4-b850-4030-a7a0-b477fe601905";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39547";
+    xyz:offer_service_area "";
+    xyz:offer_title "Prävention";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-dfe3aa6c-870b-40af-aba0-2a719cde9845 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-70f55007f511;
+    xyz:offer_id "dfe3aa6c-870b-40af-aba0-2a719cde9845";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "42065";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-e2490c38-045b-4f89-832f-80c964cccbe4 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-436bb091cce9;
+    xyz:offer_id "e2490c38-045b-4f89-832f-80c964cccbe4";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "40686";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-e431346b-48b5-4c8d-a407-716d44dbd2c3 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-67a2c59ed7fa;
+    xyz:offer_id "e431346b-48b5-4c8d-a407-716d44dbd2c3";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39986";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-e7db815d-e83b-413d-9b98-2d453f282815 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-0fcddfa501d9;
+    xyz:offer_id "e7db815d-e83b-413d-9b98-2d453f282815";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "41995";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-e8f84b6e-3967-49cc-ac41-afee7cc10226 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-758b427e17fc;
+    xyz:offer_id "e8f84b6e-3967-49cc-ac41-afee7cc10226";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "40681";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-e93a3858-5443-4fde-bfcd-5e0e88b48c02 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-0e60f01a9bb6;
+    xyz:offer_id "e93a3858-5443-4fde-bfcd-5e0e88b48c02";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "40134";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-ecf9b2a3-678b-4e9d-a4e5-631934952249 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-4240a59c4e5b;
+    xyz:offer_id "ecf9b2a3-678b-4e9d-a4e5-631934952249";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "38112";
+    xyz:offer_service_area "";
+    xyz:offer_title "Wohnungsnothilfe";
+    xyz:offer_type "Wohnungsnotfallhilfe".
+cdp:sp-service-f2c028aa-4477-46a3-be8e-f33c01989abc cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-59ee688f57e3;
+    xyz:offer_id "f2c028aa-4477-46a3-be8e-f33c01989abc";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39534";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-f31da316-b268-4632-bfa6-de8c9bb66953 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-3d053776eb63;
+    xyz:offer_id "f31da316-b268-4632-bfa6-de8c9bb66953";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39532";
+    xyz:offer_service_area "";
+    xyz:offer_title "Allgemeine Suchtberatung";
+    xyz:offer_type "Suchtberatung".
+cdp:sp-service-ff7ef8f0-979d-4250-9e9f-9f6cfcc3cae4 cdp:fromSource cdp:sozialplattformSource;
+    cdp:targetSchema cdp:angebotSchema;
+    cdp:providedBy cdp:sp-org-19021420bffa;
+    xyz:offer_id "ff7ef8f0-979d-4250-9e9f-9f6cfcc3cae4";
+    xyz:offer_langcode "de";
+    xyz:offer_nid "39970";
+    xyz:offer_service_area "";
+    xyz:offer_title "Drogen";
+    xyz:offer_type "Suchtberatung".

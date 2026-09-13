@@ -1,0 +1,74 @@
+@prefix :      <https://civic-data.de/sosuse/query-example#> .
+@prefix cdp:   <https://civic-data.de/pipeline#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+:inventory a cdp:QueryExample ;
+    cdp:order 1 ;
+    rdfs:label "Bestand nach Entitätstyp"@de ;
+    cdp:query """PREFIX schema: <http://schema.org/>
+PREFIX org: <http://www.w3.org/ns/org#>
+
+# Wie viele Träger, Einrichtungen, Angebote und Adressen enthält der Datenpool?
+SELECT ?type ?label (COUNT(DISTINCT ?entity) AS ?entities) WHERE {
+    VALUES (?type ?label) {
+        (schema:Organization "Träger")
+        (org:OrganizationalUnit "Einrichtung")
+        (schema:Service "Angebot")
+        (schema:PostalAddress "Adresse")
+    }
+    ?entity a ?type .
+}
+GROUP BY ?type ?label
+ORDER BY DESC(?entities)""" .
+
+:facilities a cdp:QueryExample ;
+    cdp:order 2 ;
+    rdfs:label "Einrichtungen mit Adresse"@de ;
+    cdp:query """PREFIX schema: <http://schema.org/>
+PREFIX org: <http://www.w3.org/ns/org#>
+
+SELECT ?einrichtung ?name ?category ?street ?postalCode ?locality WHERE {
+    ?einrichtung a org:OrganizationalUnit ;
+        schema:name ?name ;
+        schema:address ?address .
+    ?address schema:streetAddress ?street .
+    OPTIONAL { ?einrichtung schema:category ?category }
+    OPTIONAL { ?address schema:postalCode ?postalCode }
+    OPTIONAL { ?address schema:addressLocality ?locality }
+}
+ORDER BY LCASE(STR(?name))
+LIMIT 100""" .
+
+:postalCodes a cdp:QueryExample ;
+    cdp:order 3 ;
+    rdfs:label "Einrichtungen je Postleitzahl"@de ;
+    cdp:query """PREFIX schema: <http://schema.org/>
+PREFIX org: <http://www.w3.org/ns/org#>
+
+SELECT ?postalCode ?locality (COUNT(DISTINCT ?einrichtung) AS ?facilities) WHERE {
+    ?einrichtung a org:OrganizationalUnit ;
+        schema:address ?address .
+    ?address schema:postalCode ?postalCode .
+    OPTIONAL { ?address schema:addressLocality ?locality }
+}
+GROUP BY ?postalCode ?locality
+ORDER BY ?postalCode ?locality""" .
+
+:servicesVisual a cdp:QueryExample ;
+    cdp:order 101 ;
+    rdfs:label "Angebote mit Anbieter"@de ;
+    cdp:visualFrom cdp:angebotSchema ;
+    cdp:visualBranch [
+        cdp:visualThrough cdp:t-provider ;
+        cdp:visualTo cdp:einrichtungSchema
+    ] .
+
+:facilitiesAddressAndOrganisationVisual a cdp:QueryExample ;
+    cdp:order 102 ;
+    rdfs:label "Einrichtungen mit Adresse und Träger"@de ;
+    cdp:visualFrom cdp:einrichtungSchema ;
+    cdp:visualBranch
+        [ cdp:visualThrough cdp:t-address ;
+          cdp:visualTo cdp:adresseSchema ],
+        [ cdp:visualThrough cdp:t-parentOrganization ;
+          cdp:visualTo cdp:traegerSchema ] .

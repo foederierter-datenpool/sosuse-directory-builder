@@ -1,0 +1,46 @@
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX cdf: <https://civic-data.de/federated-directory#>
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+INSERT {
+    GRAPH <urn:mapped> {
+        ?entity a <http://www.w3.org/ns/org#OrganizationalUnit> ; cdp:fromSource cdp:dhsSource .
+        ?entity schema:availableService ?angebote .
+        ?entity schema:availableService ?arbeit .
+        ?entity schema:category ?art .
+        ?entity schema:accessibilitySummary ?barrierefrei .
+        ?entity schema:alternateName ?department .
+        ?entity schema:mainEntityOfPage ?detailLink .
+        ?entity schema:email ?email .
+        ?entity schema:identifier ?entryId .
+        ?entity schema:name ?name .
+        ?entity schema:telephone ?telefon .
+        ?entity cdf:parentOrgClassification ?traeger .
+        ?entity foaf:homepage ?website .
+        ?entity schema:openingHours ?zeiten .
+        ?entity schema:audience ?zielgruppe .
+    }
+} WHERE {
+    GRAPH <urn:source:dhs> {
+        ?entity cdp:fromSource cdp:dhsSource .
+        OPTIONAL { ?entity cdp:targetSchema ?_ts }
+        FILTER(!bound(?_ts) || ?_ts = cdp:einrichtungSchema)
+        OPTIONAL { ?entity xyz:angebote ?angebote . FILTER(isLiteral(?angebote) && REPLACE(STR(?angebote), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:arbeit ?arbeit . FILTER(isLiteral(?arbeit) && REPLACE(STR(?arbeit), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:art ?art . FILTER(isLiteral(?art) && REPLACE(STR(?art), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:barrierefrei ?barrierefrei . FILTER(isLiteral(?barrierefrei) && REPLACE(STR(?barrierefrei), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:department ?department . FILTER(isLiteral(?department) && REPLACE(STR(?department), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:detailLink ?detailLink . FILTER(isLiteral(?detailLink) && REPLACE(STR(?detailLink), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:email ?email . FILTER(isLiteral(?email) && REPLACE(STR(?email), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:entryId ?entryId . FILTER(isLiteral(?entryId) && REPLACE(STR(?entryId), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:name ?name . FILTER(isLiteral(?name) && REPLACE(STR(?name), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:telefon ?telefon . FILTER(isLiteral(?telefon) && REPLACE(STR(?telefon), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:traeger ?traeger . FILTER(isLiteral(?traeger) && REPLACE(STR(?traeger), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:website ?website . FILTER(isLiteral(?website) && REPLACE(STR(?website), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:zeiten ?zeiten . FILTER(isLiteral(?zeiten) && REPLACE(STR(?zeiten), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:zielgruppe ?zielgruppe . FILTER(isLiteral(?zielgruppe) && REPLACE(STR(?zielgruppe), "\\s+", "") != "") }
+    }
+}

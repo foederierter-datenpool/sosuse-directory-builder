@@ -1,0 +1,24 @@
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX cdf: <https://civic-data.de/federated-directory#>
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+INSERT {
+    GRAPH <urn:mapped> {
+        ?entity a schema:PostalAddress ; cdp:fromSource cdp:dhsSource .
+        ?entity schema:streetAddress ?streetAddress .
+        ?entity schema:postalCode ?postalCode .
+        ?entity schema:addressLocality ?addressLocality .
+    }
+} WHERE {
+    GRAPH <urn:source:dhs> {
+        ?entity cdp:fromSource cdp:dhsSource .
+        OPTIONAL { ?entity cdp:targetSchema ?_ts }
+        FILTER(!bound(?_ts) || ?_ts = cdp:adresseSchema)
+        OPTIONAL { ?entity xyz:streetAddress ?streetAddress . FILTER(isLiteral(?streetAddress) && REPLACE(STR(?streetAddress), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:postalCode ?postalCode . FILTER(isLiteral(?postalCode) && REPLACE(STR(?postalCode), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:addressLocality ?addressLocality . FILTER(isLiteral(?addressLocality) && REPLACE(STR(?addressLocality), "\\s+", "") != "") }
+    }
+}

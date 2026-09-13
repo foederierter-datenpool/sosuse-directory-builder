@@ -1,0 +1,18 @@
+{
+  "name": "sosuse-directory-builder",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test scripts/*.test.js",
+    "pipeline": "directory-builder",
+    "publish:pages": "node scripts/publish-pages.js",
+    "ingest": "directory-builder ingest",
+    "federate": "directory-builder federate",
+    "validate": "directory-builder validate",
+    "webapp": "directory-builder webapp",
+    "webapp:build": "directory-builder webapp build --base /sosuse-directory-builder/"
+  },
+  "dependencies": {
+    "@directory-builder/core": "^0.3.9"
+  }
+}

@@ -1,0 +1,1170 @@
+@prefix xyz: <http://sparql.xyz/facade-x/data/>.
+@prefix cdp: <https://civic-data.de/pipeline#>.
+
+_:bc_0_b31011 xyz:name "Geschäftsstellen";
+    xyz:nummer "8.3.4".
+_:bc_0_b31020 xyz:name "Geschäftsstellen";
+    xyz:nummer "8.3.4".
+_:bc_0_b31025 xyz:name "Geschäftsstellen";
+    xyz:nummer "8.3.4".
+_:bc_0_b31030 xyz:name "Ambulantes betreutes Wohnen für Menschen mit Behinderung/Menschen mit psych. Erkrankung";
+    xyz:nummer "5.3.8".
+_:bc_0_b31035 xyz:name "Beratungsstellen/ambulante Dienste";
+    xyz:nummer "3.3".
+_:bc_0_b31040 xyz:name "Beratungsstellen für erwerbslose Menschen";
+    xyz:nummer "7.3.11".
+_:bc_0_b31045 xyz:name "Schuldnerberatungsstellen/Schuldner- und Verbraucherinsolvenzberatung";
+    xyz:nummer "7.3.6".
+_:bc_0_b31050 xyz:name "Beratungsstellen für arbeitslose Jugendliche/Ausbildungsplatzvermittlung";
+    xyz:nummer "2.3.8".
+_:bc_0_b31055 xyz:name "Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    xyz:nummer "5.2.9.3".
+_:bc_0_b31060 xyz:name "Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    xyz:nummer "5.2.9.3".
+_:bc_0_b31065 xyz:name "Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    xyz:nummer "5.2.9.3".
+_:bc_0_b31074 xyz:name "Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    xyz:nummer "5.2.9.3".
+_:bc_0_b31079 xyz:name "Solitäre Tages- und/oder Nachtpflegeeinrichtungen nach § 41 SGB XI";
+    xyz:nummer "4.2.1".
+_:bc_0_b31084 xyz:name "Beratungs- und Vermittlungsstellen für FSJ/FÖJ, Au pair, Bundesfreiwilligendienst";
+    xyz:nummer "2.3.6".
+_:bc_0_b31089 xyz:name "Ambulante sozialpsychiatrische Dienste, Kontakt- und Beratungsstellen für Menschen mit psychischen Erkrankungen und Behinderungen ";
+    xyz:nummer "5.3.3".
+_:bc_0_b31094 xyz:name "Berufsvorbereitende Einrichtungen für arbeitslose Jugendliche";
+    xyz:nummer "2.2.5".
+_:bc_0_b31099 xyz:name "Berufsvorbereitende Einrichtungen für arbeitslose Jugendliche";
+    xyz:nummer "2.2.5".
+_:bc_0_b31108 xyz:name "Migrationsberatung für erwachsene Zugewanderte ";
+    xyz:nummer "6.3.1".
+_:bc_0_b31113 xyz:name "Ambulante Pflegedienste/Sozialstationen (§ 72 SGB XI bzw. § 36 SGB XI)";
+    xyz:nummer "4.3.1".
+_:bc_0_b31118 xyz:name "Ambulante Pflegedienste/Sozialstationen (§ 72 SGB XI bzw. § 36 SGB XI)";
+    xyz:nummer "4.3.1".
+_:bc_0_b31127 xyz:name "Einrichtungen der örtlichen Erholungshilfe für Kinder und Jugendliche";
+    xyz:nummer "2.2.3".
+_:bc_0_b31132 xyz:name "Einrichtungen der Tagespflege für Kinder";
+    xyz:nummer "2.2.2".
+_:bc_0_b31137 xyz:name "Zuordnung offen";
+    xyz:nummer "10.1".
+_:bc_0_b31142 xyz:name "Ambulante Pflegedienste/Sozialstationen (§ 72 SGB XI bzw. § 36 SGB XI)";
+    xyz:nummer "4.3.1".
+_:bc_0_b31147 xyz:name "Migrationsberatung für erwachsene Zugewanderte ";
+    xyz:nummer "6.3.1".
+_:bc_0_b31152 xyz:name "Jugendberatungsstellen, Jugendhilfestellen, Jugendfreizeiteinrichtungen (§11 SGB VIII)";
+    xyz:nummer "2.3.1".
+_:bc_0_b31157 xyz:name "Jugendberatungsstellen, Jugendhilfestellen, Jugendfreizeiteinrichtungen (§11 SGB VIII)";
+    xyz:nummer "2.3.1".
+_:bc_0_b31162 xyz:name "Clubs für Jugendliche";
+    xyz:nummer "10.4.2.2".
+_:bc_0_b31167 xyz:name "Seniorenbegegnungsstätten/ Seniorentagesstätten/ Seniorenfreizeitstätten";
+    xyz:nummer "4.3.2".
+_:bc_0_b31172 xyz:name "Seniorenbegegnungsstätten/ Seniorentagesstätten/ Seniorenfreizeitstätten";
+    xyz:nummer "4.3.2".
+cdp:awo-13 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:traegerSchema;
+    xyz:id "13"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Rigaer Str. 55 b";
+    xyz:plz "10115";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-1;
+    cdp:locatedAt cdp:awo-addr-341da225cab3;
+    xyz:name "AWO Kreisverband Spree-Wuhle e.V.";
+    xyz:parent_id "1"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "traeger";
+    xyz:webseite "http://www.awo-friedrichshain-kreuzberg.de";
+    xyz:category "8.3.4 Geschäftsstellen".
+cdp:awo-2 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:traegerSchema;
+    xyz:id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Hochstädter Str. 1";
+    xyz:plz "13347";
+    xyz:ort "Berlin";
+    xyz:ortsteil "Berlin-Mitte";
+    cdp:hasParent cdp:awo-1;
+    cdp:locatedAt cdp:awo-addr-5b6f6dce0519;
+    xyz:name "AWO Kreisverband Berlin-Mitte e.V.";
+    xyz:parent_id "1"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "traeger";
+    xyz:webseite "http://www.awo-mitte.de";
+    xyz:category "8.3.4 Geschäftsstellen".
+cdp:awo-4884 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:traegerSchema;
+    xyz:id "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Müllerstraße 74";
+    xyz:plz "13349";
+    xyz:ort "Berlin";
+    xyz:ortsteil "Berlin-Mitte";
+    cdp:hasParent cdp:awo-1;
+    cdp:locatedAt cdp:awo-addr-c837a6fc981e;
+    xyz:name "SPI - Stiftung Sozialpädagogisches Institut Berlin »Walter May«";
+    xyz:parent_id "1"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "traeger";
+    xyz:webseite "http://www.stiftung-spi.de/".
+cdp:awo-8801 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:traegerSchema;
+    xyz:id "8801"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:hasParent cdp:awo-1;
+    cdp:locatedAt cdp:awo-addr-1af1f1211aa9;
+    xyz:name "AWO Gemeinnützige Pflegegesellschaft mbH";
+    xyz:parent_id "1"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "traeger";
+    xyz:category "8.3.4 Geschäftsstellen".
+cdp:awo-8813 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8813"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Hochstädter Str. 1";
+    xyz:plz "13353";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-0c18019a2553;
+    xyz:name "Behindertenhilfe Betreutes Wohnen";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "5.3.8 Ambulantes betreutes Wohnen für Menschen mit Behinderung/Menschen mit psych. Erkrankung";
+    xyz:name_zusatz "".
+cdp:awo-8818 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8818"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Hochstädter Str. 1";
+    xyz:plz "13353";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-0c18019a2553;
+    xyz:name "BEW für Menschen mit Behinderung";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "Stützpunkt Turmstraße".
+cdp:awo-8845 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8845"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Hochstädter Str. 1";
+    xyz:plz "13353";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-0c18019a2553;
+    xyz:name "Wohngemeinschaft f. geistig Behinderte Hochstädter Straße";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-8850 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8850"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "";
+    xyz:plz "10115";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-4884;
+    cdp:locatedAt cdp:awo-addr-loc8968;
+    xyz:name "Berliner Zentrum für Gewaltprävention e.V.";
+    xyz:parent_id "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "3.3 Beratungsstellen/ambulante Dienste";
+    xyz:name_zusatz "".
+cdp:awo-8854 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8854"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Prinzenallee 74";
+    xyz:plz "13357";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-4884;
+    cdp:locatedAt cdp:awo-addr-d8c316125f3d;
+    xyz:name "Beratung für erwachsene Arbeitslose Stiftung SPI";
+    xyz:parent_id "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "7.3.11 Beratungsstellen für erwerbslose Menschen";
+    xyz:name_zusatz "Geschäftsbereich Stadtentwicklung".
+cdp:awo-8856 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8856"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Prinzenallee 74";
+    xyz:plz "13357";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-4884;
+    cdp:locatedAt cdp:awo-addr-d8c316125f3d;
+    xyz:name "Schuldnerberatung Stiftung SPI";
+    xyz:parent_id "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "Geschäftsbereich Stadtentwicklung".
+cdp:awo-8858 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8858"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Badstr. 33";
+    xyz:plz "13357";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-a1f454ee23b7;
+    xyz:name "Schuldner- und Insolvenzberatung";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "7.3.6 Schuldnerberatungsstellen/Schuldner- und Verbraucherinsolvenzberatung";
+    xyz:name_zusatz "".
+cdp:awo-8862 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8862"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Badstr. 33";
+    xyz:plz "13357";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-1;
+    cdp:locatedAt cdp:awo-addr-a1f454ee23b7;
+    xyz:name "Schuldnerberatung und Insolvenzberatung";
+    xyz:parent_id "1"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-8872 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8872"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Badstr. 10";
+    xyz:plz "13357";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-1;
+    cdp:locatedAt cdp:awo-addr-393899ed6bbb;
+    xyz:name "Interkulturelles Zentrum f. Mädchen und MÄDEA";
+    xyz:parent_id "1"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "2.3.8 Beratungsstellen für arbeitslose Jugendliche/Ausbildungsplatzvermittlung";
+    xyz:name_zusatz "".
+cdp:awo-8877 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8877"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Derfflingerstraße 21";
+    xyz:plz "10785";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-eed4d5a4fa31;
+    xyz:name "Integrationskindergarten in Kindertagesstätte \"Maulwurf\"";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "5.2.9.3 Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    xyz:name_zusatz "".
+cdp:awo-8879 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8879"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Putbusser Straße 30";
+    xyz:plz "13355";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-f6b62416db8d;
+    xyz:name "Integrationskindergarten in Kindertagesstätte \"Rosa Marzipan\"";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "5.2.9.3 Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    xyz:name_zusatz "".
+cdp:awo-8881 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8881"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Reinickendorferstraße 62";
+    xyz:plz "13347";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-c9cf0d7b38bd;
+    xyz:name "Integrationskindergarten in Kindertagesstätte \"Sonnenblume\"";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "5.2.9.3 Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    xyz:name_zusatz "".
+cdp:awo-8882 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8882"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Turmstraße 71";
+    xyz:plz "10551";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-bdb8a136055d;
+    xyz:name "Integrationskindergarten in Kindertagesstätte \"Kelebek\"";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "5.2.9.3 Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    xyz:name_zusatz "".
+cdp:awo-8894 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8894"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Reinickendorfer Str. 58 a";
+    xyz:plz "13347";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-1af1f1211aa9;
+    xyz:name "Gerontopsych. Tagespflege Sommergarten";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "4.2.1 Solitäre Tages- und/oder Nachtpflegeeinrichtungen nach § 41 SGB XI";
+    xyz:name_zusatz "".
+cdp:awo-8906 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8906"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Turmstraße 71";
+    xyz:plz "10551";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-bdb8a136055d;
+    xyz:name "Betreutes Einzelwohnen";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-8913 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8913"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Karl-Liebknecht-Str. 13";
+    xyz:plz "10178";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-4884;
+    cdp:locatedAt cdp:awo-addr-83ecb9baa721;
+    xyz:name "Platzmanagement Alexanderplatz Stiftung SPI Berlin";
+    xyz:parent_id "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "2.3.6 Beratungs- und Vermittlungsstellen für FSJ/FÖJ, Au pair, Bundesfreiwilligendienst";
+    xyz:name_zusatz "".
+cdp:awo-8936 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8936"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Alt-Reinickendorf 23-24";
+    xyz:plz "13407";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-1;
+    cdp:locatedAt cdp:awo-addr-3037e7c631ab;
+    xyz:name "Drogenberatung Nord";
+    xyz:parent_id "1"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "5.3.3 Ambulante sozialpsychiatrische Dienste, Kontakt- und Beratungsstellen für Menschen mit psychischen Erkrankungen und Behinderungen ";
+    xyz:name_zusatz "Stiftung SPI Berlin".
+cdp:awo-8940 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8940"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Markgrafenstr. 26";
+    xyz:plz "10117";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-4884;
+    cdp:locatedAt cdp:awo-addr-8e979697f9f4;
+    xyz:name "Tagesfreizeitstätte Werk 9";
+    xyz:parent_id "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "2.2.5 Berufsvorbereitende Einrichtungen für arbeitslose Jugendliche";
+    xyz:name_zusatz "Stiftung SPI Berlin".
+cdp:awo-8945 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8945"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Bellermannstr. 65";
+    xyz:plz "13357";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-af4a4a7be7d8;
+    xyz:name "Suchtprophylaxeprojekt für Kinder u. Jugendliche";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "2.2.5 Berufsvorbereitende Einrichtungen für arbeitslose Jugendliche";
+    xyz:name_zusatz "".
+cdp:awo-8954 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8954"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Hochstädter Str. 1";
+    xyz:plz "13347";
+    xyz:ort "Berlin";
+    xyz:ortsteil "Berlin-Mitte";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-5b6f6dce0519;
+    xyz:name "Fahrdienst für Behinderte";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-8956 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8956"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Prinzenallee 25/26";
+    xyz:plz "13359";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-07e794ee9433;
+    xyz:name "Frauenwohnprojekt";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-8971 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8971"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Groninger str. 28";
+    xyz:plz "13347";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-6ff88bc40de2;
+    xyz:name "Frauenladen";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "6.3.1 Migrationsberatung für erwachsene Zugewanderte ";
+    xyz:name_zusatz "".
+cdp:awo-8974 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8974"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:hasParent cdp:awo-8801;
+    xyz:name "AWO Sozialstation Mitte/Tiergarten";
+    xyz:parent_id "8801"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:category "4.3.1 Ambulante Pflegedienste/Sozialstationen (§ 72 SGB XI bzw. § 36 SGB XI)";
+    xyz:name_zusatz "".
+cdp:awo-8977 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8977"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:hasParent cdp:awo-8801;
+    cdp:locatedAt cdp:awo-addr-1af1f1211aa9;
+    xyz:name "AWO Sozialstation Wedding";
+    xyz:parent_id "8801"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:category "4.3.1 Ambulante Pflegedienste/Sozialstationen (§ 72 SGB XI bzw. § 36 SGB XI)";
+    xyz:name_zusatz "".
+cdp:awo-8981 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "8981"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Rosenthaler Str. 59";
+    xyz:plz "10119";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-4884;
+    cdp:locatedAt cdp:awo-addr-38be04a9789f;
+    xyz:name "Abenteuerspielplatz \"Stadt der Kinder\"";
+    xyz:parent_id "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "2.2.3 Einrichtungen der örtlichen Erholungshilfe für Kinder und Jugendliche";
+    xyz:name_zusatz "Stiftung SPI Berlin".
+cdp:awo-9007 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9007"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Hochstädter Str. 1";
+    xyz:plz "13347";
+    xyz:ort "Berlin";
+    xyz:ortsteil "Berlin-Mitte";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-5b6f6dce0519;
+    xyz:name "Familienpflege";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-9046 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9046"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Antwerpener Straße 40/42";
+    xyz:plz "13353";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-83410725f660;
+    xyz:name "Kindertagesstätte \"Pinocchio\"";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "2.2.2 Einrichtungen der Tagespflege für Kinder";
+    xyz:name_zusatz "".
+cdp:awo-9048 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9048"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Derfflingerstraße 21";
+    xyz:plz "10785";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-eed4d5a4fa31;
+    xyz:name "Kindertagesstätte \"Maulwurf\"";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-9050 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9050"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Putbusser Straße 30";
+    xyz:plz "13355";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-f6b62416db8d;
+    xyz:name "Kindertagesstätte \"Rosa Marzipan\"";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-9052 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9052"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Reinickendorferstraße 62";
+    xyz:plz "13347";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-c9cf0d7b38bd;
+    xyz:name "Kindertagesstätte \"Sonnenblume\"";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-9053 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9053"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Turmstraße 71";
+    xyz:plz "10551";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-bdb8a136055d;
+    xyz:name "Kindertagesstätte \"Kelebek\"";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-9066 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9066"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Prinzenallee 74";
+    xyz:plz "13357";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-4884;
+    cdp:locatedAt cdp:awo-addr-d8c316125f3d;
+    xyz:name "Geschäftsbereich Stadtentwicklung Stiftung SPI";
+    xyz:parent_id "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-9070 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9070"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Müllerstr. 163";
+    xyz:plz "13353";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-1;
+    cdp:locatedAt cdp:awo-addr-7bb699177b0e;
+    xyz:name "August-Bebel-Institut Institut f. Soziale Demokratie";
+    xyz:parent_id "1"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "10.1 Zuordnung offen";
+    xyz:name_zusatz "".
+cdp:awo-9078 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9078"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Reinickendorfer Str. 58 a";
+    xyz:plz "13347";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-8801;
+    cdp:locatedAt cdp:awo-addr-1af1f1211aa9;
+    xyz:name "AWO Gemeinnützige Pflegegesellschaft mbH Geschäftsstelle";
+    xyz:parent_id "8801"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "https://www.awo-pflegenetz.de";
+    xyz:category "4.3.1 Ambulante Pflegedienste/Sozialstationen (§ 72 SGB XI bzw. § 36 SGB XI)";
+    xyz:name_zusatz "".
+cdp:awo-9082 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9082"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Liebenwalder Str. 59";
+    xyz:plz "13347";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-1;
+    cdp:locatedAt cdp:awo-addr-5ac0472077e7;
+    xyz:name "Geschäftsstelle Verwaltungsstelle Zivildienst";
+    xyz:parent_id "1"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-9083 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9083"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Hochstädter Str. 1";
+    xyz:plz "13347";
+    xyz:ort "Berlin";
+    xyz:ortsteil "Berlin-Mitte";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-5b6f6dce0519;
+    xyz:name "allgem. Beratungsstelle KV Mitte e.V.";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "Kreisvorsitzender Karl-Heinz Junge".
+cdp:awo-9085 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9085"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Prinzenallee 74";
+    xyz:plz "13357";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-d8c316125f3d;
+    xyz:name "Kleiderkammer IsA-K Integration statt Ausgrenzung -Kleiderk.";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-9086 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9086"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Prinzenallee 74";
+    xyz:plz "13357";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-d8c316125f3d;
+    xyz:name "Kleiderstube";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-9093 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9093"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Stettiner Str. 12";
+    xyz:plz "13357";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-1;
+    cdp:locatedAt cdp:awo-addr-1d53dcc44bba;
+    xyz:name "Migrationsberatung für erwachsene Zuwanderer (MBE) Zentrum für Migration und Integration";
+    xyz:parent_id "1"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "6.3.1 Migrationsberatung für erwachsene Zugewanderte ";
+    xyz:name_zusatz "".
+cdp:awo-9094 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9094"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Stettiner Str. 12";
+    xyz:plz "13357";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-1;
+    cdp:locatedAt cdp:awo-addr-1d53dcc44bba;
+    xyz:name "Sozialberatung für Migrant*innen Zentrum für Migration und Integration";
+    xyz:parent_id "1"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "".
+cdp:awo-9099 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9099"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "";
+    xyz:plz "10435";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-4884;
+    cdp:locatedAt cdp:awo-addr-loc9217;
+    xyz:name "Clearingstelle Jugendhilfe/Polizei";
+    xyz:parent_id "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "2.3.1 Jugendberatungsstellen, Jugendhilfestellen, Jugendfreizeiteinrichtungen (§11 SGB VIII)";
+    xyz:name_zusatz "Stiftung SPI Berlin".
+cdp:awo-9100 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9100"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "";
+    xyz:plz "10435";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-4884;
+    cdp:locatedAt cdp:awo-addr-loc9217;
+    xyz:name "Drehscheibe Kinder - und Jugendpolitik";
+    xyz:parent_id "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "Stiftung SPI Berlin".
+cdp:awo-9101 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9101"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "";
+    xyz:plz "10435";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-4884;
+    cdp:locatedAt cdp:awo-addr-loc9217;
+    xyz:name "Berliner Büro f. Diversionsberatung u. Vermittlung";
+    xyz:parent_id "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:name_zusatz "Stiftung SPI Berlin".
+cdp:awo-9102 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9102"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Buttmannstr. 9";
+    xyz:plz "13357";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-4884;
+    cdp:locatedAt cdp:awo-addr-d4e78fd1a6a0;
+    xyz:name "Sozialpädagogische Hilfen Fallschirm, Stiftung SPI Berlin";
+    xyz:parent_id "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "2.3.1 Jugendberatungsstellen, Jugendhilfestellen, Jugendfreizeiteinrichtungen (§11 SGB VIII)";
+    xyz:name_zusatz "".
+cdp:awo-9106 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9106"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Lützowstr. 42";
+    xyz:plz "10785";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-1;
+    cdp:locatedAt cdp:awo-addr-e501f871ac90;
+    xyz:name "Jugendkulturzentrum Pumpe";
+    xyz:parent_id "1"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "10.4.2.2 Clubs für Jugendliche";
+    xyz:name_zusatz "".
+cdp:awo-9122 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9122"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Barfusstr. 22/24";
+    xyz:plz "13349";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-633fa681cf61;
+    xyz:name "Begegnungstätte Schillerpark";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "4.3.2 Seniorenbegegnungsstätten/ Seniorentagesstätten/ Seniorenfreizeitstätten";
+    xyz:name_zusatz "".
+cdp:awo-9123 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    xyz:id "9123"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:adresse "Spenerstr. 37";
+    xyz:plz "10557";
+    xyz:ort "Berlin";
+    xyz:ortsteil "";
+    cdp:hasParent cdp:awo-2;
+    cdp:locatedAt cdp:awo-addr-2172c1fe0700;
+    xyz:name "Begegnungsstätte Club 37";
+    xyz:parent_id "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:type "einrichtung";
+    xyz:webseite "";
+    xyz:category "4.3.2 Seniorenbegegnungsstätten/ Seniorentagesstätten/ Seniorenfreizeitstätten";
+    xyz:name_zusatz "".
+cdp:awo-addr-07e794ee9433 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "prinzenallee2526";
+    xyz:locationId "9074"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Prinzenallee 25-26";
+    xyz:postalCode "13359";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-0c18019a2553 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "hochstaedterstrasse1";
+    xyz:locationId "8931"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Hochstädter Straße 1";
+    xyz:postalCode "13353";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-1af1f1211aa9 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "reinickendorferstrasse58a";
+    xyz:locationId "9012"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Reinickendorfer Straße 58a";
+    xyz:postalCode "13347";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-1d53dcc44bba cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "stettinerstrasse12";
+    xyz:locationId "9211"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Stettiner Straße 12";
+    xyz:postalCode "13357";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-2172c1fe0700 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "spenerstrasse37";
+    xyz:locationId "9241"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Spenerstraße 37";
+    xyz:postalCode "10557";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-3037e7c631ab cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "altreinickendorf2324";
+    xyz:locationId "9054"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Alt-Reinickendorf 23-24";
+    xyz:postalCode "13407";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-341da225cab3 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "rigaerstrasse55b";
+    xyz:locationId "13"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Rigaer Straße 55b";
+    xyz:postalCode "10115";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-38be04a9789f cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "rosenthalerstrasse59";
+    xyz:locationId "9099"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Rosenthaler Straße 59";
+    xyz:postalCode "10119";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-393899ed6bbb cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "badstrasse10";
+    xyz:locationId "8990"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Badstraße 10";
+    xyz:postalCode "13357";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-5ac0472077e7 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "liebenwalderstrasse59";
+    xyz:locationId "9095"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Liebenwalder Straße 59";
+    xyz:postalCode "13347";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-5b6f6dce0519 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "hochstaedterstrasse1";
+    xyz:locationId "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Hochstädter Straße 1";
+    xyz:postalCode "13347";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-633fa681cf61 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "barfusstrasse2224";
+    xyz:locationId "9240"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Barfusstraße 22-24";
+    xyz:postalCode "13349";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-6ff88bc40de2 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "groningerstrasse28";
+    xyz:locationId "9089"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Groninger Straße 28";
+    xyz:postalCode "13347";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-7bb699177b0e cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "muellerstrasse163";
+    xyz:locationId "9188"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Müllerstraße 163";
+    xyz:postalCode "13353";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-83410725f660 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "antwerpenerstrasse4042";
+    xyz:locationId "9164"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Antwerpener Straße 40-42";
+    xyz:postalCode "13353";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-83ecb9baa721 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "karlliebknechtstrasse13";
+    xyz:locationId "9031"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Karl-Liebknecht-Straße 13";
+    xyz:postalCode "10178";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-8e979697f9f4 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "markgrafenstrasse26";
+    xyz:locationId "9058"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Markgrafenstraße 26";
+    xyz:postalCode "10117";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-a1f454ee23b7 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "badstrasse33";
+    xyz:locationId "8976"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Badstraße 33";
+    xyz:postalCode "13357";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-af4a4a7be7d8 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "bellermannstrasse65";
+    xyz:locationId "9063"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Bellermannstraße 65";
+    xyz:postalCode "13357";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-bdb8a136055d cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "turmstrasse71";
+    xyz:locationId "9000"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Turmstraße 71";
+    xyz:postalCode "10551";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-c837a6fc981e cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "muellerstrasse74";
+    xyz:locationId "4908"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Müllerstraße 74";
+    xyz:postalCode "13349";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-c9cf0d7b38bd cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "reinickendorferstrasse62";
+    xyz:locationId "8999"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Reinickendorferstraße 62";
+    xyz:postalCode "13347";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-d4e78fd1a6a0 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "buttmannstrasse9";
+    xyz:locationId "9220"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Buttmannstraße 9";
+    xyz:postalCode "13357";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-d8c316125f3d cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "prinzenallee74";
+    xyz:locationId "8972"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Prinzenallee 74";
+    xyz:postalCode "13357";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-e501f871ac90 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "luetzowstrasse42";
+    xyz:locationId "9224"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Lützowstraße 42";
+    xyz:postalCode "10785";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-eed4d5a4fa31 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "derfflingerstrasse21";
+    xyz:locationId "8995"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Derfflingerstraße 21";
+    xyz:postalCode "10785";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-f6b62416db8d cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "putbusserstrasse30";
+    xyz:locationId "8997"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:streetAddress "Putbusser Straße 30";
+    xyz:postalCode "13355";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-loc8968 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    xyz:locationId "8968"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:postalCode "10115";
+    xyz:addressLocality "Berlin".
+cdp:awo-addr-loc9217 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:adresseSchema;
+    xyz:locationId "9217"^^<http://www.w3.org/2001/XMLSchema#int>;
+    xyz:postalCode "10435";
+    xyz:addressLocality "Berlin".
+cdp:awo-service-12715 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12715"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8813;
+    xyz:bagfw_category _:bc_0_b31030;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12752 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12752"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8850;
+    xyz:bagfw_category _:bc_0_b31035;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12756 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12756"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8854;
+    xyz:bagfw_category _:bc_0_b31040;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12760 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12760"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8858;
+    xyz:bagfw_category _:bc_0_b31045;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12774 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12774"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8872;
+    xyz:bagfw_category _:bc_0_b31050;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12779 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12779"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8877;
+    xyz:bagfw_category _:bc_0_b31055;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12781 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12781"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8879;
+    xyz:bagfw_category _:bc_0_b31060;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12783 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12783"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8881;
+    xyz:bagfw_category _:bc_0_b31065;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12784 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12784"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8882;
+    xyz:bagfw_category _:bc_0_b31074;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12796 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12796"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8894;
+    xyz:bagfw_category _:bc_0_b31079;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12815 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12815"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8913;
+    xyz:bagfw_category _:bc_0_b31084;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12838 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12838"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8936;
+    xyz:bagfw_category _:bc_0_b31089;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12842 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12842"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8940;
+    xyz:bagfw_category _:bc_0_b31094;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12847 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12847"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8945;
+    xyz:bagfw_category _:bc_0_b31099;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12858 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12858"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8956;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12873 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12873"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8971;
+    xyz:bagfw_category _:bc_0_b31108;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12883 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12883"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8981;
+    xyz:bagfw_category _:bc_0_b31127;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12948 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12948"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-9046;
+    xyz:bagfw_category _:bc_0_b31132;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12972 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12972"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-9070;
+    xyz:bagfw_category _:bc_0_b31137;
+    xyz:areaServed "Berlin".
+cdp:awo-service-12995 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "12995"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-9093;
+    xyz:bagfw_category _:bc_0_b31147;
+    xyz:areaServed "Berlin".
+cdp:awo-service-13001 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "13001"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-9099;
+    xyz:bagfw_category _:bc_0_b31152;
+    xyz:areaServed "Berlin".
+cdp:awo-service-13004 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "13004"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-9102;
+    xyz:bagfw_category _:bc_0_b31157;
+    xyz:areaServed "Berlin".
+cdp:awo-service-13008 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "13008"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-9106;
+    xyz:bagfw_category _:bc_0_b31162;
+    xyz:areaServed "Berlin".
+cdp:awo-service-13024 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "13024"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-9122;
+    xyz:bagfw_category _:bc_0_b31167;
+    xyz:areaServed "Berlin".
+cdp:awo-service-13025 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "13025"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-9123;
+    xyz:bagfw_category _:bc_0_b31172;
+    xyz:areaServed "Berlin".
+cdp:awo-service-14 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "14"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-13;
+    xyz:bagfw_category _:bc_0_b31020;
+    xyz:areaServed "Berlin".
+cdp:awo-service-19712 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "19712"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8801;
+    xyz:bagfw_category _:bc_0_b31025;
+    xyz:areaServed "Berlin".
+cdp:awo-service-19714 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "19714"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8974;
+    xyz:bagfw_category _:bc_0_b31113.
+cdp:awo-service-19716 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "19716"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-8977;
+    xyz:bagfw_category _:bc_0_b31118;
+    xyz:areaServed "Berlin".
+cdp:awo-service-19717 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "19717"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-9078;
+    xyz:bagfw_category _:bc_0_b31142;
+    xyz:areaServed "Berlin".
+cdp:awo-service-3 cdp:fromSource cdp:awoSource;
+    cdp:targetSchema cdp:angebotSchema;
+    xyz:id "3"^^<http://www.w3.org/2001/XMLSchema#int>;
+    cdp:providedBy cdp:awo-2;
+    xyz:bagfw_category _:bc_0_b31011;
+    xyz:areaServed "Berlin".

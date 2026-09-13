@@ -1,0 +1,14 @@
+@prefix :       <https://civic-data.de/pipeline#> .
+@prefix p-plan: <http://purl.org/net/p-plan#> .
+
+:extractCaritas a :Extract, p-plan:Step ; :fromSource :caritasSource ; p-plan:isPrecededBy :liftCaritas .
+:extractSozialplattform a :Extract, p-plan:Step ; :fromSource :sozialplattformSource ; p-plan:isPrecededBy :liftSozialplattform .
+:extractDhs a :Extract, p-plan:Step ; :fromSource :dhsSource ; p-plan:isPrecededBy :liftDhs .
+:extractAwo a :Extract, p-plan:Step ; :fromSource :awoSource ; p-plan:isPrecededBy :liftAwo .
+:extractDestatis a :Extract, p-plan:Step ; :fromSource :destatisSource ; p-plan:isPrecededBy :liftDestatis .
+:mapStep a :Map, p-plan:Step ; p-plan:isPrecededBy :extractCaritas, :extractSozialplattform, :extractDhs, :extractAwo, :extractDestatis .
+:matchStep a :Match, p-plan:Step ; p-plan:isPrecededBy :mapStep .
+:mergeStep a :Merge, p-plan:Step ; p-plan:isPrecededBy :matchStep .
+:resolveStep a :Resolve, p-plan:Step ; p-plan:isPrecededBy :mergeStep .
+:enrichStep a :Enrich, p-plan:Step ; p-plan:isPrecededBy :resolveStep .
+:publishStep a :Publish, p-plan:Step ; p-plan:isPrecededBy :enrichStep .

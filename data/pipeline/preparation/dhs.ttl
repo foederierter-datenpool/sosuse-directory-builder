@@ -1,0 +1,1070 @@
+@prefix cdp: <https://civic-data.de/pipeline#>.
+
+cdp:dhs-3955 cdp:prepared _:n3-30919, _:n3-30920, _:n3-30921, _:n3-30922, _:n3-30923, _:n3-30924, _:n3-30925, _:n3-30926, _:n3-30927.
+cdp:dhs-4052 cdp:prepared _:n3-30928, _:n3-30929, _:n3-30930, _:n3-30931, _:n3-30932, _:n3-30933, _:n3-30934, _:n3-30935.
+cdp:dhs-4346 cdp:prepared _:n3-30936, _:n3-30937, _:n3-30938, _:n3-30939, _:n3-30940, _:n3-30941, _:n3-30942, _:n3-30943, _:n3-30944.
+cdp:dhs-4514 cdp:prepared _:n3-30945, _:n3-30946, _:n3-30947, _:n3-30948, _:n3-30949, _:n3-30950, _:n3-30951, _:n3-30952, _:n3-30953.
+cdp:dhs-4529 cdp:prepared _:n3-30954, _:n3-30955, _:n3-30956, _:n3-30957, _:n3-30958, _:n3-30959, _:n3-30960, _:n3-30961, _:n3-30962.
+cdp:dhs-4536 cdp:prepared _:n3-30963, _:n3-30964, _:n3-30965, _:n3-30966, _:n3-30967, _:n3-30968, _:n3-30969, _:n3-30970, _:n3-30971.
+cdp:dhs-4660 cdp:prepared _:n3-30972, _:n3-30973, _:n3-30974, _:n3-30975, _:n3-30976, _:n3-30977, _:n3-30978, _:n3-30979.
+cdp:dhs-4750 cdp:prepared _:n3-30980, _:n3-30981, _:n3-30982, _:n3-30983, _:n3-30984, _:n3-30985, _:n3-30986, _:n3-30987, _:n3-30988.
+cdp:dhs-4795 cdp:prepared _:n3-30989, _:n3-30990, _:n3-30991, _:n3-30992, _:n3-30993, _:n3-30994, _:n3-30995, _:n3-30996, _:n3-30997.
+cdp:dhs-4974 cdp:prepared _:n3-30998, _:n3-30999, _:n3-31000, _:n3-31001.
+cdp:dhs-4991 cdp:prepared _:n3-31002, _:n3-31003, _:n3-31004.
+cdp:dhs-4992 cdp:prepared _:n3-31005, _:n3-31006, _:n3-31007, _:n3-31008, _:n3-31009, _:n3-31010, _:n3-31011.
+cdp:dhs-5066 cdp:prepared _:n3-31012, _:n3-31013, _:n3-31014, _:n3-31015, _:n3-31016, _:n3-31017, _:n3-31018, _:n3-31019.
+cdp:dhs-5080 cdp:prepared _:n3-31020, _:n3-31021, _:n3-31022.
+cdp:dhs-5081 cdp:prepared _:n3-31023, _:n3-31024, _:n3-31025.
+cdp:dhs-5087 cdp:prepared _:n3-31026, _:n3-31027, _:n3-31028, _:n3-31029, _:n3-31030, _:n3-31031, _:n3-31032, _:n3-31033.
+cdp:dhs-5088 cdp:prepared _:n3-31034, _:n3-31035, _:n3-31036, _:n3-31037, _:n3-31038, _:n3-31039, _:n3-31040, _:n3-31041, _:n3-31042.
+cdp:dhs-5089 cdp:prepared _:n3-31043, _:n3-31044, _:n3-31045, _:n3-31046, _:n3-31047, _:n3-31048, _:n3-31049, _:n3-31050.
+cdp:dhs-5097 cdp:prepared _:n3-31051, _:n3-31052, _:n3-31053, _:n3-31054, _:n3-31055, _:n3-31056, _:n3-31057, _:n3-31058.
+cdp:dhs-5115 cdp:prepared _:n3-31059, _:n3-31060, _:n3-31061, _:n3-31062, _:n3-31063, _:n3-31064, _:n3-31065, _:n3-31066.
+cdp:dhs-5161 cdp:prepared _:n3-31067, _:n3-31068, _:n3-31069, _:n3-31070, _:n3-31071, _:n3-31072, _:n3-31073, _:n3-31074.
+cdp:dhs-5260 cdp:prepared _:n3-31075, _:n3-31076, _:n3-31077, _:n3-31078, _:n3-31079, _:n3-31080, _:n3-31081, _:n3-31082, _:n3-31083.
+cdp:dhs-5278 cdp:prepared _:n3-31084, _:n3-31085, _:n3-31086, _:n3-31087, _:n3-31088, _:n3-31089, _:n3-31090, _:n3-31091, _:n3-31092.
+cdp:dhs-5284 cdp:prepared _:n3-31093, _:n3-31094, _:n3-31095, _:n3-31096, _:n3-31097, _:n3-31098, _:n3-31099.
+cdp:dhs-5288 cdp:prepared _:n3-31100, _:n3-31101, _:n3-31102, _:n3-31103, _:n3-31104, _:n3-31105, _:n3-31106, _:n3-31107.
+cdp:dhs-5290 cdp:prepared _:n3-31108, _:n3-31109, _:n3-31110, _:n3-31111, _:n3-31112, _:n3-31113, _:n3-31114.
+cdp:dhs-5750 cdp:prepared _:n3-31115, _:n3-31116, _:n3-31117, _:n3-31118, _:n3-31119, _:n3-31120, _:n3-31121, _:n3-31122.
+cdp:dhs-5775 cdp:prepared _:n3-31123, _:n3-31124, _:n3-31125, _:n3-31126, _:n3-31127, _:n3-31128, _:n3-31129, _:n3-31130.
+cdp:dhs-5980 cdp:prepared _:n3-31131, _:n3-31132, _:n3-31133, _:n3-31134, _:n3-31135, _:n3-31136, _:n3-31137, _:n3-31138.
+cdp:dhs-6138 cdp:prepared _:n3-31139, _:n3-31140, _:n3-31141, _:n3-31142, _:n3-31143, _:n3-31144, _:n3-31145, _:n3-31146.
+cdp:dhs-6155 cdp:prepared _:n3-31147, _:n3-31148, _:n3-31149, _:n3-31150, _:n3-31151, _:n3-31152, _:n3-31153, _:n3-31154, _:n3-31155.
+cdp:dhs-6265 cdp:prepared _:n3-31156, _:n3-31157, _:n3-31158, _:n3-31159, _:n3-31160, _:n3-31161, _:n3-31162, _:n3-31163, _:n3-31164.
+cdp:dhs-6270 cdp:prepared _:n3-31165, _:n3-31166, _:n3-31167, _:n3-31168, _:n3-31169, _:n3-31170, _:n3-31171, _:n3-31172, _:n3-31173.
+cdp:dhs-addr-11fab7dcdfb2 cdp:matchString "brienzerstrasse22";
+    cdp:prepared _:n3-30855, _:n3-30856, _:n3-30857, _:n3-30858.
+cdp:dhs-addr-253096f5d97b cdp:matchString "kurfuerstenstrasse40";
+    cdp:prepared _:n3-30871, _:n3-30872, _:n3-30873, _:n3-30874.
+cdp:dhs-addr-256021bff712 cdp:matchString "genterstrasse63";
+    cdp:prepared _:n3-30907, _:n3-30908.
+cdp:dhs-addr-3037e7c631ab cdp:matchString "altreinickendorf2324";
+    cdp:prepared _:n3-30885, _:n3-30886.
+cdp:dhs-addr-3b184ec6b11a cdp:matchString "badstrasse35";
+    cdp:prepared _:n3-30889, _:n3-30890.
+cdp:dhs-addr-48c5b5c64bf0 cdp:matchString "muellerstrasse120";
+    cdp:prepared _:n3-30913, _:n3-30914.
+cdp:dhs-addr-4cdda2d52df7 cdp:matchString "rathenowerstrasse16haush";
+    cdp:prepared _:n3-30909, _:n3-30910.
+cdp:dhs-addr-607e9bd3af5b cdp:matchString "stromstrasse47";
+    cdp:prepared _:n3-30897, _:n3-30898.
+cdp:dhs-addr-67cc995d4582 cdp:matchString "augustenburgerplatz1";
+    cdp:prepared _:n3-30903, _:n3-30904.
+cdp:dhs-addr-6c22628912f6 cdp:matchString "turmstrasse34";
+    cdp:prepared _:n3-30851, _:n3-30852, _:n3-30853, _:n3-30854.
+cdp:dhs-addr-6f4c6fe5ae04 cdp:matchString "schoenebergerstrasse17a";
+    cdp:prepared _:n3-30901, _:n3-30902.
+cdp:dhs-addr-70d105a5b407 cdp:matchString "ruetlistrasse18";
+    cdp:prepared _:n3-30905, _:n3-30906.
+cdp:dhs-addr-7bbcab7ff166 cdp:matchString "grossehamburgerstrasse18";
+    cdp:prepared _:n3-30887, _:n3-30888.
+cdp:dhs-addr-94dc9d8e488e cdp:matchString "heinzgalinskistrasse1";
+    cdp:prepared _:n3-30847, _:n3-30848, _:n3-30849, _:n3-30850.
+cdp:dhs-addr-97eb1d64551d cdp:matchString "segitzdamm46";
+    cdp:prepared _:n3-30893, _:n3-30894.
+cdp:dhs-addr-b08134bb28c9 cdp:matchString "birkenstrasse51";
+    cdp:prepared _:n3-30895, _:n3-30896.
+cdp:dhs-addr-bda859d36348 cdp:matchString "badstrasse33a";
+    cdp:prepared _:n3-30859, _:n3-30860, _:n3-30861, _:n3-30862.
+cdp:dhs-addr-bddf51d1423e cdp:matchString "nazarethkirchstrasse42";
+    cdp:prepared _:n3-30891, _:n3-30892.
+cdp:dhs-addr-c61fd64e0aed cdp:matchString "ruschestrasse103";
+    cdp:prepared _:n3-30883, _:n3-30884.
+cdp:dhs-addr-c9b2e4384fd7 cdp:matchString "perlebergerstrasse27";
+    cdp:prepared _:n3-30911, _:n3-30912.
+cdp:dhs-addr-d50bf3ec191e cdp:matchString "obentrautstrasse57";
+    cdp:prepared _:n3-30875, _:n3-30876, _:n3-30877, _:n3-30878.
+cdp:dhs-addr-e0c59379bc26 cdp:matchString "koloniestrasse76";
+    cdp:prepared _:n3-30879, _:n3-30880, _:n3-30881, _:n3-30882.
+cdp:dhs-addr-e54acf42273a cdp:matchString "stromstra0e47";
+    cdp:prepared _:n3-30917, _:n3-30918.
+cdp:dhs-addr-e6e5c5a54caa cdp:matchString "chausseestrasse128129";
+    cdp:prepared _:n3-30863, _:n3-30864, _:n3-30865, _:n3-30866.
+cdp:dhs-addr-efff78f8a016 cdp:matchString "wartenburgstrasse8";
+    cdp:prepared _:n3-30915, _:n3-30916.
+cdp:dhs-addr-ff06e7b985af cdp:matchString "genthinerstrasse48";
+    cdp:prepared _:n3-30867, _:n3-30868, _:n3-30869, _:n3-30870.
+cdp:dhs-addr-ffe712ae2f1f cdp:matchString "luebeckerstrasse50";
+    cdp:prepared _:n3-30899, _:n3-30900.
+_:n3-30847 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Heinz-Galinski-Str. 1";
+    cdp:cleanValue "Heinz-Galinski-Straße 1".
+_:n3-30848 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "13347 Berlin";
+    cdp:cleanValue "13347".
+_:n3-30849 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "13347 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30850 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Heinz-Galinski-Str. 1";
+    cdp:cleanValue "Heinz-Galinski-Straße 1".
+_:n3-30851 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Turmstr.34";
+    cdp:cleanValue "Turmstraße 34".
+_:n3-30852 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10551 Berlin";
+    cdp:cleanValue "10551".
+_:n3-30853 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10551 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30854 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Turmstr.34";
+    cdp:cleanValue "Turmstraße 34".
+_:n3-30855 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Brienzer Str. 22";
+    cdp:cleanValue "Brienzer Straße 22".
+_:n3-30856 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "13407 Berlin";
+    cdp:cleanValue "13407".
+_:n3-30857 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "13407 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30858 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Brienzer Str. 22";
+    cdp:cleanValue "Brienzer Straße 22".
+_:n3-30859 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Badstr. 33 a";
+    cdp:cleanValue "Badstraße 33a".
+_:n3-30860 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "13357 Berlin";
+    cdp:cleanValue "13357".
+_:n3-30861 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "13357 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30862 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Badstr. 33 a";
+    cdp:cleanValue "Badstraße 33a".
+_:n3-30863 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Chausseestraße 128/129";
+    cdp:cleanValue "Chausseestraße 128-129".
+_:n3-30864 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10115 Berlin";
+    cdp:cleanValue "10115".
+_:n3-30865 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10115 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30866 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Chausseestraße 128/129";
+    cdp:cleanValue "Chausseestraße 128-129".
+_:n3-30867 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Genthiner Str. 48";
+    cdp:cleanValue "Genthiner Straße 48".
+_:n3-30868 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10785 Berlin";
+    cdp:cleanValue "10785".
+_:n3-30869 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10785 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30870 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Genthiner Str. 48";
+    cdp:cleanValue "Genthiner Straße 48".
+_:n3-30871 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Kurfürstenstr. 40";
+    cdp:cleanValue "Kurfürstenstraße 40".
+_:n3-30872 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10785 Berlin";
+    cdp:cleanValue "10785".
+_:n3-30873 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10785 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30874 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Kurfürstenstr. 40";
+    cdp:cleanValue "Kurfürstenstraße 40".
+_:n3-30875 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Obentrautstr. 57";
+    cdp:cleanValue "Obentrautstraße 57".
+_:n3-30876 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10963 Berlin";
+    cdp:cleanValue "10963".
+_:n3-30877 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10963 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30878 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Obentrautstr. 57";
+    cdp:cleanValue "Obentrautstraße 57".
+_:n3-30879 cdp:field cdp:dhs-addr-street;
+    cdp:rawValue "Koloniestr. 76";
+    cdp:cleanValue "Koloniestraße 76".
+_:n3-30880 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "13359 Berlin";
+    cdp:cleanValue "13359".
+_:n3-30881 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "13359 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30882 cdp:field cdp:destatis-addr-street;
+    cdp:rawValue "Koloniestr. 76";
+    cdp:cleanValue "Koloniestraße 76".
+_:n3-30883 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10365 Berlin";
+    cdp:cleanValue "10365".
+_:n3-30884 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10365 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30885 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "13407 Berlin";
+    cdp:cleanValue "13407".
+_:n3-30886 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "13407 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30887 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10115 Berlin";
+    cdp:cleanValue "10115".
+_:n3-30888 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10115 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30889 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "13357 Berlin";
+    cdp:cleanValue "13357".
+_:n3-30890 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "13357 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30891 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "13347 Berlin";
+    cdp:cleanValue "13347".
+_:n3-30892 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "13347 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30893 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10969 Berlin";
+    cdp:cleanValue "10969".
+_:n3-30894 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10969 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30895 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10559 Berlin";
+    cdp:cleanValue "10559".
+_:n3-30896 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10559 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30897 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10551 Berlin";
+    cdp:cleanValue "10551".
+_:n3-30898 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10551 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30899 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10559 Berlin";
+    cdp:cleanValue "10559".
+_:n3-30900 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10559 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30901 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10963 Berlin";
+    cdp:cleanValue "10963".
+_:n3-30902 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10963 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30903 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "13353 Berlin";
+    cdp:cleanValue "13353".
+_:n3-30904 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "13353 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30905 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "13407 Berlin";
+    cdp:cleanValue "13407".
+_:n3-30906 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "13407 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30907 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "13353 Berlin";
+    cdp:cleanValue "13353".
+_:n3-30908 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "13353 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30909 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10559 Berlin";
+    cdp:cleanValue "10559".
+_:n3-30910 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10559 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30911 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10559 Berlin";
+    cdp:cleanValue "10559".
+_:n3-30912 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10559 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30913 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "13349 Berlin";
+    cdp:cleanValue "13349".
+_:n3-30914 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "13349 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30915 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10963 Berlin";
+    cdp:cleanValue "10963".
+_:n3-30916 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10963 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30917 cdp:field cdp:dhs-addr-plz;
+    cdp:rawValue "10551 Berlin";
+    cdp:cleanValue "10551".
+_:n3-30918 cdp:field cdp:dhs-addr-ort;
+    cdp:rawValue "10551 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-30919 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Beratung für Angehörige";
+    cdp:cleanValue "Beratung für Angehörige".
+_:n3-30920 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten 8.00-16.00 Uhr";
+    cdp:cleanValue "8.00-16.00 Uhr".
+_:n3-30921 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-30922 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Krankenhaus/ -abteilung";
+    cdp:cleanValue "Krankenhaus/ -abteilung".
+_:n3-30923 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-30924 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Behandlung, Entzugsbehandlung";
+    cdp:cleanValue "Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Behandlung, Entzugsbehandlung".
+_:n3-30925 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Tabak, Medikamenten, Glücksspiel, Illegalen Drogen, Problematisches Essverhalten, Problematischer Mediennutzung";
+    cdp:cleanValue "Alkohol, Tabak, Medikamenten, Glücksspiel, Illegalen Drogen, Problematisches Essverhalten, Problematischer Mediennutzung".
+_:n3-30926 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 49942461";
+    cdp:cleanValue "03049942461".
+_:n3-30927 cdp:field "email";
+    cdp:rawValue "sekretariat-psychiatrie(at)jkb-online.de";
+    cdp:cleanValue "sekretariat-psychiatrie@jkb-online.de".
+_:n3-30928 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Sprechzeiten: Mo, Di, Do und Freitag: 10:00 bis 13:00Uhr";
+    cdp:cleanValue "Sprechzeiten: Mo, Di, Do und Freitag: 10:00 bis 13:00Uhr".
+_:n3-30929 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-30930 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung, Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten";
+    cdp:cleanValue "Ambulante Einrichtung, Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten".
+_:n3-30931 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-30932 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Formen des Betreuten Wohnens, Psychosoziale Betreuung Substituierter";
+    cdp:cleanValue "Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Formen des Betreuten Wohnens, Psychosoziale Betreuung Substituierter".
+_:n3-30933 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Medikamenten, Illegalen Drogen, Substitution ist Voraussetzung";
+    cdp:cleanValue "Alkohol, Medikamenten, Illegalen Drogen, Substitution ist Voraussetzung".
+_:n3-30934 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 233240380";
+    cdp:cleanValue "030233240380".
+_:n3-30935 cdp:field "email";
+    cdp:rawValue "moabit(at)notdienstberlin.de";
+    cdp:cleanValue "moabit@notdienstberlin.de".
+_:n3-30936 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Vermittlung an vereinsinterne Familienhilfe für suchterkrankte Eltern";
+    cdp:cleanValue "Vermittlung an vereinsinterne Familienhilfe für suchterkrankte Eltern".
+_:n3-30937 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Mo - Fr 9.00 -17.00";
+    cdp:cleanValue "Mo - Fr 9.00 -17.00".
+_:n3-30938 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-30939 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-30940 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-30941 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Substitutionsbehandlung, Psychosoziale Betreuung Substituierter";
+    cdp:cleanValue "Substitutionsbehandlung, Psychosoziale Betreuung Substituierter".
+_:n3-30942 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Medikamenten, Illegalen Drogen";
+    cdp:cleanValue "Medikamenten, Illegalen Drogen".
+_:n3-30943 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 233240600";
+    cdp:cleanValue "030233240600".
+_:n3-30944 cdp:field "email";
+    cdp:rawValue "lichtenberg(at)notdienstberlin.de";
+    cdp:cleanValue "lichtenberg@notdienstberlin.de".
+_:n3-30945 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)";
+    cdp:cleanValue "Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)".
+_:n3-30946 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Mo bis Do 10-17 Uhr und Fr 10-14 Uhr";
+    cdp:cleanValue "Mo bis Do 10-17 Uhr und Fr 10-14 Uhr".
+_:n3-30947 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-30948 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung, Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten";
+    cdp:cleanValue "Ambulante Einrichtung, Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten".
+_:n3-30949 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist nicht barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist nicht barrierefrei erreichbar.".
+_:n3-30950 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Formen des Betreuten Wohnens, Ambulante Behandlung, Psychosoziale Betreuung Substituierter, Suchtberatung im Justizvollzug, Hilfen zur Erziehung";
+    cdp:cleanValue "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Formen des Betreuten Wohnens, Ambulante Behandlung, Psychosoziale Betreuung Substituierter, Suchtberatung im Justizvollzug, Hilfen zur Erziehung".
+_:n3-30951 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Illegalen Drogen";
+    cdp:cleanValue "Illegalen Drogen".
+_:n3-30952 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 493 80 88";
+    cdp:cleanValue "0304938088".
+_:n3-30953 cdp:field "email";
+    cdp:rawValue "drogenhilfe-nord(at)stiftung-spi.de";
+    cdp:cleanValue "drogenhilfe-nord@stiftung-spi.de".
+_:n3-30954 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)";
+    cdp:cleanValue "Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)".
+_:n3-30955 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Mo-Do 9-17 Uhr Fr 12-15 Uhr";
+    cdp:cleanValue "Mo-Do 9-17 Uhr Fr 12-15 Uhr".
+_:n3-30956 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-30957 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-30958 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-30959 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Formen des Betreuten Wohnens, Ambulante Behandlung, Kombibehandlung, Suchtberatung im Justizvollzug";
+    cdp:cleanValue "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Formen des Betreuten Wohnens, Ambulante Behandlung, Kombibehandlung, Suchtberatung im Justizvollzug".
+_:n3-30960 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Medikamenten, Glücksspiel, Illegalen Drogen";
+    cdp:cleanValue "Alkohol, Medikamenten, Glücksspiel, Illegalen Drogen".
+_:n3-30961 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 666 33-400 / -401";
+    cdp:cleanValue "03066633400401".
+_:n3-30962 cdp:field "email";
+    cdp:rawValue "sucht-gr.hamburger(at)caritas-berlin.de";
+    cdp:cleanValue "sucht-gr.hamburger@caritas-berlin.de".
+_:n3-30963 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Beratung für Angehörige";
+    cdp:cleanValue "Beratung für Angehörige".
+_:n3-30964 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Montag bis Freitag von 10-13 Uhr";
+    cdp:cleanValue "Montag bis Freitag von 10-13 Uhr".
+_:n3-30965 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-30966 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Suchtberatungsstelle";
+    cdp:cleanValue "Suchtberatungsstelle".
+_:n3-30967 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-30968 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Beratung / Sucht- und Drogenberatung";
+    cdp:cleanValue "Ambulante Beratung / Sucht- und Drogenberatung".
+_:n3-30969 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung";
+    cdp:cleanValue "Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung".
+_:n3-30970 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 692 74 30";
+    cdp:cleanValue "0306927430".
+_:n3-30971 cdp:field "email";
+    cdp:rawValue "blaueskreuz-bkz(at)t-online.de";
+    cdp:cleanValue "blaueskreuz-bkz@t-online.de".
+_:n3-30972 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Montag bis Freitag: 9:00 bis 14:00 Uhr";
+    cdp:cleanValue "Montag bis Freitag: 9:00 bis 14:00 Uhr".
+_:n3-30973 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-30974 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten";
+    cdp:cleanValue "Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten".
+_:n3-30975 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist nicht barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist nicht barrierefrei erreichbar.".
+_:n3-30976 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Formen des Betreuten Wohnens";
+    cdp:cleanValue "Ambulante Formen des Betreuten Wohnens".
+_:n3-30977 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Medikamenten, Illegalen Drogen";
+    cdp:cleanValue "Alkohol, Medikamenten, Illegalen Drogen".
+_:n3-30978 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 28386512";
+    cdp:cleanValue "03028386512".
+_:n3-30979 cdp:field "email";
+    cdp:rawValue "wohnen(at)frausuchtzukunft.de";
+    cdp:cleanValue "wohnen@frausuchtzukunft.de".
+_:n3-30980 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Beratung für Angehörige, Kollegiale Beratung für Fachkräfte";
+    cdp:cleanValue "Beratung für Angehörige, Kollegiale Beratung für Fachkräfte".
+_:n3-30981 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Offene Sprechstunden: Montags 11 - 14 Uhr Mittwochs 15 - 18 Uhr Donnerstags 12 - 15 Uhr Außerdem Termine nach Vereinbarung von Montag bis Freitag. Telefonische Erreichbarkeit von Montag bis Freitag.";
+    cdp:cleanValue "Offene Sprechstunden: Montags 11 - 14 Uhr Mittwochs 15 - 18 Uhr Donnerstags 12 - 15 Uhr Außerdem Termine nach Vereinbarung von Montag bis Freitag. Telefonische Erreichbarkeit von Montag bis Freitag.".
+_:n3-30982 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-30983 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-30984 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist nicht barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist nicht barrierefrei erreichbar.".
+_:n3-30985 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Beratung / Sucht- und Drogenberatung, Suchtberatung im Justizvollzug, NADA-Ohrakupunktur";
+    cdp:cleanValue "Ambulante Beratung / Sucht- und Drogenberatung, Suchtberatung im Justizvollzug, NADA-Ohrakupunktur".
+_:n3-30986 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Medikamenten, Illegalen Drogen";
+    cdp:cleanValue "Alkohol, Medikamenten, Illegalen Drogen".
+_:n3-30987 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 4552093";
+    cdp:cleanValue "0304552093".
+_:n3-30988 cdp:field "email";
+    cdp:rawValue "frauenladen(at)notdienstberlin.de";
+    cdp:cleanValue "frauenladen@notdienstberlin.de".
+_:n3-30989 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Beratung für Angehörige";
+    cdp:cleanValue "Beratung für Angehörige".
+_:n3-30990 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Mo, Di, Do, Fr 9 bis 12 Uhr Dienstag 16-18 Uhr und nach telefonischer Vereinbarung";
+    cdp:cleanValue "Mo, Di, Do, Fr 9 bis 12 Uhr Dienstag 16-18 Uhr und nach telefonischer Vereinbarung".
+_:n3-30991 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-30992 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-30993 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-30994 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Beratung / Sucht- und Drogenberatung";
+    cdp:cleanValue "Ambulante Beratung / Sucht- und Drogenberatung".
+_:n3-30995 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Medikamenten";
+    cdp:cleanValue "Alkohol, Medikamenten".
+_:n3-30996 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 6143056";
+    cdp:cleanValue "0306143056".
+_:n3-30997 cdp:field "email";
+    cdp:rawValue "suchtberatung(at)diakonie-stadtmitte.de";
+    cdp:cleanValue "suchtberatung@diakonie-stadtmitte.de".
+_:n3-30998 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-30999 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist nicht barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist nicht barrierefrei erreichbar.".
+_:n3-31000 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Illegalen Drogen";
+    cdp:cleanValue "Illegalen Drogen".
+_:n3-31001 cdp:field "email";
+    cdp:rawValue "birkenstube(at)vistaberlin.de";
+    cdp:cleanValue "birkenstube@vistaberlin.de".
+_:n3-31002 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31003 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31004 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung";
+    cdp:cleanValue "Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung".
+_:n3-31005 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31006 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung, Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten";
+    cdp:cleanValue "Ambulante Einrichtung, Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten".
+_:n3-31007 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31008 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Formen des Betreuten Wohnens, Psychosoziale Betreuung Substituierter";
+    cdp:cleanValue "Ambulante Formen des Betreuten Wohnens, Psychosoziale Betreuung Substituierter".
+_:n3-31009 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung";
+    cdp:cleanValue "Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung".
+_:n3-31010 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 4652471";
+    cdp:cleanValue "0304652471".
+_:n3-31011 cdp:field "email";
+    cdp:rawValue "wohnen-wedding(at)vistaberlin.de";
+    cdp:cleanValue "wohnen-wedding@vistaberlin.de".
+_:n3-31012 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Elternarbeit (Angebote für Eltern suchtkranker Kinder)";
+    cdp:cleanValue "Elternarbeit (Angebote für Eltern suchtkranker Kinder)".
+_:n3-31013 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Montag 10.00 ? 14.00 Uhr Dienstag 10.00 ? 18.00 Uhr Donnerstag 16.00 ? 19.00 Uhr Freitag 09.00 ? 13.00 Uhr";
+    cdp:cleanValue "Montag 10.00 ? 14.00 Uhr Dienstag 10.00 ? 18.00 Uhr Donnerstag 16.00 ? 19.00 Uhr Freitag 09.00 ? 13.00 Uhr".
+_:n3-31014 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31015 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Suchtpräventionsfachstelle";
+    cdp:cleanValue "Suchtpräventionsfachstelle".
+_:n3-31016 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31017 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Suchtberatung / -Prävention im Betrieb, Präventionsberatung, Vermittlung in Hilfen";
+    cdp:cleanValue "Suchtberatung / -Prävention im Betrieb, Präventionsberatung, Vermittlung in Hilfen".
+_:n3-31018 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 29352615";
+    cdp:cleanValue "03029352615".
+_:n3-31019 cdp:field "email";
+    cdp:rawValue "info(at)berlin-suchtpraevention.de";
+    cdp:cleanValue "info@berlin-suchtpraevention.de".
+_:n3-31020 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31021 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31022 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung";
+    cdp:cleanValue "Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung".
+_:n3-31023 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31024 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31025 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung";
+    cdp:cleanValue "Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung".
+_:n3-31026 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Mo., Di., 12:00-19:00 Uhr Mi.: 14:00-19:00 Uhr Do., Fr.: 10:00-17:00 Uhr Sa.+So.: Geschlossen Konsumraum (letzter Einlass): Mo., D.: 12:00-19:00 Uhr Mi.: bis 18:30 Uhr Do., Fr.: bis 16:30 Uhr";
+    cdp:cleanValue "Mo., Di., 12:00-19:00 Uhr Mi.: 14:00-19:00 Uhr Do., Fr.: 10:00-17:00 Uhr Sa.+So.: Geschlossen Konsumraum (letzter Einlass): Mo., D.: 12:00-19:00 Uhr Mi.: bis 18:30 Uhr Do., Fr.: bis 16:30 Uhr".
+_:n3-31027 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31028 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung, Kontakt- und Anlaufstelle mit integriertem Drogenkonsumraum";
+    cdp:cleanValue "Ambulante Einrichtung, Kontakt- und Anlaufstelle mit integriertem Drogenkonsumraum".
+_:n3-31029 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist nicht barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist nicht barrierefrei erreichbar.".
+_:n3-31030 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Spritzentausch, Safer-use-Beratung, Drogennotfalltraining (Naloxonvergabe), medizinische Versorgung und Beratung sowie Vermittlung in weiterführende Einrichtungen.";
+    cdp:cleanValue "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Spritzentausch, Safer-use-Beratung, Drogennotfalltraining (Naloxonvergabe), medizinische Versorgung und Beratung sowie Vermittlung in weiterführende Einrichtungen.".
+_:n3-31031 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Illegalen Drogen";
+    cdp:cleanValue "Illegalen Drogen".
+_:n3-31032 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 447213-53";
+    cdp:cleanValue "03044721353".
+_:n3-31033 cdp:field "email";
+    cdp:rawValue "birkenstube(at)vistaberlin.de";
+    cdp:cleanValue "birkenstube@vistaberlin.de".
+_:n3-31034 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Bei Bedarf Zusammenarbeit mit Angehörigen im Rahmen der Psychosozialen Betreuung.";
+    cdp:cleanValue "Bei Bedarf Zusammenarbeit mit Angehörigen im Rahmen der Psychosozialen Betreuung.".
+_:n3-31035 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Mo, Mi, Do, Fr 10:00 - 16.30 Uhr Di 14:00- 16.30 Uhr";
+    cdp:cleanValue "Mo, Mi, Do, Fr 10:00 - 16.30 Uhr Di 14:00- 16.30 Uhr".
+_:n3-31036 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31037 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung, Betreutes Wohnen bei Substitution";
+    cdp:cleanValue "Ambulante Einrichtung, Betreutes Wohnen bei Substitution".
+_:n3-31038 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist nicht barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist nicht barrierefrei erreichbar.".
+_:n3-31039 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Formen des Betreuten Wohnens, Psychosoziale Betreuung Substituierter";
+    cdp:cleanValue "Ambulante Formen des Betreuten Wohnens, Psychosoziale Betreuung Substituierter".
+_:n3-31040 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Illegalen Drogen, Menschen in einer Substitutionsbehandlung";
+    cdp:cleanValue "Illegalen Drogen, Menschen in einer Substitutionsbehandlung".
+_:n3-31041 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 398396-29";
+    cdp:cleanValue "03039839629".
+_:n3-31042 cdp:field "email";
+    cdp:rawValue "psb-wohnen(at)vistaberlin.de";
+    cdp:cleanValue "psb-wohnen@vistaberlin.de".
+_:n3-31043 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Termine werden individuell nach Absprache vergeben. Nehmen Sie mit uns Kontakt auf!";
+    cdp:cleanValue "Termine werden individuell nach Absprache vergeben. Nehmen Sie mit uns Kontakt auf!".
+_:n3-31044 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31045 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung, Betreutes Wohnen";
+    cdp:cleanValue "Ambulante Einrichtung, Betreutes Wohnen".
+_:n3-31046 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31047 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Formen des Betreuten Wohnens";
+    cdp:cleanValue "Ambulante Formen des Betreuten Wohnens".
+_:n3-31048 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Illegalen Drogen";
+    cdp:cleanValue "Alkohol, Illegalen Drogen".
+_:n3-31049 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 465247-1";
+    cdp:cleanValue "0304652471".
+_:n3-31050 cdp:field "email";
+    cdp:rawValue "bew-wedding(at)vistaberlin.de";
+    cdp:cleanValue "bew-wedding@vistaberlin.de".
+_:n3-31051 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Telefonische Erstberatung Mo - Fr 10 bis 15 Uhr";
+    cdp:cleanValue "Telefonische Erstberatung Mo - Fr 10 bis 15 Uhr".
+_:n3-31052 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31053 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-31054 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31055 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Beratung / Sucht- und Drogenberatung, Frauen vor und während der Schwangerschaft; Prävention, Aufklärung und Weiterbildung";
+    cdp:cleanValue "Ambulante Beratung / Sucht- und Drogenberatung, Frauen vor und während der Schwangerschaft; Prävention, Aufklärung und Weiterbildung".
+_:n3-31056 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Schwangerschaft und Alkohol";
+    cdp:cleanValue "Alkohol, Schwangerschaft und Alkohol".
+_:n3-31057 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 224451-414";
+    cdp:cleanValue "030224451414".
+_:n3-31058 cdp:field "email";
+    cdp:rawValue "info(at)wigwamzero.de, wigwam-zero@vistaberlin.de";
+    cdp:cleanValue "info@wigwamzero.de, wigwam-zero@vistaberlin.de".
+_:n3-31059 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Kontaktstellen (noch im Ausbau, veränderlich) siehe www.fixpunktggmbh.org";
+    cdp:cleanValue "Kontaktstellen (noch im Ausbau, veränderlich) siehe www.fixpunktggmbh.org".
+_:n3-31060 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31061 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-31062 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31063 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Qualifizierung / Arbeitsförderung / Beschäftigung, Drogenkonsum unter pflegerischer Aufsicht, Streetwork";
+    cdp:cleanValue "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Qualifizierung / Arbeitsförderung / Beschäftigung, Drogenkonsum unter pflegerischer Aufsicht, Streetwork".
+_:n3-31064 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Illegalen Drogen";
+    cdp:cleanValue "Alkohol, Illegalen Drogen".
+_:n3-31065 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 667 011 15";
+    cdp:cleanValue "03066701115".
+_:n3-31066 cdp:field "email";
+    cdp:rawValue "ggmbh(at)fixpunktggmbh.org";
+    cdp:cleanValue "ggmbh@fixpunktggmbh.org".
+_:n3-31067 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten telefonische Anmeldung Mo.-Fr. 08:00-15:00 Uhr Termine nur nach Terminvereinbarung";
+    cdp:cleanValue "telefonische Anmeldung Mo.-Fr. 08:00-15:00 Uhr Termine nur nach Terminvereinbarung".
+_:n3-31068 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Öffentlich-rechtlicher Träger";
+    cdp:cleanValue "Öffentlich-rechtlicher Träger".
+_:n3-31069 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung, Krankenhaus/ -abteilung";
+    cdp:cleanValue "Ambulante Einrichtung, Krankenhaus/ -abteilung".
+_:n3-31070 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31071 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Beratung / Sucht- und Drogenberatung, Substitutionsbehandlung, Ambulante Behandlung, Schwangere und Frauen mit Kinderwunsch";
+    cdp:cleanValue "Ambulante Beratung / Sucht- und Drogenberatung, Substitutionsbehandlung, Ambulante Behandlung, Schwangere und Frauen mit Kinderwunsch".
+_:n3-31072 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Medikamenten, Illegalen Drogen, Schwangere mit opioidhaltiger Schmerztherapie";
+    cdp:cleanValue "Alkohol, Medikamenten, Illegalen Drogen, Schwangere mit opioidhaltiger Schmerztherapie".
+_:n3-31073 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 450564112";
+    cdp:cleanValue "030450564112".
+_:n3-31074 cdp:field "email";
+    cdp:rawValue "infektionsambulanz(at)charite.de";
+    cdp:cleanValue "infektionsambulanz@charite.de".
+_:n3-31075 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)";
+    cdp:cleanValue "Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)".
+_:n3-31076 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Montag - Donnerstag 10:00 - 13:00 Uhr";
+    cdp:cleanValue "Montag - Donnerstag 10:00 - 13:00 Uhr".
+_:n3-31077 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31078 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-31079 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31080 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Suchtberatung / -Prävention im Betrieb, Suchtberatung im Justizvollzug";
+    cdp:cleanValue "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Suchtberatung / -Prävention im Betrieb, Suchtberatung im Justizvollzug".
+_:n3-31081 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Tabak, Glücksspiel, Illegalen Drogen, psychische Erkrankungen";
+    cdp:cleanValue "Alkohol, Tabak, Glücksspiel, Illegalen Drogen, psychische Erkrankungen".
+_:n3-31082 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 4565565";
+    cdp:cleanValue "0304565565".
+_:n3-31083 cdp:field "email";
+    cdp:rawValue "info(at)bhs-tc.de";
+    cdp:cleanValue "info@bhs-tc.de".
+_:n3-31084 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Beratung für Angehörige";
+    cdp:cleanValue "Beratung für Angehörige".
+_:n3-31085 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Mo, Mi, Do, Fr: 10:00 - 15:00 Di: 11:30 - 15:00";
+    cdp:cleanValue "Mo, Mi, Do, Fr: 10:00 - 15:00 Di: 11:30 - 15:00".
+_:n3-31086 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31087 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-31088 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist nicht barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist nicht barrierefrei erreichbar.".
+_:n3-31089 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Psychosoziale Betreuung Substituierter, Suchtberatung im Justizvollzug";
+    cdp:cleanValue "Psychosoziale Betreuung Substituierter, Suchtberatung im Justizvollzug".
+_:n3-31090 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Illegalen Drogen";
+    cdp:cleanValue "Illegalen Drogen".
+_:n3-31091 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 233 240 220";
+    cdp:cleanValue "030233240220".
+_:n3-31092 cdp:field "email";
+    cdp:rawValue "PSB-GenthinerStrasse(at)notdienstberlin.de";
+    cdp:cleanValue "PSB-GenthinerStrasse@notdienstberlin.de".
+_:n3-31093 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31094 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-31095 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist nicht barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist nicht barrierefrei erreichbar.".
+_:n3-31096 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Formen des Betreuten Wohnens";
+    cdp:cleanValue "Ambulante Formen des Betreuten Wohnens".
+_:n3-31097 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Illegalen Drogen";
+    cdp:cleanValue "Alkohol, Illegalen Drogen".
+_:n3-31098 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 233 240 350";
+    cdp:cleanValue "030233240350".
+_:n3-31099 cdp:field "email";
+    cdp:rawValue "wedding(at)notdienstberlin.de";
+    cdp:cleanValue "wedding@notdienstberlin.de".
+_:n3-31100 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Mo - Sa 14:00-20:00 Medizinische Versorgung durch Krankenschwester Mo, Di, Fr 14:00-20:00 / Do 14:00-18:00 Rechtsberatung jeden 2. Dienstag im Monat";
+    cdp:cleanValue "Mo - Sa 14:00-20:00 Medizinische Versorgung durch Krankenschwester Mo, Di, Fr 14:00-20:00 / Do 14:00-18:00 Rechtsberatung jeden 2. Dienstag im Monat".
+_:n3-31101 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31102 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-31103 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist nicht barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist nicht barrierefrei erreichbar.".
+_:n3-31104 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Psychosoziale Betreuung Substituierter";
+    cdp:cleanValue "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Psychosoziale Betreuung Substituierter".
+_:n3-31105 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Illegalen Drogen";
+    cdp:cleanValue "Illegalen Drogen".
+_:n3-31106 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 2628959";
+    cdp:cleanValue "0302628959".
+_:n3-31107 cdp:field "email";
+    cdp:rawValue "olga(at)notdienstberlin.de";
+    cdp:cleanValue "olga@notdienstberlin.de".
+_:n3-31108 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31109 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Notübernachtungsstelle";
+    cdp:cleanValue "Notübernachtungsstelle".
+_:n3-31110 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist nicht barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist nicht barrierefrei erreichbar.".
+_:n3-31111 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Niedrigschwellige Hilfen, Notübernachtung";
+    cdp:cleanValue "Niedrigschwellige Hilfen, Notübernachtung".
+_:n3-31112 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Illegalen Drogen";
+    cdp:cleanValue "Alkohol, Illegalen Drogen".
+_:n3-31113 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 233 240 410";
+    cdp:cleanValue "030233240410".
+_:n3-31114 cdp:field "email";
+    cdp:rawValue "kw(at)notdienstberlin.de";
+    cdp:cleanValue "kw@notdienstberlin.de".
+_:n3-31115 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Termine nach Vereinbarung Mo bis DO 09.00 bis 16.00 Uhr Fr 09.00 bis 15.00 Uhr";
+    cdp:cleanValue "Termine nach Vereinbarung Mo bis DO 09.00 bis 16.00 Uhr Fr 09.00 bis 15.00 Uhr".
+_:n3-31116 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31117 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten";
+    cdp:cleanValue "Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten".
+_:n3-31118 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist nicht barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist nicht barrierefrei erreichbar.".
+_:n3-31119 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Formen des Betreuten Wohnens";
+    cdp:cleanValue "Ambulante Formen des Betreuten Wohnens".
+_:n3-31120 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Medikamenten, Illegalen Drogen";
+    cdp:cleanValue "Alkohol, Medikamenten, Illegalen Drogen".
+_:n3-31121 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 55443 9300";
+    cdp:cleanValue "030554439300".
+_:n3-31122 cdp:field "email";
+    cdp:rawValue "aufnahme(at)zik-ggmbh.de";
+    cdp:cleanValue "aufnahme@zik-ggmbh.de".
+_:n3-31123 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Paartherapie";
+    cdp:cleanValue "Paartherapie".
+_:n3-31124 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31125 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-31126 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31127 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Behandlung";
+    cdp:cleanValue "Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Behandlung".
+_:n3-31128 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Medikamenten, Illegalen Drogen";
+    cdp:cleanValue "Alkohol, Medikamenten, Illegalen Drogen".
+_:n3-31129 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 21021760";
+    cdp:cleanValue "03021021760".
+_:n3-31130 cdp:field "email";
+    cdp:rawValue "kibo(at)kokon.de";
+    cdp:cleanValue "kibo@kokon.de".
+_:n3-31131 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Montag, Dienstag: 10:00-17:00 Uhr Mittwoch: 10:00-15:00 Uhr Donnerstag, Freitag: 12:00-19:00 Uhr Samstag und Sonntag: 11:30-19:00 Uhr Konsumraum (letzter Einlass): Montag, Dienstag bis 16:30 Uhr Mittwoch bis 14:30 Uhr Donnerstag, Freitag bis 18:30 Uhr Samstag, Sonntag bis 18:30 Uhr";
+    cdp:cleanValue "Montag, Dienstag: 10:00-17:00 Uhr Mittwoch: 10:00-15:00 Uhr Donnerstag, Freitag: 12:00-19:00 Uhr Samstag und Sonntag: 11:30-19:00 Uhr Konsumraum (letzter Einlass): Montag, Dienstag bis 16:30 Uhr Mittwoch bis 14:30 Uhr Donnerstag, Freitag bis 18:30 Uhr Samstag, Sonntag bis 18:30 Uhr".
+_:n3-31132 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31133 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Kontaktstelle mit Drogenkonsumraum";
+    cdp:cleanValue "Kontaktstelle mit Drogenkonsumraum".
+_:n3-31134 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31135 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Vermittlung, medizinische Erstversorgung";
+    cdp:cleanValue "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Vermittlung, medizinische Erstversorgung".
+_:n3-31136 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Illegalen Drogen";
+    cdp:cleanValue "Illegalen Drogen".
+_:n3-31137 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 297735600";
+    cdp:cleanValue "030297735600".
+_:n3-31138 cdp:field "email";
+    cdp:rawValue "muehlenstube(at)vistaberlin.de";
+    cdp:cleanValue "muehlenstube@vistaberlin.de".
+_:n3-31139 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Montag bis Freitag von 9.00 - 16.00 Uhr";
+    cdp:cleanValue "Montag bis Freitag von 9.00 - 16.00 Uhr".
+_:n3-31140 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31141 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Obdachlosen-Unterkunft mit Cleananspruch";
+    cdp:cleanValue "Obdachlosen-Unterkunft mit Cleananspruch".
+_:n3-31142 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist nicht barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist nicht barrierefrei erreichbar.".
+_:n3-31143 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Suchtselbsthilfe - von Süchtigen für Süchtige";
+    cdp:cleanValue "Suchtselbsthilfe - von Süchtigen für Süchtige".
+_:n3-31144 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Illegalen Drogen";
+    cdp:cleanValue "Alkohol, Illegalen Drogen".
+_:n3-31145 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 47005041";
+    cdp:cleanValue "03047005041".
+_:n3-31146 cdp:field "email";
+    cdp:rawValue "synergie(at)haus-phoenix.de";
+    cdp:cleanValue "synergie@haus-phoenix.de".
+_:n3-31147 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)";
+    cdp:cleanValue "Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)".
+_:n3-31148 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Montag: 12:00-17:00 Uhr Dienstag: 10:00-17:00 Uhr Mittwoch: 12:00-17:00 Uhr";
+    cdp:cleanValue "Montag: 12:00-17:00 Uhr Dienstag: 10:00-17:00 Uhr Mittwoch: 12:00-17:00 Uhr".
+_:n3-31149 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Öffentlich-rechtlicher Träger";
+    cdp:cleanValue "Öffentlich-rechtlicher Träger".
+_:n3-31150 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-31151 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31152 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Beratung / Sucht- und Drogenberatung, Präventionsberatung";
+    cdp:cleanValue "Ambulante Beratung / Sucht- und Drogenberatung, Präventionsberatung".
+_:n3-31153 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Tabak, Medikamenten, Glücksspiel, Illegalen Drogen, Problematisches Essverhalten, Problematischer Mediennutzung";
+    cdp:cleanValue "Alkohol, Tabak, Medikamenten, Glücksspiel, Illegalen Drogen, Problematisches Essverhalten, Problematischer Mediennutzung".
+_:n3-31154 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 29 35 26 44";
+    cdp:cleanValue "03029352644".
+_:n3-31155 cdp:field "email";
+    cdp:rawValue "info(at)berlin-praeventionspraxis.de";
+    cdp:cleanValue "info@berlin-praeventionspraxis.de".
+_:n3-31156 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)";
+    cdp:cleanValue "Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)".
+_:n3-31157 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten Unsere Telefonzeiten finden Sie auf unserer Webseite: verhaltenssucht-berlin.de/kontakt/";
+    cdp:cleanValue "Unsere Telefonzeiten finden Sie auf unserer Webseite: verhaltenssucht-berlin.de/kontakt/".
+_:n3-31158 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31159 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-31160 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31161 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Beratung / Sucht- und Drogenberatung, Nachsorge nach stationärer Reha";
+    cdp:cleanValue "Ambulante Beratung / Sucht- und Drogenberatung, Nachsorge nach stationärer Reha".
+_:n3-31162 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Glücksspiel, Problematischer Mediennutzung, Shoppingstörung (Kaufsucht), Pornografienutzungsstörung (Pornosucht)";
+    cdp:cleanValue "Glücksspiel, Problematischer Mediennutzung, Shoppingstörung (Kaufsucht), Pornografienutzungsstörung (Pornosucht)".
+_:n3-31163 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 66633955";
+    cdp:cleanValue "03066633955".
+_:n3-31164 cdp:field "email";
+    cdp:rawValue "verhaltenssucht(at)caritas-berlin.de";
+    cdp:cleanValue "verhaltenssucht@caritas-berlin.de".
+_:n3-31165 cdp:field "arbeit";
+    cdp:rawValue "Art der Angehörigenarbeit Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)";
+    cdp:cleanValue "Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)".
+_:n3-31166 cdp:field "zeiten";
+    cdp:rawValue "Sprech-/Öffnungszeiten mo. 10 - 17 Uhr di. 10 - 17 Uhr mi. 10 - 18:30 Uhr do. 10 - 17 Uhr fr. 10 - 15:30 Uhr";
+    cdp:cleanValue "mo. 10 - 17 Uhr di. 10 - 17 Uhr mi. 10 - 18:30 Uhr do. 10 - 17 Uhr fr. 10 - 15:30 Uhr".
+_:n3-31167 cdp:field "traeger";
+    cdp:rawValue "Trägerschaft Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    cdp:cleanValue "Freie Wohlfahrtspflege / gemeinnütziger Träger".
+_:n3-31168 cdp:field "art";
+    cdp:rawValue "Art der Einrichtung, Art des Dienstes Ambulante Einrichtung";
+    cdp:cleanValue "Ambulante Einrichtung".
+_:n3-31169 cdp:field "barrierefrei";
+    cdp:rawValue "Barrierefreiheit Die Einrichtung ist barrierefrei erreichbar.";
+    cdp:cleanValue "Die Einrichtung ist barrierefrei erreichbar.".
+_:n3-31170 cdp:field "angebote";
+    cdp:rawValue "Angebote der Suchtberatung und Suchtbehandlung Ambulante Beratung / Sucht- und Drogenberatung, Suchtberatung im Justizvollzug";
+    cdp:cleanValue "Ambulante Beratung / Sucht- und Drogenberatung, Suchtberatung im Justizvollzug".
+_:n3-31171 cdp:field "zielgruppe";
+    cdp:rawValue "Zielgruppe sind Personen mit Problemen im Umgang mit... Alkohol, Cannabis, Medikamenten, Illegalen Drogen";
+    cdp:cleanValue "Alkohol, Cannabis, Medikamenten, Illegalen Drogen".
+_:n3-31172 cdp:field "telefon";
+    cdp:rawValue "Tel.: 030 22 44 51 - 100";
+    cdp:cleanValue "030224451100".
+_:n3-31173 cdp:field "email";
+    cdp:rawValue "mitte(at)vistaberlin.de";
+    cdp:cleanValue "mitte@vistaberlin.de".

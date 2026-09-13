@@ -1,0 +1,28 @@
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX cdf: <https://civic-data.de/federated-directory#>
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+INSERT {
+    GRAPH <urn:mapped> {
+        ?entity a <http://www.w3.org/ns/org#OrganizationalUnit> ; cdp:fromSource cdp:sozialplattformSource .
+        ?entity schema:email ?office_email .
+        ?entity schema:openingHours ?office_opening_hours .
+        ?entity schema:openingHours ?office_opening_hours_notes .
+        ?entity schema:telephone ?office_phone .
+        ?entity schema:name ?office_title .
+    }
+} WHERE {
+    GRAPH <urn:source:sozialplattform> {
+        ?entity cdp:fromSource cdp:sozialplattformSource .
+        OPTIONAL { ?entity cdp:targetSchema ?_ts }
+        FILTER(!bound(?_ts) || ?_ts = cdp:einrichtungSchema)
+        OPTIONAL { ?entity xyz:office_email ?office_email . FILTER(isLiteral(?office_email) && REPLACE(STR(?office_email), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:office_opening_hours ?office_opening_hours . FILTER(isLiteral(?office_opening_hours) && REPLACE(STR(?office_opening_hours), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:office_opening_hours_notes ?office_opening_hours_notes . FILTER(isLiteral(?office_opening_hours_notes) && REPLACE(STR(?office_opening_hours_notes), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:office_phone ?office_phone . FILTER(isLiteral(?office_phone) && REPLACE(STR(?office_phone), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:office_title ?office_title . FILTER(isLiteral(?office_title) && REPLACE(STR(?office_title), "\\s+", "") != "") }
+    }
+}

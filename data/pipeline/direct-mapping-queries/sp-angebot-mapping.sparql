@@ -1,0 +1,26 @@
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX cdf: <https://civic-data.de/federated-directory#>
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+INSERT {
+    GRAPH <urn:mapped> {
+        ?entity a schema:Service ; cdp:fromSource cdp:sozialplattformSource .
+        ?entity schema:identifier ?offer_id .
+        ?entity schema:name ?offer_title .
+        ?entity schema:category ?offer_type .
+        ?entity schema:areaServed ?offer_service_area .
+    }
+} WHERE {
+    GRAPH <urn:source:sozialplattform> {
+        ?entity cdp:fromSource cdp:sozialplattformSource .
+        OPTIONAL { ?entity cdp:targetSchema ?_ts }
+        FILTER(!bound(?_ts) || ?_ts = cdp:angebotSchema)
+        OPTIONAL { ?entity xyz:offer_id ?offer_id . FILTER(isLiteral(?offer_id) && REPLACE(STR(?offer_id), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:offer_title ?offer_title . FILTER(isLiteral(?offer_title) && REPLACE(STR(?offer_title), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:offer_type ?offer_type . FILTER(isLiteral(?offer_type) && REPLACE(STR(?offer_type), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:offer_service_area ?offer_service_area . FILTER(isLiteral(?offer_service_area) && REPLACE(STR(?offer_service_area), "\\s+", "") != "") }
+    }
+}

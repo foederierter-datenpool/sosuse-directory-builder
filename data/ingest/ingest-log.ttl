@@ -1,0 +1,25 @@
+@prefix :       <https://civic-data.de/pipeline#> .
+@prefix p-plan: <http://purl.org/net/p-plan#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+:fetchCaritas a :Fetch, p-plan:Step ; :fromSource :caritasSource .
+:fetchSozialplattform a :Fetch, p-plan:Step ; :fromSource :sozialplattformSource .
+:fetchDhs a :Fetch, p-plan:Step ; :fromSource :dhsSource .
+:fetchAwo a :Fetch, p-plan:Step ; :fromSource :awoSource .
+:fetchDestatis a :Fetch, p-plan:Step ; :fromSource :destatisSource .
+:liftCaritas a :Lift, p-plan:Step ; :fromSource :caritasSource ; p-plan:isPrecededBy :fetchCaritas .
+:liftSozialplattform a :Lift, p-plan:Step ; :fromSource :sozialplattformSource ; p-plan:isPrecededBy :fetchSozialplattform .
+:liftDhs a :Lift, p-plan:Step ; :fromSource :dhsSource ; p-plan:isPrecededBy :fetchDhs .
+:liftAwo a :Lift, p-plan:Step ; :fromSource :awoSource ; p-plan:isPrecededBy :fetchAwo .
+:liftDestatis a :Lift, p-plan:Step ; :fromSource :destatisSource ; p-plan:isPrecededBy :fetchDestatis .
+
+:run20260913210033 a :IngestRun ;
+    prov:startedAtTime "2026-09-13T21:00:33.764Z"^^xsd:dateTime ;
+    prov:endedAtTime   "2026-09-13T21:03:10.874Z"^^xsd:dateTime ;
+    :harvested
+        [ :ofSource :caritasSource ; prov:atTime "2026-09-13T21:00:53.883Z"^^xsd:dateTime ] ,
+        [ :ofSource :sozialplattformSource ; prov:atTime "2026-09-13T21:00:59.730Z"^^xsd:dateTime ] ,
+        [ :ofSource :dhsSource ; prov:atTime "2026-09-13T21:01:38.580Z"^^xsd:dateTime ] ,
+        [ :ofSource :awoSource ; prov:atTime "2026-09-13T21:01:38.637Z"^^xsd:dateTime ; :staticCommittedAt "2026-06-30T12:31:01+02:00"^^xsd:dateTime ] ,
+        [ :ofSource :destatisSource ; prov:atTime "2026-09-13T21:01:38.673Z"^^xsd:dateTime ; :staticCommittedAt "2026-07-14T22:45:04+02:00"^^xsd:dateTime ] .

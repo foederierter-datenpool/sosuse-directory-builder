@@ -1,0 +1,28 @@
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX cdf: <https://civic-data.de/federated-directory#>
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+INSERT {
+    GRAPH <urn:mapped> {
+        ?entity a <http://www.w3.org/ns/org#OrganizationalUnit> ; cdp:fromSource cdp:awoSource .
+        ?entity schema:name ?name .
+        ?entity schema:identifier ?id .
+        ?entity schema:alternateName ?name_zusatz .
+        ?entity foaf:homepage ?webseite .
+        ?entity schema:category ?category .
+    }
+} WHERE {
+    GRAPH <urn:source:awo> {
+        ?entity cdp:fromSource cdp:awoSource .
+        OPTIONAL { ?entity cdp:targetSchema ?_ts }
+        FILTER(!bound(?_ts) || ?_ts = cdp:einrichtungSchema)
+        OPTIONAL { ?entity xyz:name ?name . FILTER(isLiteral(?name) && REPLACE(STR(?name), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:id ?id . FILTER(isLiteral(?id) && REPLACE(STR(?id), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:name_zusatz ?name_zusatz . FILTER(isLiteral(?name_zusatz) && REPLACE(STR(?name_zusatz), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:webseite ?webseite . FILTER(isLiteral(?webseite) && REPLACE(STR(?webseite), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:category ?category . FILTER(isLiteral(?category) && REPLACE(STR(?category), "\\s+", "") != "") }
+    }
+}

@@ -1,0 +1,102 @@
+@prefix xyz: <http://sparql.xyz/facade-x/data/>.
+@prefix cdp: <https://civic-data.de/pipeline#>.
+
+cdp:destatis-0df792624e30 cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:destatis-addr-5ec52eca4985;
+    xyz:refId "0df792624e30";
+    xyz:name "SIB für Kleinstselbstständige - Schuldner- und Insolvenzberatung";
+    xyz:bundesland "Berlin";
+    xyz:strasse "Lehrter Str. 68";
+    xyz:plz "10557";
+    xyz:stadt "Berlin".
+cdp:destatis-374213b67185 cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:destatis-addr-6f5a94291572;
+    xyz:refId "374213b67185";
+    xyz:name "AWO Berlin Kreisverband Mitte e.V. - Schuldnerberatung";
+    xyz:bundesland "Berlin";
+    xyz:strasse "Wattstraße 9";
+    xyz:plz "13355";
+    xyz:stadt "Berlin".
+cdp:destatis-56b678c81c90 cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:destatis-addr-5ec52eca4985;
+    xyz:refId "56b678c81c90";
+    xyz:name "SIB für den Berliner Strafvollzug - Schuldner- und Insolvenzberatung";
+    xyz:bundesland "Berlin";
+    xyz:strasse "Lehrter Str. 68";
+    xyz:plz "10557";
+    xyz:stadt "Berlin".
+cdp:destatis-6b8f0adf685f cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:destatis-addr-663a6fb5fb8c;
+    xyz:refId "6b8f0adf685f";
+    xyz:name "AWO Berlin Spree-Wuhle e.V.";
+    xyz:bundesland "Berlin";
+    xyz:strasse "Ritterstr. 3";
+    xyz:plz "10969";
+    xyz:stadt "Berlin-Kreuzberg".
+cdp:destatis-857869480761 cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:destatis-addr-a103a10dd842;
+    xyz:refId "857869480761";
+    xyz:name "Soziale Initiative Niederlausitz e.V. - Schuldner- und Insolvenzberatung";
+    xyz:bundesland "Berlin";
+    xyz:strasse "Liebenwalder Str. 8";
+    xyz:plz "13347";
+    xyz:stadt "Berlin".
+cdp:destatis-addr-5ec52eca4985 cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "lehrterstrasse68";
+    xyz:streetAddress "Lehrter Straße 68";
+    xyz:postalCode "10557";
+    xyz:addressLocality "Berlin".
+cdp:destatis-addr-663a6fb5fb8c cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "ritterstrasse3";
+    xyz:streetAddress "Ritterstraße 3";
+    xyz:postalCode "10969";
+    xyz:addressLocality "Berlin-Kreuzberg".
+cdp:destatis-addr-6f5a94291572 cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "wattstrasse9";
+    xyz:streetAddress "Wattstraße 9";
+    xyz:postalCode "13355";
+    xyz:addressLocality "Berlin".
+cdp:destatis-addr-7bbcab7ff166 cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "grossehamburgerstrasse18";
+    xyz:streetAddress "Große Hamburger Straße 18";
+    xyz:postalCode "10115";
+    xyz:addressLocality "Berlin-Mitte".
+cdp:destatis-addr-a103a10dd842 cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "liebenwalderstrasse8";
+    xyz:streetAddress "Liebenwalder Straße 8";
+    xyz:postalCode "13347";
+    xyz:addressLocality "Berlin".
+cdp:destatis-addr-ad62efa5c2f3 cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:adresseSchema;
+    cdp:matchString "arminiusstrasse24";
+    xyz:streetAddress "Arminiusstraße 2-4";
+    xyz:postalCode "10551";
+    xyz:addressLocality "Berlin-Tiergarten".
+cdp:destatis-bd528a533cbc cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:destatis-addr-ad62efa5c2f3;
+    xyz:refId "bd528a533cbc";
+    xyz:name "Deutscher FamilienVerband e.V. - Schuldner- und Insolvenzberatung";
+    xyz:bundesland "Berlin";
+    xyz:strasse "Arminiusstr. 2-4";
+    xyz:plz "10551";
+    xyz:stadt "Berlin-Tiergarten".
+cdp:destatis-ce87403fd44c cdp:fromSource cdp:destatisSource;
+    cdp:targetSchema cdp:einrichtungSchema;
+    cdp:locatedAt cdp:destatis-addr-7bbcab7ff166;
+    xyz:refId "ce87403fd44c";
+    xyz:name "Caritasverband f. d. Erzbistum Berlin e.V. - Schuldnerberatung";
+    xyz:bundesland "Berlin";
+    xyz:strasse "Große Hamburger Str.18";
+    xyz:plz "10115";
+    xyz:stadt "Berlin-Mitte".

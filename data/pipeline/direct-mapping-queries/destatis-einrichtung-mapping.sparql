@@ -1,0 +1,22 @@
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX cdf: <https://civic-data.de/federated-directory#>
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+INSERT {
+    GRAPH <urn:mapped> {
+        ?entity a <http://www.w3.org/ns/org#OrganizationalUnit> ; cdp:fromSource cdp:destatisSource .
+        ?entity schema:identifier ?refId .
+        ?entity schema:name ?name .
+    }
+} WHERE {
+    GRAPH <urn:source:destatis> {
+        ?entity cdp:fromSource cdp:destatisSource .
+        OPTIONAL { ?entity cdp:targetSchema ?_ts }
+        FILTER(!bound(?_ts) || ?_ts = cdp:einrichtungSchema)
+        OPTIONAL { ?entity xyz:refId ?refId . FILTER(isLiteral(?refId) && REPLACE(STR(?refId), "\\s+", "") != "") }
+        OPTIONAL { ?entity xyz:name ?name . FILTER(isLiteral(?name) && REPLACE(STR(?name), "\\s+", "") != "") }
+    }
+}
