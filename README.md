@@ -64,4 +64,40 @@ npm run webapp:build   # production build → webapp/dist/
 ```
 
 ## Deployment
-Pushes to `main` trigger `.github/workflows/deploy.yml`, which runs the pipeline, builds the webapp, and force-pushes the result as a single-commit onto the `gh-pages` branch where the static webapp is being served from via GitHub Pages.
+Before publishing, set GitHub **Settings → Pages → Source** to **GitHub Actions**.
+If the `github-pages` environment restricts branches, allow `gh-pages`.
+
+From your source checkout on `main`:
+
+```sh
+npm run publish:pages                      # Run pipeline, validate, prepare commit
+npm run publish:pages -- --reuse-data       # Prepare from existing output instead
+npm run publish:pages -- --dry-run          # Optional: preview existing files only
+```
+
+Choose one command. Reusing output requires a complete `data/` matching the current
+configuration. The dry run only copies selected files into a temporary folder;
+it does not run the pipeline, commit or push.
+
+**Pushing is manual.** The script creates a single parentless commit in a temporary
+repository and prints the exact push command. Run that command when ready to
+replace remote `gh-pages`. It uses your existing Git identity and GitHub access,
+and refuses to overwrite a remote update made since preparation started.
+To enable automatic pushing, change `const PUSH_AUTOMATICALLY = false` to `true`
+at the top of `scripts/publish-pages.js`.
+
+Keep the temporary directory until you have pushed. Stay on `main` for pipeline
+work: switching to `gh-pages` and back can remove generated data from your working
+checkout.
+
+The snapshot contains configuration, webapp content/exporters, the package
+manifest, deployment workflow and generated data. Raw downloads and lifted RDF
+stay local; hidden files and old data-directory HTML indexes are excluded.
+A generated `.gitignore` hides untracked local leftovers on the publication branch.
+
+Pushing `gh-pages` triggers Actions to build and deploy the webapp. The finished
+`assets/` and `index.html` go into the Pages artifact, not the branch. Actions uses
+the published npm core package and never runs the pipeline. Pushes to `main` do
+not deploy. Check the Actions run for completion.
+
+Run the publisher tests with `npm test`; they do not harvest, commit or push.

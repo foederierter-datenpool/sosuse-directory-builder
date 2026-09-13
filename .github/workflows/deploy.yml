@@ -2,51 +2,43 @@ name: Deploy webapp
 
 on:
     push:
-        branches: [main]
-    workflow_dispatch:
+        branches: [gh-pages]
 
 permissions:
-    contents: write
+    contents: read
+    pages: write
+    id-token: write
+
+concurrency:
+    group: github-pages
+    cancel-in-progress: false
 
 jobs:
     deploy:
         runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
         steps:
             - uses: actions/checkout@v4
-              # Full history: the ingest engine runs `git log` to date static
-              # sources into the ingest log. A shallow clone has no parent to
-              # diff against, so git would misattribute the add to the
-              # HEAD/deploy commit instead of the real one.
               with:
-                  fetch-depth: 0
+                  persist-credentials: false
+
+            - run: test -s data/directory.ttl
 
             - uses: actions/setup-node@v4
               with:
                   node-version: 20
 
-            - uses: actions/setup-java@v4
-              with:
-                  distribution: temurin
-                  java-version: 21
-
-            - name: Cache sparql-anything jar
-              uses: actions/cache@v4
-              with:
-                  path: tools
-                  # The jar version is pinned in the core engine, so a core
-                  # dependency bump is what can change it.
-                  key: sparql-anything-${{ hashFiles('package.json') }}
-
             - run: npm install
 
-            - run: npm run pipeline
-
-            # webapp:build stages config/, data/ and webapp/{content,exporters}/
-            # into webapp/dist/ alongside the bundle — the complete site.
             - run: npm run webapp:build
 
-            - uses: peaceiris/actions-gh-pages@v4
+            - uses: actions/configure-pages@v5
+
+            - uses: actions/upload-pages-artifact@v4
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./webapp/dist
-                  force_orphan: true
+                  path: webapp/dist
+
+            - uses: actions/deploy-pages@v4
+              id: deployment

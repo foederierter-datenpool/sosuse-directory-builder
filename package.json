@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "test": "node --test scripts/publish-pages.test.js",
     "pipeline": "directory-builder",
+    "publish:pages": "node scripts/publish-pages.js",
     "ingest": "directory-builder ingest",
     "federate": "directory-builder federate",
     "validate": "directory-builder validate",
