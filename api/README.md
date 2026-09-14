@@ -12,11 +12,33 @@ In Coolify, create a separate resource from this sosuse repository:
 
 - Branch `main`, server `cdl-federation`, build pack **Docker Compose**.
 - Base directory `/api`, Compose file `/compose.yaml`.
-- Assign a domain to `api` targeting port **8080**, and another to `fuseki` targeting **3030**.
-- For the existing resource, **Reload Compose** after pushing, then **Redeploy**.
-  Compose starts both processes automatically.
-- On the API domain, open `/swagger-ui.html` and try **GET /directory.ttl**.
-- On the Fuseki domain, open `/directory/sparql?query=ASK%7B%7D` to test a query.
+
+Use one hostname for both services. In **Domains**, set:
+
+| Service | Domain | Target port | Path |
+| --- | --- | --- | --- |
+| `api` | Your shared hostname | `8080` | Leave empty |
+| `fuseki` | The same hostname | `3030` | `/directory/sparql` |
+
+In **Advanced**, disable **Strip Prefixes** so Fuseki receives `/directory/sparql`
+unchanged. See [Coolify's path routing documentation](https://coolify.io/docs/core/networking/domains#route-to-a-port-or-path).
+For a generated `sslip.io` test hostname, use **http** for both entries: HTTPS
+certificate issuance can hit shared Let's Encrypt rate limits. For production,
+point your own hostname at the server and use **https** for both.
+
+For the existing resource, **Reload Compose** after changing the Compose file.
+Save domain/settings changes and **Redeploy**. Compose starts both containers.
+Public URLs omit the internal target ports. The current shared test deployment is
+`http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io`:
+
+- [Swagger UI](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/swagger-ui.html)
+- [Turtle download](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/directory.ttl)
+- [SPARQL ASK query](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/directory/sparql?query=ASK%7B%7D)
+
+All three routes were verified on 2026-09-14; API readiness also returned `UP`.
+
+If SPARQL returns 404 and its error page shows `/`, prefix stripping is still active.
+For API 502 errors, check the `api` target port is `8080` and inspect its runtime logs.
 
 After a pipeline run pushes `gh-pages`, deploy the API again with a build.
 The Compose configuration disables build caching and pulls the current API base
