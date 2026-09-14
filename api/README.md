@@ -37,6 +37,10 @@ Public URLs omit the internal target ports. The current shared test deployment i
 
 All three routes were verified on 2026-09-14; API readiness also returned `UP`.
 
+The webapp's APIs page publishes these endpoints and examples through
+[`webapp/content/apis.md`](../webapp/content/apis.md), in place of core's default guide.
+Update that file too when the public hostname changes.
+
 The new REST collections use the published target schemas: `traegerSchema`,
 `einrichtungSchema`, `angebotSchema`, and `adresseSchema`. After publishing the new
 directory-api image and this Compose configuration, reload Compose and redeploy.
