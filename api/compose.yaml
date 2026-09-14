@@ -1,7 +1,11 @@
 services:
   api:
-    image: ghcr.io/foederierter-datenpool/directory-api:main
-    pull_policy: always
+    build:
+      context: .
+      no_cache: true
+      pull: true
+      args:
+        DIRECTORY_SOURCE_URL: https://raw.githubusercontent.com/foederierter-datenpool/sosuse-directory-builder/gh-pages/data/directory.ttl
     environment:
       SPRING_APPLICATION_NAME: sosuse-api
     mem_limit: 512m
