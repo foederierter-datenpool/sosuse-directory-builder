@@ -1,5 +1,7 @@
 services:
   api:
+    image: &directory-image sosuse-directory-api:local
+    pull_policy: never
     build:
       context: .
       no_cache: true
@@ -10,3 +12,13 @@ services:
       SPRING_APPLICATION_NAME: sosuse-api
     mem_limit: 512m
     restart: unless-stopped
+
+  fuseki:
+    image: *directory-image
+    pull_policy: never
+    entrypoint: ["java", "-cp", "/app/fuseki-server.jar", "org.apache.jena.fuseki.main.cmds.FusekiMainCmd"]
+    command: ["--config=/app/fuseki.ttl"]
+    mem_limit: 512m
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://localhost:3030/directory/sparql?query=ASK%7B%7D"]
