@@ -108,3 +108,6 @@ The [Coolify setup guide](deploy/README.md) covers the GitHub token, Docker Comp
 deployment, cloning the repository and starting the pipeline. The runner keeps
 its checkout and output in a persistent volume; deployment itself does not run
 the pipeline.
+
+The [API setup guide](api/README.md) covers a separate Spring Boot deployment
+using the reusable `directory-api` image and settings in `api/compose.yaml`.
