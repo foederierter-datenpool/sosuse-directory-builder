@@ -1,7 +1,7 @@
 # Sosuse API and SPARQL
 
 The instance Dockerfile takes the generic [directory-api](https://github.com/foederierter-datenpool/directory-api)
-image and downloads `directory.ttl` from `gh-pages` during the build. All API downloads
+image and downloads `directory.ttl` and `config/federation.ttl` from `gh-pages` during the build. All API downloads
 then serve that local snapshot. Fuseki loads it into memory at startup. Both
 containers use the same image. Rebuild to refresh them; a restart reloads the same data.
 
@@ -36,6 +36,14 @@ Public URLs omit the internal target ports. The current shared test deployment i
 - [SPARQL ASK query](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/directory/sparql?query=ASK%7B%7D)
 
 All three routes were verified on 2026-09-14; API readiness also returned `UP`.
+
+The new REST collections use the published target schemas: `traegerSchema`,
+`einrichtungSchema`, `angebotSchema`, and `adresseSchema`. After publishing the new
+directory-api image and this Compose configuration, reload Compose and redeploy.
+Try `/collections`, then `/collections/einrichtungSchema/items?limit=10` in Swagger.
+Follow returned `href`, relationship and `next` links for details and further pages.
+Fields, multiple values and RDF identities follow the generic
+[collection response format](https://github.com/foederierter-datenpool/directory-api#collection-responses).
 
 If SPARQL returns 404 and its error page shows `/`, prefix stripping is still active.
 For API 502 errors, check the `api` target port is `8080` and inspect its runtime logs.

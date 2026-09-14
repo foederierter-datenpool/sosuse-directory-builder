@@ -8,8 +8,10 @@ services:
       pull: true
       args:
         DIRECTORY_SOURCE_URL: https://raw.githubusercontent.com/foederierter-datenpool/sosuse-directory-builder/gh-pages/data/directory.ttl
+        FEDERATION_SOURCE_URL: https://raw.githubusercontent.com/foederierter-datenpool/sosuse-directory-builder/gh-pages/config/federation.ttl
     environment:
       SPRING_APPLICATION_NAME: sosuse-api
+      DIRECTORY_API_SPARQL_URL: http://fuseki:3030/directory/sparql
     mem_limit: 512m
     restart: unless-stopped
 
