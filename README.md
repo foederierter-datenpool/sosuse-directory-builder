@@ -65,7 +65,7 @@ npm run webapp:build   # production build → webapp/dist/
 
 ## Deployment
 Before publishing, set GitHub **Settings → Pages → Source** to **GitHub Actions**.
-If the `github-pages` environment restricts branches, allow `gh-pages`.
+If the `github-pages` environment restricts branches, allow both `main` and `gh-pages`.
 
 From your source checkout on `main`:
 
@@ -96,10 +96,14 @@ manifest, deployment workflow and generated data. Raw downloads and lifted RDF
 stay local; hidden files and old data-directory HTML indexes are excluded.
 A generated `.gitignore` hides untracked local leftovers on the publication branch.
 
-Pushing `gh-pages` triggers Actions to build and deploy the webapp. The finished
-`assets/` and `index.html` go into the Pages artifact, not the branch. Actions uses
-the published npm core package and never runs the pipeline. Pushes to `main` do
-not deploy. Check the Actions run for completion.
+Pushes to `main` or `gh-pages` build and deploy the webapp. Actions takes the package
+manifest and webapp content/exporters from `main`, and `config/` plus `data/` from
+the published `gh-pages` snapshot. Webapp edits deploy without rerunning the pipeline;
+pipeline configuration changes take effect after publishing fresh output.
+
+To rebuild manually, choose **Actions → Deploy webapp → Run workflow → main**.
+Actions installs the published npm core package and never runs the pipeline.
+The finished `assets/` and `index.html` go into the Pages artifact, not the branch.
 
 Run the publisher tests with `npm test`; they do not harvest, commit or push.
 

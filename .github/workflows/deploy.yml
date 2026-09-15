@@ -2,7 +2,8 @@ name: Deploy webapp
 
 on:
     push:
-        branches: [gh-pages]
+        branches: [main, gh-pages]
+    workflow_dispatch:
 
 permissions:
     contents: read
@@ -20,11 +21,27 @@ jobs:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
         steps:
-            - uses: actions/checkout@v4
+            - name: Check out webapp inputs from main
+              uses: actions/checkout@v4
               with:
+                  ref: ${{ github.ref == 'refs/heads/main' && github.sha || 'main' }}
                   persist-credentials: false
 
-            - run: test -s data/directory.ttl
+            - name: Check out published pipeline snapshot
+              uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.ref == 'refs/heads/gh-pages' && github.sha || 'gh-pages' }}
+                  path: .publication
+                  sparse-checkout: |
+                      config
+                      data
+                  persist-credentials: false
+
+            - name: Use published data and matching configuration
+              run: |
+                  rm -rf config data
+                  mv .publication/config .publication/data .
+                  test -s data/directory.ttl
 
             - uses: actions/setup-node@v4
               with:
