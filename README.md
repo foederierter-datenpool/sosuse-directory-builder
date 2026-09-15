@@ -65,7 +65,7 @@ npm run webapp:build   # production build → webapp/dist/
 
 ## Deployment
 Before publishing, set GitHub **Settings → Pages → Source** to **GitHub Actions**.
-If the `github-pages` environment restricts branches, allow both `main` and `gh-pages`.
+If the `github-pages` environment restricts branches, allow both `main` and `pipeline-data`.
 
 From your source checkout on `main`:
 
@@ -80,7 +80,7 @@ configuration. The dry run only copies selected files into a temporary folder;
 it does not run the pipeline, commit or push.
 
 **Pushing is automatic.** The script creates a single parentless commit and
-replaces remote `gh-pages` using force-with-lease. It refuses to overwrite a remote
+replaces remote `pipeline-data` using force-with-lease. It refuses to overwrite a remote
 update made since preparation started. Local runs use your existing Git access;
 the Coolify runner uses `GITHUB_PUSH_TOKEN` through a Git credential helper.
 To push manually instead, change `const PUSH_AUTOMATICALLY = true` to `false`
@@ -88,7 +88,7 @@ at the top of `scripts/publish-pages.js`. The script then prints the push comman
 
 In manual mode or after a failed push, keep the temporary directory until you
 have pushed. Stay on `main` for pipeline
-work: switching to `gh-pages` and back can remove generated data from your working
+work: switching to `pipeline-data` and back can remove generated data from your working
 checkout.
 
 The snapshot contains configuration, webapp content/exporters, the package
@@ -96,9 +96,9 @@ manifest, deployment workflow and generated data. Raw downloads and lifted RDF
 stay local; hidden files and old data-directory HTML indexes are excluded.
 A generated `.gitignore` hides untracked local leftovers on the publication branch.
 
-Pushes to `main` or `gh-pages` build and deploy the webapp. Actions takes the package
+Pushes to `main` or `pipeline-data` build and deploy the webapp. Actions takes the package
 manifest and webapp content/exporters from `main`, and `config/` plus `data/` from
-the published `gh-pages` snapshot. Webapp edits deploy without rerunning the pipeline;
+the published `pipeline-data` snapshot. Webapp edits deploy without rerunning the pipeline;
 pipeline configuration changes take effect after publishing fresh output.
 
 To rebuild manually, choose **Actions → Deploy webapp → Run workflow → main**.

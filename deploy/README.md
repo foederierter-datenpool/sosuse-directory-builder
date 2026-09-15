@@ -19,7 +19,7 @@ Choose:
 
 Workflows permission is needed because the publication includes `deploy.yml`.
 If GitHub marks the token pending, an organization owner must approve it before
-it can push. The branch rules must permit force pushes to `gh-pages`.
+it can push. The branch rules must permit force pushes to `pipeline-data`.
 
 Copy the token directly into Coolify in the next step. It is not a repository
 file or Docker build argument. [GitHub token documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
@@ -76,13 +76,21 @@ The image supplies Git author name/email. The publisher reads the token at runti
 ordinary Git commands otherwise retain their normal authentication behavior.
 
 This performs fetch, lift, federation, validation and an automatic force-with-lease
-push to `gh-pages`. Check the terminal for success, then the repository's **Actions**
+push to `pipeline-data`. Check the terminal for success, then the repository's **Actions**
 tab for the webapp deployment. GitHub Pages must use **GitHub Actions** as its source.
 
 For subsequent runs, use the same final command without cloning again. Redeploying
-the container preserves `/workspace` but does not update its checkout; update that
-checkout on `main` when you want newer code. Geocache updates remain local unless
-you explicitly commit them. Keep `gh-pages` out of this working checkout.
+the container preserves `/workspace` but does not update its checkout. To update
+the runner code before publishing:
+
+```sh
+cd /workspace/sosuse-directory-builder
+git pull --ff-only origin main
+npm install
+```
+
+Geocache updates remain local unless you explicitly commit them.
+Keep `pipeline-data` out of this working checkout.
 
 ## 4. Long runs
 

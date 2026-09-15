@@ -61,7 +61,7 @@ export function prepareSnapshot(root, destination) {
 export function publishPages(root, args, execute = execFileSync) {
     if (args.includes("--help")) {
         console.log("Usage: npm run publish:pages -- [--reuse-data] [--dry-run]\n"
-            + "Default: run and validate the pipeline, then push a single-commit gh-pages snapshot.\n"
+            + "Default: run and validate the pipeline, then push a single-commit pipeline-data snapshot.\n"
             + "To push manually, set PUSH_AUTOMATICALLY to false at the top of this script.\n"
             + "--reuse-data: prepare existing output without running the pipeline.\n"
             + "--dry-run: stage existing output only; no pipeline, commit or push.")
@@ -84,7 +84,7 @@ export function publishPages(root, args, execute = execFileSync) {
         auth = githubAuth(remote)
         name = gitIdentity("user.name", "Your Name")
         email = gitIdentity("user.email", "you@example.org")
-        previous = git(...auth, "ls-remote", remote, "refs/heads/gh-pages").split(/\s/)[0]
+        previous = git(...auth, "ls-remote", remote, "refs/heads/pipeline-data").split(/\s/)[0]
         if (!args.includes("--reuse-data")) run("npm", ["run", "pipeline"])
         run("npm", ["run", "validate"])
     }
@@ -99,15 +99,15 @@ export function publishPages(root, args, execute = execFileSync) {
             return staging
         }
 
-        run("git", ["init", "--initial-branch=gh-pages"], staging)
+        run("git", ["init", "--initial-branch=pipeline-data"], staging)
         run("git", ["config", "user.name", name], staging)
         run("git", ["config", "user.email", email], staging)
         run("git", ["remote", "add", "origin", remote], staging)
         run("git", ["add", "--force", "."], staging)
         run("git", ["-c", "commit.gpgsign=false", "commit", "-m", "Publish pipeline snapshot"], staging)
         keepStaging = true
-        const pushArgs = [...auth, "push", `--force-with-lease=refs/heads/gh-pages:${previous}`, "origin",
-            "HEAD:refs/heads/gh-pages"]
+        const pushArgs = [...auth, "push", `--force-with-lease=refs/heads/pipeline-data:${previous}`, "origin",
+            "HEAD:refs/heads/pipeline-data"]
         const quote = (arg) => `'${arg.replaceAll("'", "'\\''")}'`
         const printManualPush = () => console.log("Commit prepared. To publish it, run:\n"
             + ["git", "-C", staging, ...pushArgs].map(quote).join(" ")

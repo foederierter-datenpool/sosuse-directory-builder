@@ -2,7 +2,7 @@ name: Deploy webapp
 
 on:
     push:
-        branches: [main, gh-pages]
+        branches: [main, pipeline-data]
     workflow_dispatch:
 
 permissions:
@@ -30,7 +30,7 @@ jobs:
             - name: Check out published pipeline snapshot
               uses: actions/checkout@v4
               with:
-                  ref: ${{ github.ref == 'refs/heads/gh-pages' && github.sha || 'gh-pages' }}
+                  ref: ${{ github.ref == 'refs/heads/pipeline-data' && github.sha || 'pipeline-data' }}
                   path: .publication
                   sparse-checkout: |
                       config

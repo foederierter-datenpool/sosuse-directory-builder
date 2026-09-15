@@ -102,7 +102,7 @@ test("pushes automatically with a lease and retains the commit if the push fails
         if (args[0] === "init") staging = options.cwd
         if (args[0] === "remote" && args[1] === "get-url") return "git@example.org:example/site.git\n"
         if (args[0] === "config" && args.length === 2) return "Test\n"
-        if (args[0] === "ls-remote") return `${"a".repeat(40)}\trefs/heads/gh-pages\n`
+        if (args[0] === "ls-remote") return `${"a".repeat(40)}\trefs/heads/pipeline-data\n`
         if (args[0] === "push" && rejectPush) throw new Error("Push rejected")
         return ""
     }
@@ -110,15 +110,15 @@ test("pushes automatically with a lease and retains the commit if the push fails
     publishPages(root, ["--reuse-data"], execute)
     assert.equal(calls.some((call) => call.includes("commit")), true)
     assert.ok(calls.some((call) => call[1] === "push"
-        && call.includes(`--force-with-lease=refs/heads/gh-pages:${"a".repeat(40)}`)))
+        && call.includes(`--force-with-lease=refs/heads/pipeline-data:${"a".repeat(40)}`)))
     assert.equal(fs.existsSync(staging), false)
     assert.equal(messages.some((message) => message.includes("To publish it, run:")), false)
     rejectPush = true
     assert.throws(() => publishPages(root, ["--reuse-data"], execute), /Push rejected/)
     assert.equal(fs.existsSync(path.join(staging, "data/directory.ttl")), true)
     assert.equal(messages.some((message) => message.includes(staging)
-        && message.includes(`--force-with-lease=refs/heads/gh-pages:${"a".repeat(40)}`)
-        && message.includes("HEAD:refs/heads/gh-pages")), true)
+        && message.includes(`--force-with-lease=refs/heads/pipeline-data:${"a".repeat(40)}`)
+        && message.includes("HEAD:refs/heads/pipeline-data")), true)
 })
 
 test("missing Git identity explains the fix before processing or publication", (t) => {
@@ -161,7 +161,7 @@ test("runtime token authenticates both the remote check and push without appeari
             networkCalls.push(actual[0])
             assert.ok(args.some((arg) => arg.startsWith("credential.helper=!f()")))
         }
-        if (actual[0] === "ls-remote") return `${"a".repeat(40)}\trefs/heads/gh-pages\n`
+        if (actual[0] === "ls-remote") return `${"a".repeat(40)}\trefs/heads/pipeline-data\n`
         return ""
     }
     publishPages(root, ["--reuse-data"], execute)
