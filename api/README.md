@@ -1,9 +1,25 @@
 # Sosuse API and SPARQL
 
 The instance Dockerfile takes the generic [directory-api](https://github.com/foederierter-datenpool/directory-api)
-image and downloads `directory.ttl` and `config/federation.ttl` from `gh-pages` during the build. All API downloads
-then serve that local snapshot. Fuseki loads it into memory at startup. Both
+image and downloads one `gh-pages` archive during the build. Every published Turtle
+file except `data/directory.ttl` and those under `data/pipeline/extracted/` and
+`data/pipeline/preparation/` becomes a named graph;
+only `data/directory.ttl` populates the default graph.
+The API download serves that local directory snapshot. Fuseki loads the graphs into memory at startup. Both
 containers use the same image. Rebuild to refresh them; a restart reloads the same data.
+
+For local Fuseki, with `directory-api` checked out beside this repository and
+JDK 25 installed, run from the sosuse repository:
+
+```sh
+npm run fuseki
+```
+
+Run `npm run pipeline` first if `data/directory.ttl` is missing. The endpoint is
+`http://localhost:3030/directory/sparql`. Ctrl+C stops it; restart after a pipeline run.
+Local execution reads the pipeline files in place. Docker builds download and unpack
+`SNAPSHOT_URL` from Compose. Both run the same `directory-fuseki.jar` launcher and use the
+same graph selection, without copying data into a second local dataset.
 
 First push directory-api, wait for **Build API image**, and make its GitHub container
 package **Public**. Push this sosuse configuration too.
@@ -40,6 +56,13 @@ All three routes were verified on 2026-09-14; API readiness also returned `UP`.
 The webapp's APIs page publishes these endpoints and examples through
 [`webapp/content/apis.md`](../webapp/content/apis.md), in place of core's default guide.
 Update that file too when the public hostname changes.
+
+Named graph URNs follow file paths, e.g. `urn:directory:data/pipeline/merged.ttl`
+and `urn:directory:config/federation.ttl`. The finished directory is only in the
+default graph. The API page has queries for graph discovery, statement provenance
+and competing values.
+New published `.ttl` files are included automatically on the next build. Raw and
+lifted files remain excluded by the publication script.
 
 The new REST collections use the published target schemas: `traegerSchema`,
 `einrichtungSchema`, `angebotSchema`, and `adresseSchema`. After publishing the new

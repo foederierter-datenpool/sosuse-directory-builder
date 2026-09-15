@@ -8,6 +8,7 @@
     "publish:pages": "node scripts/publish-pages.js",
     "ingest": "directory-builder ingest",
     "federate": "directory-builder federate",
+    "fuseki": "../directory-api/gradlew -p ../directory-api fusekiDist -q && java -jar ../directory-api/build/fuseki/directory-fuseki.jar .",
     "validate": "directory-builder validate",
     "webapp": "directory-builder webapp",
     "webapp:build": "directory-builder webapp build --base /sosuse-directory-builder/"
