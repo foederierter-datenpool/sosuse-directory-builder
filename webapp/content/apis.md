@@ -165,3 +165,69 @@ HAVING (COUNT(DISTINCT ?value) > 1)
 The REST API provides predefined calls for browsing collections and retrieving entities. It can be extended with further methods for common use cases.
 
 [Open Swagger to explore the methods and try them out](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/swagger-ui.html), or view the [OpenAPI description](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/v3/api-docs).
+
+## GraphQL: select fields and follow relationships
+
+The read-only GraphQL API lets you choose fields and follow connections, such as Einrichtungen and their addresses, in one request. [Open GraphiQL for schema documentation and a query editor](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/graphiql). Queries go to `/graphql` on the same host.
+
+```graphql
+{
+  einrichtungSchema(limit: 5) {
+    id
+    name
+    address { postalCode addressLocality }
+  }
+}
+```
+
+GraphQL reads the finished directory. For named graphs, provenance and full RDF values, use SPARQL.
+
+<details>
+<summary>More GraphQL examples</summary>
+
+**Contact details, opening hours and Träger**
+
+Skip the first ten Einrichtungen and retrieve the next ten with their parent organizations:
+
+```graphql
+{
+  einrichtungSchema(limit: 10, offset: 10) {
+    id
+    name
+    telephone
+    email
+    openingHours
+    parentOrganization { id name homepage }
+  }
+}
+```
+
+**Angebote and their providers**
+
+A provider can be an Einrichtung or a Träger. Inline fragments select fields for each type; `__typename` identifies which one was returned.
+
+```graphql
+{
+  angebotSchema(limit: 5) {
+    id
+    name
+    provider {
+      __typename
+      ... on Entity_einrichtungSchema {
+        id
+        name
+        address { streetAddress postalCode addressLocality }
+      }
+      ... on Entity_traegerSchema {
+        id
+        name
+        homepage
+      }
+    }
+  }
+}
+```
+
+</details>
+
+[GraphQL-LD clients](https://github.com/rubensworks/GraphQL-LD.js) can also use the SPARQL endpoint with a JSON-LD context. This is separate from the typed GraphQL API above.
