@@ -162,13 +162,13 @@ HAVING (COUNT(DISTINCT ?value) > 1)
 
 ## REST API: convenience access
 
-The REST API provides predefined calls for browsing collections and retrieving entities. It can be extended with further methods for common use cases.
+The REST API provides predefined calls for browsing collections and retrieving entities. It can be extended with further methods for common use cases. Both REST and GraphQL query the SPARQL endpoint behind the scenes.
 
 [Open Swagger to explore the methods and try them out](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/swagger-ui.html), or view the [OpenAPI description](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/v3/api-docs).
 
 ## GraphQL: select fields and follow relationships
 
-The read-only GraphQL API lets you choose fields and follow connections, such as Einrichtungen and their addresses, in one request. [Open GraphiQL for schema documentation and a query editor](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/graphiql). Queries go to `/graphql` on the same host.
+The read-only GraphQL API lets you choose fields and follow connections, such as Einrichtungen and their addresses, in one request. [Open GraphiQL for schema documentation and a query editor](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/graphiql?query=%7B%0A%20%20einrichtungSchema%28limit%3A%205%29%20%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20address%20%7B%20postalCode%20addressLocality%20%7D%0A%20%20%7D%0A%7D). Queries go to `/graphql` on the same host.
 
 ```graphql
 {
