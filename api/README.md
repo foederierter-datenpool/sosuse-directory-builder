@@ -44,12 +44,12 @@ point your own hostname at the server and use **https** for all.
 
 For the existing resource, **Reload Compose** after changing the Compose file.
 Save domain/settings changes and **Redeploy**. Compose starts Fuseki, then the API.
-Public URLs omit the internal target ports. The current shared test deployment is
-`http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io`:
+Public URLs omit the internal target ports. The current deployment is
+`https://sosue.correlaid.org`:
 
-- [Swagger UI](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/swagger-ui.html)
-- [Turtle download](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/directory.ttl)
-- [SPARQL ASK query](http://bntqrhrnf22fyrc3js1g6rug.88.99.121.103.sslip.io/directory/sparql?query=ASK%7B%7D)
+- [Swagger UI](https://sosue.correlaid.org/swagger-ui.html)
+- [Turtle download](https://sosue.correlaid.org/directory.ttl)
+- [SPARQL ASK query](https://sosue.correlaid.org/directory/sparql?query=ASK%7B%7D)
 
 Publish the updated `directory-api` image, push this Compose configuration, reload
 Compose and rebuild the existing resource. GraphQL shares the `api` service on port
