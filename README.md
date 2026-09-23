@@ -55,6 +55,15 @@ await pipeline.run() // ingest + federate
 ```
 Outputs &rarr; `data/`
 
+The DHS fetcher deduplicates entries across the configured postal codes,
+checks HTTP status and page content, and retries transient failures. It downloads
+up to three detail pages concurrently and fails the harvest if any discovered
+detail page cannot be retrieved and verified.
+
+DHS groups up to 50 HTML pages per file to reduce Java process launches during
+lift. Core detects these chunks automatically and splits the lifted RDF into
+one file per page for extraction.
+
 ## Run the webapp
 The webapp ships with `@directory-builder/core`; this repo holds no webapp
 code — only the modules and prose under `webapp/` it injects at runtime.
@@ -105,7 +114,8 @@ To rebuild manually, choose **Actions → Deploy webapp → Run workflow → mai
 Actions installs the published npm core package and never runs the pipeline.
 The finished `assets/` and `index.html` go into the Pages artifact, not the branch.
 
-Run the publisher tests with `npm test`; they do not harvest, commit or push.
+Run the fetcher and publisher tests with `npm test`; they do not harvest live
+data, commit or push.
 
 ## Run on Coolify
 The [Coolify setup guide](deploy/README.md) covers the GitHub token, Docker Compose

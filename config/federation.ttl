@@ -226,8 +226,6 @@ org:OrganizationalUnit rdfs:label "Einrichtung"@de .
     :fetchUrl     "https://www.dhs.de/service/suchthilfeverzeichnis/" ;
     :retrieval    "API" ;
     :format       ft:HTML ;
-    # Passed to the lift query as a SPARQL Anything variable
-    :hasLiftParam [ :name "selector" ; :value "html" ] ;
     :hasEntity  :dhs-einrichtung, :dhs-address .
 
 :dhs-einrichtung a :SourceEntity ;
