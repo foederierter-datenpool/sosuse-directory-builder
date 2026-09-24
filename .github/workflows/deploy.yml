@@ -37,17 +37,21 @@ jobs:
                       data
                   persist-credentials: false
 
-            - name: Use published data and matching configuration
-              run: |
-                  rm -rf config data
-                  mv .publication/config .publication/data .
-                  test -s data/directory.ttl
-
             - uses: actions/setup-node@v4
               with:
                   node-version: 20
 
             - run: npm install
+
+            - name: Build vocabulary from main configuration
+              run: npm run vocabulary:build
+
+            - name: Stage published snapshot with current vocabulary
+              run: |
+                  cp data/target-vocabulary.ttl .publication/data/target-vocabulary.ttl
+                  rm -rf config data
+                  mv .publication/config .publication/data .
+                  test -s data/directory.ttl
 
             - run: npm run webapp:build
 

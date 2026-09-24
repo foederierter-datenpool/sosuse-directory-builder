@@ -108,8 +108,10 @@ A generated `.gitignore` hides untracked local leftovers on the publication bran
 
 Pushes to `main` or `pipeline-data` build and deploy the webapp. Actions takes the package
 manifest and webapp content/exporters from `main`, and `config/` plus `data/` from
-the published `pipeline-data` snapshot. Webapp edits deploy without rerunning the pipeline;
-pipeline configuration changes take effect after publishing fresh output.
+the published `pipeline-data` snapshot. It regenerates `data/target-vocabulary.ttl`
+from `main`'s `config/federation.ttl` for each deployment, so the Vocabulary page
+updates without a pipeline run. Other pages use the snapshot's matching configuration
+and data; changes to the pipeline output still require publishing a fresh snapshot.
 
 To rebuild manually, choose **Actions → Deploy webapp → Run workflow → main**.
 Actions installs the published npm core package and never runs the pipeline.
