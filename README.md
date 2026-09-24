@@ -44,6 +44,7 @@ Via command (root = where you invoke):
 npm run pipeline   # ingest + federate
 npm run ingest     # fetch + lift only
 npm run federate   # extract → map → match → merge → resolve only
+npm run vocabulary:build  # federation.ttl → data/target-vocabulary.ttl (RDFS + SHACL)
 ```
 
 Or programmatically:

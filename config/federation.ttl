@@ -8,6 +8,8 @@
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
 @prefix ft:     <http://publications.europa.eu/resource/authority/file-type/> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 # ---- Federation ---------------------------------------------------------
 
@@ -28,6 +30,14 @@
 # ---- Vocabulary ---------------------------------------------------------
 
 org:OrganizationalUnit rdfs:label "Einrichtung"@de .
+
+cdf:bagfwId
+    rdfs:label "BAGFW-Code"@de, "BAGFW classification code"@en ;
+    rdfs:comment "BAGFW classification code for a service, such as 2.3.1."@en .
+
+cdf:parentOrgClassification
+    rdfs:label "Trägerkategorie"@de, "Parent organization classification"@en ;
+    rdfs:comment "Free-text classification of the parent organization, e.g. Freie Wohlfahrtspflege / gemeinnütziger Träger."@en .
 
 # ---- Target schemas -----------------------------------------------------
 
@@ -70,46 +80,183 @@ org:OrganizationalUnit rdfs:label "Einrichtung"@de .
     :hiddenByDefault true ;
     :hasTargetField :t-identifier, :t-streetAddress, :t-postalCode, :t-locality, :t-country .
 
+# :typeDerivation: :adopted = upstream, :overridden = deliberate deviation,
+# :local = our choice where upstream leaves the type open or the term is ours.
+# schema:Text/Boolean/Date map to xsd:string/boolean/date.
 # :multiValued - one value per contributing source is expected; the Merge view doesn't flag these as conflicts
-:t-identifier           a :TargetField ; :targetPredicate schema:identifier ; :multiValued true .
-:t-name                 a :TargetField ; :targetPredicate schema:name .
-:t-alternateName        a :TargetField ; :targetPredicate schema:alternateName .
-:t-description          a :TargetField ; :targetPredicate schema:description .
+:t-identifier a :TargetField ;
+    :targetPredicate schema:identifier ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    :multiValued     true ;
+    rdfs:comment     "Uses upstream Text; AWO supplies xsd:int. Resolve removes identifiers."@en .
+
+:t-name a :TargetField ;
+    :targetPredicate schema:name ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
+
+:t-alternateName a :TargetField ;
+    :targetPredicate schema:alternateName ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
+
+:t-description a :TargetField ;
+    :targetPredicate schema:description ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    rdfs:comment     "Selects upstream Text over TextObject."@en .
 
 # Address fields live on :adresseSchema entities only; the other tiers link
 # there via :t-address.
-:t-streetAddress        a :TargetField ; :targetPredicate schema:streetAddress .
-:t-postalCode           a :TargetField ; :targetPredicate schema:postalCode .
-:t-locality             a :TargetField ; :targetPredicate schema:addressLocality .
-:t-country              a :TargetField ; :targetPredicate schema:addressCountry .
+:t-streetAddress a :TargetField ;
+    :targetPredicate schema:streetAddress ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
 
-:t-areaServed           a :TargetField ; :targetPredicate schema:areaServed .
+:t-postalCode a :TargetField ;
+    :targetPredicate schema:postalCode ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
 
-:t-telephone            a :TargetField ; :targetPredicate schema:telephone ; :multiValued true .
-:t-email                a :TargetField ; :targetPredicate schema:email .
-:t-homepage             a :TargetField ; :targetPredicate foaf:homepage .
-:t-detailUrl            a :TargetField ; :targetPredicate schema:mainEntityOfPage .
+:t-locality a :TargetField ;
+    :targetPredicate schema:addressLocality ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
 
-:t-category             a :TargetField ; :targetPredicate schema:category .
-:t-availableService     a :TargetField ; :targetPredicate schema:availableService .
-:t-audience             a :TargetField ; :targetPredicate schema:audience .
-:t-accessibilitySummary a :TargetField ; :targetPredicate schema:accessibilitySummary .
-:t-openingHours         a :TargetField ; :targetPredicate schema:openingHours .
-:t-language             a :TargetField ; :targetPredicate dct:language ; :multiValued true .
-:t-isAccessibleForFree  a :TargetField ; :targetPredicate schema:isAccessibleForFree .
-:t-parentOrganization   a :TargetField ; :targetPredicate schema:parentOrganization .
-:t-provider             a :TargetField ; :targetPredicate schema:provider .
+:t-country a :TargetField ;
+    :targetPredicate schema:addressCountry ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    rdfs:comment     "Country codes such as DE use the upstream Text option."@en .
+
+:t-areaServed a :TargetField ;
+    :targetPredicate schema:areaServed ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    rdfs:comment     "Uses upstream Text rather than geographic objects."@en .
+
+:t-telephone a :TargetField ;
+    :targetPredicate schema:telephone ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    :multiValued     true .
+
+:t-email a :TargetField ;
+    :targetPredicate schema:email ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
+
+:t-homepage a :TargetField ;
+    :targetPredicate foaf:homepage ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :overridden ;
+    rdfs:comment     "FOAF expects Document links; source URLs remain text, some without a scheme."@en .
+
+:t-detailUrl a :TargetField ;
+    :targetPredicate schema:mainEntityOfPage ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :overridden ;
+    rdfs:comment     "Upstream expects CreativeWork or URL; Caritas supplies search paths needing URL extraction."@en .
+
+:t-category a :TargetField ;
+    :targetPredicate schema:category ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    rdfs:comment     "Uses upstream Text rather than URLs or objects."@en .
+
+:t-availableService a :TargetField ;
+    :targetPredicate schema:availableService ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :overridden ;
+    rdfs:comment     "Keeps service descriptions as text; upstream expects medical procedure, test or therapy objects."@en .
+
+:t-audience a :TargetField ;
+    :targetPredicate schema:audience ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :overridden ;
+    rdfs:comment     "Keeps audience descriptions as text; upstream expects Audience objects."@en .
+
+:t-accessibilitySummary a :TargetField ;
+    :targetPredicate schema:accessibilitySummary ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
+
+:t-openingHours a :TargetField ;
+    :targetPredicate schema:openingHours ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    rdfs:comment     "Adopts Text without enforcing schema.org's opening-hours syntax."@en .
+
+:t-language a :TargetField ;
+    :targetPredicate dct:language ;
+    sh:datatype      xsd:language ;
+    :typeDerivation  :adopted ;
+    :multiValued     true ;
+    rdfs:comment     "DCMI recommends BCP47 literals; xsd:language is our choice, not full BCP47 validation."@en .
+
+:t-isAccessibleForFree a :TargetField ;
+    :targetPredicate schema:isAccessibleForFree ;
+    sh:datatype      xsd:boolean ;
+    :typeDerivation  :adopted .
+
+:t-parentOrganization a :TargetField ;
+    :targetPredicate schema:parentOrganization ;
+    sh:nodeKind      sh:IRI ;
+    sh:class         schema:Organization ;
+    :typeDerivation  :adopted .
+
+:t-provider a :TargetField ;
+    :targetPredicate schema:provider ;
+    sh:nodeKind      sh:IRI ;
+    sh:or            (
+        [ sh:class org:OrganizationalUnit ]
+        [ sh:class schema:Organization ]
+    ) ;
+    :typeDerivation  :overridden ;
+    rdfs:comment     "Uses org:OrganizationalUnit for Einrichtungen; upstream expects schema:Organization or schema:Person."@en .
+
 # Entity link to :adresseSchema, on the Träger and Einrichtung tiers only: an
 # Angebot has no address of its own — its place is its provider's.
-:t-address              a :TargetField ; :targetPredicate schema:address .
-:t-bagfwId              a :TargetField ; :targetPredicate cdf:bagfwId .
-:t-parentOrgClassification a :TargetField ; :targetPredicate cdf:parentOrgClassification .
+:t-address a :TargetField ;
+    :targetPredicate schema:address ;
+    sh:nodeKind      sh:IRI ;
+    sh:class         schema:PostalAddress ;
+    :typeDerivation  :adopted ;
+    rdfs:comment     "Uses upstream PostalAddress rather than address text."@en .
+
+:t-bagfwId a :TargetField ;
+    :targetPredicate cdf:bagfwId ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :local .
+
+:t-parentOrgClassification a :TargetField ;
+    :targetPredicate cdf:parentOrgClassification ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :local .
 
 # Temporal fields, all unmapped for now
-:t-harvestedAt          a :TargetField ; :targetPredicate prov:generatedAtTime .
-:t-sourceCreated        a :TargetField ; :targetPredicate dct:created .
-:t-sourceModified       a :TargetField ; :targetPredicate dct:modified .
-:t-sourceReviewed       a :TargetField ; :targetPredicate schema:lastReviewed .
+:t-harvestedAt a :TargetField ;
+    :targetPredicate prov:generatedAtTime ;
+    sh:datatype      xsd:dateTime ;
+    :typeDerivation  :adopted .
+
+:t-sourceCreated a :TargetField ;
+    :targetPredicate dct:created ;
+    sh:nodeKind      sh:Literal ;
+    :typeDerivation  :local ;
+    rdfs:comment     "DCMI allows dates, timestamps or periods. Datatype awaits a precision choice; field unmapped."@en .
+
+:t-sourceModified a :TargetField ;
+    :targetPredicate dct:modified ;
+    sh:nodeKind      sh:Literal ;
+    :typeDerivation  :local ;
+    rdfs:comment     "DCMI allows dates, timestamps or periods. Datatype awaits a precision choice; field unmapped."@en .
+
+:t-sourceReviewed a :TargetField ;
+    :targetPredicate schema:lastReviewed ;
+    sh:datatype      xsd:date ;
+    :typeDerivation  :adopted .
 
 # ---- Sources ------------------------------------------------------------
 
