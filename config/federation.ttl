@@ -1,0 +1,712 @@
+@prefix :       <https://civic-data.de/pipeline#> .
+@prefix cdf:    <https://civic-data.de/federated-directory#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix ft:     <http://publications.europa.eu/resource/authority/file-type/> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ---- Federation ---------------------------------------------------------
+
+:federation a :Federation ;
+    rdfs:label       "Federated directory of social support services in Germany" ;
+    :hasSource       :caritasSource, :sozialplattformSource, :dhsSource, :awoSource, :destatisSource ;
+    :hasTargetSchema :traegerSchema, :einrichtungSchema, :angebotSchema, :adresseSchema ;
+    :harvestingModeActive false ;
+    :hasRunParam     [ :name "plz" ; :value "10115", "10117", "10119", "10178", "10365",
+                       "10435", "10551", "10557", "10559", "10785", "10963", "10969", "13347",
+                       "13349", "13353", "13355", "13357", "13359", "13407" ] ;
+    :hasExporter     "sozialplattform" ;
+    :repository      "https://github.com/foederierter-datenpool/sosuse-directory-builder" ;
+    # Where the webapp is deployed: the webapp build takes its vite base from
+    # this path, and publish builds the catalog's IRIs on it.
+    :baseUrl         "https://foederierter-datenpool.github.io/sosuse-directory-builder/" .
+
+# ---- Vocabulary ---------------------------------------------------------
+
+org:OrganizationalUnit rdfs:label "Einrichtung"@de .
+
+cdf:bagfwId
+    rdfs:label "BAGFW-Code"@de, "BAGFW classification code"@en ;
+    rdfs:comment "BAGFW classification code for a service, such as 2.3.1."@en .
+
+cdf:parentOrgClassification
+    rdfs:label "Trägerkategorie"@de, "Parent organization classification"@en ;
+    rdfs:comment "Free-text classification of the parent organization, e.g. Freie Wohlfahrtspflege / gemeinnütziger Träger."@en .
+
+# ---- Target schemas -----------------------------------------------------
+
+:traegerSchema a :TargetSchema ;
+    :targetClass schema:Organization ;
+    rdfs:label "Träger"@de ;
+    :hasTargetField :t-identifier, :t-name, :t-alternateName, :t-description,
+                    :t-telephone, :t-email, :t-homepage, :t-detailUrl,
+                    :t-address,
+                    :t-harvestedAt, :t-sourceCreated, :t-sourceModified, :t-sourceReviewed .
+
+:einrichtungSchema a :TargetSchema ;
+    :targetClass org:OrganizationalUnit ;
+    rdfs:label "Einrichtung"@de ;
+    :hasTargetField :t-identifier, :t-name, :t-alternateName, :t-description, :t-areaServed,
+                    :t-telephone, :t-email, :t-homepage, :t-detailUrl,
+                    :t-category, :t-availableService, :t-audience, :t-accessibilitySummary,
+                    :t-openingHours, :t-parentOrganization, :t-parentOrgClassification, :t-address,
+                    :t-harvestedAt, :t-sourceCreated, :t-sourceModified, :t-sourceReviewed .
+
+:angebotSchema a :TargetSchema ;
+    :targetClass schema:Service ;
+    rdfs:label "Angebot"@de ;
+    :hasTargetField :t-identifier, :t-name, :t-category, :t-bagfwId, :t-audience,
+                    :t-areaServed, :t-language, :t-isAccessibleForFree,
+                    :t-detailUrl, :t-provider, :t-openingHours .
+
+# Independent address entities, linked from the Träger and Einrichtung tiers via
+# schema:address; Angebote carry none (an Angebot's place is its provider's).
+# Identity is exact, never fuzzy (fuzzy street similarity would glue neighbouring
+# house numbers — "Lehrter Straße 68" vs "69" scores ≈ 0.94): each extract step
+# normalises the street onto cdp:matchString (Str. → Straße, lowercase, diacritics
+# folded, punctuation dropped) and mints one content-addressed IRI per distinct
+# street+PLZ, so formatting variants collapse and the match rule only has to
+# equate identical (PLZ, matchString) pairs across sources.
+:adresseSchema a :TargetSchema ;
+    :targetClass schema:PostalAddress ;
+    rdfs:label "Adresse"@de ;
+    # The Match lane starts deselected (toggle it back on via the lanes dropdown).
+    :hiddenByDefault true ;
+    :hasTargetField :t-identifier, :t-streetAddress, :t-postalCode, :t-locality, :t-country .
+
+# :typeDerivation: :adopted = upstream, :overridden = deliberate deviation,
+# :local = our choice where upstream leaves the type open or the term is ours.
+# schema:Text/Boolean/Date map to xsd:string/boolean/date.
+# :multiValued - one value per contributing source is expected; the Merge view doesn't flag these as conflicts
+:t-identifier a :TargetField ;
+    :targetPredicate schema:identifier ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    :multiValued     true ;
+    rdfs:comment     "Uses upstream Text; AWO supplies xsd:int. Resolve removes identifiers."@en .
+
+:t-name a :TargetField ;
+    :targetPredicate schema:name ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
+
+:t-alternateName a :TargetField ;
+    :targetPredicate schema:alternateName ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
+
+:t-description a :TargetField ;
+    :targetPredicate schema:description ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    rdfs:comment     "Selects upstream Text over TextObject."@en .
+
+# Address fields live on :adresseSchema entities only; the other tiers link
+# there via :t-address.
+:t-streetAddress a :TargetField ;
+    :targetPredicate schema:streetAddress ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
+
+:t-postalCode a :TargetField ;
+    :targetPredicate schema:postalCode ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
+
+:t-locality a :TargetField ;
+    :targetPredicate schema:addressLocality ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
+
+:t-country a :TargetField ;
+    :targetPredicate schema:addressCountry ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    rdfs:comment     "Country codes such as DE use the upstream Text option."@en .
+
+:t-areaServed a :TargetField ;
+    :targetPredicate schema:areaServed ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    rdfs:comment     "Uses upstream Text rather than geographic objects."@en .
+
+:t-telephone a :TargetField ;
+    :targetPredicate schema:telephone ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    :multiValued     true .
+
+:t-email a :TargetField ;
+    :targetPredicate schema:email ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
+
+:t-homepage a :TargetField ;
+    :targetPredicate foaf:homepage ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :overridden ;
+    rdfs:comment     "FOAF expects Document links; source URLs remain text, some without a scheme."@en .
+
+:t-detailUrl a :TargetField ;
+    :targetPredicate schema:mainEntityOfPage ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :overridden ;
+    rdfs:comment     "Upstream expects CreativeWork or URL; Caritas supplies search paths needing URL extraction."@en .
+
+:t-category a :TargetField ;
+    :targetPredicate schema:category ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    rdfs:comment     "Uses upstream Text rather than URLs or objects."@en .
+
+:t-availableService a :TargetField ;
+    :targetPredicate schema:availableService ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :overridden ;
+    rdfs:comment     "Keeps service descriptions as text; upstream expects medical procedure, test or therapy objects."@en .
+
+:t-audience a :TargetField ;
+    :targetPredicate schema:audience ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :overridden ;
+    rdfs:comment     "Keeps audience descriptions as text; upstream expects Audience objects."@en .
+
+:t-accessibilitySummary a :TargetField ;
+    :targetPredicate schema:accessibilitySummary ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted .
+
+:t-openingHours a :TargetField ;
+    :targetPredicate schema:openingHours ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :adopted ;
+    rdfs:comment     "Adopts Text without enforcing schema.org's opening-hours syntax."@en .
+
+:t-language a :TargetField ;
+    :targetPredicate dct:language ;
+    sh:datatype      xsd:language ;
+    :typeDerivation  :adopted ;
+    :multiValued     true ;
+    rdfs:comment     "DCMI recommends BCP47 literals; xsd:language is our choice, not full BCP47 validation."@en .
+
+:t-isAccessibleForFree a :TargetField ;
+    :targetPredicate schema:isAccessibleForFree ;
+    sh:datatype      xsd:boolean ;
+    :typeDerivation  :adopted .
+
+:t-parentOrganization a :TargetField ;
+    :targetPredicate schema:parentOrganization ;
+    sh:nodeKind      sh:IRI ;
+    sh:class         schema:Organization ;
+    :typeDerivation  :adopted .
+
+:t-provider a :TargetField ;
+    :targetPredicate schema:provider ;
+    sh:nodeKind      sh:IRI ;
+    sh:or            (
+        [ sh:class org:OrganizationalUnit ]
+        [ sh:class schema:Organization ]
+    ) ;
+    :typeDerivation  :overridden ;
+    rdfs:comment     "Uses org:OrganizationalUnit for Einrichtungen; upstream expects schema:Organization or schema:Person."@en .
+
+# Entity link to :adresseSchema, on the Träger and Einrichtung tiers only: an
+# Angebot has no address of its own — its place is its provider's.
+:t-address a :TargetField ;
+    :targetPredicate schema:address ;
+    sh:nodeKind      sh:IRI ;
+    sh:class         schema:PostalAddress ;
+    :typeDerivation  :adopted ;
+    rdfs:comment     "Uses upstream PostalAddress rather than address text."@en .
+
+:t-bagfwId a :TargetField ;
+    :targetPredicate cdf:bagfwId ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :local .
+
+:t-parentOrgClassification a :TargetField ;
+    :targetPredicate cdf:parentOrgClassification ;
+    sh:datatype      xsd:string ;
+    :typeDerivation  :local .
+
+# Temporal fields, all unmapped for now
+:t-harvestedAt a :TargetField ;
+    :targetPredicate prov:generatedAtTime ;
+    sh:datatype      xsd:dateTime ;
+    :typeDerivation  :adopted .
+
+:t-sourceCreated a :TargetField ;
+    :targetPredicate dct:created ;
+    sh:nodeKind      sh:Literal ;
+    :typeDerivation  :local ;
+    rdfs:comment     "DCMI allows dates, timestamps or periods. Datatype awaits a precision choice; field unmapped."@en .
+
+:t-sourceModified a :TargetField ;
+    :targetPredicate dct:modified ;
+    sh:nodeKind      sh:Literal ;
+    :typeDerivation  :local ;
+    rdfs:comment     "DCMI allows dates, timestamps or periods. Datatype awaits a precision choice; field unmapped."@en .
+
+:t-sourceReviewed a :TargetField ;
+    :targetPredicate schema:lastReviewed ;
+    sh:datatype      xsd:date ;
+    :typeDerivation  :adopted .
+
+# ---- Sources ------------------------------------------------------------
+
+:caritasSource a :Source ;
+    rdfs:label    "Caritas" ;
+    skos:notation "ca" ;
+    :fetchUrl     "https://www.caritas.de/Api/search/searchbyquery" ;
+    :retrieval    "API" ;
+    :format       ft:JSON ;
+    :hasEntity  :caritas-einrichtung, :caritas-address .
+
+:caritas-einrichtung a :SourceEntity ;
+    rdfs:label "Einrichtung" ;
+    :hasField   :caritas-Categories, :caritas-ContentType, :caritas-ContentTypeGuid, :caritas-Date, :caritas-Distance,
+                :caritas-Format, :caritas-Guid, :caritas-Index, :caritas-LeadLine, :caritas-Link,
+                :caritas-OnlineConsultingUrl, :caritas-SearchResultHtml, :caritas-SubTitle, :caritas-Teaser,
+                :caritas-Title, :caritas-ViewType .
+
+:caritas-Categories          a :SourceField ; :fieldPath "Categories"          .
+:caritas-ContentType         a :SourceField ; :fieldPath "ContentType"         .
+:caritas-ContentTypeGuid     a :SourceField ; :fieldPath "ContentTypeGuid"     .
+:caritas-Date                a :SourceField ; :fieldPath "Date"                .
+:caritas-Distance            a :SourceField ; :fieldPath "Distance"            .
+:caritas-Format              a :SourceField ; :fieldPath "Format"              .
+:caritas-Guid                a :SourceField ; :fieldPath "Guid"                .
+:caritas-Index               a :SourceField ; :fieldPath "Index"               .
+:caritas-LeadLine            a :SourceField ; :fieldPath "LeadLine"            .
+:caritas-Link                a :SourceField ; :fieldPath "Link"                .
+:caritas-OnlineConsultingUrl a :SourceField ; :fieldPath "OnlineConsultingUrl" .
+:caritas-SearchResultHtml    a :SourceField ; :fieldPath "SearchResultHtml"    .
+:caritas-SubTitle            a :SourceField ; :fieldPath "SubTitle"            .
+:caritas-Teaser              a :SourceField ; :fieldPath "Teaser"              .
+:caritas-Title               a :SourceField ; :fieldPath "Title"               .
+:caritas-ViewType            a :SourceField ; :fieldPath "ViewType"            .
+
+# Address entities, minted by extract from the Teaser (anchor-on-PLZ split).
+# :derivedFrom names a derived field's raw origin — the Map view starts the
+# flow there instead of pretending the field came off the wire.
+:caritas-address a :SourceEntity ;
+    rdfs:label "Adresse" ;
+    :hasField :caritas-addr-street, :caritas-addr-plz, :caritas-addr-ort .
+
+:caritas-addr-street a :SourceField ; :fieldPath "streetAddress"   ; :derivedFrom :caritas-Teaser .
+:caritas-addr-plz    a :SourceField ; :fieldPath "postalCode"      ; :derivedFrom :caritas-Teaser .
+:caritas-addr-ort    a :SourceField ; :fieldPath "addressLocality" ; :derivedFrom :caritas-Teaser .
+
+# -------------------------------------------------------------------------
+
+:sozialplattformSource a :Source ;
+    rdfs:label    "Sozialplattform" ;
+    skos:notation "sp" ;
+    :fetchUrl     "https://sozialplattform.de/content/de/api/v1/consultation/search" ;
+    :retrieval    "API" ;
+    :format       ft:JSON ;
+    :hasEntity  :sp-offer, :sp-office, :sp-address ;
+    :hasField   :sp-search_score .
+
+# The extract step splits each row into these two entities (offer_* / office_*
+# fields); search_score is a query-time artifact belonging to neither.
+:sp-offer a :SourceEntity ;
+    rdfs:label "Offer" ;
+    :hasField   :sp-offer_id, :sp-offer_nid, :sp-offer_service_area, :sp-offer_title, :sp-offer_type .
+
+# Address entities, minted by extract from the office_address sub-node (which the
+# office's own flat mapping keeps navigating untouched).
+:sp-address a :SourceEntity ;
+    rdfs:label "Adresse" ;
+    :hasField :sp-addr-street, :sp-addr-plz, :sp-addr-ort, :sp-addr-country .
+
+:sp-addr-street  a :SourceField ; :fieldPath "streetAddress"   ; :derivedFrom :sp-office_address-address_line1 .
+:sp-addr-plz     a :SourceField ; :fieldPath "postalCode"      ; :derivedFrom :sp-office_address-postal_code   .
+:sp-addr-ort     a :SourceField ; :fieldPath "addressLocality" ; :derivedFrom :sp-office_address-locality      .
+:sp-addr-country a :SourceField ; :fieldPath "addressCountry"  ; :derivedFrom :sp-office_address-country_code  .
+
+:sp-office a :SourceEntity ;
+    rdfs:label "Office" ;
+    :hasField   :sp-office_address, :sp-office_address_short, :sp-office_email,
+                :sp-office_opening_hours, :sp-office_opening_hours_notes,
+                :sp-office_phone, :sp-office_title .
+
+:sp-offer_id                           a :SourceField ; :fieldPath "offer_id"                           .
+:sp-offer_nid                          a :SourceField ; :fieldPath "offer_nid"                          .
+:sp-offer_service_area                 a :SourceField ; :fieldPath "offer_service_area"                 .
+:sp-offer_title                        a :SourceField ; :fieldPath "offer_title"                        .
+:sp-offer_type                         a :SourceField ; :fieldPath "offer_type"                         .
+:sp-office_address                     a :SourceField ; :fieldPath "office_address" ;
+    :hasSubField :sp-office_address-address_line1, :sp-office_address-address_line3, :sp-office_address-country_code,
+                 :sp-office_address-langcode, :sp-office_address-locality, :sp-office_address-postal_code .
+
+:sp-office_address-address_line1 a :SubField ; :fieldPath "address_line1" .
+:sp-office_address-address_line3 a :SubField ; :fieldPath "address_line3" .
+:sp-office_address-country_code  a :SubField ; :fieldPath "country_code"  .
+:sp-office_address-langcode      a :SubField ; :fieldPath "langcode"      .
+:sp-office_address-locality      a :SubField ; :fieldPath "locality"      .
+:sp-office_address-postal_code   a :SubField ; :fieldPath "postal_code"   .
+
+:sp-office_address_short               a :SourceField ; :fieldPath "office_address_short"               .
+:sp-office_email                       a :SourceField ; :fieldPath "office_email"                       .
+:sp-office_opening_hours               a :SourceField ; :fieldPath "office_opening_hours"               .
+:sp-office_opening_hours_notes         a :SourceField ; :fieldPath "office_opening_hours_notes"         .
+:sp-office_phone                       a :SourceField ; :fieldPath "office_phone"                       .
+:sp-office_title                       a :SourceField ; :fieldPath "office_title"                       .
+:sp-search_score                       a :SourceField ; :fieldPath "search_score"                       .
+
+# -------------------------------------------------------------------------
+
+:dhsSource a :Source ;
+    rdfs:label    "Deutsche Hauptstelle für Suchtfragen (DHS)" ;
+    skos:notation "dhs" ;
+    # entryIds are stable and distinct co-located programs (vista WIGWAM
+    # Connect/Support/ZERO) would otherwise fuzzy-merge; true DHS-internal
+    # duplicates still cluster via cross-source bridges (e.g. Birkenstube).
+    :dedupWithinSource false ;
+    :fetchUrl     "https://www.dhs.de/service/suchthilfeverzeichnis/" ;
+    :retrieval    "API" ;
+    :format       ft:HTML ;
+    :hasEntity  :dhs-einrichtung, :dhs-address .
+
+:dhs-einrichtung a :SourceEntity ;
+    rdfs:label "Einrichtung" ;
+    :hasField   :dhs-angebote, :dhs-arbeit, :dhs-art, :dhs-barrierefrei, :dhs-department, :dhs-detailLink, :dhs-email,
+                :dhs-entryId, :dhs-name, :dhs-plzort, :dhs-strasse, :dhs-telefon, :dhs-traeger, :dhs-website,
+                :dhs-zeiten, :dhs-zielgruppe .
+
+:dhs-angebote     a :SourceField ; :fieldPath "angebote"     .
+:dhs-arbeit       a :SourceField ; :fieldPath "arbeit"       .
+:dhs-art          a :SourceField ; :fieldPath "art"          .
+:dhs-barrierefrei a :SourceField ; :fieldPath "barrierefrei" .
+:dhs-department   a :SourceField ; :fieldPath "department"   .
+:dhs-detailLink   a :SourceField ; :fieldPath "detailLink"   .
+:dhs-email        a :SourceField ; :fieldPath "email"        .
+:dhs-entryId      a :SourceField ; :fieldPath "entryId"      .
+:dhs-name         a :SourceField ; :fieldPath "name"         .
+:dhs-plzort       a :SourceField ; :fieldPath "plzort"       .
+:dhs-strasse      a :SourceField ; :fieldPath "strasse"      .
+:dhs-telefon      a :SourceField ; :fieldPath "telefon"      .
+:dhs-traeger      a :SourceField ; :fieldPath "traeger"      .
+:dhs-website      a :SourceField ; :fieldPath "website"      .
+:dhs-zeiten       a :SourceField ; :fieldPath "zeiten"       .
+:dhs-zielgruppe   a :SourceField ; :fieldPath "zielgruppe"   .
+
+# Address entities, minted by extract from the strasse + plzort spans.
+:dhs-address a :SourceEntity ;
+    rdfs:label "Adresse" ;
+    :hasField :dhs-addr-street, :dhs-addr-plz, :dhs-addr-ort .
+
+:dhs-addr-street a :SourceField ; :fieldPath "streetAddress"   ; :derivedFrom :dhs-strasse .
+:dhs-addr-plz    a :SourceField ; :fieldPath "postalCode"      ; :derivedFrom :dhs-plzort  .
+:dhs-addr-ort    a :SourceField ; :fieldPath "addressLocality" ; :derivedFrom :dhs-plzort  .
+
+# -------------------------------------------------------------------------
+
+:awoSource a :Source ;
+    rdfs:label    "Arbeiterwohlfahrt (AWO)" ;
+    skos:notation "awo" ;
+    :dedupWithinSource false ;
+    :retrieval    "Files" ;
+    :format       ft:JSON ;
+    :hasEntity  :awo-org, :awo-service, :awo-address .
+
+# The extract step unifies the org files' records into one org entity per id and
+# mints one service entity per services[] element.
+:awo-org a :SourceEntity ;
+    rdfs:label "Organisation" ;
+    :hasField   :awo-id, :awo-name, :awo-name_zusatz, :awo-webseite, :awo-parent_name,
+                :awo-adresse, :awo-plz, :awo-ort, :awo-ortsteil, :awo-category .
+
+:awo-service a :SourceEntity ;
+    rdfs:label "Service" ;
+    :hasField   :awo-svc-id, :awo-svc-bagfw, :awo-svc-area .
+
+# Address entities, minted by extract from the locations_filtered rows — an
+# (org, location) assignment table where the same location id recurs once per
+# assigned org (the only source with native location IDs).
+:awo-address a :SourceEntity ;
+    rdfs:label "Adresse" ;
+    :hasField   :awo-addr-locationId, :awo-addr-street, :awo-addr-plz, :awo-addr-ort .
+
+:awo-addr-locationId a :SourceField ; :fieldPath "locationId" .
+:awo-addr-street     a :SourceField ; :fieldPath "streetAddress"   ; :derivedFrom :awo-adresse .
+:awo-addr-plz        a :SourceField ; :fieldPath "postalCode"      ; :derivedFrom :awo-plz     .
+:awo-addr-ort        a :SourceField ; :fieldPath "addressLocality" ; :derivedFrom :awo-ort     .
+
+:awo-id          a :SourceField ; :fieldPath "id"          .
+:awo-name        a :SourceField ; :fieldPath "name"        .
+:awo-name_zusatz a :SourceField ; :fieldPath "name_zusatz" .
+:awo-webseite    a :SourceField ; :fieldPath "webseite"    .
+:awo-parent_name a :SourceField ; :fieldPath "parent_name" .
+:awo-adresse     a :SourceField ; :fieldPath "adresse"     .
+:awo-plz         a :SourceField ; :fieldPath "plz"         .
+:awo-ort         a :SourceField ; :fieldPath "ort"         .
+:awo-ortsteil    a :SourceField ; :fieldPath "ortsteil"    .
+:awo-category    a :SourceField ; :fieldPath "category"    .
+
+# Service-side source fields — one schema:Service per services[] element.
+:awo-svc-id    a :SourceField ; :fieldPath "id"         .
+:awo-svc-area  a :SourceField ; :fieldPath "areaServed" ; :derivedFrom :awo-ort .
+:awo-svc-bagfw a :SourceField ; :fieldPath "bagfw_category" ;
+    :hasSubField :awo-svc-bagfw-nummer, :awo-svc-bagfw-name .
+:awo-svc-bagfw-nummer a :SubField ; :fieldPath "nummer" .
+:awo-svc-bagfw-name   a :SubField ; :fieldPath "name" .
+
+# -------------------------------------------------------------------------
+
+:destatisSource a :Source ;
+    rdfs:label    "Schuldnerberatung (Destatis)" ;
+    skos:notation "dsb" ;
+    rdfs:comment  "Adressliste der Beratungsstellen in der Überschuldungsstatistik, aus der Adressdatenbank des Statistischen Bundesamtes" ;
+    :retrieval    "Files" ;
+    :format       ft:XLSX ;
+    :hasEntity  :destatis-einrichtung, :destatis-address .
+
+:destatis-einrichtung a :SourceEntity ;
+    rdfs:label "Einrichtung" ;
+    :hasField   :destatis-refId, :destatis-name, :destatis-bundesland,
+                :destatis-strasse, :destatis-plz, :destatis-stadt .
+
+# refId is the row's content hash (name+PLZ+street), the source's stand-in for a missing native id
+:destatis-refId      a :SourceField ; :fieldPath "refId"      .
+:destatis-name       a :SourceField ; :fieldPath "name"       .
+:destatis-bundesland a :SourceField ; :fieldPath "bundesland" .
+:destatis-strasse    a :SourceField ; :fieldPath "strasse"    .
+:destatis-plz        a :SourceField ; :fieldPath "plz"        .
+:destatis-stadt      a :SourceField ; :fieldPath "stadt"      .
+
+# Address entity, minted by extract from the Strasse + PLZ + Stadt columns.
+:destatis-address a :SourceEntity ;
+    rdfs:label "Adresse" ;
+    :hasField :destatis-addr-street, :destatis-addr-plz, :destatis-addr-ort .
+
+:destatis-addr-street a :SourceField ; :fieldPath "streetAddress"   ; :derivedFrom :destatis-strasse .
+:destatis-addr-plz    a :SourceField ; :fieldPath "postalCode"      ; :derivedFrom :destatis-plz     .
+:destatis-addr-ort    a :SourceField ; :fieldPath "addressLocality" ; :derivedFrom :destatis-stadt   .
+
+# ---- Mappings -----------------------------------------------------------
+
+:caritas-einrichtung-mapping a :Mapping ;
+    :fromSource    :caritasSource ;
+    :toTarget      :einrichtungSchema ;
+    :hasFieldMapping
+        [ :from :caritas-Guid     ; :to :t-identifier    ] ,
+        [ :from :caritas-Title    ; :to :t-name          ] ,
+        [ :from :caritas-SubTitle ; :to :t-alternateName ] ,
+        [ :from :caritas-LeadLine ; :to :t-category      ] ,
+        [ :from :caritas-Link     ; :to :t-detailUrl     ] ;
+    :hasRelationship
+        [ :sourcePredicate :locatedAt ; :toTargetField :t-address ; :toTargetSchema :adresseSchema ] .
+
+:caritas-adresse-mapping a :Mapping ;
+    :fromSource    :caritasSource ;
+    :toTarget      :adresseSchema ;
+    :hasFieldMapping
+        [ :from :caritas-addr-street ; :to :t-streetAddress ] ,
+        [ :from :caritas-addr-plz    ; :to :t-postalCode    ] ,
+        [ :from :caritas-addr-ort    ; :to :t-locality      ] .
+
+# Sozialplattform is offer-first: the extract step splits each row into an office
+# org + an offer service (see sozialplattform.sparql), so it has two mappings.
+:sp-einrichtung-mapping a :Mapping ;
+    :fromSource    :sozialplattformSource ;
+    :toTarget      :einrichtungSchema ;
+    :hasFieldMapping
+        [ :from :sp-office_title                 ; :to :t-name          ] ,
+        [ :from :sp-office_opening_hours         ; :to :t-openingHours  ] ,
+        [ :from :sp-office_opening_hours_notes   ; :to :t-openingHours  ] ,
+        [ :from :sp-office_phone                 ; :to :t-telephone     ] ,
+        [ :from :sp-office_email                 ; :to :t-email         ] ;
+    :hasRelationship
+        [ :sourcePredicate :locatedAt ; :toTargetField :t-address ; :toTargetSchema :adresseSchema ] .
+
+:sp-adresse-mapping a :Mapping ;
+    :fromSource    :sozialplattformSource ;
+    :toTarget      :adresseSchema ;
+    :hasFieldMapping
+        [ :from :sp-addr-street  ; :to :t-streetAddress ] ,
+        [ :from :sp-addr-plz     ; :to :t-postalCode    ] ,
+        [ :from :sp-addr-ort     ; :to :t-locality      ] ,
+        [ :from :sp-addr-country ; :to :t-country       ] .
+
+:sp-angebot-mapping a :Mapping ;
+    :fromSource    :sozialplattformSource ;
+    :toTarget      :angebotSchema ;
+    :hasFieldMapping
+        [ :from :sp-offer_id           ; :to :t-identifier ] ,
+        [ :from :sp-offer_title        ; :to :t-name       ] ,
+        [ :from :sp-offer_type         ; :to :t-category   ] ,
+        [ :from :sp-offer_service_area ; :to :t-areaServed ] ;
+    :hasRelationship
+        [ :sourcePredicate :providedBy ; :toTargetField :t-provider ; :toTargetSchema :einrichtungSchema ] .
+
+:dhs-einrichtung-mapping a :Mapping ;
+    :fromSource    :dhsSource ;
+    :toTarget      :einrichtungSchema ;
+    :hasFieldMapping
+        [ :from :dhs-entryId      ; :to :t-identifier              ] ,
+        [ :from :dhs-name         ; :to :t-name                    ] ,
+        [ :from :dhs-department   ; :to :t-alternateName           ] ,
+        [ :from :dhs-detailLink   ; :to :t-detailUrl               ] ,
+        [ :from :dhs-website      ; :to :t-homepage                ] ,
+        [ :from :dhs-art          ; :to :t-category                ] ,
+        [ :from :dhs-angebote     ; :to :t-availableService        ] ,
+        [ :from :dhs-arbeit       ; :to :t-availableService        ] ,
+        [ :from :dhs-zielgruppe   ; :to :t-audience                ] ,
+        [ :from :dhs-zeiten       ; :to :t-openingHours            ] ,
+        [ :from :dhs-barrierefrei ; :to :t-accessibilitySummary    ] ,
+        [ :from :dhs-traeger      ; :to :t-parentOrgClassification ] ,
+        [ :from :dhs-telefon      ; :to :t-telephone               ] ,
+        [ :from :dhs-email        ; :to :t-email                   ] ;
+    :hasRelationship
+        [ :sourcePredicate :locatedAt ; :toTargetField :t-address ; :toTargetSchema :adresseSchema ] .
+
+:dhs-adresse-mapping a :Mapping ;
+    :fromSource    :dhsSource ;
+    :toTarget      :adresseSchema ;
+    :hasFieldMapping
+        [ :from :dhs-addr-street ; :to :t-streetAddress ] ,
+        [ :from :dhs-addr-plz    ; :to :t-postalCode    ] ,
+        [ :from :dhs-addr-ort    ; :to :t-locality      ] .
+
+:awo-traeger-mapping a :Mapping ;
+    :fromSource    :awoSource ;
+    :toTarget      :traegerSchema ;
+    :hasFieldMapping
+        [ :from :awo-id          ; :to :t-identifier         ] ,
+        [ :from :awo-name        ; :to :t-name               ] ,
+        [ :from :awo-name_zusatz ; :to :t-alternateName      ] ,
+        [ :from :awo-webseite    ; :to :t-homepage           ] ;
+    :hasRelationship
+        [ :sourcePredicate :locatedAt ; :toTargetField :t-address ; :toTargetSchema :adresseSchema ] .
+
+:awo-einrichtung-mapping a :Mapping ;
+    :fromSource    :awoSource ;
+    :toTarget      :einrichtungSchema ;
+    :hasFieldMapping
+        [ :from :awo-id          ; :to :t-identifier         ] ,
+        [ :from :awo-name        ; :to :t-name               ] ,
+        [ :from :awo-name_zusatz ; :to :t-alternateName      ] ,
+        [ :from :awo-webseite    ; :to :t-homepage           ] ,
+        [ :from :awo-category    ; :to :t-category           ] ;
+    :hasRelationship
+        [ :sourcePredicate :hasParent ; :toTargetField :t-parentOrganization ; :toTargetSchema :traegerSchema ] ,
+        [ :sourcePredicate :locatedAt ; :toTargetField :t-address            ; :toTargetSchema :adresseSchema ] .
+
+:awo-angebot-mapping a :Mapping ;
+    :fromSource    :awoSource ;
+    :toTarget      :angebotSchema ;
+    :hasFieldMapping
+        [ :from :awo-svc-id           ; :to :t-identifier ] ,
+        [ :from :awo-svc-bagfw-name   ; :to :t-category   ] ,
+        [ :from :awo-svc-bagfw-nummer ; :to :t-bagfwId    ] ,
+        [ :from :awo-svc-area         ; :to :t-areaServed ] ;
+    :hasRelationship
+        [ :sourcePredicate :providedBy ; :toTargetField :t-provider ; :toTargetSchema :einrichtungSchema ] ,
+        [ :sourcePredicate :providedBy ; :toTargetField :t-provider ; :toTargetSchema :traegerSchema     ] .
+
+:awo-adresse-mapping a :Mapping ;
+    :fromSource    :awoSource ;
+    :toTarget      :adresseSchema ;
+    :hasFieldMapping
+        [ :from :awo-addr-locationId ; :to :t-identifier    ] ,
+        [ :from :awo-addr-street     ; :to :t-streetAddress ] ,
+        [ :from :awo-addr-plz        ; :to :t-postalCode    ] ,
+        [ :from :awo-addr-ort        ; :to :t-locality      ] .
+
+# Destatis is names + addresses only: one Einrichtung per row, linked to its
+# minted address. bundesland/strasse/plz/stadt stay unmapped (the address
+# fields carry the location; Bundesland has no target slot here).
+:destatis-einrichtung-mapping a :Mapping ;
+    :fromSource    :destatisSource ;
+    :toTarget      :einrichtungSchema ;
+    :hasFieldMapping
+        [ :from :destatis-refId ; :to :t-identifier ] ,
+        [ :from :destatis-name  ; :to :t-name       ] ;
+    :hasRelationship
+        [ :sourcePredicate :locatedAt ; :toTargetField :t-address ; :toTargetSchema :adresseSchema ] .
+
+:destatis-adresse-mapping a :Mapping ;
+    :fromSource    :destatisSource ;
+    :toTarget      :adresseSchema ;
+    :hasFieldMapping
+        [ :from :destatis-addr-street ; :to :t-streetAddress ] ,
+        [ :from :destatis-addr-plz    ; :to :t-postalCode    ] ,
+        [ :from :destatis-addr-ort    ; :to :t-locality      ] .
+
+# ---- Match --------------------------------------------------------------
+
+# The hard criterion is an entity link: two Einrichtungen must share the same
+# *resolved* address — the minted :adresseSchema identity, curation included.
+# The engine topologically sorts match rules by such link criteria (the
+# :hasRelationship declarations name the linked schema), so :adresseMatch runs
+# before this rule; no explicit ordering is declared here.
+:einrichtungMatch a :MatchRule ;
+    :forTarget           :einrichtungSchema ;
+    :targetNamespace     "https://civic-data.de/federated-directory#" ;
+    :mintedSubjectPrefix "org-" ;
+    :hasHardCriterion     [ :on schema:address ] ;
+    :minScore             0.7 ;
+    :hasWeightedCriterion [ :on schema:name ; :weight 1.0 ] .
+
+:traegerMatch a :MatchRule ;
+    :forTarget           :traegerSchema ;
+    :targetNamespace     "https://civic-data.de/federated-directory#" ;
+    :mintedSubjectPrefix "traeger-" .
+
+:angebotMatch a :MatchRule ;
+    :forTarget           :angebotSchema ;
+    :targetNamespace     "https://civic-data.de/federated-directory#" ;
+    :mintedSubjectPrefix "service-" ;
+    :hasHardCriterion     [ :on schema:provider ] ;
+    :minScore             0.85 ;
+    :hasWeightedCriterion [ :on schema:name ; :weight 1.0 ] .
+
+# Exact matching only: same PLZ and same normalised street (:matchString, built in
+# extract) or nothing. No weighted criteria — see the :adresseSchema note above.
+:adresseMatch a :MatchRule ;
+    :forTarget           :adresseSchema ;
+    :targetNamespace     "https://civic-data.de/federated-directory#" ;
+    :mintedSubjectPrefix "addr-" ;
+    :hasHardCriterion     [ :on schema:postalCode ], [ :on :matchString ] .
+
+# ---- Resolve ------------------------------------------------------------
+
+# Preserve all category labels in one readable field, without normalizing them.
+:resolve a :ResolveRule ;
+    :defaultStrategy :longestValue ;
+    :hasOverride     [ :on schema:availableService ; :strategy :concatenateAll ] ,
+                     [ :on schema:category         ; :strategy :concatenateAll ] ,
+                     [ :on schema:telephone        ; :strategy :keepAll ] ,
+                     [ :on dct:language            ; :strategy :keepAll ] .
+
+# ---- Enrich -------------------------------------------------------------
+
+# Geocode the resolved addresses via Nominatim (OSM). Runs past resolve, so
+# each canonical address is looked up once, with curated corrections applied;
+# lookups are cached in registry/geocache.json.
+:enrich a :EnrichRule ;
+    :geocode :adresseSchema ;
+    :inherit :inheritEinrichtungToAngebot, :inheritTraegerToEinrichtung .
+
+# An Angebot points to its Einrichtung through schema:provider. Audience,
+# opening hours and service area are fallbacks; the Angebot's own values win.
+:inheritEinrichtungToAngebot a :InheritanceRule ;
+    :from    :einrichtungSchema ;
+    :to      :angebotSchema ;
+    :through schema:provider ;
+    :on      schema:audience, schema:openingHours, schema:areaServed .
+
+# An Einrichtung inherits missing contact details from its Träger.
+:inheritTraegerToEinrichtung a :InheritanceRule ;
+    :from    :traegerSchema ;
+    :to      :einrichtungSchema ;
+    :through schema:parentOrganization ;
+    :on      schema:telephone, schema:email, foaf:homepage .

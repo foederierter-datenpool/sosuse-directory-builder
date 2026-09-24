@@ -1,0 +1,357 @@
+@prefix cdp: <https://civic-data.de/pipeline#>.
+
+cdp:caritas-addr-03915e15c686 cdp:matchString "bellermannstrasse92";
+    cdp:prepared _:n3-32620, _:n3-32621, _:n3-32622.
+cdp:caritas-addr-1bd4298d5dd7 cdp:matchString "carolinemichaelisstrasse1";
+    cdp:prepared _:n3-32557, _:n3-32558, _:n3-32559.
+cdp:caritas-addr-2890247d0e6e cdp:matchString "reinhardtstrasse13";
+    cdp:prepared _:n3-32560, _:n3-32561, _:n3-32562, _:n3-32563, _:n3-32564, _:n3-32565, _:n3-32566, _:n3-32567, _:n3-32568.
+cdp:caritas-addr-29c8785b6348 cdp:matchString "niederwallstrasse89";
+    cdp:prepared _:n3-32548, _:n3-32549, _:n3-32550, _:n3-32551, _:n3-32552, _:n3-32553.
+cdp:caritas-addr-2c2d41ae0ff4 cdp:matchString "schoenhauserallee182";
+    cdp:prepared _:n3-32554, _:n3-32555, _:n3-32556.
+cdp:caritas-addr-301bac6c9415 cdp:matchString "platzvordemneuentor2";
+    cdp:prepared _:n3-32572, _:n3-32573, _:n3-32574.
+cdp:caritas-addr-38fbe6ed28fe cdp:matchString "oldenburgerstrasse46";
+    cdp:prepared _:n3-32590, _:n3-32591, _:n3-32592.
+cdp:caritas-addr-5766b57dae1c cdp:matchString "grossehamburgerstrasse5";
+    cdp:prepared _:n3-32629, _:n3-32630, _:n3-32631.
+cdp:caritas-addr-5a149d8e9d81 cdp:matchString "feldstrasse20";
+    cdp:prepared _:n3-32605, _:n3-32606, _:n3-32607.
+cdp:caritas-addr-63d334bdc691 cdp:matchString "reinhardtstrasse44";
+    cdp:prepared _:n3-32626, _:n3-32627, _:n3-32628.
+cdp:caritas-addr-6b804cdf6d5b cdp:matchString "hannoverschestrasse5";
+    cdp:prepared _:n3-32638, _:n3-32639, _:n3-32640.
+cdp:caritas-addr-6d48efe193ee cdp:matchString "prinzenstrasse103";
+    cdp:prepared _:n3-32602, _:n3-32603, _:n3-32604.
+cdp:caritas-addr-6ee0684e27b3 cdp:matchString "schulzeboysenstrasse26";
+    cdp:prepared _:n3-32599, _:n3-32600, _:n3-32601.
+cdp:caritas-addr-764bc0cd4847 cdp:matchString "muellerstrasse126";
+    cdp:prepared _:n3-32593, _:n3-32594, _:n3-32595, _:n3-32596, _:n3-32597, _:n3-32598.
+cdp:caritas-addr-7ada1b4cd41b cdp:matchString "oldenburgerstrasse47";
+    cdp:prepared _:n3-32617, _:n3-32618, _:n3-32619.
+cdp:caritas-addr-7b41340f3f35 cdp:matchString "wilhelmstrasse122";
+    cdp:prepared _:n3-32635, _:n3-32636, _:n3-32637.
+cdp:caritas-addr-7bbcab7ff166 cdp:matchString "grossehamburgerstrasse18";
+    cdp:prepared _:n3-32614, _:n3-32615, _:n3-32616.
+cdp:caritas-addr-7db6999118e9 cdp:matchString "schulzeboysenstrasse10";
+    cdp:prepared _:n3-32623, _:n3-32624, _:n3-32625.
+cdp:caritas-addr-81a9315de772 cdp:matchString "oldenburgerstrasse45";
+    cdp:prepared _:n3-32578, _:n3-32579, _:n3-32580.
+cdp:caritas-addr-8580a52a44b6 cdp:matchString "gotlindestrasse38";
+    cdp:prepared _:n3-32608, _:n3-32609, _:n3-32610.
+cdp:caritas-addr-8810e2fbace0 cdp:matchString "turmstrasse21";
+    cdp:prepared _:n3-32545, _:n3-32546, _:n3-32547.
+cdp:caritas-addr-8c707dd47e38 cdp:matchString "nazarethkirchstrasse36";
+    cdp:prepared _:n3-32569, _:n3-32570, _:n3-32571.
+cdp:caritas-addr-9ede1b7527ac cdp:matchString "bandelstrasse41";
+    cdp:prepared _:n3-32575, _:n3-32576, _:n3-32577.
+cdp:caritas-addr-a25e56835afb cdp:matchString "europaplatz1";
+    cdp:prepared _:n3-32587, _:n3-32588, _:n3-32589.
+cdp:caritas-addr-cdd5cae75aad cdp:matchString "grossehamburgerstrasse511";
+    cdp:prepared _:n3-32584, _:n3-32585, _:n3-32586.
+cdp:caritas-addr-e6e5c5a54caa cdp:matchString "chausseestrasse128129";
+    cdp:prepared _:n3-32581, _:n3-32582, _:n3-32583.
+cdp:caritas-addr-ea678cf16980 cdp:matchString "hochstaedterstrasse14";
+    cdp:prepared _:n3-32611, _:n3-32612, _:n3-32613.
+cdp:caritas-addr-efff78f8a016 cdp:matchString "wartenburgstrasse8";
+    cdp:prepared _:n3-32632, _:n3-32633, _:n3-32634.
+cdp:caritas-addr-fa13ac4c2fa2 cdp:matchString "mauritiuskirchstrasse1";
+    cdp:prepared _:n3-32641, _:n3-32642, _:n3-32643.
+_:n3-32545 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Turmstraße 21 - 10559 Berlin";
+    cdp:cleanValue "Turmstraße 21".
+_:n3-32546 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Turmstraße 21 - 10559 Berlin";
+    cdp:cleanValue "10559".
+_:n3-32547 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Turmstraße 21 - 10559 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32548 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Niederwallstraße 8-9 - 10117 Berlin";
+    cdp:cleanValue "Niederwallstraße 8-9".
+_:n3-32549 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Niederwallstraße 8/9 - 10117 Berlin";
+    cdp:cleanValue "Niederwallstraße 8-9".
+_:n3-32550 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Niederwallstraße 8-9 - 10117 Berlin";
+    cdp:cleanValue "10117".
+_:n3-32551 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Niederwallstraße 8/9 - 10117 Berlin";
+    cdp:cleanValue "10117".
+_:n3-32552 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Niederwallstraße 8-9 - 10117 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32553 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Niederwallstraße 8/9 - 10117 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32554 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Schönhauser Allee 182 - 10119 Berlin";
+    cdp:cleanValue "Schönhauser Allee 182".
+_:n3-32555 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Schönhauser Allee 182 - 10119 Berlin";
+    cdp:cleanValue "10119".
+_:n3-32556 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Schönhauser Allee 182 - 10119 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32557 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Caroline-Michaelis-Str. 1 - 10115 Berlin";
+    cdp:cleanValue "Caroline-Michaelis-Straße 1".
+_:n3-32558 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Caroline-Michaelis-Str. 1 - 10115 Berlin";
+    cdp:cleanValue "10115".
+_:n3-32559 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Caroline-Michaelis-Str. 1 - 10115 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32560 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Reinhardtstr. 13 - 10117 Berlin";
+    cdp:cleanValue "Reinhardtstraße 13".
+_:n3-32561 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Reinhardtstraße 13 - 10117 Berlin";
+    cdp:cleanValue "Reinhardtstraße 13".
+_:n3-32562 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Reinhardtstrasse 13 - 10117 Berlin";
+    cdp:cleanValue "Reinhardtstraße 13".
+_:n3-32563 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Reinhardtstr. 13 - 10117 Berlin";
+    cdp:cleanValue "10117".
+_:n3-32564 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Reinhardtstraße 13 - 10117 Berlin";
+    cdp:cleanValue "10117".
+_:n3-32565 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Reinhardtstrasse 13 - 10117 Berlin";
+    cdp:cleanValue "10117".
+_:n3-32566 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Reinhardtstr. 13 - 10117 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32567 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Reinhardtstraße 13 - 10117 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32568 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Reinhardtstrasse 13 - 10117 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32569 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Nazarethkirchstr. 36 - 13347 Berlin";
+    cdp:cleanValue "Nazarethkirchstraße 36".
+_:n3-32570 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Nazarethkirchstr. 36 - 13347 Berlin";
+    cdp:cleanValue "13347".
+_:n3-32571 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Nazarethkirchstr. 36 - 13347 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32572 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Platz vor dem Neuen Tor 2 - 10115 Berlin";
+    cdp:cleanValue "Platz vor dem Neuen Tor 2".
+_:n3-32573 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Platz vor dem Neuen Tor 2 - 10115 Berlin";
+    cdp:cleanValue "10115".
+_:n3-32574 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Platz vor dem Neuen Tor 2 - 10115 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32575 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Bandelstr. 41 - 10559 Berlin";
+    cdp:cleanValue "Bandelstraße 41".
+_:n3-32576 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Bandelstr. 41 - 10559 Berlin";
+    cdp:cleanValue "10559".
+_:n3-32577 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Bandelstr. 41 - 10559 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32578 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Oldenburger Straße 45 - 10551 Berlin";
+    cdp:cleanValue "Oldenburger Straße 45".
+_:n3-32579 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Oldenburger Straße 45 - 10551 Berlin";
+    cdp:cleanValue "10551".
+_:n3-32580 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Oldenburger Straße 45 - 10551 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32581 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Chausseestr. 128/129 - 10115 Berlin";
+    cdp:cleanValue "Chausseestraße 128-129".
+_:n3-32582 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Chausseestr. 128/129 - 10115 Berlin";
+    cdp:cleanValue "10115".
+_:n3-32583 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Chausseestr. 128/129 - 10115 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32584 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Große Hamburger Str. 5 - 11 - 10115 Berlin";
+    cdp:cleanValue "Große Hamburger Straße 5-11".
+_:n3-32585 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Große Hamburger Str. 5 - 11 - 10115 Berlin";
+    cdp:cleanValue "10115".
+_:n3-32586 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Große Hamburger Str. 5 - 11 - 10115 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32587 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Europaplatz 1 - 10557 Berlin";
+    cdp:cleanValue "Europaplatz 1".
+_:n3-32588 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Europaplatz 1 - 10557 Berlin";
+    cdp:cleanValue "10557".
+_:n3-32589 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Europaplatz 1 - 10557 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32590 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Oldenburger Str. 46 - 10551 Berlin";
+    cdp:cleanValue "Oldenburger Straße 46".
+_:n3-32591 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Oldenburger Str. 46 - 10551 Berlin";
+    cdp:cleanValue "10551".
+_:n3-32592 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Oldenburger Str. 46 - 10551 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32593 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Müllerstraße 126 - 13349 Berlin";
+    cdp:cleanValue "Müllerstraße 126".
+_:n3-32594 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Müllerstr. 126 - 13349 Berlin";
+    cdp:cleanValue "Müllerstraße 126".
+_:n3-32595 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Müllerstraße 126 - 13349 Berlin";
+    cdp:cleanValue "13349".
+_:n3-32596 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Müllerstr. 126 - 13349 Berlin";
+    cdp:cleanValue "13349".
+_:n3-32597 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Müllerstraße 126 - 13349 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32598 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Müllerstr. 126 - 13349 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32599 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Schulze-Boysen-Str. 26 - 10365 Berlin";
+    cdp:cleanValue "Schulze-Boysen-Straße 26".
+_:n3-32600 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Schulze-Boysen-Str. 26 - 10365 Berlin";
+    cdp:cleanValue "10365".
+_:n3-32601 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Schulze-Boysen-Str. 26 - 10365 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32602 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Prinzenstraße 103 - 10969 Berlin";
+    cdp:cleanValue "Prinzenstraße 103".
+_:n3-32603 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Prinzenstraße 103 - 10969 Berlin";
+    cdp:cleanValue "10969".
+_:n3-32604 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Prinzenstraße 103 - 10969 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32605 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Feldstr. 20 - 13355 Berlin";
+    cdp:cleanValue "Feldstraße 20".
+_:n3-32606 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Feldstr. 20 - 13355 Berlin";
+    cdp:cleanValue "13355".
+_:n3-32607 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Feldstr. 20 - 13355 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32608 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Gotlindestr. 38 - 10365 Berlin";
+    cdp:cleanValue "Gotlindestraße 38".
+_:n3-32609 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Gotlindestr. 38 - 10365 Berlin";
+    cdp:cleanValue "10365".
+_:n3-32610 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Gotlindestr. 38 - 10365 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32611 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Hochstädter Str. 14 - 13347 Berlin";
+    cdp:cleanValue "Hochstädter Straße 14".
+_:n3-32612 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Hochstädter Str. 14 - 13347 Berlin";
+    cdp:cleanValue "13347".
+_:n3-32613 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Hochstädter Str. 14 - 13347 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32614 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Große Hamburger Str. 18 - 10115 Berlin";
+    cdp:cleanValue "Große Hamburger Straße 18".
+_:n3-32615 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Große Hamburger Str. 18 - 10115 Berlin";
+    cdp:cleanValue "10115".
+_:n3-32616 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Große Hamburger Str. 18 - 10115 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32617 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Oldenburger Str. 47 - 10551 Berlin";
+    cdp:cleanValue "Oldenburger Straße 47".
+_:n3-32618 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Oldenburger Str. 47 - 10551 Berlin";
+    cdp:cleanValue "10551".
+_:n3-32619 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Oldenburger Str. 47 - 10551 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32620 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Bellermannstr. 92 - 13357 Berlin";
+    cdp:cleanValue "Bellermannstraße 92".
+_:n3-32621 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Bellermannstr. 92 - 13357 Berlin";
+    cdp:cleanValue "13357".
+_:n3-32622 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Bellermannstr. 92 - 13357 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32623 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Schulze-Boysen-Straße 10 - 10365 Berlin";
+    cdp:cleanValue "Schulze-Boysen-Straße 10".
+_:n3-32624 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Schulze-Boysen-Straße 10 - 10365 Berlin";
+    cdp:cleanValue "10365".
+_:n3-32625 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Schulze-Boysen-Straße 10 - 10365 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32626 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Reinhardtstraße 44 - 10117 Berlin";
+    cdp:cleanValue "Reinhardtstraße 44".
+_:n3-32627 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Reinhardtstraße 44 - 10117 Berlin";
+    cdp:cleanValue "10117".
+_:n3-32628 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Reinhardtstraße 44 - 10117 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32629 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Große Hamburger Straße 5 - 10115 Berlin";
+    cdp:cleanValue "Große Hamburger Straße 5".
+_:n3-32630 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Große Hamburger Straße 5 - 10115 Berlin";
+    cdp:cleanValue "10115".
+_:n3-32631 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Große Hamburger Straße 5 - 10115 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32632 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Wartenburgstr. 8 - 10963 Berlin";
+    cdp:cleanValue "Wartenburgstraße 8".
+_:n3-32633 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Wartenburgstr. 8 - 10963 Berlin";
+    cdp:cleanValue "10963".
+_:n3-32634 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Wartenburgstr. 8 - 10963 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32635 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Wilhelmstr. 122 - 10963 Berlin";
+    cdp:cleanValue "Wilhelmstraße 122".
+_:n3-32636 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Wilhelmstr. 122 - 10963 Berlin";
+    cdp:cleanValue "10963".
+_:n3-32637 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Wilhelmstr. 122 - 10963 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32638 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Hannoversche Str. 5 - 10115 Berlin";
+    cdp:cleanValue "Hannoversche Straße 5".
+_:n3-32639 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Hannoversche Str. 5 - 10115 Berlin";
+    cdp:cleanValue "10115".
+_:n3-32640 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Hannoversche Str. 5 - 10115 Berlin";
+    cdp:cleanValue "Berlin".
+_:n3-32641 cdp:field cdp:caritas-addr-street;
+    cdp:rawValue "Mauritiuskirchstr. 1 - 10365 Berlin";
+    cdp:cleanValue "Mauritiuskirchstraße 1".
+_:n3-32642 cdp:field cdp:caritas-addr-plz;
+    cdp:rawValue "Mauritiuskirchstr. 1 - 10365 Berlin";
+    cdp:cleanValue "10365".
+_:n3-32643 cdp:field cdp:caritas-addr-ort;
+    cdp:rawValue "Mauritiuskirchstr. 1 - 10365 Berlin";
+    cdp:cleanValue "Berlin".

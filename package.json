@@ -1,0 +1,20 @@
+{
+  "name": "sosuse-directory-builder",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test scripts/*.test.js",
+    "pipeline": "directory-builder",
+    "publish:pages": "node scripts/publish-pages.js",
+    "ingest": "directory-builder ingest",
+    "federate": "directory-builder federate",
+    "fuseki": "../directory-api/gradlew -p ../directory-api fusekiDist -q && java -jar ../directory-api/build/fuseki/directory-fuseki.jar .",
+    "validate": "directory-builder validate",
+    "vocabulary:build": "directory-builder vocabulary",
+    "webapp": "directory-builder webapp",
+    "webapp:build": "directory-builder webapp build --base /sosuse-directory-builder/"
+  },
+  "dependencies": {
+    "@directory-builder/core": "^0.12.0"
+  }
+}

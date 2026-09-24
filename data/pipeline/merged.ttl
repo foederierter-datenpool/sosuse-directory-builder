@@ -1,0 +1,2583 @@
+@prefix schema: <http://schema.org/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix cdp: <https://civic-data.de/pipeline#>.
+@prefix cdf: <https://civic-data.de/federated-directory#>.
+
+cdf:addr-0027af8dd02e cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource, cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Alt-Reinickendorf 23-24";
+    schema:postalCode "13407";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE";
+    schema:identifier "9054"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-05ed8e35e136 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Bellermannstraße 92";
+    schema:postalCode "13357";
+    schema:addressLocality "Berlin".
+cdf:addr-07186889552c cdp:fromSource cdp:destatisSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Lehrter Straße 68";
+    schema:postalCode "10557";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-0787320c50e7 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Badstraße 10";
+    schema:postalCode "13357";
+    schema:addressLocality "Berlin";
+    schema:identifier "8990"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-0830ea9f549d cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Schönhauser Allee 182";
+    schema:postalCode "10119";
+    schema:addressLocality "Berlin".
+cdf:addr-0fed5b8021b2 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Oldenburger Straße 2";
+    schema:postalCode "10551";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-10e31cd1bdbc cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Rathenower Straße 16H", "Rathenower Straße 16, Haus H";
+    schema:postalCode "10559";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-1853a08606a9 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:postalCode "10115";
+    schema:addressLocality "Berlin";
+    schema:identifier "8968"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-19bb325d85b1 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Caroline-Michaelis-Straße 1";
+    schema:postalCode "10115";
+    schema:addressLocality "Berlin".
+cdf:addr-19da89c63b40 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Schulze-Boysen-Straße 26";
+    schema:postalCode "10365";
+    schema:addressLocality "Berlin".
+cdf:addr-1bf0865fe28e cdp:fromSource cdp:caritasSource, cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Wartenburgstraße 8";
+    schema:postalCode "10963";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-1f508583bd14 cdp:fromSource cdp:caritasSource, cdp:destatisSource, cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Große Hamburger Straße 18";
+    schema:postalCode "10115";
+    schema:addressLocality "Berlin", "Berlin-Mitte";
+    schema:addressCountry "DE".
+cdf:addr-22396c694bdd cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Gotlindestraße 38";
+    schema:postalCode "10365";
+    schema:addressLocality "Berlin".
+cdf:addr-2366652f8f73 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Müllerstraße 163";
+    schema:postalCode "13353";
+    schema:addressLocality "Berlin";
+    schema:identifier "9188"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-243bf0783cc2 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Derfflingerstraße 21";
+    schema:postalCode "10785";
+    schema:addressLocality "Berlin";
+    schema:identifier "8995"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-2a047e8b0c41 cdp:fromSource cdp:destatisSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Liebenwalder Straße 8";
+    schema:postalCode "13347";
+    schema:addressLocality "Berlin".
+cdf:addr-2fb8d7fcbf10 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Herzbergstraße 82";
+    schema:postalCode "10365";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-2fda64a4efeb cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Kurfürstenstraße 40";
+    schema:postalCode "10785";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-336728388e53 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Rütlistraße 18";
+    schema:postalCode "13407";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-33a609ab7d24 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Lübecker Straße 6";
+    schema:postalCode "10559";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-3559dc51a870 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Hagenstraße 1";
+    schema:postalCode "10365";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-35e4ef384887 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Hochstädter Straße 1";
+    schema:postalCode "13353";
+    schema:addressLocality "Berlin";
+    schema:identifier "8931"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-3a46d3e12781 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Osloer Straße 80";
+    schema:postalCode "13359";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-3a4908acdad4 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Spenerstraße 37";
+    schema:postalCode "10557";
+    schema:addressLocality "Berlin";
+    schema:identifier "9241"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-3aabbf3a1ac6 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Stromstraße 47", "Stromstra0e 47";
+    schema:postalCode "10551";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-3d174698d831 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Rigaer Straße 55b";
+    schema:postalCode "10115";
+    schema:addressLocality "Berlin";
+    schema:identifier "13"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-3ed1057bcfef cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Schulze-Boysen-Straße 10";
+    schema:postalCode "10365";
+    schema:addressLocality "Berlin".
+cdf:addr-42a06250270b cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Tieckstraße 17";
+    schema:postalCode "10115";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-4429f8c9bbb0 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Segitzdamm 46";
+    schema:postalCode "10969";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-4457ddb0549d cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Groninger Straße 28";
+    schema:postalCode "13347";
+    schema:addressLocality "Berlin";
+    schema:identifier "9089"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-4475eee6e4b7 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:postalCode "10435";
+    schema:addressLocality "Berlin";
+    schema:identifier "9217"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-45fe1b3ff480 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Badstraße 33";
+    schema:postalCode "13357";
+    schema:addressLocality "Berlin";
+    schema:identifier "8976"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-461f379ba256 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Bornitzstraße 73-75";
+    schema:postalCode "10365";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-46e1cb79d54e cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Barfusstraße 22-24";
+    schema:postalCode "13349";
+    schema:addressLocality "Berlin";
+    schema:identifier "9240"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-49b0e8d541fa cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Putbusser Straße 30";
+    schema:postalCode "13355";
+    schema:addressLocality "Berlin";
+    schema:identifier "8997"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-4b0ca8942b97 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Chausseestraße 84";
+    schema:postalCode "10115";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-4e817f3a1401 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Bornemannstraße 12";
+    schema:postalCode "13357";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-517f3ac3ac86 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Große Hamburger Straße 5";
+    schema:postalCode "10115";
+    schema:addressLocality "Berlin".
+cdf:addr-53f00643ac14 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Müllerstraße 126";
+    schema:postalCode "13349";
+    schema:addressLocality "Berlin".
+cdf:addr-5ce91defb637 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Ruschestraße 103";
+    schema:postalCode "10365";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-600ff606996b cdp:fromSource cdp:dhsSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Perleberger Straße 27";
+    schema:postalCode "10559";
+    schema:addressLocality "Berlin".
+cdf:addr-634ac5a273ca cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Herzbergstraße 84";
+    schema:postalCode "10365";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-64693174109e cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Hochstädter Straße 1";
+    schema:postalCode "13347";
+    schema:addressLocality "Berlin";
+    schema:identifier "2"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-66cc08665815 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Oldenburger Straße 45";
+    schema:postalCode "10551";
+    schema:addressLocality "Berlin".
+cdf:addr-6882f0a17653 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Europaplatz 1";
+    schema:postalCode "10557";
+    schema:addressLocality "Berlin".
+cdf:addr-693aea31d475 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Oldenburger Straße 46";
+    schema:postalCode "10551";
+    schema:addressLocality "Berlin".
+cdf:addr-6b72c879afbc cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Rudi-Dutschke-Straße 9";
+    schema:postalCode "10969";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-6c25decee0be cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Turmstraße 71";
+    schema:postalCode "10551";
+    schema:addressLocality "Berlin";
+    schema:identifier "9000"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-6d14d02eb11f cdp:fromSource cdp:dhsSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Schöneberger Straße 17a";
+    schema:postalCode "10963";
+    schema:addressLocality "Berlin".
+cdf:addr-6efe7ba55f8b cdp:fromSource cdp:dhsSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Koloniestraße 76";
+    schema:postalCode "13359";
+    schema:addressLocality "Berlin".
+cdf:addr-738bae5279fa cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Obentrautstraße 57";
+    schema:postalCode "10963";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-756e883a3853 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Turmstraße 34";
+    schema:postalCode "10551";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-78703837d9b9 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Reinhardtstraße 44";
+    schema:postalCode "10117";
+    schema:addressLocality "Berlin".
+cdf:addr-79a20514840f cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Markgrafenstraße 26";
+    schema:postalCode "10117";
+    schema:addressLocality "Berlin";
+    schema:identifier "9058"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-7a8ea44d8122 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Auguststraße 82";
+    schema:postalCode "10117";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-7bac7c5c09fe cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Platz vor dem Neuen Tor 2";
+    schema:postalCode "10115";
+    schema:addressLocality "Berlin".
+cdf:addr-7e6e985f6a20 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Brienzer Straße 22";
+    schema:postalCode "13407";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-840851b4025e cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Turmstraße 35a";
+    schema:postalCode "10551";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-86b16633bc3f cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Karl-Liebknecht-Straße 13";
+    schema:postalCode "10178";
+    schema:addressLocality "Berlin";
+    schema:identifier "9031"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-86c608491416 cdp:fromSource cdp:dhsSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Badstraße 33a";
+    schema:postalCode "13357";
+    schema:addressLocality "Berlin".
+cdf:addr-87295602fcfa cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Badstraße 35";
+    schema:postalCode "13357";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-8dac927043da cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Müllerstraße 74";
+    schema:postalCode "13349";
+    schema:addressLocality "Berlin";
+    schema:identifier "4908"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-8de7a6de6581 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Antwerpener Straße 40-42";
+    schema:postalCode "13353";
+    schema:addressLocality "Berlin";
+    schema:identifier "9164"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-9132a6ebaf7a cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Kolberger Straße 14";
+    schema:postalCode "13357";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-92eda355da76 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Augustenburger Platz 1";
+    schema:postalCode "13353";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-94ecf2317331 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Buttmannstraße 9";
+    schema:postalCode "13357";
+    schema:addressLocality "Berlin";
+    schema:identifier "9220"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-9a3123891aec cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Große Hamburger Straße 5-11";
+    schema:postalCode "10115";
+    schema:addressLocality "Berlin".
+cdf:addr-9a312febeb18 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Reinickendorfer Straße 58a";
+    schema:postalCode "13347";
+    schema:addressLocality "Berlin";
+    schema:identifier "9012"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-9ac4db8f63a9 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Kopenhagenerstraße 29";
+    schema:postalCode "13407";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-9c8ec44408d3 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Pflugstraße 12";
+    schema:postalCode "10115";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-9ef5282694a3 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Genter Straße 63 4.OG", "Genter Straße 63";
+    schema:postalCode "13353";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-9f35e9002f0a cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Prinzenstraße 103";
+    schema:postalCode "10969";
+    schema:addressLocality "Berlin".
+cdf:addr-a1adbf8d0ba5 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Reinhardtstraße 13";
+    schema:postalCode "10117";
+    schema:addressLocality "Berlin".
+cdf:addr-a26276d7eb42 cdp:fromSource cdp:destatisSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Arminiusstraße 2-4";
+    schema:postalCode "10551";
+    schema:addressLocality "Berlin", "Berlin-Tiergarten";
+    schema:addressCountry "DE".
+cdf:addr-a2d785abd305 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Lützowstraße 42";
+    schema:postalCode "10785";
+    schema:addressLocality "Berlin";
+    schema:identifier "9224"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-a4d64956d883 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Grenzstraße 1-5";
+    schema:postalCode "13355";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-ac2f04250f12 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Birkenstraße 51";
+    schema:postalCode "10559";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-acb70b1be356 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Lehrter Straße 69";
+    schema:postalCode "10557";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-aff5dcfbcc20 cdp:fromSource cdp:dhsSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Lübecker Straße 50";
+    schema:postalCode "10559";
+    schema:addressLocality "Berlin".
+cdf:addr-b0217b494a79 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Bellermannstraße 65";
+    schema:postalCode "13357";
+    schema:addressLocality "Berlin";
+    schema:identifier "9063"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-b2b82c76bd35 cdp:fromSource cdp:destatisSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Ritterstraße 3";
+    schema:postalCode "10969";
+    schema:addressLocality "Berlin", "Berlin-Kreuzberg";
+    schema:addressCountry "DE".
+cdf:addr-b494904ee3e8 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Heinz-Galinski-Straße 1";
+    schema:postalCode "13347";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-b52117f83adc cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Friedrichstraße 231";
+    schema:postalCode "10969";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-b9dbb620de58 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Wilhelmstraße 122";
+    schema:postalCode "10963";
+    schema:addressLocality "Berlin".
+cdf:addr-bff418638182 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Rosenthaler Straße 59";
+    schema:postalCode "10119";
+    schema:addressLocality "Berlin";
+    schema:identifier "9099"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-c0fc2e8b7e8e cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Gudrunstraße 4";
+    schema:postalCode "10365";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-c1863d69ca59 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Niederwallstraße 8-9";
+    schema:postalCode "10117";
+    schema:addressLocality "Berlin".
+cdf:addr-c2654185de3c cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Turmstraße 21";
+    schema:postalCode "10559";
+    schema:addressLocality "Berlin".
+cdf:addr-c34361180e33 cdp:fromSource cdp:destatisSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Wattstraße 9";
+    schema:postalCode "13355";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-c4f77af8c41b cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Hochstädter Straße 14";
+    schema:postalCode "13347";
+    schema:addressLocality "Berlin".
+cdf:addr-c94838c8d007 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Prinzenallee 25-26";
+    schema:postalCode "13359";
+    schema:addressLocality "Berlin";
+    schema:identifier "9074"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-ca98474ddecb cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Stettiner Straße 12";
+    schema:postalCode "13357";
+    schema:addressLocality "Berlin";
+    schema:identifier "9211"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-cd002162a139 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Feldstraße 20";
+    schema:postalCode "13355";
+    schema:addressLocality "Berlin".
+cdf:addr-d3d49dd2c7c1 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Prinzenallee 39-40";
+    schema:postalCode "13359";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-d4c41d0e23f9 cdp:fromSource cdp:caritasSource, cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Chausseestraße 128-129";
+    schema:postalCode "10115";
+    schema:addressLocality "Berlin", "Berlin-Mitte";
+    schema:addressCountry "DE".
+cdf:addr-d77e48dddb2e cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Müllerstraße 146";
+    schema:postalCode "13353";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-db73d62aa571 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Nazarethkirchstraße 42";
+    schema:postalCode "13347";
+    schema:addressLocality "Berlin", "Berlin-Wedding";
+    schema:addressCountry "DE".
+cdf:addr-e07e484190d1 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Bandelstraße 41";
+    schema:postalCode "10559";
+    schema:addressLocality "Berlin".
+cdf:addr-e549d91fb797 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Reinickendorferstraße 62";
+    schema:postalCode "13347";
+    schema:addressLocality "Berlin";
+    schema:identifier "8999"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-e767e50b5279 cdp:fromSource cdp:caritasSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Oldenburger Straße 47";
+    schema:postalCode "10551";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-e96cbaada173 cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Prinzenallee 74";
+    schema:postalCode "13357";
+    schema:addressLocality "Berlin";
+    schema:identifier "8972"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-ebbdda1700c9 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Nazarethkirchstraße 36";
+    schema:postalCode "13347";
+    schema:addressLocality "Berlin".
+cdf:addr-ed2327a70a44 cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Badstraße 22";
+    schema:postalCode "13357";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-f0ab6987370f cdp:fromSource cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Drontheimer Straße 27";
+    schema:postalCode "13359";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-f280cd85e26d cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Hannoversche Straße 5";
+    schema:postalCode "10115";
+    schema:addressLocality "Berlin".
+cdf:addr-f52230c56d84 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Genthiner Straße 48";
+    schema:postalCode "10785";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-f61c3e950510 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Müllerstraße 120";
+    schema:postalCode "13349";
+    schema:addressLocality "Berlin";
+    schema:addressCountry "DE".
+cdf:addr-f93ec34d2a3a cdp:fromSource cdp:awoSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Liebenwalder Straße 59";
+    schema:postalCode "13347";
+    schema:addressLocality "Berlin";
+    schema:identifier "9095"^^<http://www.w3.org/2001/XMLSchema#int>.
+cdf:addr-fbc447bce495 cdp:fromSource cdp:caritasSource;
+    a schema:PostalAddress;
+    schema:streetAddress "Mauritiuskirchstraße 1";
+    schema:postalCode "10365";
+    schema:addressLocality "Berlin".
+cdf:org-00416a783a9b cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9100"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Drehscheibe Kinder - und Jugendpolitik";
+    schema:alternateName "Stiftung SPI Berlin";
+    schema:address cdf:addr-4475eee6e4b7;
+    schema:parentOrganization cdf:traeger-e82cc1d98b19.
+cdf:org-02d2cb53e9f8 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "449d0352-8fe4-4580-90d2-e5f78f2352f2";
+    schema:name "Metropolitankapitel bei Sankt Hedwig";
+    schema:mainEntityOfPage "/search.ashx?g=24ddc253-dcaa-4a26-9543-0d8f6719364b&p=0&r=449d0352-8fe4-4580-90d2-e5f78f2352f2&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fmetropolitankapitel-bei-sankt-hedwig%2f10551-berlin%2f2045587%3fsearchterm%3d";
+    schema:address cdf:addr-693aea31d475.
+cdf:org-0a3cd6337719 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Haus Lübecker Straße (HLS6)";
+    schema:address cdf:addr-33a609ab7d24.
+cdf:org-0a9f477e4444 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9078"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "4.3.1 Ambulante Pflegedienste/Sozialstationen (§ 72 SGB XI bzw. § 36 SGB XI)";
+    schema:name "AWO Gemeinnützige Pflegegesellschaft mbH Geschäftsstelle";
+    foaf:homepage "https://www.awo-pflegenetz.de";
+    schema:address cdf:addr-9a312febeb18;
+    schema:parentOrganization cdf:traeger-0ea194ec8950.
+cdf:org-0b40976c9491 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8882"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "5.2.9.3 Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    schema:name "Integrationskindergarten in Kindertagesstätte \"Kelebek\"";
+    schema:address cdf:addr-6c25decee0be;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-0d03f30640d0 cdp:fromSource cdp:destatisSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "0df792624e30", "56b678c81c90";
+    schema:name "SIB für Kleinstselbstständige - Schuldner- und Insolvenzberatung", "SIB für den Berliner Strafvollzug - Schuldner- und Insolvenzberatung";
+    schema:address cdf:addr-07186889552c.
+cdf:org-0d2255cc2e2f cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "062624a9-7910-43bb-8acd-aa8a75b7a8d4";
+    schema:category "Sonstige";
+    schema:name "Diözesanrat der Katholiken im Erzbistum";
+    schema:mainEntityOfPage "/search.ashx?g=29e10fda-6576-40e3-ae5f-3ae5e5ae6da3&p=11&r=062624a9-7910-43bb-8acd-aa8a75b7a8d4&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fdioezesanrat-der-katholiken-im-erzbistum%2f10117-berlin%2f1943041%3fsearchterm%3d";
+    schema:address cdf:addr-c1863d69ca59.
+cdf:org-0f4c4c221a0e cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Übergangshaus";
+    schema:address cdf:addr-acb70b1be356.
+cdf:org-122cd07dab33 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "sbh Wohnungslosen- & Eingliederungshilfe";
+    schema:address cdf:addr-0fed5b8021b2.
+cdf:org-12983c83982f cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "48343fba-b06a-4282-b785-36ff7ff67cb1";
+    schema:category "Kinder- und Jugendhilfe";
+    schema:name "Katholische Kindertagesstätte St. Mauritius";
+    schema:mainEntityOfPage "/search.ashx?g=c27eca69-3d92-4a45-946e-4e5c672e09e2&p=2&r=48343fba-b06a-4282-b785-36ff7ff67cb1&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fkatholische-kindertagesstaette-st.-mauritius%2f10365-berlin%2f80134%3fsearchterm%3d";
+    schema:address cdf:addr-19da89c63b40.
+cdf:org-1525a6fb5c8b cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8856"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Schuldnerberatung Stiftung SPI";
+    schema:alternateName "Geschäftsbereich Stadtentwicklung";
+    schema:address cdf:addr-e96cbaada173;
+    schema:parentOrganization cdf:traeger-e82cc1d98b19.
+cdf:org-171e16354483 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9052"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Kindertagesstätte \"Sonnenblume\"";
+    schema:address cdf:addr-e549d91fb797;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-183f1d3d4fe8 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Schuldner- und Insolvenzberatung Berlin Spree-Wuhle";
+    schema:address cdf:addr-6b72c879afbc.
+cdf:org-18d502a0c994 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8858"^^<http://www.w3.org/2001/XMLSchema#int>, "8862"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "7.3.6 Schuldnerberatungsstellen/Schuldner- und Verbraucherinsolvenzberatung";
+    schema:name "Schuldner- und Insolvenzberatung", "Schuldnerberatung und Insolvenzberatung";
+    schema:address cdf:addr-45fe1b3ff480;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-1a9a70707d70 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Das Gesundheitszentrum";
+    schema:address cdf:addr-9c8ec44408d3.
+cdf:org-22623fadd742 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "23a5f301-98fe-4463-86e3-152a78ca4cd6";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Tamar";
+    schema:alternateName "Sozialdienst katholischer Frauen e.V. Berlin";
+    schema:mainEntityOfPage "/search.ashx?g=7ada11ca-eb48-4a90-960e-243aac5c2834&p=0&r=23a5f301-98fe-4463-86e3-152a78ca4cd6&u=http%3a%2f%2fwww.caritas.de%2fadressen%2ftamar%2fsozialdienst-katholischer-frauen-e.v.-berlin%2f13347-berlin%2f75065%3fsearchterm%3d";
+    schema:address cdf:addr-ebbdda1700c9.
+cdf:org-229a4e0b1081 cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5080";
+    schema:category "Ambulante Einrichtung";
+    schema:name "vista WIGWAM Connect";
+    schema:alternateName "Aufsuchende Elternhilfe";
+    foaf:homepage "www.vistaberlin.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5080&cHash=da7c4c8096d360c688ade7e744da8e57";
+    schema:availableService "Hilfen für junge Eltern", "Aufsuchende Elternhilfe bei problematischem Konsum. Begleitung in der Schwangerschaft und frühen Elternzeit.";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "wigwam-connect@vistaberlin.de";
+    schema:telephone "030224451400";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Mo bis Do 10 bis 16 Uhr Fr 10 - 15 Uhr Sprechstunde in der Charité Campus Virchow Klinikum Di 10 - 15 Uhr und nach Vereinbarung (Tel. 030/ 450564-270)";
+    schema:audience "Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung";
+    schema:address cdf:addr-3aabbf3a1ac6.
+cdf:org-236847e0f3e3 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "SPEZIALISIERTE SCHULDNER- UND INSOLVENZBERATUNGSSTELLE FÜR KLEINSTSELBSTSTÄNDIGE IN BERLIN";
+    schema:address cdf:addr-acb70b1be356.
+cdf:org-2434a5967acf cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8881"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "5.2.9.3 Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    schema:name "Integrationskindergarten in Kindertagesstätte \"Sonnenblume\"";
+    schema:address cdf:addr-e549d91fb797;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-24bcd56b09cb cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Zuwendungen Ambulante Einrichtungen";
+    schema:address cdf:addr-f52230c56d84.
+cdf:org-24d39704bb0d cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "WIN/Wohn- und INtegrationshilfen";
+    schema:address cdf:addr-c0fc2e8b7e8e.
+cdf:org-26b5be6c340b cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8940"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "2.2.5 Berufsvorbereitende Einrichtungen für arbeitslose Jugendliche";
+    schema:name "Tagesfreizeitstätte Werk 9";
+    schema:alternateName "Stiftung SPI Berlin";
+    schema:address cdf:addr-79a20514840f;
+    schema:parentOrganization cdf:traeger-e82cc1d98b19.
+cdf:org-271cba534b72 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8813"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "5.3.8 Ambulantes betreutes Wohnen für Menschen mit Behinderung/Menschen mit psych. Erkrankung";
+    schema:name "Behindertenhilfe Betreutes Wohnen";
+    schema:address cdf:addr-35e4ef384887;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-289cddd77454 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "MutterKindWohnen";
+    schema:address cdf:addr-87295602fcfa.
+cdf:org-2a437f9aa35d cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9050"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Kindertagesstätte \"Rosa Marzipan\"";
+    schema:address cdf:addr-49b0e8d541fa;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-2bbd1097e91a cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8954"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Fahrdienst für Behinderte";
+    schema:address cdf:addr-64693174109e;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-2c929ac30e1a cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "c72d636e-7a4f-4156-b0cb-1827234263ba";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Betreutes Einzelwohnen Große Hamburger";
+    schema:alternateName "Caritas Erzbistum Berlin Projekt: Betreutes Einzelwohnen";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=3&r=c72d636e-7a4f-4156-b0cb-1827234263ba&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fbetreutes-einzelwohnen-grosse-hamburger%2fcaritas-erzbistum-berlin-projekt-betreutes-einzelw%2f10115-berlin%2f75498%3fsearchterm%3d";
+    schema:address cdf:addr-1f508583bd14.
+cdf:org-2ffec0f57249 cdp:fromSource cdp:caritasSource, cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "73689048-ab16-478e-9814-9ad2a9c5d45e", "f1da2711-9e0c-4498-988c-ab324f0c555e", "4529";
+    schema:category "Weitere soziale Hilfen", "Ambulante Einrichtung";
+    schema:name "Caritasverband für das Erzbistum Berlin e. V. Integrative Suchtberatung Mitte Große Hamburger Str. 18, 10115 Berlin", "Integrative Suchtberatung Mitte", "Caritasverband für das Erzbistum Berlin e.V., Integratives Suchtzentrum Mitte", "Caritasverband für das Erzbistum Berlin e.V.";
+    schema:alternateName "Integrative Suchtberatung Mitte", "Ambulante Rehabilitation Sucht und Nachsorge\r\nCaritasverband für das Erzbistum Berlin e.V.\r\nGroße Hamburger Str. 18, 10115 Berlin", "Integratives Suchtzentrum Mitte";
+    foaf:homepage "https://www.caritas-berlin.de";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=7&r=73689048-ab16-478e-9814-9ad2a9c5d45e&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fcaritasverband-fuer-das-erzbistum-berlin-e.-v.-int%2fambulante-rehabilitation-sucht-und-nachsorgecarita%2f10115-berlin%2f95109%3fsearchterm%3d", "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=8&r=f1da2711-9e0c-4498-988c-ab324f0c555e&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fcaritasverband-fuer-das-erzbistum-berlin-e.v.-inte%2fintegrative-suchtberatung-mitte%2f10115-berlin%2f97660%3fsearchterm%3d", "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=4529&cHash=ba60da2713e78c722d364e2e89fe8352";
+    schema:availableService "Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)", "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Formen des Betreuten Wohnens, Ambulante Behandlung, Kombibehandlung, Suchtberatung im Justizvollzug";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "sucht-gr.hamburger@caritas-berlin.de";
+    schema:telephone "03066633400401";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Mo-Do 9-17 Uhr Fr 12-15 Uhr";
+    schema:audience "Alkohol, Medikamenten, Glücksspiel, Illegalen Drogen";
+    schema:address cdf:addr-1f508583bd14.
+cdf:org-31357e1eff74 cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5089";
+    schema:category "Ambulante Einrichtung, Betreutes Wohnen";
+    schema:name "vista BEW Wedding";
+    schema:alternateName "Betreutes Wohnen";
+    foaf:homepage "www.vistaberlin.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5089&cHash=b112da963d1a371bdc3f83b3e1713633";
+    schema:availableService "Ambulante Formen des Betreuten Wohnens";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "bew-wedding@vistaberlin.de";
+    schema:telephone "0304652471";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Termine werden individuell nach Absprache vergeben. Nehmen Sie mit uns Kontakt auf!";
+    schema:audience "Alkohol, Illegalen Drogen";
+    schema:address cdf:addr-86c608491416.
+cdf:org-32aca85620a9 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9070"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "10.1 Zuordnung offen";
+    schema:name "August-Bebel-Institut Institut f. Soziale Demokratie";
+    schema:address cdf:addr-2366652f8f73.
+cdf:org-34e986356c61 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "4750";
+    schema:category "Ambulante Einrichtung";
+    schema:name "Frauenladen", "Frauenladen - Drogennotdienst Berlin gGmbH";
+    foaf:homepage "www.drogennotdienst.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=4750&cHash=d7d5a615491cc30e7f3a03256e7377cd";
+    schema:availableService "Beratung für Angehörige, Kollegiale Beratung für Fachkräfte", "Ambulante Beratung / Sucht- und Drogenberatung, Suchtberatung im Justizvollzug, NADA-Ohrakupunktur";
+    schema:accessibilitySummary "Die Einrichtung ist nicht barrierefrei erreichbar.";
+    schema:email "frauenladen@notdienstberlin.de";
+    schema:telephone "0304552093";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Offene Sprechstunden: Montags 11 - 14 Uhr Mittwochs 15 - 18 Uhr Donnerstags 12 - 15 Uhr Außerdem Termine nach Vereinbarung von Montag bis Freitag. Telefonische Erreichbarkeit von Montag bis Freitag.";
+    schema:audience "Alkohol, Medikamenten, Illegalen Drogen";
+    schema:address cdf:addr-db73d62aa571.
+cdf:org-357cf41d9745 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "680c9532-20ce-4fa3-b8f0-69906dfcb4b1";
+    schema:category "Kinder- und Jugendhilfe";
+    schema:name "Kindertagesstätte St. Robert";
+    schema:alternateName "Katholische Kindertagesstätte";
+    schema:mainEntityOfPage "/search.ashx?g=7ada11ca-eb48-4a90-960e-243aac5c2834&p=1&r=680c9532-20ce-4fa3-b8f0-69906dfcb4b1&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fkindertagesstaette-st.-robert%2fkatholische-kindertagesstaette%2f13347-berlin%2f87658%3fsearchterm%3d";
+    schema:address cdf:addr-c4f77af8c41b.
+cdf:org-35c3c8d20875 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8872"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "2.3.8 Beratungsstellen für arbeitslose Jugendliche/Ausbildungsplatzvermittlung";
+    schema:name "Interkulturelles Zentrum f. Mädchen und MÄDEA";
+    schema:address cdf:addr-0787320c50e7.
+cdf:org-369c153655f8 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "ef0fbf54-743e-4b44-b98a-cafeceef21f4";
+    schema:category "Altenhilfe";
+    schema:name "Caritas-Seniorenzentrum St. Johannes Berlin";
+    schema:alternateName "Verhinderungspflege, Tagespflege, Seniorenheim";
+    schema:mainEntityOfPage "/search.ashx?g=9f17e8ee-47ef-41ce-9652-eac2d56e60e9&p=0&r=ef0fbf54-743e-4b44-b98a-cafeceef21f4&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fcaritas-seniorenzentrum-st.-johannes-berlin%2fverhinderungspflege-tagespflege-seniorenheim%2f10963-berlin%2f102446%3fsearchterm%3d";
+    schema:address cdf:addr-b9dbb620de58.
+cdf:org-392b1665fa8d cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "43e53ca4-e395-4845-b670-684eccd21546";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Bahnhofsmission Hauptbahnhof";
+    schema:mainEntityOfPage "/search.ashx?g=2f68eba9-2c8b-4304-a685-78a4fca80a72&p=0&r=43e53ca4-e395-4845-b670-684eccd21546&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fbahnhofsmission-hauptbahnhof%2f10557-berlin%2f87462%3fsearchterm%3d";
+    schema:address cdf:addr-6882f0a17653.
+cdf:org-39abaff663ec cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9007"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Familienpflege";
+    schema:address cdf:addr-64693174109e;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-3b8f827868ff cdp:fromSource cdp:caritasSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "7bb6377e-8db1-4307-8e85-2f50b706c4b4";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Ambulante Wohnungslosenhilfe Nord", "Ambulante Wohnungslosenhilfe Moabit";
+    schema:alternateName "Beratungszentrum Oldenburger Straße, \r\nAmbulante Wohnungslosenhilfe Nord\r\nCaritasverband für das Erzbistum Berlin e.V. ";
+    schema:mainEntityOfPage "/search.ashx?g=24ddc253-dcaa-4a26-9543-0d8f6719364b&p=3&r=7bb6377e-8db1-4307-8e85-2f50b706c4b4&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fambulante-wohnungslosenhilfe-nord%2fberatungszentrum-oldenburger-strasse-ambulante-woh%2f10551-berlin%2f790494%3fsearchterm%3d";
+    schema:address cdf:addr-e767e50b5279.
+cdf:org-3da393095e42 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "2db75137-e63a-4b5f-ab4d-b940ab2ee95a";
+    schema:name "Mitarbeiterseite Arbeitsrechtliche Kommission (ak.mas)";
+    schema:alternateName "Deutscher Caritasverband e.V.";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=2&r=2db75137-e63a-4b5f-ab4d-b940ab2ee95a&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fmitarbeiterseite-arbeitsrechtliche-kommission-ak.m%2fdeutscher-caritasverband-e.v%2f10115-berlin%2f3359111%3fsearchterm%3d";
+    schema:address cdf:addr-7bac7c5c09fe.
+cdf:org-3da7dba9ccda cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "c08e2cd8-1641-4cd5-a971-a592e308e1bc";
+    schema:name "Hedi Kitas  - Kitas im Erzbistum Berlin – Zweckverband der katholischen Kirchengemeinden";
+    schema:mainEntityOfPage "/search.ashx?g=29e10fda-6576-40e3-ae5f-3ae5e5ae6da3&p=4&r=c08e2cd8-1641-4cd5-a971-a592e308e1bc&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fhedi-kitas-kitas-im-erzbistum-berlin--zweckverband%2f10117-berlin%2f2635879%3fsearchterm%3d";
+    schema:address cdf:addr-c1863d69ca59.
+cdf:org-3fd74b2d37fb cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "4974", "5087";
+    schema:category "Ambulante Einrichtung", "Ambulante Einrichtung, Kontakt- und Anlaufstelle mit integriertem Drogenkonsumraum";
+    schema:name "Birkenstube - Kontakt- und Anlaufstelle Mitte", "Birkenstube", "vista Birkenstube";
+    schema:alternateName "Kontakt- und Anlaufstelle mit Drogenkonsumraum", "Kontakt und Beratung, medizinische Hilfen, Konsumraum";
+    foaf:homepage "www.vistaberlin.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=4974&cHash=ddb39a8afdc73d778d816dd674eb30ab", "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5087&cHash=05d330d37d468b1c16a5211f9a1ce178";
+    schema:availableService "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Drogenkonsumraum", "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Spritzentausch, Safer-use-Beratung, Drogennotfalltraining (Naloxonvergabe), medizinische Versorgung und Beratung sowie Vermittlung in weiterführende Einrichtungen.";
+    schema:accessibilitySummary "Die Einrichtung ist nicht barrierefrei erreichbar.";
+    schema:email "birkenstube@vistaberlin.de";
+    schema:telephone "03044721353";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Mo., Di., Do., Fr. 10°° - 20°° Mi. 10.30 - 20°° Sa. 11°° - 19°°", "Mo., Di., 12:00-19:00 Uhr Mi.: 14:00-19:00 Uhr Do., Fr.: 10:00-17:00 Uhr Sa.+So.: Geschlossen Konsumraum (letzter Einlass): Mo., D.: 12:00-19:00 Uhr Mi.: bis 18:30 Uhr Do., Fr.: bis 16:30 Uhr";
+    schema:audience "Illegalen Drogen";
+    schema:address cdf:addr-ac2f04250f12.
+cdf:org-40649150bd4d cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Wohnhilfe Turmstraße";
+    schema:address cdf:addr-840851b4025e.
+cdf:org-45a7aa509f58 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "0c5cf1e4-c199-4462-845c-4478e7b32633";
+    schema:category "Kinder- und Jugendhilfe";
+    schema:name "Katholische Kindertagesstätte Herz Jesu";
+    schema:mainEntityOfPage "/search.ashx?g=1078e1e3-60c2-4817-bba9-b1a2e54d6341&p=0&r=0c5cf1e4-c199-4462-845c-4478e7b32633&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fkatholische-kindertagesstaette-herz-jesu%2f10119-berlin%2f82177%3fsearchterm%3d";
+    schema:address cdf:addr-0830ea9f549d.
+cdf:org-45e82d88e7c9 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5775";
+    schema:category "Ambulante Einrichtung";
+    schema:name "Kibo – ambulante Drogentherapie", "Kibo";
+    schema:alternateName "Ambulante Drogentherapie";
+    foaf:homepage "www.kibo-berlin.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5775&cHash=16b05d11c67cfd84db9211bcb5ac897a";
+    schema:availableService "Paartherapie", "Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Behandlung";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "kibo@kokon.de";
+    schema:telephone "03021021760";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:audience "Alkohol, Medikamenten, Illegalen Drogen";
+    schema:address cdf:addr-738bae5279fa.
+cdf:org-469d86c764eb cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Haus \"Panorama Nord\"";
+    schema:address cdf:addr-3a46d3e12781.
+cdf:org-4729a57573fe cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9048"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Kindertagesstätte \"Maulwurf\"";
+    schema:address cdf:addr-243bf0783cc2;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-48223bc232b3 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8945"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "2.2.5 Berufsvorbereitende Einrichtungen für arbeitslose Jugendliche";
+    schema:name "Suchtprophylaxeprojekt für Kinder u. Jugendliche";
+    schema:address cdf:addr-b0217b494a79;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-48948595c4bd cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9122"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "4.3.2 Seniorenbegegnungsstätten/ Seniorentagesstätten/ Seniorenfreizeitstätten";
+    schema:name "Begegnungstätte Schillerpark";
+    schema:address cdf:addr-46e1cb79d54e;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-4a22112ece60 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9093"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "6.3.1 Migrationsberatung für erwachsene Zugewanderte ";
+    schema:name "Migrationsberatung für erwachsene Zuwanderer (MBE) Zentrum für Migration und Integration";
+    schema:address cdf:addr-ca98474ddecb.
+cdf:org-4dc2fdbb2a29 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "ef260d7a-7363-4b60-be06-dae217575567";
+    schema:category "Sonstige";
+    schema:name "Kommissariat der deutschen Bischöfe";
+    schema:alternateName "Katholisches Büro in Berlin";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=14&r=ef260d7a-7363-4b60-be06-dae217575567&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fkommissariat-der-deutschen-bischoefe%2fkatholisches-buero-in-berlin%2f10115-berlin%2f2557311%3fsearchterm%3d";
+    schema:address cdf:addr-f280cd85e26d.
+cdf:org-51c06607c395 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9106"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "10.4.2.2 Clubs für Jugendliche";
+    schema:name "Jugendkulturzentrum Pumpe";
+    schema:address cdf:addr-a2d785abd305.
+cdf:org-5246b75cdb6a cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9046"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "2.2.2 Einrichtungen der Tagespflege für Kinder";
+    schema:name "Kindertagesstätte \"Pinocchio\"";
+    schema:address cdf:addr-8de7a6de6581;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-529bcfff161c cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Betreutes Einzelwohnen";
+    schema:address cdf:addr-9132a6ebaf7a.
+cdf:org-5392f9bac342 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "95810df6-c066-48f6-9149-91866fbf5fac";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "IN VIA -Jugendmigrationsdienst - Cafe VIA -";
+    schema:mainEntityOfPage "/search.ashx?g=1c616915-4b4c-4e32-9001-b1047eb0ed99&p=0&r=95810df6-c066-48f6-9149-91866fbf5fac&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fin-via-jugendmigrationsdienst-cafe-via%2f13357-berlin%2f93674%3fsearchterm%3d";
+    schema:address cdf:addr-05ed8e35e136.
+cdf:org-5425b07c3e72 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9099"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "2.3.1 Jugendberatungsstellen, Jugendhilfestellen, Jugendfreizeiteinrichtungen (§11 SGB VIII)";
+    schema:name "Clearingstelle Jugendhilfe/Polizei";
+    schema:alternateName "Stiftung SPI Berlin";
+    schema:address cdf:addr-4475eee6e4b7;
+    schema:parentOrganization cdf:traeger-e82cc1d98b19.
+cdf:org-54ec4da85630 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "344e2e03-73a2-4a37-b1d8-5cdf279d339b";
+    schema:category "Kinder- und Jugendhilfe";
+    schema:name "Katholische Kindertagesstätte St. Laurentius";
+    schema:mainEntityOfPage "/search.ashx?g=dccc99cb-4b88-4b23-8054-87d3b05b8a87&p=0&r=344e2e03-73a2-4a37-b1d8-5cdf279d339b&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fkatholische-kindertagesstaette-st.-laurentius%2f10559-berlin%2f85880%3fsearchterm%3d";
+    schema:address cdf:addr-e07e484190d1.
+cdf:org-56e96807da21 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8854"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "7.3.11 Beratungsstellen für erwerbslose Menschen";
+    schema:name "Beratung für erwachsene Arbeitslose Stiftung SPI";
+    schema:alternateName "Geschäftsbereich Stadtentwicklung";
+    schema:address cdf:addr-e96cbaada173;
+    schema:parentOrganization cdf:traeger-e82cc1d98b19.
+cdf:org-5973c6bbb27d cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9085"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Kleiderkammer IsA-K Integration statt Ausgrenzung -Kleiderk.";
+    schema:address cdf:addr-e96cbaada173;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-59c8941de46c cdp:fromSource cdp:destatisSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "bd528a533cbc";
+    schema:name "Schuldner- und Insolvenzberatung Berlin", "Deutscher FamilienVerband e.V. - Schuldner- und Insolvenzberatung";
+    schema:address cdf:addr-a26276d7eb42.
+cdf:org-5ba56b28d437 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5260";
+    schema:category "Ambulante Einrichtung";
+    schema:name "Berliner Help Stiftung";
+    schema:alternateName "Christliche Sucht und Lebenshilfe";
+    foaf:homepage "www.berliner-help-stiftung.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5260&cHash=133bb0a99d609ad59106b3dde9fc25bb";
+    schema:availableService "Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)", "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Suchtberatung / -Prävention im Betrieb, Suchtberatung im Justizvollzug";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "info@bhs-tc.de";
+    schema:telephone "0304565565";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Montag - Donnerstag 10:00 - 13:00 Uhr";
+    schema:audience "Alkohol, Tabak, Glücksspiel, Illegalen Drogen, psychische Erkrankungen";
+    schema:address cdf:addr-336728388e53.
+cdf:org-5dc73d54b577 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Aufnahmewohnheim Grenzstraße";
+    schema:address cdf:addr-a4d64956d883.
+cdf:org-605c888738aa cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "6155";
+    schema:category "Ambulante Einrichtung";
+    schema:name "Berliner Präventionspraxis";
+    foaf:homepage "www.berlin-suchtpraevention.de/projekte/berliner-praeventions-praxis-raus-aus-der-grauzone/";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=6155&cHash=e96f8be967a6fac57f064a9e8b8db723";
+    schema:availableService "Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)", "Ambulante Beratung / Sucht- und Drogenberatung, Präventionsberatung";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "info@berlin-praeventionspraxis.de";
+    schema:telephone "03029352644";
+    cdf:parentOrgClassification "Öffentlich-rechtlicher Träger";
+    schema:openingHours "Montag: 12:00-17:00 Uhr Dienstag: 10:00-17:00 Uhr Mittwoch: 12:00-17:00 Uhr";
+    schema:audience "Alkohol, Tabak, Medikamenten, Glücksspiel, Illegalen Drogen, Problematisches Essverhalten, Problematischer Mediennutzung";
+    schema:address cdf:addr-d4c41d0e23f9.
+cdf:org-67cef3f351b4 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "FrauenbeDacht - Wohnen Plus für Frauen";
+    schema:address cdf:addr-4e817f3a1401.
+cdf:org-6a57901fcd15 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9101"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Berliner Büro f. Diversionsberatung u. Vermittlung";
+    schema:alternateName "Stiftung SPI Berlin";
+    schema:address cdf:addr-4475eee6e4b7;
+    schema:parentOrganization cdf:traeger-e82cc1d98b19.
+cdf:org-6af9155b0c65 cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5115";
+    schema:category "Ambulante Einrichtung";
+    schema:name "Fixpunkt gGmbH";
+    schema:alternateName "Geschäftsstelle";
+    foaf:homepage "www.fixpunktggmbh.org";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5115&cHash=453b2ddc19bc982a1736ee1aac27294c";
+    schema:availableService "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Qualifizierung / Arbeitsförderung / Beschäftigung, Drogenkonsum unter pflegerischer Aufsicht, Streetwork";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "ggmbh@fixpunktggmbh.org";
+    schema:telephone "03066701115";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Kontaktstellen (noch im Ausbau, veränderlich) siehe www.fixpunktggmbh.org";
+    schema:audience "Alkohol, Illegalen Drogen";
+    schema:address cdf:addr-6d14d02eb11f.
+cdf:org-6b82756d31f8 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "13f87edb-d150-456e-b2d5-7f46da6a7671", "62caa2d2-a776-47c7-8072-7516ffb1a0c4";
+    schema:name "Verband katholischer Altenhilfe in Deutschland e.V. (VKAD)", "Verband kath. Altenhilfe in Deutschland e. V.";
+    schema:alternateName "Berliner Büro";
+    schema:mainEntityOfPage "/search.ashx?g=29e10fda-6576-40e3-ae5f-3ae5e5ae6da3&p=1&r=13f87edb-d150-456e-b2d5-7f46da6a7671&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fverband-katholischer-altenhilfe-in-deutschland-e.v%2f10117-berlin%2f151574%3fsearchterm%3d", "/search.ashx?g=29e10fda-6576-40e3-ae5f-3ae5e5ae6da3&p=7&r=62caa2d2-a776-47c7-8072-7516ffb1a0c4&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fverband-kath.-altenhilfe-in-deutschland-e.-v%2fberliner-buero%2f10117-berlin%2f772744%3fsearchterm%3d";
+    schema:address cdf:addr-a1adbf8d0ba5.
+cdf:org-6cad5b5b64a6 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Tagesstätte Lichtenberg";
+    schema:address cdf:addr-2fb8d7fcbf10.
+cdf:org-6d7b61fd54cc cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "d342beeb-d184-4857-8d1a-1a308efa23c7";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Flüchtlingsberatung";
+    schema:alternateName "Beratungszentrum Oldenburger Straße,\r\nRechts- und Verfahrensberatung für Geflüchtete\r\nCaritasverband für das Erzbistum Berlin e.V.";
+    schema:mainEntityOfPage "/search.ashx?g=24ddc253-dcaa-4a26-9543-0d8f6719364b&p=2&r=d342beeb-d184-4857-8d1a-1a308efa23c7&u=http%3a%2f%2fwww.caritas.de%2fadressen%2ffluechtlingsberatung%2fberatungszentrum-oldenburger-strasserechts-und-ver%2f10551-berlin%2f790497%3fsearchterm%3d";
+    schema:address cdf:addr-66cc08665815.
+cdf:org-6e00f901e8fc cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Neue Chance Mitte";
+    schema:address cdf:addr-4b0ca8942b97.
+cdf:org-6fb7f657a030 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9fb0a702-3147-4b37-8084-3f744e23b603";
+    schema:category "Sonstige";
+    schema:name "Kath. Arbeitsgemeinschaft für Müttergenesung";
+    schema:alternateName "Klara-Ullrich-Haus";
+    schema:mainEntityOfPage "/search.ashx?g=29e10fda-6576-40e3-ae5f-3ae5e5ae6da3&p=10&r=9fb0a702-3147-4b37-8084-3f744e23b603&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fkath.-arbeitsgemeinschaft-fuer-muettergenesung%2fklara-ullrich-haus%2f10117-berlin%2f2631088%3fsearchterm%3d";
+    schema:address cdf:addr-a1adbf8d0ba5.
+cdf:org-7202370e3c37 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8913"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "2.3.6 Beratungs- und Vermittlungsstellen für FSJ/FÖJ, Au pair, Bundesfreiwilligendienst";
+    schema:name "Platzmanagement Alexanderplatz Stiftung SPI Berlin";
+    schema:address cdf:addr-86b16633bc3f;
+    schema:parentOrganization cdf:traeger-e82cc1d98b19.
+cdf:org-72a81475f551 cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5097";
+    schema:category "Ambulante Einrichtung";
+    schema:name "vista WIGWAM ZERO";
+    schema:alternateName "Schwangerschaft und Alkohol I Prävention -Information -Beratung";
+    foaf:homepage "www.wigwamzero.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5097&cHash=3f8bdfda72e26cbbdf5250ab3d6511d2";
+    schema:availableService "Ambulante Beratung / Sucht- und Drogenberatung, Frauen vor und während der Schwangerschaft; Prävention, Aufklärung und Weiterbildung";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "info@wigwamzero.de, wigwam-zero@vistaberlin.de";
+    schema:telephone "030224451414";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Telefonische Erstberatung Mo - Fr 10 bis 15 Uhr";
+    schema:audience "Alkohol, Schwangerschaft und Alkohol";
+    schema:address cdf:addr-3aabbf3a1ac6.
+cdf:org-73674123efb0 cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "6138";
+    schema:category "Obdachlosen-Unterkunft mit Cleananspruch";
+    schema:name "Haus Phönix Pankow gGmbH";
+    foaf:homepage "www.haus-phoenix.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=6138&cHash=011fba9bcf012c9c58e8ff0d6e5717b1";
+    schema:availableService "Suchtselbsthilfe - von Süchtigen für Süchtige";
+    schema:accessibilitySummary "Die Einrichtung ist nicht barrierefrei erreichbar.";
+    schema:email "synergie@haus-phoenix.de";
+    schema:telephone "03047005041";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Montag bis Freitag von 9.00 - 16.00 Uhr";
+    schema:audience "Alkohol, Illegalen Drogen";
+    schema:address cdf:addr-6efe7ba55f8b.
+cdf:org-75852a15fae2 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Schuldner- und Insolvenzberatung Berlin";
+    schema:address cdf:addr-c34361180e33.
+cdf:org-76b13a36a139 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8971"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "6.3.1 Migrationsberatung für erwachsene Zugewanderte ";
+    schema:name "Frauenladen";
+    schema:address cdf:addr-4457ddb0549d;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-79954ee5dd4b cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Schutz und Neustart für Menschen ohne Obdach";
+    schema:address cdf:addr-7a8ea44d8122.
+cdf:org-7c7c0e562bb0 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "d42402a3-8b6a-456c-819f-c5848c7c9cdc";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Allgemeine Soziale Beratung Mitte";
+    schema:alternateName "Beratungszentrum Oldenburger Straße,\r\nAllgemeine Soziale Beratung Mitte, \r\nCaritasverband für das Erzbistum Berlin e.V.";
+    schema:mainEntityOfPage "/search.ashx?g=24ddc253-dcaa-4a26-9543-0d8f6719364b&p=1&r=d42402a3-8b6a-456c-819f-c5848c7c9cdc&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fallgemeine-soziale-beratung-mitte%2fberatungszentrum-oldenburger-strasseallgemeine-soz%2f10551-berlin%2f101676%3fsearchterm%3d";
+    schema:address cdf:addr-e767e50b5279.
+cdf:org-7d9fb9585804 cdp:fromSource cdp:destatisSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "374213b67185";
+    schema:name "AWO Berlin Kreisverband Mitte e.V. - Schuldnerberatung";
+    schema:address cdf:addr-c34361180e33.
+cdf:org-7dc1f578e47f cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "ASOG-Wohnheim";
+    schema:address cdf:addr-9ac4db8f63a9.
+cdf:org-7dce01b8b5a1 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9102"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "2.3.1 Jugendberatungsstellen, Jugendhilfestellen, Jugendfreizeiteinrichtungen (§11 SGB VIII)";
+    schema:name "Sozialpädagogische Hilfen Fallschirm, Stiftung SPI Berlin";
+    schema:address cdf:addr-94ecf2317331;
+    schema:parentOrganization cdf:traeger-e82cc1d98b19.
+cdf:org-7e00110890d0 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "60bc9831-a445-45d2-abd6-0d92b624c40e";
+    schema:category "Kinder- und Jugendhilfe";
+    schema:name "Katholische Kindertagesstätte St. Sebastian";
+    schema:mainEntityOfPage "/search.ashx?g=60e90050-a2c0-4784-8899-5e2bb06ca965&p=0&r=60bc9831-a445-45d2-abd6-0d92b624c40e&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fkatholische-kindertagesstaette-st.-sebastian%2f13355-berlin%2f73895%3fsearchterm%3d";
+    schema:address cdf:addr-cd002162a139.
+cdf:org-7e1cd8b26879 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Kleiderkammer";
+    schema:address cdf:addr-07186889552c.
+cdf:org-7e3fa1342f13 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "2000bb7b-a596-475a-97f6-c81a760d2816", "bffe5660-b85f-4ed2-b26d-81ce41dbff4f";
+    schema:name "Caritas Behindertenhilfe und Psychiatrie e.V.";
+    schema:alternateName "Hauptvertretung Berlin";
+    schema:mainEntityOfPage "/search.ashx?g=29e10fda-6576-40e3-ae5f-3ae5e5ae6da3&p=5&r=2000bb7b-a596-475a-97f6-c81a760d2816&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fcaritas-behindertenhilfe-und-psychiatrie-e.v%2fhauptvertretung-berlin%2f10117-berlin%2f946102%3fsearchterm%3d", "/search.ashx?g=29e10fda-6576-40e3-ae5f-3ae5e5ae6da3&p=3&r=bffe5660-b85f-4ed2-b26d-81ce41dbff4f&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fcaritas-behindertenhilfe-und-psychiatrie-e.v%2f10117-berlin%2f436858%3fsearchterm%3d";
+    schema:address cdf:addr-a1adbf8d0ba5.
+cdf:org-82e27a964742 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "e53ae44c-187f-4cf5-8ab8-7ec529dcd358";
+    schema:name "Katholischer Krankenhausverband Deutschlands e.V.";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=0&r=e53ae44c-187f-4cf5-8ab8-7ec529dcd358&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fkatholischer-krankenhausverband-deutschlands-e.v%2f10115-berlin%2f603024%3fsearchterm%3d";
+    schema:address cdf:addr-517f3ac3ac86.
+cdf:org-83471dff4537 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8879"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "5.2.9.3 Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    schema:name "Integrationskindergarten in Kindertagesstätte \"Rosa Marzipan\"";
+    schema:address cdf:addr-49b0e8d541fa;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-8b23df3f8ccd cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Betreutes Einzelwohnen (§ 67 SGB XII) & Appartements für wohnungslose Frauen";
+    schema:address cdf:addr-42a06250270b.
+cdf:org-8d1c17922264 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "4052";
+    schema:category "Ambulante Einrichtung, Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten";
+    schema:name "Betreutes Wohnen Turmstraße";
+    schema:alternateName "Betreutes Wohnen für Substituierte";
+    foaf:homepage "www.notdienstberlin.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=4052&cHash=423af6fb759c88127de771f4edb5f599";
+    schema:availableService "Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Formen des Betreuten Wohnens, Psychosoziale Betreuung Substituierter";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "moabit@notdienstberlin.de";
+    schema:telephone "030233240380";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Sprechzeiten: Mo, Di, Do und Freitag: 10:00 bis 13:00Uhr";
+    schema:audience "Alkohol, Medikamenten, Illegalen Drogen, Substitution ist Voraussetzung";
+    schema:address cdf:addr-756e883a3853.
+cdf:org-8f8aba9872f3 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8977"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "4.3.1 Ambulante Pflegedienste/Sozialstationen (§ 72 SGB XI bzw. § 36 SGB XI)";
+    schema:name "AWO Sozialstation Wedding";
+    schema:address cdf:addr-9a312febeb18;
+    schema:parentOrganization cdf:traeger-0ea194ec8950.
+cdf:org-8fddea78969a cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Ambulante Wohnhilfen Wedding und Reinickendorf";
+    schema:address cdf:addr-ed2327a70a44.
+cdf:org-91488a458a47 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8845"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Wohngemeinschaft f. geistig Behinderte Hochstädter Straße";
+    schema:address cdf:addr-35e4ef384887;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-91655b89db8a cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "84a099ef-4626-4624-9c1c-637bad38dbad";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Evas Haltestelle";
+    schema:alternateName "Evas Haltestelle - Tagesstätte für Frauen ohne Obdach vom Sozialdienst katholischer Frauen e.V. Berlin";
+    schema:mainEntityOfPage "/search.ashx?g=8314c4b1-2d2f-4b72-80fb-f7779f85b347&p=0&r=84a099ef-4626-4624-9c1c-637bad38dbad&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fevas-haltestelle%2fevas-haltestelle-tagesstaette-fuer-frauen-ohne-obd%2f13349-berlin%2f86796%3fsearchterm%3d";
+    schema:address cdf:addr-53f00643ac14.
+cdf:org-917025b4d74b cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "e008b4d6-1757-4d52-87aa-f941d6fd9243";
+    schema:name "Deutscher Caritasverband e.V.";
+    schema:alternateName "Geschäftsstelle Berlin\nKlara-Ullrich-Haus";
+    schema:mainEntityOfPage "/search.ashx?g=29e10fda-6576-40e3-ae5f-3ae5e5ae6da3&p=2&r=e008b4d6-1757-4d52-87aa-f941d6fd9243&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fdeutscher-caritasverband-e.v%2fgeschaeftsstelle-berlinklara-ullrich-haus%2f10117-berlin%2f118111%3fsearchterm%3d";
+    schema:address cdf:addr-a1adbf8d0ba5.
+cdf:org-920ae3b19e8c cdp:fromSource cdp:caritasSource, cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "e5486914-965e-40b6-9d06-e94f3dcc8d3e", "6265";
+    schema:category "Weitere soziale Hilfen", "Ambulante Einrichtung";
+    schema:name "ZENTRUM FÜR VERHALTENSSUCHT - Frühintervention, Beratung und Nachsorge (Café Beispiellos + Lost in Space)", "Cafe Beispiellos / Lost in Space Beratungsstelle für Glücksspiel-, Computerspiel- und Internetsüchtige und deren Angehörige", "ZENTRUM FÜR VERHALTENSSUCHT";
+    schema:alternateName "Zentrum für Verhaltenssucht\r\nBeratungsstelle für Glücksspielsucht, Computerspielsucht, Internetsucht, Kaufsucht oder Pornografiesucht ", "Café Beispiellos + Lost in Space";
+    foaf:homepage "www.verhaltenssucht-berlin.de";
+    schema:mainEntityOfPage "/search.ashx?g=9f17e8ee-47ef-41ce-9652-eac2d56e60e9&p=1&r=e5486914-965e-40b6-9d06-e94f3dcc8d3e&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fzentrum-fuer-verhaltenssucht-fruehintervention-ber%2fzentrum-fuer-verhaltenssuchtberatungsstelle-fuer-g%2f10963-berlin%2f107052%3fsearchterm%3d", "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=6265&cHash=86be6c372393a041fb7e4246c6fa6914";
+    schema:availableService "Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)", "Ambulante Beratung / Sucht- und Drogenberatung, Nachsorge nach stationärer Reha";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "verhaltenssucht@caritas-berlin.de";
+    schema:telephone "03066633955";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Unsere Telefonzeiten finden Sie auf unserer Webseite: verhaltenssucht-berlin.de/kontakt/";
+    schema:audience "Glücksspiel, Problematischer Mediennutzung, Shoppingstörung (Kaufsucht), Pornografienutzungsstörung (Pornosucht)";
+    schema:address cdf:addr-1bf0865fe28e.
+cdf:org-9283980cc716 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8974"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "4.3.1 Ambulante Pflegedienste/Sozialstationen (§ 72 SGB XI bzw. § 36 SGB XI)";
+    schema:name "AWO Sozialstation Mitte/Tiergarten";
+    schema:parentOrganization cdf:traeger-0ea194ec8950.
+cdf:org-95f725a7a4ff cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Immanuel Beratung Lichtenberg";
+    schema:address cdf:addr-461f379ba256.
+cdf:org-96641eb3c4d5 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "11bc6887-01a5-4644-a173-b3318dec4ab4";
+    schema:name "Klima-Kollekte - Kirchlicher Kompensationsfonds gGmbH";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=1&r=11bc6887-01a5-4644-a173-b3318dec4ab4&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fklima-kollekte-kirchlicher-kompensationsfonds-ggmb%2f10115-berlin%2f2408922%3fsearchterm%3d";
+    schema:address cdf:addr-19bb325d85b1.
+cdf:org-968fd658d25b cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "1fd7166d-153d-41dc-9bff-27788c49c58f";
+    schema:name "Erzbischöfliches Ordinariat";
+    schema:mainEntityOfPage "/search.ashx?g=29e10fda-6576-40e3-ae5f-3ae5e5ae6da3&p=0&r=1fd7166d-153d-41dc-9bff-27788c49c58f&u=http%3a%2f%2fwww.caritas.de%2fadressen%2ferzbischoefliches-ordinariat%2f10117-berlin%2f77790%3fsearchterm%3d";
+    schema:address cdf:addr-c1863d69ca59.
+cdf:org-980015b6e11e cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9066"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Geschäftsbereich Stadtentwicklung Stiftung SPI";
+    schema:address cdf:addr-e96cbaada173;
+    schema:parentOrganization cdf:traeger-e82cc1d98b19.
+cdf:org-98f5dd4c6eaa cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Soziale Wohnhilfe";
+    schema:address cdf:addr-d77e48dddb2e.
+cdf:org-9da82e8175f6 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Betreutes Wohnen casa nostra";
+    schema:address cdf:addr-3559dc51a870.
+cdf:org-9f3832af4b8c cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "4346";
+    schema:category "Ambulante Einrichtung";
+    schema:name "AID Lichtenberg", "A.I.D. Lichtenberg";
+    foaf:homepage "www.notdienstberlin.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=4346&cHash=1a124c62a1d6e3ec4cbcef6e3f503f1a";
+    schema:availableService "Vermittlung an vereinsinterne Familienhilfe für suchterkrankte Eltern", "Substitutionsbehandlung, Psychosoziale Betreuung Substituierter";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "lichtenberg@notdienstberlin.de";
+    schema:telephone "030233240600";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Mo - Fr 9.00 -17.00";
+    schema:audience "Medikamenten, Illegalen Drogen";
+    schema:address cdf:addr-5ce91defb637.
+cdf:org-a3ccb55c61ce cdp:fromSource cdp:caritasSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "d7c63113-1707-4d68-b764-5bcafe96597f";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Hart am LimiT (HaLT)", "Projekt HaLT";
+    schema:alternateName "Caritas Erzbistum Berlin Frühinterventionsprojekt für Kinder und Jugendliche mit riskantem Alkohol- und Drogenkonsum. ";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=4&r=d7c63113-1707-4d68-b764-5bcafe96597f&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fhart-am-limit-halt%2fcaritas-erzbistum-berlin-fruehinterventionsprojekt%2f10115-berlin%2f85732%3fsearchterm%3d";
+    schema:address cdf:addr-1f508583bd14.
+cdf:org-a3cd36b535c9 cdp:fromSource cdp:destatisSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "857869480761";
+    schema:name "Soziale Initiative Niederlausitz e.V. - Schuldner- und Insolvenzberatung";
+    schema:address cdf:addr-2a047e8b0c41.
+cdf:org-a41de28ff5d8 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "65990754-a785-43a9-b638-5d6b0834ad27";
+    schema:category "Kinder- und Jugendhilfe";
+    schema:name "magda Caritas Jugendzentrum";
+    schema:alternateName "Caritas Erzbistum Berlin ";
+    schema:mainEntityOfPage "/search.ashx?g=c27eca69-3d92-4a45-946e-4e5c672e09e2&p=3&r=65990754-a785-43a9-b638-5d6b0834ad27&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fmagda-caritas-jugendzentrum%2fcaritas-erzbistum-berlin%2f10365-berlin%2f85960%3fsearchterm%3d";
+    schema:address cdf:addr-22396c694bdd.
+cdf:org-a4962ad26a42 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9094"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Sozialberatung für Migrant*innen Zentrum für Migration und Integration";
+    schema:address cdf:addr-ca98474ddecb.
+cdf:org-a4e1b9ccfa5e cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "StoffBruch-Beratung";
+    schema:address cdf:addr-b52117f83adc.
+cdf:org-a5c1bdf178c1 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "4660";
+    schema:category "Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten";
+    schema:name "Betreutes Wohnen", "FrauSuchtZukunft e.V. - Einrichtung Betreutes Wohnen";
+    schema:alternateName "Betreutes Gruppen- und Einzelwohnen nach §§ 67 ff. SGB XII";
+    foaf:homepage "https://www.frausuchtzukunft.de/";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=4660&cHash=1c7bc787431c69254e9a3d3a822682c3";
+    schema:availableService "Ambulante Formen des Betreuten Wohnens";
+    schema:accessibilitySummary "Die Einrichtung ist nicht barrierefrei erreichbar.";
+    schema:email "wohnen@frausuchtzukunft.de";
+    schema:telephone "03028386512";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Montag bis Freitag: 9:00 bis 14:00 Uhr";
+    schema:audience "Alkohol, Medikamenten, Illegalen Drogen";
+    schema:address cdf:addr-87295602fcfa.
+cdf:org-a63b7b5fb66b cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5290";
+    schema:category "Notübernachtungsstelle";
+    schema:name "Kriesenwohnung", "Krisenwohnung";
+    foaf:homepage "www.drogennotdienst.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5290&cHash=db84bfe2f52a33dd39fd5035c9a36027";
+    schema:availableService "Niedrigschwellige Hilfen, Notübernachtung";
+    schema:accessibilitySummary "Die Einrichtung ist nicht barrierefrei erreichbar.";
+    schema:email "kw@notdienstberlin.de";
+    schema:telephone "030233240410";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:audience "Alkohol, Illegalen Drogen";
+    schema:address cdf:addr-10e31cd1bdbc.
+cdf:org-a821864ab783 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Kältehilfe";
+    schema:address cdf:addr-07186889552c.
+cdf:org-a875bd871a0a cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "7eec405c-dafd-4bad-83ea-c8e6e067e516";
+    schema:category "Gesundheitshilfe";
+    schema:name "St. Hedwig-Krankenhaus";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=10&r=7eec405c-dafd-4bad-83ea-c8e6e067e516&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fst.-hedwig-krankenhaus%2f10115-berlin%2f102140%3fsearchterm%3d";
+    schema:address cdf:addr-9a3123891aec.
+cdf:org-aa62496dd6cc cdp:fromSource cdp:destatisSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "6b8f0adf685f";
+    schema:name "AWO Berlin Spree-Wuhle e.V.";
+    schema:address cdf:addr-b2b82c76bd35.
+cdf:org-ab019fd3a0a6 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9123"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "4.3.2 Seniorenbegegnungsstätten/ Seniorentagesstätten/ Seniorenfreizeitstätten";
+    schema:name "Begegnungsstätte Club 37";
+    schema:address cdf:addr-3a4908acdad4;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-abc9c5796788 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8906"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Betreutes Einzelwohnen";
+    schema:address cdf:addr-6c25decee0be;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-accc7bf8bcd0 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9086"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Kleiderstube";
+    schema:address cdf:addr-e96cbaada173;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-adb682139478 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8894"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "4.2.1 Solitäre Tages- und/oder Nachtpflegeeinrichtungen nach § 41 SGB XI";
+    schema:name "Gerontopsych. Tagespflege Sommergarten";
+    schema:address cdf:addr-9a312febeb18;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-afc8593af78f cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "4aa33c61-0d7b-4c63-9371-1ffe0372a6ed";
+    schema:category "Gesundheitshilfe";
+    schema:name "Caritas-Sozialstation Kreuzberg";
+    schema:alternateName "Pflege zu Hause";
+    schema:mainEntityOfPage "/search.ashx?g=5ddc14f7-9176-4742-accd-4417be856c89&p=0&r=4aa33c61-0d7b-4c63-9371-1ffe0372a6ed&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fcaritas-sozialstation-kreuzberg%2fpflege-zu-hause%2f10969-berlin%2f76695%3fsearchterm%3d";
+    schema:address cdf:addr-9f35e9002f0a.
+cdf:org-b0892d67c792 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5161";
+    schema:category "Ambulante Einrichtung, Krankenhaus/ -abteilung";
+    schema:name "Ambulanz für Suchterkrankungen und Infektionen in der Schwangerschaft";
+    schema:alternateName "Campus Virchow-Klinikum, Charité - Universitätsmedizin Berlin";
+    foaf:homepage "https://geburtsmedizin.charite.de/leistungen/suchterkrankungen/";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5161&cHash=c6a8b0ebe5c6f11d9b00480ce46681aa";
+    schema:availableService "Ambulante Beratung / Sucht- und Drogenberatung, Substitutionsbehandlung, Ambulante Behandlung, Schwangere und Frauen mit Kinderwunsch";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "infektionsambulanz@charite.de";
+    schema:telephone "030450564112";
+    cdf:parentOrgClassification "Öffentlich-rechtlicher Träger";
+    schema:openingHours "telefonische Anmeldung Mo.-Fr. 08:00-15:00 Uhr Termine nur nach Terminvereinbarung";
+    schema:audience "Alkohol, Medikamenten, Illegalen Drogen, Schwangere mit opioidhaltiger Schmerztherapie";
+    schema:address cdf:addr-92eda355da76.
+cdf:org-b324360cc1a2 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5980";
+    schema:category "Kontaktstelle mit Drogenkonsumraum";
+    schema:name "Mühlenstube Kontakt- und Anlaufstelle Mitte", "vista Mühlenstube";
+    schema:alternateName "Kontakt- und Anlaufstelle mit Drogenkonsumraum";
+    foaf:homepage "www.vistaberlin.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5980&cHash=4693db37200d7521cea282f17dba74cf";
+    schema:availableService "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Vermittlung, medizinische Erstversorgung";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "muehlenstube@vistaberlin.de";
+    schema:telephone "030297735600";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Montag, Dienstag: 10:00-17:00 Uhr Mittwoch: 10:00-15:00 Uhr Donnerstag, Freitag: 12:00-19:00 Uhr Samstag und Sonntag: 11:30-19:00 Uhr Konsumraum (letzter Einlass): Montag, Dienstag bis 16:30 Uhr Mittwoch bis 14:30 Uhr Donnerstag, Freitag bis 18:30 Uhr Samstag, Sonntag bis 18:30 Uhr";
+    schema:audience "Illegalen Drogen";
+    schema:address cdf:addr-f61c3e950510.
+cdf:org-b4cc84f22367 cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5081";
+    schema:category "Ambulante Einrichtung";
+    schema:name "vista WIGWAM Support";
+    schema:alternateName "Angebote für Eltern und Kinder";
+    foaf:homepage "www.vistaberlin.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5081&cHash=ed30399144f08be468015e75b28f4899";
+    schema:availableService "Beratung für Angehörige, Gruppen für Kinder von suchtmittelkonsumierenden Eltern", "Gruppenangebote für Kinder, Gruppenangebote für Eltern";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "wigwam@vistaberlin.de";
+    schema:telephone "030224451400";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Mo bis Do 10 bis 16 Uhr Fr 10 bis 15 Uhr";
+    schema:audience "Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung";
+    schema:address cdf:addr-3aabbf3a1ac6.
+cdf:org-b81ff600fd28 cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5088";
+    schema:category "Ambulante Einrichtung, Betreutes Wohnen bei Substitution";
+    schema:name "vista Wohnprojekte Mitte";
+    schema:alternateName "Betreutes Wohnen bei Substitution";
+    foaf:homepage "www.vistaberlin.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5088&cHash=cad3ba601e30282ac1309b358852a30c";
+    schema:availableService "Ambulante Formen des Betreuten Wohnens, Psychosoziale Betreuung Substituierter", "Bei Bedarf Zusammenarbeit mit Angehörigen im Rahmen der Psychosozialen Betreuung.";
+    schema:accessibilitySummary "Die Einrichtung ist nicht barrierefrei erreichbar.";
+    schema:email "psb-wohnen@vistaberlin.de";
+    schema:telephone "03039839629";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Mo, Mi, Do, Fr 10:00 - 16.30 Uhr Di 14:00- 16.30 Uhr";
+    schema:audience "Illegalen Drogen, Menschen in einer Substitutionsbehandlung";
+    schema:address cdf:addr-aff5dcfbcc20.
+cdf:org-b84b3bd05fdf cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "4536";
+    schema:category "Suchtberatungsstelle";
+    schema:name "Blaues Kreuz in Deutschland e.V.";
+    schema:alternateName "Landesverband Berlin-Brandenburg";
+    foaf:homepage "www.blaues kreuz.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=4536&cHash=db2cafbd58d84fe2eb649d1a613c9120";
+    schema:availableService "Beratung für Angehörige", "Ambulante Beratung / Sucht- und Drogenberatung";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "blaueskreuz-bkz@t-online.de";
+    schema:telephone "0306927430";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Montag bis Freitag von 10-13 Uhr";
+    schema:audience "Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung";
+    schema:address cdf:addr-7e6e985f6a20.
+cdf:org-b99135938526 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8981"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "2.2.3 Einrichtungen der örtlichen Erholungshilfe für Kinder und Jugendliche";
+    schema:name "Abenteuerspielplatz \"Stadt der Kinder\"";
+    schema:alternateName "Stiftung SPI Berlin";
+    schema:address cdf:addr-bff418638182;
+    schema:parentOrganization cdf:traeger-e82cc1d98b19.
+cdf:org-babf6cc2cc90 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5066";
+    schema:category "Suchtpräventionsfachstelle";
+    schema:name "Fachstelle für Suchtprävention im Land Berlin", "Fachstelle für Suchtprävention Berlin gGmbH";
+    foaf:homepage "www.berlin-suchtpraevention.de ; www.kompetent-gesund.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5066&cHash=85303b4dcb4d3d4f96ff6a5e9b2fdd8b";
+    schema:availableService "Elternarbeit (Angebote für Eltern suchtkranker Kinder)", "Suchtberatung / -Prävention im Betrieb, Präventionsberatung, Vermittlung in Hilfen";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "info@berlin-suchtpraevention.de";
+    schema:telephone "03029352615";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Montag 10.00 ? 14.00 Uhr Dienstag 10.00 ? 18.00 Uhr Donnerstag 16.00 ? 19.00 Uhr Freitag 09.00 ? 13.00 Uhr";
+    schema:address cdf:addr-d4c41d0e23f9.
+cdf:org-bb8a7e5509f3 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "3955";
+    schema:category "Krankenhaus/ -abteilung";
+    schema:name "Klinik für Psychiatrie und Psychotherapie", "Jüdisches Krankenhaus Berlin Klinik für Psychiatrie und Psychotherapie";
+    foaf:homepage "https://www.juedisches-krankenhaus.de/home.html";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=3955&cHash=e1c4823c717b3f099c651066253c9b90";
+    schema:availableService "Beratung für Angehörige", "Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Behandlung, Entzugsbehandlung";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "sekretariat-psychiatrie@jkb-online.de";
+    schema:telephone "03049942461";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "8.00-16.00 Uhr";
+    schema:audience "Alkohol, Tabak, Medikamenten, Glücksspiel, Illegalen Drogen, Problematisches Essverhalten, Problematischer Mediennutzung";
+    schema:address cdf:addr-b494904ee3e8.
+cdf:org-bde306e22cf6 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "6270";
+    schema:category "Ambulante Einrichtung";
+    schema:name "Ambulante Suchtberatung Mitte", "Ambulante Suchtberatung Mitte, vista gGmbH";
+    foaf:homepage "www.vistaberlin.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=6270&cHash=3d81b564fce885399ec920a27b8f5da1";
+    schema:availableService "Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)", "Ambulante Beratung / Sucht- und Drogenberatung, Suchtberatung im Justizvollzug";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "mitte@vistaberlin.de";
+    schema:telephone "030224451100";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "mo. 10 - 17 Uhr di. 10 - 17 Uhr mi. 10 - 18:30 Uhr do. 10 - 17 Uhr fr. 10 - 15:30 Uhr";
+    schema:audience "Alkohol, Cannabis, Medikamenten, Illegalen Drogen";
+    schema:address cdf:addr-3aabbf3a1ac6.
+cdf:org-bf328ca6656a cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "88ef385e-ce55-43f8-a7e8-e5a19ae913d3";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Schuldner- und Insolvenzberatung Berlin-Mitte";
+    schema:alternateName "Caritas Erzbistum Berlin ";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=11&r=88ef385e-ce55-43f8-a7e8-e5a19ae913d3&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fschuldner-und-insolvenzberatung-berlin-mitte%2fcaritas-erzbistum-berlin%2f10115-berlin%2f106508%3fsearchterm%3d";
+    schema:address cdf:addr-1f508583bd14.
+cdf:org-c0512f590133 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "d006aacb-28ea-4e0d-8ee3-53b4db82605f";
+    schema:name "Diözesankomitee Berlin e. V.";
+    schema:mainEntityOfPage "/search.ashx?g=29e10fda-6576-40e3-ae5f-3ae5e5ae6da3&p=8&r=d006aacb-28ea-4e0d-8ee3-53b4db82605f&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fdioezesankomitee-berlin-e.-v%2f10117-berlin%2f1942527%3fsearchterm%3d";
+    schema:address cdf:addr-c1863d69ca59.
+cdf:org-c056eb5e847e cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "025dfcf8-dd70-4cee-9800-c9cb759e3ec2";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Caritas-Krankenwohnung für Wohnungslose";
+    schema:alternateName "Caritas-Krankenwohnung für Wohnungslose";
+    schema:mainEntityOfPage "/search.ashx?g=dccc99cb-4b88-4b23-8054-87d3b05b8a87&p=1&r=025dfcf8-dd70-4cee-9800-c9cb759e3ec2&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fcaritas-krankenwohnung-fuer-wohnungslose%2fcaritas-krankenwohnung-fuer-wohnungslose%2f10559-berlin%2f1353711%3fsearchterm%3d";
+    schema:address cdf:addr-c2654185de3c.
+cdf:org-c11fc929c777 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Blaukreuz - Zentrum Schillerhöhe";
+    schema:address cdf:addr-7e6e985f6a20.
+cdf:org-c25e5dce966a cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Betreute Einzelwohnen Lichtenberg";
+    schema:address cdf:addr-634ac5a273ca.
+cdf:org-c908863da521 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "d166b142-baff-44e8-918a-2eabfcb7d154";
+    schema:name "Mitarbeiterseite Arbeitsrechtliche Kommission Deutscher Caritasverband";
+    schema:alternateName "Geschäftsstelle";
+    schema:mainEntityOfPage "/search.ashx?g=29e10fda-6576-40e3-ae5f-3ae5e5ae6da3&p=9&r=d166b142-baff-44e8-918a-2eabfcb7d154&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fmitarbeiterseite-arbeitsrechtliche-kommission-deut%2fgeschaeftsstelle%2f10117-berlin%2f2508531%3fsearchterm%3d";
+    schema:address cdf:addr-78703837d9b9.
+cdf:org-cb3e23d8f42c cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9053"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Kindertagesstätte \"Kelebek\"";
+    schema:address cdf:addr-6c25decee0be;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-ccf37a28514c cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "f3b6307d-7c16-448f-9765-be3b428e14fc";
+    schema:category "Kinder- und Jugendhilfe";
+    schema:name "Erziehungs- und Familienberatung Mitte";
+    schema:alternateName "Caritas Erzbistum Berlin ";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=9&r=f3b6307d-7c16-448f-9765-be3b428e14fc&u=http%3a%2f%2fwww.caritas.de%2fadressen%2ferziehungs-und-familienberatung-mitte%2fcaritas-erzbistum-berlin%2f10115-berlin%2f100587%3fsearchterm%3d";
+    schema:address cdf:addr-1f508583bd14.
+cdf:org-cd5e0ee4d505 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9efcefbc-ab1f-4c48-b2ad-0317e0f23ee2";
+    schema:name "Caritas-Konferenzen Deutschlands e.V. – Das Netzwerk von Ehrenamtlichen";
+    schema:mainEntityOfPage "/search.ashx?g=29e10fda-6576-40e3-ae5f-3ae5e5ae6da3&p=6&r=9efcefbc-ab1f-4c48-b2ad-0317e0f23ee2&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fcaritas-konferenzen-deutschlands-e.v.--das-netzwer%2f10117-berlin%2f770428%3fsearchterm%3d";
+    schema:address cdf:addr-a1adbf8d0ba5.
+cdf:org-ce453df335ba cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "a646b16b-dd47-48c8-a503-48bb23d574af";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Psychosoziale Betreuung für Substituierte";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=12&r=a646b16b-dd47-48c8-a503-48bb23d574af&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fpsychosoziale-betreuung-fuer-substituierte%2f10115-berlin%2f1419789%3fsearchterm%3d".
+cdf:org-d39539e08f98 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Wohnhilfe Lehrter Straße";
+    schema:address cdf:addr-acb70b1be356.
+cdf:org-d5aeb06c209f cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "36a5dbc4-adc0-4272-bd19-2623243cb101";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Migrationsberatung für erwachsene Zugewanderte (MBE)";
+    schema:alternateName "Beratungszentrum Oldenburger Straße, \r\nMigrationsberatung für erwachsene Zugewanderte\r\nCaritasverband für das Erzbistum Berlin";
+    schema:mainEntityOfPage "/search.ashx?g=24ddc253-dcaa-4a26-9543-0d8f6719364b&p=4&r=36a5dbc4-adc0-4272-bd19-2623243cb101&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fmigrationsberatung-fuer-erwachsene-zugewanderte-mb%2fberatungszentrum-oldenburger-strasse-migrationsber%2f10551-berlin%2f1826074%3fsearchterm%3d";
+    schema:address cdf:addr-66cc08665815.
+cdf:org-db1507051d72 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "4795";
+    schema:category "Ambulante Einrichtung";
+    schema:name "Alkohol- und Medikamentenberatungsstelle", "Kreuzberger Alkohol- und Medikamentenberatungsstelle";
+    foaf:homepage "www.diakonie-stadtmitte.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=4795&cHash=207aeb52e5a4fd92bda9afb54eaac08e";
+    schema:availableService "Beratung für Angehörige", "Ambulante Beratung / Sucht- und Drogenberatung";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "suchtberatung@diakonie-stadtmitte.de";
+    schema:telephone "0306143056";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Mo, Di, Do, Fr 9 bis 12 Uhr Dienstag 16-18 Uhr und nach telefonischer Vereinbarung";
+    schema:audience "Alkohol, Medikamenten";
+    schema:address cdf:addr-4429f8c9bbb0.
+cdf:org-dcc7369d2202 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "3b5aac64-df05-4dd4-9611-1f20eea15809";
+    schema:category "Sonstige";
+    schema:name "Bundesarbeitsgemeinschaft Katholische Jugendsozialarbeit e.V.";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=13&r=3b5aac64-df05-4dd4-9611-1f20eea15809&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fbundesarbeitsgemeinschaft-katholische-jugendsozial%2f10115-berlin%2f1580341%3fsearchterm%3d";
+    schema:address cdf:addr-d4c41d0e23f9.
+cdf:org-dcd15d72996f cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource, cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "4514", "8936"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Ambulante Einrichtung, Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten", "5.3.3 Ambulante sozialpsychiatrische Dienste, Kontakt- und Beratungsstellen für Menschen mit psychischen Erkrankungen und Behinderungen ";
+    schema:name "Drogenhilfe Nord - NordPassage", "Drogenhilfe Nord", "Drogenberatung Nord";
+    schema:alternateName "Drogenberatung Nord", "Stiftung SPI Berlin";
+    foaf:homepage "https://www.stiftung-spi.de/projekte/drogenhilfe-nord/";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=4514&cHash=ac9ab2aee85995fb71c1d4ecc8b400a3";
+    schema:availableService "Beratung für Angehörige, Elternarbeit (Angebote für Eltern suchtkranker Kinder)", "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Ambulante Formen des Betreuten Wohnens, Ambulante Behandlung, Psychosoziale Betreuung Substituierter, Suchtberatung im Justizvollzug, Hilfen zur Erziehung";
+    schema:accessibilitySummary "Die Einrichtung ist nicht barrierefrei erreichbar.";
+    schema:email "drogenhilfe-nord@stiftung-spi.de";
+    schema:telephone "0304938088";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Mo bis Do 10-17 Uhr und Fr 10-14 Uhr";
+    schema:audience "Illegalen Drogen";
+    schema:address cdf:addr-0027af8dd02e.
+cdf:org-dd9bf1615a53 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8956"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Frauenwohnprojekt";
+    schema:address cdf:addr-c94838c8d007;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-df2f310866d3 cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "4991";
+    schema:category "Ambulante Einrichtung, Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten";
+    schema:name "vista PSB/ BEW Mitte";
+    schema:alternateName "Psychosoziale Unterstützung bei Substitution und Betreutes Einzelwohnen";
+    foaf:homepage "www.vistaberlin.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=4991&cHash=07fe26ce85bf64f4dc0ed8c9479fb860";
+    schema:availableService "Ambulante Formen des Betreuten Wohnens, Psychosoziale Betreuung Substituierter";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "bew-mitte@vistaberlin.de";
+    schema:telephone "030224451200";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Mo., Di., Do., Fr.: 10:00-17:00 Uhr Mi.: 10:00-19:00 Uhr Termine werden individuell nach Absprache vergeben. Nehmen Sie mit uns Kontakt auf!";
+    schema:audience "Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung";
+    schema:address cdf:addr-3aabbf3a1ac6.
+cdf:org-e02ff58ef2f8 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5284";
+    schema:category "Ambulante Einrichtung";
+    schema:name "Betreutes Wohnen Genter Straße", "Betreutes Wohnen Genther Straße";
+    foaf:homepage "www.drogennotdienst.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5284&cHash=d417d031d589e0f10b0525c972a5ac3c";
+    schema:availableService "Ambulante Formen des Betreuten Wohnens";
+    schema:accessibilitySummary "Die Einrichtung ist nicht barrierefrei erreichbar.";
+    schema:email "wedding@notdienstberlin.de";
+    schema:telephone "030233240350";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:audience "Alkohol, Illegalen Drogen";
+    schema:address cdf:addr-9ef5282694a3.
+cdf:org-e5dfbcfe5371 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "f77dc400-16d9-40fa-a358-a1db201a1a25";
+    schema:name "Katholische Kirchengemeinde Pfarrei St. Mauritius - Lichtenberg-Friedrichshain";
+    schema:mainEntityOfPage "/search.ashx?g=c27eca69-3d92-4a45-946e-4e5c672e09e2&p=0&r=f77dc400-16d9-40fa-a358-a1db201a1a25&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fkatholische-kirchengemeinde-pfarrei-st.-mauritius-%2f10365-berlin%2f426551%3fsearchterm%3d";
+    schema:address cdf:addr-fbc447bce495.
+cdf:org-e7f16bb0d757 cdp:fromSource cdp:dhsSource, cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5288";
+    schema:category "Ambulante Einrichtung";
+    schema:name "Frauentreff Olga";
+    foaf:homepage "www.drogennotdienst.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5288&cHash=5673bbf441b035589670b88b9eed5ab9";
+    schema:availableService "Niedrigschwellige Hilfen, Ambulante Beratung / Sucht- und Drogenberatung, Psychosoziale Betreuung Substituierter";
+    schema:accessibilitySummary "Die Einrichtung ist nicht barrierefrei erreichbar.";
+    schema:email "olga@notdienstberlin.de";
+    schema:telephone "0302628959";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Mo - Sa 14:00-20:00 Medizinische Versorgung durch Krankenschwester Mo, Di, Fr 14:00-20:00 / Do 14:00-18:00 Rechtsberatung jeden 2. Dienstag im Monat";
+    schema:audience "Illegalen Drogen";
+    schema:address cdf:addr-2fda64a4efeb.
+cdf:org-e83ad9bb4f56 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9082"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "Geschäftsstelle Verwaltungsstelle Zivildienst";
+    schema:address cdf:addr-f93ec34d2a3a.
+cdf:org-e9edd9baf07f cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Ambulanz Berliner Stadtmission";
+    schema:address cdf:addr-07186889552c.
+cdf:org-eb1222ae04e1 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Wili 67";
+    schema:address cdf:addr-d3d49dd2c7c1.
+cdf:org-eb55978ca236 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8877"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "5.2.9.3 Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    schema:name "Integrationskindergarten in Kindertagesstätte \"Maulwurf\"";
+    schema:address cdf:addr-243bf0783cc2;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-eb9500c062ff cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8818"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "BEW für Menschen mit Behinderung";
+    schema:alternateName "Stützpunkt Turmstraße";
+    schema:address cdf:addr-35e4ef384887;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-ebce9e2b40d5 cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "8850"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "3.3 Beratungsstellen/ambulante Dienste";
+    schema:name "Berliner Zentrum für Gewaltprävention e.V.";
+    schema:address cdf:addr-1853a08606a9;
+    schema:parentOrganization cdf:traeger-e82cc1d98b19.
+cdf:org-ec337d26a776 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "c5ee10a2-3464-4972-8ea7-71950cf880cb";
+    schema:category "Kinder- und Jugendhilfe";
+    schema:name "Caritas Kinder- und Jugendzentrum Steinhaus";
+    schema:mainEntityOfPage "/search.ashx?g=c27eca69-3d92-4a45-946e-4e5c672e09e2&p=1&r=c5ee10a2-3464-4972-8ea7-71950cf880cb&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fcaritas-kinder-und-jugendzentrum-steinhaus%2f10365-berlin%2f1125825%3fsearchterm%3d";
+    schema:address cdf:addr-3ed1057bcfef.
+cdf:org-ef7c7aa50634 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Drogennotdienst";
+    schema:address cdf:addr-f52230c56d84.
+cdf:org-efc3f3e22bcd cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Übergangshaus Drontheimer Straße";
+    schema:address cdf:addr-f0ab6987370f.
+cdf:org-f19850f38cdf cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Logistikküche";
+    schema:address cdf:addr-07186889552c.
+cdf:org-f19e033eb067 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5f0493e8-8a98-4c71-8477-1ba085cca3c2";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Housing First für Frauen – Wohnen ohne Umwege";
+    schema:alternateName "SKF - Sozialdienst katholischer Frauen";
+    schema:mainEntityOfPage "/search.ashx?g=8314c4b1-2d2f-4b72-80fb-f7779f85b347&p=1&r=5f0493e8-8a98-4c71-8477-1ba085cca3c2&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fhousing-first-fuer-frauen--wohnen-ohne-umwege%2fskf-sozialdienst-katholischer-frauen%2f13349-berlin%2f1447793%3fsearchterm%3d";
+    schema:address cdf:addr-53f00643ac14.
+cdf:org-f1a072b3cd17 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Wohnraum für Frauen Tieck 17";
+    schema:address cdf:addr-42a06250270b.
+cdf:org-f1cabda74eb6 cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "4992";
+    schema:category "Ambulante Einrichtung, Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten";
+    schema:name "Wohnprojekte Wedding";
+    schema:alternateName "Betreutes Einzelwohnen und PsB Wohnen";
+    foaf:homepage "Www.vistaberlin.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=4992&cHash=20081bebcbcd154ba665043484ee324a";
+    schema:availableService "Ambulante Formen des Betreuten Wohnens, Psychosoziale Betreuung Substituierter";
+    schema:accessibilitySummary "Die Einrichtung ist barrierefrei erreichbar.";
+    schema:email "wohnen-wedding@vistaberlin.de";
+    schema:telephone "0304652471";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:audience "Alkohol, Tabak, Medikamenten, Illegalen Drogen, Problematischer Mediennutzung";
+    schema:address cdf:addr-86c608491416.
+cdf:org-f1ee23077bc4 cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5278";
+    schema:category "Ambulante Einrichtung";
+    schema:name "Psychosoziale Beratungsstelle";
+    schema:alternateName "Drogennotdienst Berlin gGmbH";
+    foaf:homepage "www.drogennotdienst.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5278&cHash=f00939abf8896cbf1bed6b3098e47322";
+    schema:availableService "Beratung für Angehörige", "Psychosoziale Betreuung Substituierter, Suchtberatung im Justizvollzug";
+    schema:accessibilitySummary "Die Einrichtung ist nicht barrierefrei erreichbar.";
+    schema:email "PSB-GenthinerStrasse@notdienstberlin.de";
+    schema:telephone "030233240220";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Mo, Mi, Do, Fr: 10:00 - 15:00 Di: 11:30 - 15:00";
+    schema:audience "Illegalen Drogen";
+    schema:address cdf:addr-f52230c56d84.
+cdf:org-f1f94f2ec8d7 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Psychosoziale Betreuung für Substituierte (PSB)";
+    schema:address cdf:addr-f52230c56d84.
+cdf:org-f262167d35de cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Schuldner- und Insolvenzberatung";
+    schema:email "inso@awo-spree-wuhle.de";
+    schema:telephone "03025293540";
+    schema:address cdf:addr-b2b82c76bd35.
+cdf:org-f32e05371577 cdp:fromSource cdp:destatisSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "ce87403fd44c";
+    schema:name "Caritasverband f. d. Erzbistum Berlin e.V. - Schuldnerberatung";
+    schema:address cdf:addr-1f508583bd14.
+cdf:org-f3bb2d9632db cdp:fromSource cdp:dhsSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "5750";
+    schema:category "Soziotherapeutische Einrichtungen / Eingliederungshilfe / Hilfen zur Überwindung besonderer sozialer Schwierigkeiten";
+    schema:name "ZIK - zuhause im Kiez - gGmbH - Betreutes Wohnen";
+    schema:alternateName "zentrale Aufnahme";
+    foaf:homepage "www.zik-ggmbh.de";
+    schema:mainEntityOfPage "https://www.dhs.de/service/suchthilfeverzeichnis/?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bcontroller%5D=Entry&tx_wwdhseinrichtung2_fe1%5Bentry%5D=5750&cHash=2817c9955efea5c9485f3ef3b4f431d8";
+    schema:availableService "Ambulante Formen des Betreuten Wohnens";
+    schema:accessibilitySummary "Die Einrichtung ist nicht barrierefrei erreichbar.";
+    schema:email "aufnahme@zik-ggmbh.de";
+    schema:telephone "030554439300";
+    cdf:parentOrgClassification "Freie Wohlfahrtspflege / gemeinnütziger Träger";
+    schema:openingHours "Termine nach Vereinbarung Mo bis DO 09.00 bis 16.00 Uhr Fr 09.00 bis 15.00 Uhr";
+    schema:audience "Alkohol, Medikamenten, Illegalen Drogen";
+    schema:address cdf:addr-600ff606996b.
+cdf:org-f3f94034afa4 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "40569a0c-a4ad-497a-90f8-85423a7d0285";
+    schema:category "Gesundheitshilfe";
+    schema:name "Alexianer Akademie für Gesundheits- und Krankenpflege Berlin / Brandenburg";
+    schema:alternateName "Krankenpflegeschule";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=6&r=40569a0c-a4ad-497a-90f8-85423a7d0285&u=http%3a%2f%2fwww.caritas.de%2fadressen%2falexianer-akademie-fuer-gesundheits-und-krankenpfl%2fkrankenpflegeschule%2f10115-berlin%2f91843%3fsearchterm%3d";
+    schema:address cdf:addr-9a3123891aec.
+cdf:org-f64a8eb15dc3 cdp:fromSource cdp:sozialplattformSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:name "Notübernachtung Marie", "Notübernachtung für Frauen";
+    schema:address cdf:addr-42a06250270b.
+cdf:org-f7e7cda50b6e cdp:fromSource cdp:awoSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "9083"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "allgem. Beratungsstelle KV Mitte e.V.";
+    schema:alternateName "Kreisvorsitzender Karl-Heinz Junge";
+    schema:address cdf:addr-64693174109e;
+    schema:parentOrganization cdf:traeger-0fd100a1aff8.
+cdf:org-fcbf7cd7f013 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "ad92a73e-8ca8-497b-b75a-75cd8b6ddb6e";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "Café-Streetwork 'Nur Nach Hause...\"";
+    schema:alternateName "Café-Streetwork 'Nur Nach Hause...\", Treffpunkt für Menschen mit Suchtproblemen, Projekt des Caritas Suchtzentrum Mitte";
+    schema:mainEntityOfPage "/search.ashx?g=dada3f26-2530-42a6-8b47-f569987eb224&p=5&r=ad92a73e-8ca8-497b-b75a-75cd8b6ddb6e&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fcaf-streetwork-nur-nach-hause%2fcaf-streetwork-nur-nach-hause..-treffpunkt-fuer-me%2f10115-berlin%2f89512%3fsearchterm%3d";
+    schema:address cdf:addr-1f508583bd14.
+cdf:org-fecea42d3f07 cdp:fromSource cdp:caritasSource;
+    a <http://www.w3.org/ns/org#OrganizationalUnit>;
+    schema:identifier "46f7842a-bef7-43d5-9fae-5dc13d2d3395";
+    schema:category "Weitere soziale Hilfen";
+    schema:name "IwoF - Intensivberatung und Begleitung wohnungsloser Frauen";
+    schema:alternateName "SKF - Sozialdienst katholischer Frauen";
+    schema:mainEntityOfPage "/search.ashx?g=8314c4b1-2d2f-4b72-80fb-f7779f85b347&p=2&r=46f7842a-bef7-43d5-9fae-5dc13d2d3395&u=http%3a%2f%2fwww.caritas.de%2fadressen%2fiwof-intensivberatung-und-begleitung-wohnungsloser%2fskf-sozialdienst-katholischer-frauen%2f13349-berlin%2f1447792%3fsearchterm%3d";
+    schema:address cdf:addr-53f00643ac14.
+cdf:service-04b4dec19d58 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "56f2dc2c-d600-4426-8283-6318e5ae193e";
+    schema:category "Suchtberatung";
+    schema:name "Alkohol, Drogen, Medikamente";
+    schema:provider cdf:org-34e986356c61.
+cdf:service-1ab668da139c cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "8cbdbb11-ad12-41af-942e-bd56ab43fdf9";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-920ae3b19e8c.
+cdf:service-1e9cde546fe9 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12847"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Berufsvorbereitende Einrichtungen für arbeitslose Jugendliche";
+    schema:provider cdf:org-48223bc232b3;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "2.2.5".
+cdf:service-1ef2079eab1d cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "8fa0d6d8-7de5-480d-9f8c-9ac8fdb3a3f0";
+    schema:category "Suchtberatung";
+    schema:name "Drogen";
+    schema:provider cdf:org-b324360cc1a2.
+cdf:service-226b2cc54672 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "ab01a076-1149-4cf9-87f8-426e69fd023d";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-b324360cc1a2.
+cdf:service-24160323f6db cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "547e4ae8-86bc-4988-ba3f-3a967eb93d2c";
+    schema:category "Schuldnerberatung";
+    schema:name "Schuldner- und Insolvenzberatung";
+    schema:provider cdf:org-f262167d35de.
+cdf:service-26d071852dd0 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "89f72b03-57e1-49b7-92a3-5325d010c15a";
+    schema:category "Suchtberatung";
+    schema:name "Spielsucht";
+    schema:provider cdf:org-ef7c7aa50634.
+cdf:service-280a90a1d2f0 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12796"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Solitäre Tages- und/oder Nachtpflegeeinrichtungen nach § 41 SGB XI";
+    schema:provider cdf:org-adb682139478;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "4.2.1".
+cdf:service-283f58436836 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "dfe3aa6c-870b-40af-aba0-2a719cde9845";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-eb1222ae04e1.
+cdf:service-291a3ed98658 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "6174c7db-3094-47af-96cd-6b311e6519d5", "cc6c8c5f-d188-4d58-8e52-2d71f3fb71e1";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-f64a8eb15dc3.
+cdf:service-2977b2de5328 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "2560185e-3d32-4f13-ae46-0f11d30900cf";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-f1a072b3cd17.
+cdf:service-2a48a3a07313 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "2e67834c-0437-4df2-91e8-2dd22fbb9761";
+    schema:category "Suchtberatung";
+    schema:name "Alkohol, Drogen, Medikamente";
+    schema:provider cdf:org-e7f16bb0d757.
+cdf:service-2cdfb92562e6 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12995"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Migrationsberatung für erwachsene Zugewanderte ";
+    schema:provider cdf:org-4a22112ece60;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "6.3.1".
+cdf:service-2e795d3ae649 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "a76d5b8c-dc17-4bd5-ac66-c1ebef01fd99";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-d39539e08f98.
+cdf:service-2eeb2fd0b9c1 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "80504bfb-065a-4c2f-8322-1c66f2314215";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-0a3cd6337719.
+cdf:service-2fd4eb28517d cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "13025"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Seniorenbegegnungsstätten/ Seniorentagesstätten/ Seniorenfreizeitstätten";
+    schema:provider cdf:org-ab019fd3a0a6;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "4.3.2".
+cdf:service-31d2c0c037ed cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "e7db815d-e83b-413d-9b98-2d453f282815";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-8fddea78969a.
+cdf:service-339c0f7fd88d cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12760"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Schuldnerberatungsstellen/Schuldner- und Verbraucherinsolvenzberatung";
+    schema:provider cdf:org-18d502a0c994;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "7.3.6".
+cdf:service-35b5d32e27a9 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12838"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Ambulante sozialpsychiatrische Dienste, Kontakt- und Beratungsstellen für Menschen mit psychischen Erkrankungen und Behinderungen ";
+    schema:provider cdf:org-dcd15d72996f;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "5.3.3".
+cdf:service-3cd7cca3b504 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "6e36389f-e8eb-46fa-9aad-f0545a52eed9";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-dcd15d72996f.
+cdf:service-3e601638bc24 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "a42b05a2-f5f9-47d5-80e4-89c59dc108f6";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-9da82e8175f6.
+cdf:service-3f3ffc1ad812 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12784"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    schema:provider cdf:org-0b40976c9491;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "5.2.9.3".
+cdf:service-40d716b3059f cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "75d6bbf2-53a7-4e58-9cae-c39b7db04d08";
+    schema:category "Suchtberatung";
+    schema:name "Prävention";
+    schema:provider cdf:org-34e986356c61.
+cdf:service-47ee75401f61 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "95bb5161-c377-4ae9-8990-f7d1dee73794";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-bb8a7e5509f3.
+cdf:service-495c4efa3882 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12948"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Einrichtungen der Tagespflege für Kinder";
+    schema:provider cdf:org-5246b75cdb6a;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "2.2.2".
+cdf:service-4990eef7a5a5 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "b207ca50-8a53-4c80-ab1d-ffdd22c4d1b0";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-469d86c764eb.
+cdf:service-4d474877188f cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "59463009-0dc7-4ee9-a9da-1a1586d5f758";
+    schema:category "Suchtberatung";
+    schema:name "Alkohol, Drogen, Medikamente";
+    schema:provider cdf:org-45e82d88e7c9.
+cdf:service-52895dfbd044 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12783"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    schema:provider cdf:org-2434a5967acf;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "5.2.9.3".
+cdf:service-57b3edc572b1 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "13004"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Jugendberatungsstellen, Jugendhilfestellen, Jugendfreizeiteinrichtungen (§11 SGB VIII)";
+    schema:provider cdf:org-7dce01b8b5a1;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "2.3.1".
+cdf:service-59b543e32d21 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "4b7bd3f5-d291-4ce4-997a-76766b130c1d";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-3fd74b2d37fb.
+cdf:service-5f87e11fd96c cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "a176f0cd-4cab-4ef5-839c-e631205532d3";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-3b8f827868ff.
+cdf:service-60fd6ed14ea4 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "19716"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Ambulante Pflegedienste/Sozialstationen (§ 72 SGB XI bzw. § 36 SGB XI)";
+    schema:provider cdf:org-8f8aba9872f3;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "4.3.1".
+cdf:service-635a7721e37e cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "8c9cf315-dcac-4768-ac3c-6c7904ee02f6";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-98f5dd4c6eaa.
+cdf:service-65fd562cdf59 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "b9a1e77f-19d2-465a-b4d5-8d7500af1822";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-122cd07dab33.
+cdf:service-68bbce20b544 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "a712f7b1-c6ce-457e-a624-c20985e298e2";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-f1f94f2ec8d7.
+cdf:service-691c71f76268 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "0d7348e9-15e0-4c99-af02-8a98823691e5";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-1a9a70707d70.
+cdf:service-6a4d943318f9 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12779"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    schema:provider cdf:org-eb55978ca236;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "5.2.9.3".
+cdf:service-6b920dc4236f cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "19712"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Geschäftsstellen";
+    schema:provider cdf:traeger-0ea194ec8950;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "8.3.4".
+cdf:service-721fa1045b19 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "19717"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Ambulante Pflegedienste/Sozialstationen (§ 72 SGB XI bzw. § 36 SGB XI)";
+    schema:provider cdf:org-0a9f477e4444;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "4.3.1".
+cdf:service-73a37673d8a3 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "f2c028aa-4477-46a3-be8e-f33c01989abc";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-9f3832af4b8c.
+cdf:service-7545380543fc cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12781"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Schulen für Kinder/Jugendliche mit Hör-/Sprachbeeinträchtigungen";
+    schema:provider cdf:org-83471dff4537;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "5.2.9.3".
+cdf:service-790a406ccde2 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "9c32f9ab-0ead-4715-9a08-ab194ca20613";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-5ba56b28d437.
+cdf:service-79b3eec9ab89 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "c5e938a0-67be-4120-a84d-d1c665e91b08";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-a4e1b9ccfa5e.
+cdf:service-7eaaa1dd9c65 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "73889a10-0cb7-418a-99ae-3d00490fc2c5";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-40649150bd4d.
+cdf:service-7eda85f00f99 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "bed14473-8569-4274-a883-8ff0ad18642b";
+    schema:category "Suchtberatung";
+    schema:name "Alkohol";
+    schema:provider cdf:org-a3ccb55c61ce.
+cdf:service-84ee0be6ff26 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12972"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Zuordnung offen";
+    schema:provider cdf:org-32aca85620a9;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "10.1".
+cdf:service-8b2fb29c9b73 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "52dc0081-be37-4a77-8aeb-a9807182db73";
+    schema:category "Suchtberatung";
+    schema:name "Alkohol, Drogen, Medikamente";
+    schema:provider cdf:org-babf6cc2cc90.
+cdf:service-8d69c96ca185 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "a05abddd-8bf1-41fb-999b-cf2a203e73a9";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-0f4c4c221a0e.
+cdf:service-8e83e96000fe cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12883"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Einrichtungen der örtlichen Erholungshilfe für Kinder und Jugendliche";
+    schema:provider cdf:org-b99135938526;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "2.2.3".
+cdf:service-8f694b098a38 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12756"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Beratungsstellen für erwerbslose Menschen";
+    schema:provider cdf:org-56e96807da21;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "7.3.11".
+cdf:service-8fe530ade4fd cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "e2490c38-045b-4f89-832f-80c964cccbe4";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-8b23df3f8ccd.
+cdf:service-957c73a48362 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "9f9a75b1-bbfa-4ebc-a1f3-5d8e33ee0bea";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-a821864ab783.
+cdf:service-9b502492aad3 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "8781c5b4-7491-4d4e-96b3-5444320bcd62";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-a5c1bdf178c1.
+cdf:service-9c2a927c7635 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "1c89ab9a-4d23-4f89-b599-3b9884b084f3";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-7e1cd8b26879.
+cdf:service-9c5a808259f3 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "f31da316-b268-4632-bfa6-de8c9bb66953";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-24bcd56b09cb.
+cdf:service-9cc42882798c cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "6619535c-0cba-4dd2-ac4c-8155c0e99fc1";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-a63b7b5fb66b.
+cdf:service-a1c0b9ba73dd cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "ff7ef8f0-979d-4250-9e9f-9f6cfcc3cae4";
+    schema:category "Suchtberatung";
+    schema:name "Drogen";
+    schema:provider cdf:org-a3ccb55c61ce.
+cdf:service-a3c1040839ef cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "291412a2-f700-41f3-af55-add3f2caaa90";
+    schema:category "Suchtberatung";
+    schema:name "Therapie";
+    schema:provider cdf:org-45e82d88e7c9.
+cdf:service-a88ac2ce258f cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "c709c064-7c41-4867-97c5-c8c5b6072dc8";
+    schema:category "Suchtberatung";
+    schema:name "Prävention";
+    schema:provider cdf:org-e7f16bb0d757.
+cdf:service-a9d16de2986b cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "ecf9b2a3-678b-4e9d-a4e5-631934952249";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-e9edd9baf07f.
+cdf:service-ac1df0980e16 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "36888454-211d-4788-86fd-cf9e24b15c47";
+    schema:category "Schuldnerberatung";
+    schema:name "Schuldnerberatung";
+    schema:provider cdf:org-59c8941de46c.
+cdf:service-ae01f9e17699 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "bcabb817-4189-4f57-a297-7633a5def138";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-7dc1f578e47f.
+cdf:service-b0fca6d9ae0d cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "cccce6c9-2579-42c3-ba8c-ebc4c1d8e1b7";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-b0892d67c792.
+cdf:service-b2cb822f28bb cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "d4d11a2b-95a9-4184-bedd-36e2029e90ef";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-67cef3f351b4.
+cdf:service-b77d00c43ab8 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12774"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Beratungsstellen für arbeitslose Jugendliche/Ausbildungsplatzvermittlung";
+    schema:provider cdf:org-35c3c8d20875;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "2.3.8".
+cdf:service-bb34a18cc184 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "e8f84b6e-3967-49cc-ac41-afee7cc10226";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-db1507051d72.
+cdf:service-bc07664091b7 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "19714"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Ambulante Pflegedienste/Sozialstationen (§ 72 SGB XI bzw. § 36 SGB XI)";
+    schema:provider cdf:org-9283980cc716;
+    cdf:bagfwId "4.3.1".
+cdf:service-be750c64ddda cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "4ef68f96-e5fc-43da-81ec-e2218c5aa0d0";
+    schema:category "Schuldnerberatung";
+    schema:name "Schuldnerberatung";
+    schema:provider cdf:org-183f1d3d4fe8.
+cdf:service-c2331437bcc9 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "e431346b-48b5-4c8d-a407-716d44dbd2c3";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-6cad5b5b64a6.
+cdf:service-c25992018873 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "13024"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Seniorenbegegnungsstätten/ Seniorentagesstätten/ Seniorenfreizeitstätten";
+    schema:provider cdf:org-48948595c4bd;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "4.3.2".
+cdf:service-c2b9a3066e2c cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "144a067d-2556-4104-9ac2-f5f160b12f3a";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-289cddd77454.
+cdf:service-c84a64129ee0 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "6ddceda5-9cfe-4839-bbbc-72c6ca36dc42";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-5dc73d54b577.
+cdf:service-c9b4a3bcceb9 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "8f3df874-b04d-4dbd-b9cb-00fa8c5fafb8";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-8d1c17922264.
+cdf:service-cac672074e4f cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "13008"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Clubs für Jugendliche";
+    schema:provider cdf:org-51c06607c395;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "10.4.2.2".
+cdf:service-ccd0e1780f46 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "4d1f05fe-2287-450a-8173-dd0a92de409e";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-efc3f3e22bcd.
+cdf:service-cf8a515eebbd cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "13001"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Jugendberatungsstellen, Jugendhilfestellen, Jugendfreizeiteinrichtungen (§11 SGB VIII)";
+    schema:provider cdf:org-5425b07c3e72;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "2.3.1".
+cdf:service-cfa9bb180a63 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "0a120bd9-5f60-4a7f-bcfb-4cb3c72c325c";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-2ffec0f57249.
+cdf:service-d20cd9f80955 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "9452c623-6a43-4abd-a7f9-4fd704ebf09b";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-f19850f38cdf.
+cdf:service-d44efe0d0225 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "e93a3858-5443-4fde-bfcd-5e0e88b48c02";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-c11fc929c777.
+cdf:service-d4e644c2b273 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "14"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Geschäftsstellen";
+    schema:provider cdf:traeger-1b98c8cec95e;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "8.3.4".
+cdf:service-d53543b7538a cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12752"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Beratungsstellen/ambulante Dienste";
+    schema:provider cdf:org-ebce9e2b40d5;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "3.3".
+cdf:service-d58ccc3b85f8 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12873"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Migrationsberatung für erwachsene Zugewanderte ";
+    schema:provider cdf:org-76b13a36a139;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "6.3.1".
+cdf:service-d7279b0e269d cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "470ab600-5b04-44af-996a-03adacf95add";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-c25e5dce966a.
+cdf:service-d9329b5b9e6f cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "a8363bac-47b5-434e-8030-e5a3c1b2c955";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-79954ee5dd4b.
+cdf:service-da525d604595 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "9175cb15-471f-4b1a-bdc0-4b30c6564838";
+    schema:category "Schuldnerberatung";
+    schema:name "Schuldnerberatung";
+    schema:provider cdf:org-236847e0f3e3.
+cdf:service-daa49d7cb433 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "65ff6fa3-50ad-42b8-8ea0-334fa21411ea";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-529bcfff161c.
+cdf:service-de3ab173e5c8 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12715"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Ambulantes betreutes Wohnen für Menschen mit Behinderung/Menschen mit psych. Erkrankung";
+    schema:provider cdf:org-271cba534b72;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "5.3.8".
+cdf:service-df8fdeb5c6e5 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "00c5e6c3-c185-4bed-9d33-53d49eb73dc1";
+    schema:category "Schuldnerberatung";
+    schema:name "Schuldnerberatung";
+    schema:provider cdf:org-75852a15fae2.
+cdf:service-e6728525d46c cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "8b9a6770-9713-456d-9cbd-0e78dd57c6fc";
+    schema:category "Suchtberatung";
+    schema:name "Drogen";
+    schema:provider cdf:org-2ffec0f57249.
+cdf:service-eb182012a636 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "5df1d43f-a1bd-4426-861a-740776bc0bf5";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-24d39704bb0d.
+cdf:service-ef3217d49714 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "0e2ea1ff-a4aa-4ce1-b3cb-da893c215dfe";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-e02ff58ef2f8.
+cdf:service-ef36d88bf072 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "d82695a4-b850-4030-a7a0-b477fe601905";
+    schema:category "Suchtberatung";
+    schema:name "Prävention";
+    schema:provider cdf:org-babf6cc2cc90.
+cdf:service-ef52b96778c0 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "734dec00-404e-4495-87da-a5b05cbe04d1";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-6e00f901e8fc.
+cdf:service-f34d4c406495 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12858"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:provider cdf:org-dd9bf1615a53;
+    schema:areaServed "Berlin".
+cdf:service-f7ff0aa8d0f0 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "48e4160e-0dc7-4e02-87a7-36c7d317816c";
+    schema:category "Wohnungsnotfallhilfe";
+    schema:name "Wohnungsnothilfe";
+    schema:provider cdf:org-95f725a7a4ff.
+cdf:service-f89a3ef0511b cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "3"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Geschäftsstellen";
+    schema:provider cdf:traeger-0fd100a1aff8;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "8.3.4".
+cdf:service-fb4a21b6f9f6 cdp:fromSource cdp:sozialplattformSource;
+    a schema:Service;
+    schema:identifier "a236dca3-d753-45de-aeef-11c4abbdf8fe";
+    schema:category "Suchtberatung";
+    schema:name "Allgemeine Suchtberatung";
+    schema:provider cdf:org-bde306e22cf6.
+cdf:service-fbdd0553961d cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12842"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Berufsvorbereitende Einrichtungen für arbeitslose Jugendliche";
+    schema:provider cdf:org-26b5be6c340b;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "2.2.5".
+cdf:service-ffe172019367 cdp:fromSource cdp:awoSource;
+    a schema:Service;
+    schema:identifier "12815"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:category "Beratungs- und Vermittlungsstellen für FSJ/FÖJ, Au pair, Bundesfreiwilligendienst";
+    schema:provider cdf:org-7202370e3c37;
+    schema:areaServed "Berlin";
+    cdf:bagfwId "2.3.6".
+cdf:traeger-0ea194ec8950 cdp:fromSource cdp:awoSource;
+    a schema:Organization;
+    schema:identifier "8801"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "AWO Gemeinnützige Pflegegesellschaft mbH";
+    schema:address cdf:addr-9a312febeb18.
+cdf:traeger-0fd100a1aff8 cdp:fromSource cdp:awoSource;
+    a schema:Organization;
+    schema:identifier "2"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "AWO Kreisverband Berlin-Mitte e.V.";
+    foaf:homepage "http://www.awo-mitte.de";
+    schema:address cdf:addr-64693174109e.
+cdf:traeger-1b98c8cec95e cdp:fromSource cdp:awoSource;
+    a schema:Organization;
+    schema:identifier "13"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "AWO Kreisverband Spree-Wuhle e.V.";
+    foaf:homepage "http://www.awo-friedrichshain-kreuzberg.de";
+    schema:address cdf:addr-3d174698d831.
+cdf:traeger-e82cc1d98b19 cdp:fromSource cdp:awoSource;
+    a schema:Organization;
+    schema:identifier "4884"^^<http://www.w3.org/2001/XMLSchema#int>;
+    schema:name "SPI - Stiftung Sozialpädagogisches Institut Berlin »Walter May«";
+    foaf:homepage "http://www.stiftung-spi.de/";
+    schema:address cdf:addr-8dac927043da.

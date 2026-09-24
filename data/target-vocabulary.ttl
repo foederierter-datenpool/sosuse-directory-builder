@@ -1,0 +1,230 @@
+# Target application profile: RDFS vocabulary and SHACL shapes. Only explicitly configured constraints are enforced.
+# Generated from config/federation.ttl.
+
+@prefix : <https://civic-data.de/pipeline#>.
+@prefix cdf: <https://civic-data.de/federated-directory#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix org: <http://www.w3.org/ns/org#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix schema: <http://schema.org/>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+# ---- Träger (schema:Organization) ------------------------------------------
+
+schema:Organization a rdfs:Class.
+
+:traegerSchema a sh:NodeShape;
+    rdfs:label "Träger"@de;
+    sh:property :t-address, :t-alternateName, :t-description, :t-detailUrl, :t-email, :t-harvestedAt, :t-homepage, :t-identifier, :t-name, :t-sourceCreated, :t-sourceModified, :t-sourceReviewed, :t-telephone;
+    sh:targetClass schema:Organization.
+
+# ---- Einrichtung (org:OrganizationalUnit) ----------------------------------
+
+org:OrganizationalUnit a rdfs:Class;
+    rdfs:label "Einrichtung"@de.
+
+:einrichtungSchema a sh:NodeShape;
+    rdfs:label "Einrichtung"@de;
+    sh:property :t-accessibilitySummary, :t-address, :t-alternateName, :t-areaServed, :t-audience, :t-availableService, :t-category, :t-description, :t-detailUrl, :t-email, :t-harvestedAt, :t-homepage, :t-identifier, :t-name, :t-openingHours, :t-parentOrgClassification, :t-parentOrganization, :t-sourceCreated, :t-sourceModified, :t-sourceReviewed, :t-telephone;
+    sh:targetClass org:OrganizationalUnit.
+
+:t-accessibilitySummary a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:path schema:accessibilitySummary;
+    :typeDerivation :adopted.
+
+:t-availableService a sh:PropertyShape;
+    rdfs:comment "Keeps service descriptions as text; upstream expects medical procedure, test or therapy objects."@en;
+    sh:datatype xsd:string;
+    sh:path schema:availableService;
+    :typeDerivation :overridden.
+
+cdf:parentOrgClassification a rdf:Property;
+    rdfs:comment "Free-text classification of the parent organization, e.g. Freie Wohlfahrtspflege / gemeinnütziger Träger."@en;
+    rdfs:label "Parent organization classification"@en, "Trägerkategorie"@de.
+
+:t-parentOrgClassification a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:path cdf:parentOrgClassification;
+    :typeDerivation :local.
+
+:t-parentOrganization a sh:PropertyShape;
+    sh:class schema:Organization;
+    sh:nodeKind sh:IRI;
+    sh:path schema:parentOrganization;
+    :typeDerivation :adopted.
+
+# ---- Angebot (schema:Service) ----------------------------------------------
+
+schema:Service a rdfs:Class.
+
+:angebotSchema a sh:NodeShape;
+    rdfs:label "Angebot"@de;
+    sh:property :t-areaServed, :t-audience, :t-bagfwId, :t-category, :t-detailUrl, :t-identifier, :t-isAccessibleForFree, :t-language, :t-name, :t-openingHours, :t-provider;
+    sh:targetClass schema:Service.
+
+cdf:bagfwId a rdf:Property;
+    rdfs:comment "BAGFW classification code for a service, such as 2.3.1."@en;
+    rdfs:label "BAGFW classification code"@en, "BAGFW-Code"@de.
+
+:t-bagfwId a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:path cdf:bagfwId;
+    :typeDerivation :local.
+
+:t-isAccessibleForFree a sh:PropertyShape;
+    sh:datatype xsd:boolean;
+    sh:path schema:isAccessibleForFree;
+    :typeDerivation :adopted.
+
+:t-language a sh:PropertyShape;
+    rdfs:comment "DCMI recommends BCP47 literals; xsd:language is our choice, not full BCP47 validation."@en;
+    sh:datatype xsd:language;
+    sh:path dct:language;
+    :typeDerivation :adopted.
+
+:t-provider a sh:PropertyShape;
+    rdfs:comment "Uses org:OrganizationalUnit for Einrichtungen; upstream expects schema:Organization or schema:Person."@en;
+    sh:nodeKind sh:IRI;
+    sh:or ([ sh:class org:OrganizationalUnit ] [ sh:class schema:Organization ]);
+    sh:path schema:provider;
+    :typeDerivation :overridden.
+
+# ---- Adresse (schema:PostalAddress) ----------------------------------------
+
+schema:PostalAddress a rdfs:Class.
+
+:adresseSchema a sh:NodeShape;
+    rdfs:label "Adresse"@de;
+    sh:property :t-country, :t-identifier, :t-locality, :t-postalCode, :t-streetAddress;
+    sh:targetClass schema:PostalAddress.
+
+:t-country a sh:PropertyShape;
+    rdfs:comment "Country codes such as DE use the upstream Text option."@en;
+    sh:datatype xsd:string;
+    sh:path schema:addressCountry;
+    :typeDerivation :adopted.
+
+:t-locality a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:path schema:addressLocality;
+    :typeDerivation :adopted.
+
+:t-postalCode a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:path schema:postalCode;
+    :typeDerivation :adopted.
+
+:t-streetAddress a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:path schema:streetAddress;
+    :typeDerivation :adopted.
+
+# ---- Shared fields ---------------------------------------------------------
+
+:t-address a sh:PropertyShape;
+    rdfs:comment "Uses upstream PostalAddress rather than address text."@en;
+    sh:class schema:PostalAddress;
+    sh:nodeKind sh:IRI;
+    sh:path schema:address;
+    :typeDerivation :adopted.
+
+:t-alternateName a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:path schema:alternateName;
+    :typeDerivation :adopted.
+
+:t-areaServed a sh:PropertyShape;
+    rdfs:comment "Uses upstream Text rather than geographic objects."@en;
+    sh:datatype xsd:string;
+    sh:path schema:areaServed;
+    :typeDerivation :adopted.
+
+:t-audience a sh:PropertyShape;
+    rdfs:comment "Keeps audience descriptions as text; upstream expects Audience objects."@en;
+    sh:datatype xsd:string;
+    sh:path schema:audience;
+    :typeDerivation :overridden.
+
+:t-category a sh:PropertyShape;
+    rdfs:comment "Uses upstream Text rather than URLs or objects."@en;
+    sh:datatype xsd:string;
+    sh:path schema:category;
+    :typeDerivation :adopted.
+
+:t-description a sh:PropertyShape;
+    rdfs:comment "Selects upstream Text over TextObject."@en;
+    sh:datatype xsd:string;
+    sh:path schema:description;
+    :typeDerivation :adopted.
+
+:t-detailUrl a sh:PropertyShape;
+    rdfs:comment "Upstream expects CreativeWork or URL; Caritas supplies search paths needing URL extraction."@en;
+    sh:datatype xsd:string;
+    sh:path schema:mainEntityOfPage;
+    :typeDerivation :overridden.
+
+:t-email a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:path schema:email;
+    :typeDerivation :adopted.
+
+:t-harvestedAt a sh:PropertyShape;
+    sh:datatype xsd:dateTime;
+    sh:path prov:generatedAtTime;
+    :typeDerivation :adopted.
+
+:t-homepage a sh:PropertyShape;
+    rdfs:comment "FOAF expects Document links; source URLs remain text, some without a scheme."@en;
+    sh:datatype xsd:string;
+    sh:path foaf:homepage;
+    :typeDerivation :overridden.
+
+:t-identifier a sh:PropertyShape;
+    rdfs:comment "Uses upstream Text; AWO supplies xsd:int. Resolve removes identifiers."@en;
+    sh:datatype xsd:string;
+    sh:path schema:identifier;
+    :typeDerivation :adopted.
+
+:t-name a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:path schema:name;
+    :typeDerivation :adopted.
+
+:t-openingHours a sh:PropertyShape;
+    rdfs:comment "Adopts Text without enforcing schema.org's opening-hours syntax."@en;
+    sh:datatype xsd:string;
+    sh:path schema:openingHours;
+    :typeDerivation :adopted.
+
+:t-sourceCreated a sh:PropertyShape;
+    rdfs:comment "DCMI allows dates, timestamps or periods. Datatype awaits a precision choice; field unmapped."@en;
+    sh:nodeKind sh:Literal;
+    sh:path dct:created;
+    :typeDerivation :local.
+
+:t-sourceModified a sh:PropertyShape;
+    rdfs:comment "DCMI allows dates, timestamps or periods. Datatype awaits a precision choice; field unmapped."@en;
+    sh:nodeKind sh:Literal;
+    sh:path dct:modified;
+    :typeDerivation :local.
+
+:t-sourceReviewed a sh:PropertyShape;
+    sh:datatype xsd:date;
+    sh:path schema:lastReviewed;
+    :typeDerivation :adopted.
+
+:t-telephone a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:path schema:telephone;
+    :typeDerivation :adopted.
+
+# ---- Enrichment properties -------------------------------------------------
+
+schema:latitude a rdf:Property.
+
+schema:longitude a rdf:Property.

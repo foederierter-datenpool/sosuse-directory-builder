@@ -1,0 +1,8 @@
+PREFIX schema: <http://schema.org/>
+PREFIX cdf: <https://civic-data.de/federated-directory#>
+
+SELECT ?entity (SAMPLE(?name) AS ?title) WHERE {
+    ?entity schema:name ?name .
+}
+GROUP BY ?entity
+ORDER BY ?title

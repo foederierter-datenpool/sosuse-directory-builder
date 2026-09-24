@@ -1,0 +1,3 @@
+# Publication snapshots are generated with git add --force.
+# Ignore untracked files left behind when switching from the source branch.
+*

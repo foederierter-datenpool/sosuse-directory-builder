@@ -1,0 +1,117 @@
+@prefix cdp: <https://civic-data.de/pipeline#>.
+
+cdp:awo-8813 cdp:prepared _:n3-33533.
+cdp:awo-9085 cdp:prepared _:n3-33534.
+cdp:awo-addr-07e794ee9433 cdp:matchString "prinzenallee2526";
+    cdp:prepared _:n3-33522.
+cdp:awo-addr-0c18019a2553 cdp:matchString "hochstaedterstrasse1";
+    cdp:prepared _:n3-33515.
+cdp:awo-addr-1af1f1211aa9 cdp:matchString "reinickendorferstrasse58a";
+    cdp:prepared _:n3-33518.
+cdp:awo-addr-1d53dcc44bba cdp:matchString "stettinerstrasse12";
+    cdp:prepared _:n3-33528.
+cdp:awo-addr-2172c1fe0700 cdp:matchString "spenerstrasse37";
+    cdp:prepared _:n3-33532.
+cdp:awo-addr-3037e7c631ab cdp:matchString "altreinickendorf2324".
+cdp:awo-addr-341da225cab3 cdp:matchString "rigaerstrasse55b";
+    cdp:prepared _:n3-33513.
+cdp:awo-addr-38be04a9789f cdp:matchString "rosenthalerstrasse59";
+    cdp:prepared _:n3-33524.
+cdp:awo-addr-393899ed6bbb cdp:matchString "badstrasse10";
+    cdp:prepared _:n3-33517.
+cdp:awo-addr-5ac0472077e7 cdp:matchString "liebenwalderstrasse59";
+    cdp:prepared _:n3-33527.
+cdp:awo-addr-5b6f6dce0519 cdp:matchString "hochstaedterstrasse1";
+    cdp:prepared _:n3-33514.
+cdp:awo-addr-633fa681cf61 cdp:matchString "barfusstrasse2224";
+    cdp:prepared _:n3-33531.
+cdp:awo-addr-6ff88bc40de2 cdp:matchString "groningerstrasse28";
+    cdp:prepared _:n3-33523.
+cdp:awo-addr-7bb699177b0e cdp:matchString "muellerstrasse163";
+    cdp:prepared _:n3-33526.
+cdp:awo-addr-83410725f660 cdp:matchString "antwerpenerstrasse4042";
+    cdp:prepared _:n3-33525.
+cdp:awo-addr-83ecb9baa721 cdp:matchString "karlliebknechtstrasse13";
+    cdp:prepared _:n3-33519.
+cdp:awo-addr-8e979697f9f4 cdp:matchString "markgrafenstrasse26";
+    cdp:prepared _:n3-33520.
+cdp:awo-addr-a1f454ee23b7 cdp:matchString "badstrasse33";
+    cdp:prepared _:n3-33516.
+cdp:awo-addr-af4a4a7be7d8 cdp:matchString "bellermannstrasse65";
+    cdp:prepared _:n3-33521.
+cdp:awo-addr-bdb8a136055d cdp:matchString "turmstrasse71".
+cdp:awo-addr-c837a6fc981e cdp:matchString "muellerstrasse74".
+cdp:awo-addr-c9cf0d7b38bd cdp:matchString "reinickendorferstrasse62".
+cdp:awo-addr-d4e78fd1a6a0 cdp:matchString "buttmannstrasse9";
+    cdp:prepared _:n3-33529.
+cdp:awo-addr-d8c316125f3d cdp:matchString "prinzenallee74".
+cdp:awo-addr-e501f871ac90 cdp:matchString "luetzowstrasse42";
+    cdp:prepared _:n3-33530.
+cdp:awo-addr-eed4d5a4fa31 cdp:matchString "derfflingerstrasse21".
+cdp:awo-addr-f6b62416db8d cdp:matchString "putbusserstrasse30".
+_:n3-33513 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Rigaer Str. 55 b";
+    cdp:cleanValue "Rigaer Straße 55b".
+_:n3-33514 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Hochstädter Str. 1";
+    cdp:cleanValue "Hochstädter Straße 1".
+_:n3-33515 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Hochstädter Str. 1";
+    cdp:cleanValue "Hochstädter Straße 1".
+_:n3-33516 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Badstr. 33";
+    cdp:cleanValue "Badstraße 33".
+_:n3-33517 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Badstr. 10";
+    cdp:cleanValue "Badstraße 10".
+_:n3-33518 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Reinickendorfer Str. 58 a";
+    cdp:cleanValue "Reinickendorfer Straße 58a".
+_:n3-33519 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Karl-Liebknecht-Str. 13";
+    cdp:cleanValue "Karl-Liebknecht-Straße 13".
+_:n3-33520 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Markgrafenstr. 26";
+    cdp:cleanValue "Markgrafenstraße 26".
+_:n3-33521 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Bellermannstr. 65";
+    cdp:cleanValue "Bellermannstraße 65".
+_:n3-33522 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Prinzenallee 25/26";
+    cdp:cleanValue "Prinzenallee 25-26".
+_:n3-33523 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Groninger str. 28";
+    cdp:cleanValue "Groninger Straße 28".
+_:n3-33524 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Rosenthaler Str. 59";
+    cdp:cleanValue "Rosenthaler Straße 59".
+_:n3-33525 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Antwerpener Straße 40/42";
+    cdp:cleanValue "Antwerpener Straße 40-42".
+_:n3-33526 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Müllerstr. 163";
+    cdp:cleanValue "Müllerstraße 163".
+_:n3-33527 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Liebenwalder Str. 59";
+    cdp:cleanValue "Liebenwalder Straße 59".
+_:n3-33528 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Stettiner Str. 12";
+    cdp:cleanValue "Stettiner Straße 12".
+_:n3-33529 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Buttmannstr. 9";
+    cdp:cleanValue "Buttmannstraße 9".
+_:n3-33530 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Lützowstr. 42";
+    cdp:cleanValue "Lützowstraße 42".
+_:n3-33531 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Barfusstr. 22/24";
+    cdp:cleanValue "Barfusstraße 22-24".
+_:n3-33532 cdp:field cdp:awo-addr-street;
+    cdp:rawValue "Spenerstr. 37";
+    cdp:cleanValue "Spenerstraße 37".
+_:n3-33533 cdp:field "name";
+    cdp:rawValue "Behindertenhilfe Betreutes  Wohnen";
+    cdp:cleanValue "Behindertenhilfe Betreutes Wohnen".
+_:n3-33534 cdp:field "name";
+    cdp:rawValue "Kleiderkammer  IsA-K Integration statt Ausgrenzung -Kleiderk.";
+    cdp:cleanValue "Kleiderkammer IsA-K Integration statt Ausgrenzung -Kleiderk.".

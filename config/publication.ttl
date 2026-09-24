@@ -1,0 +1,114 @@
+@prefix :       <https://civic-data.de/pipeline#> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix theme:  <http://publications.europa.eu/resource/authority/data-theme/> .
+@prefix freq:   <http://publications.europa.eu/resource/authority/frequency/> .
+@prefix pgl:    <http://dcat-ap.de/def/politicalGeocoding/Level/> .
+
+# DCAT-AP.de 3.0 metadata for publishing this directory. Generated from
+# federation.ttl as a first draft — hand-edited from here on, nothing
+# regenerates it. It is valid as it stands (`directory-builder validate`
+# passes), so the publish step works immediately; every "TODO:" is a decision
+# only you can make, and each one you leave is visible in the published catalog.
+#
+# The deployment URL is not here: :federation :baseUrl in federation.ttl states
+# it once, for both the webapp build and the IRIs published below.
+
+:federation a dcat:Catalog ;
+    dct:title       "Federated directory of social support services in Germany" ;
+    dct:description "TODO: what this directory federates, for whom" ;
+    dct:publisher   :publisher ;
+    dct:language    <http://publications.europa.eu/resource/authority/language/DEU> ;
+    dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> .
+
+:publisher a foaf:Agent ;
+    foaf:name "TODO: the organisation publishing this directory" .
+    # For delivery to GovData, add the contributor ID they assign:
+    # dcatde:contributorID <http://dcat-ap.de/def/contributors/yourorganisation> .
+
+:contact a vcard:Kind ;
+    vcard:fn "TODO: who to contact about this data" ;
+    vcard:hasEmail <mailto:TODO@example.org> .
+
+# One dcat:Dataset per :TargetSchema, hung off the schema IRI federation.ttl
+# declares. The publish step derives each one's distribution, landing page,
+# dct:conformsTo and the sources it was merged from.
+:traegerSchema :publishedAs :traegerDataset .
+:einrichtungSchema :publishedAs :einrichtungDataset .
+:angebotSchema :publishedAs :angebotDataset .
+:adresseSchema :publishedAs :adresseDataset .
+
+:traegerDataset a dcat:Dataset ;
+    dct:title       "Träger"@de ;
+    dct:description "TODO: what is in this dataset, and what a consumer can do with it" ;
+    dct:publisher   :publisher ;
+    dcat:contactPoint :contact ;
+    # From the EU data theme authority: http://publications.europa.eu/resource/authority/data-theme
+    dcat:theme      theme:GOVE ;
+    dcat:keyword    "TODO: keyword" ;
+    # How often the pipeline runs, from the EU frequency authority.
+    dct:accrualPeriodicity freq:UNKNOWN ;
+    # The smallest administrative level the entities are located at, if any:
+    # http://dcat-ap.de/def/politicalGeocoding/Level/
+    # dcatde:politicalGeocodingLevelURI pgl:municipality ;
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL> .
+
+:einrichtungDataset a dcat:Dataset ;
+    dct:title       "Einrichtung"@de ;
+    dct:description "TODO: what is in this dataset, and what a consumer can do with it" ;
+    dct:publisher   :publisher ;
+    dcat:contactPoint :contact ;
+    # From the EU data theme authority: http://publications.europa.eu/resource/authority/data-theme
+    dcat:theme      theme:GOVE ;
+    dcat:keyword    "TODO: keyword" ;
+    # How often the pipeline runs, from the EU frequency authority.
+    dct:accrualPeriodicity freq:UNKNOWN ;
+    # The smallest administrative level the entities are located at, if any:
+    # http://dcat-ap.de/def/politicalGeocoding/Level/
+    # dcatde:politicalGeocodingLevelURI pgl:municipality ;
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL> .
+
+:angebotDataset a dcat:Dataset ;
+    dct:title       "Angebot"@de ;
+    dct:description "TODO: what is in this dataset, and what a consumer can do with it" ;
+    dct:publisher   :publisher ;
+    dcat:contactPoint :contact ;
+    # From the EU data theme authority: http://publications.europa.eu/resource/authority/data-theme
+    dcat:theme      theme:GOVE ;
+    dcat:keyword    "TODO: keyword" ;
+    # How often the pipeline runs, from the EU frequency authority.
+    dct:accrualPeriodicity freq:UNKNOWN ;
+    # The smallest administrative level the entities are located at, if any:
+    # http://dcat-ap.de/def/politicalGeocoding/Level/
+    # dcatde:politicalGeocodingLevelURI pgl:municipality ;
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL> .
+
+:adresseDataset a dcat:Dataset ;
+    dct:title       "Adresse"@de ;
+    dct:description "TODO: what is in this dataset, and what a consumer can do with it" ;
+    dct:publisher   :publisher ;
+    dcat:contactPoint :contact ;
+    # From the EU data theme authority: http://publications.europa.eu/resource/authority/data-theme
+    dcat:theme      theme:GOVE ;
+    dcat:keyword    "TODO: keyword" ;
+    # How often the pipeline runs, from the EU frequency authority.
+    dct:accrualPeriodicity freq:UNKNOWN ;
+    # The smallest administrative level the entities are located at, if any:
+    # http://dcat-ap.de/def/politicalGeocoding/Level/
+    # dcatde:politicalGeocodingLevelURI pgl:municipality ;
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL> .
+
+# Stamped onto the distribution the publish step derives (its accessURL is
+# directory.ttl under :federation :baseUrl, which the webapp serves verbatim).
+:distributionDefaults a :DistributionTemplate ;
+    # "Andere geschlossene Lizenz" — a placeholder that grants nothing. Replace
+    # it with the licence you publish under: http://dcat-ap.de/def/licenses/
+    dct:license <http://dcat-ap.de/def/licenses/other-closed> ;
+    # Required for attribution licences (dl-by-de, cc-by): who to credit, and
+    # for what. Name the upstream sources as well as this directory.
+    dcatde:licenseAttributionByText "TODO: attribution for the sources and this directory" ;
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL> .
