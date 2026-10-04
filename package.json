@@ -4,10 +4,10 @@
   "type": "module",
   "scripts": {
     "test": "node --test scripts/*.test.js",
-    "pipeline": "directory-builder",
+    "pipeline": "node --env-file-if-exists=.env node_modules/@directory-builder/core/bin/cli.js",
     "publish:pages": "node scripts/publish-pages.js",
     "ingest": "directory-builder ingest",
-    "federate": "directory-builder federate",
+    "federate": "node --env-file-if-exists=.env node_modules/@directory-builder/core/bin/cli.js federate",
     "fuseki": "../directory-api/gradlew -p ../directory-api fusekiDist -q && java -jar ../directory-api/build/fuseki/directory-fuseki.jar .",
     "validate": "directory-builder validate",
     "vocabulary:build": "directory-builder vocabulary",

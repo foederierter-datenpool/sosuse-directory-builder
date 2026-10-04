@@ -51,6 +51,48 @@ persistent working checkout used for pipeline runs.
 [Docker Compose in Coolify](https://coolify.io/docs/applications/builds/docker-compose),
 [environment variables](https://coolify.io/docs/applications/configuration/environment-variables).
 
+### Geocoding settings
+
+The runner accepts these optional Compose / Coolify runtime variables. Like
+the token setting, the `PIPELINE_` aliases keep editable inputs separate from
+Coolify's managed container environment keys.
+
+| Runtime variable | Default | Passed to core as |
+| --- | --- | --- |
+| `PIPELINE_GEOCODE_ENDPOINT` | `http://nominatim:8080/search` | `GEOCODE_ENDPOINT` |
+| `PIPELINE_GEOCODE_DELAY_MS` | `0` | `GEOCODE_DELAY_MS` |
+| `PIPELINE_GEOCODE_DATASET` | unset | `GEOCODE_DATASET` |
+| `PIPELINE_GEOCODE_RETRY_MISSES` | `false` | `GEOCODE_RETRY_MISSES` |
+| `PIPELINE_GEOCODE_CACHE_ONLY` | `false` | `GEOCODE_CACHE_ONLY` |
+
+The runner checks the address cache first, then probes the preferred service
+once when needed. If unavailable, or if it fails mid-run, public Nominatim is
+used with a minimum 1100 ms delay. Valid empty results remain cached misses.
+Use a shared server geocoder for recurring national runs; public bulk jobs
+are subject to [Nominatim's usage policy](https://operations.osmfoundation.org/policies/nominatim/),
+including four requests per minute for recurring jobs (`PIPELINE_GEOCODE_DELAY_MS=15000`).
+
+The default service URL requires the pipeline and `nominatim` containers on
+the same Docker network. Separate Compose projects must explicitly join a
+shared network. Set `PIPELINE_GEOCODE_ENDPOINT` to the service URL reachable
+**from the runner container**, and `PIPELINE_GEOCODE_DATASET=germany` for a
+Germany import. The runner does not start or deploy Nominatim automatically.
+Verify the shared server has sufficient import capacity before deploying it.
+On Docker Desktop, a host-published service can instead be reached through
+`http://host.docker.internal:8088/search`; `127.0.0.1` refers to the runner itself.
+
+Misses retry when the endpoint, dataset label or reported OSM snapshot changes.
+Set `PIPELINE_GEOCODE_RETRY_MISSES=true` for a deliberate retry of all cached
+misses; successful coordinates remain cached.
+
+Alternatively, fill the instance's `registry/geocache.json` locally, transfer
+that cache to the runner checkout, and set `PIPELINE_GEOCODE_CACHE_ONLY=true`.
+Cache-only mode makes no health probes and ignores retry-misses. Any new
+complete address will fail instead of making a network request, so leave this
+mode off for recurring harvests that can introduce new addresses. The
+installed core must include these options; after publishing/upgrading core,
+run `npm install` in the persistent checkout as described below.
+
 ## 3. Clone and run
 
 Open the application's **Terminal**, selecting the `pipeline` container.

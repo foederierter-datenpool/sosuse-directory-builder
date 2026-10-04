@@ -28,7 +28,7 @@ match (cluster duplicates across sources) → merge → resolve (one value per
 field), each stage written to `data/`.
 
 ## Prerequisites
-- Node.js
+- Node.js 24 (also used by the pipeline runner)
 - Java (for [SPARQL Anything](https://github.com/SPARQL-Anything/sparql.anything), auto-downloaded on first run)
 
 ## Setup
@@ -43,7 +43,7 @@ Via command (root = where you invoke):
 ```sh
 npm run pipeline   # ingest + federate
 npm run ingest     # fetch + lift only
-npm run federate   # extract → map → match → merge → resolve only
+npm run federate   # federate existing ingest data, including geocoding
 npm run vocabulary:build  # federation.ttl → data/target-vocabulary.ttl (RDFS + SHACL)
 ```
 
@@ -56,6 +56,11 @@ await pipeline.run() // ingest + federate
 ```
 Outputs &rarr; `data/`
 
+`pipeline` and `federate` load the committed `.env` from this directory.
+It contains non-secret geocoder defaults; shell/container settings take precedence.
+Both commands write local output. Publishing to GitHub requires the separate
+`npm run publish:pages` command.
+
 The DHS fetcher deduplicates entries across the configured postal codes,
 checks HTTP status and page content, and retries transient failures. It downloads
 up to three detail pages concurrently and fails the harvest if any discovered
@@ -64,6 +69,28 @@ detail page cannot be retrieved and verified.
 DHS groups up to 50 HTML pages per file to reduce Java process launches during
 lift. Core detects these chunks automatically and splits the lifted RDF into
 one file per page for extraction.
+
+### Geocoding
+
+Run `npm run federate` to geocode existing ingest data, or `npm run pipeline`
+to fetch and ingest again. The committed `.env` selects the **Berlin-only**
+pilot on port 8089. After importing Germany, change its endpoint to port 8088
+and dataset to `germany`. Other geocoding settings use core's defaults.
+
+SoSuSe enables geocoding in `config/federation.ttl` and keeps results in
+`registry/geocache.json`. A core version with local geocoding support (or a
+linked checkout) checks the cache first, then local Nominatim, with throttled
+public fallback if the service is unavailable. Empty results stay cached
+misses and retry when the provider or dataset changes.
+
+For an offline rerun, use `GEOCODE_CACHE_ONLY=true npm run federate`; an
+uncached complete address fails that run. `GEOCODE_RETRY_MISSES=true` retries
+cached misses explicitly. Successful coordinates remain cached.
+
+See the [core setup](https://github.com/foederierter-datenpool/directory-builder-core/tree/main/tools/nominatim) for
+importing the database, and the [runner settings](deploy/README.md#geocoding-settings)
+for Docker Compose / Coolify. Geocoding is done by the pipeline; the published
+webapp uses the resulting coordinates without contacting the service.
 
 ## Run the webapp
 The webapp ships with `@directory-builder/core`; this repo holds no webapp
