@@ -47,6 +47,9 @@ npm run federate   # federate existing ingest data, including geocoding
 npm run vocabulary:build  # federation.ttl → data/target-vocabulary.ttl (RDFS + SHACL)
 ```
 
+For a fresh checkout or after deleting `data/`, start with `npm run pipeline`.
+`npm run federate` requires the lifted source data from a completed ingest.
+
 Or programmatically:
 ```js
 import { Pipeline } from "@directory-builder/core"
