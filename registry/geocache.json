@@ -413,9 +413,7 @@
             },
             "lat": null,
             "lon": null,
-            "endpoint": "http://127.0.0.1:8089/search",
-            "dataset": "berlin",
-            "dataUpdated": "2026-10-02T19:38:48+00:00"
+            "endpoint": "https://nominatim.openstreetmap.org/search"
         },
         "457baf7740ea088d73df40785e136d38f99bf5406ec3ca0ff2dac5d771f3ca28": {
             "query": {
@@ -1012,6 +1010,16 @@
             "dataset": "berlin",
             "dataUpdated": "2026-10-02T19:38:48+00:00"
         },
+        "c5dbaec1e0b75e689c043475f9abda4c1058f087743e34fcb61c8361120d7ec3": {
+            "query": {
+                "street": "Buchberger Straße 4-12",
+                "postalcode": "10365",
+                "city": "Berlin"
+            },
+            "lat": "52.5100811",
+            "lon": "13.4908066",
+            "endpoint": "https://nominatim.openstreetmap.org/search"
+        },
         "c6db754654bea538b16d9887620bfe5d79eb126128357f512d13ff44ed1bbbe0": {
             "query": {
                 "street": "Müllerstraße 163",
@@ -1312,6 +1320,16 @@
             "endpoint": "http://127.0.0.1:8089/search",
             "dataset": "berlin",
             "dataUpdated": "2026-10-02T19:38:48+00:00"
+        },
+        "fea084a2507d0f97a715e46855769dc27c4844ad23973cdc2444f8febef79690": {
+            "query": {
+                "street": "Fehrbellinerstraße 99",
+                "postalcode": "10119",
+                "city": "Berlin"
+            },
+            "lat": "52.5306497",
+            "lon": "13.4095569",
+            "endpoint": "https://nominatim.openstreetmap.org/search"
         },
         "fee50fa316bc608dd1033a66bf90db9d98fa04d854e50ac4bfb3602948f6986a": {
             "query": {

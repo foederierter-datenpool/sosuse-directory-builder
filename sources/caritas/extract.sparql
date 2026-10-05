@@ -1,14 +1,12 @@
-# Skolemize each caritas entry from its xyz:Guid into a stable cdp:caritas-<guid>
-# IRI carrying all of its xyz:* properties; drop the facade-x root scaffolding.
-# Tag each entry with cdp:fromSource so downstream consumers can identify
-# entries and bucket them by source without prefix-matching IRIs.
+# Keep the CariNet address GUID as the Caritas entity IRI. The API supplies
+# structured address fields, so no text parsing is needed.
 
 PREFIX xyz: <http://sparql.xyz/facade-x/data/>
 PREFIX cdp: <https://civic-data.de/pipeline#>
 PREFIX fx:  <http://sparql.xyz/facade-x/ns/>
 
 CONSTRUCT {
-    ?subj  ?p ?o .
+    ?org ?p ?o .
     ?org cdp:fromSource   cdp:caritasSource ;
          cdp:targetSchema cdp:einrichtungSchema ;
          cdp:locatedAt    ?addr .
@@ -17,35 +15,25 @@ CONSTRUCT {
           cdp:matchString  ?adrNorm ;
           xyz:streetAddress   ?adrStreet ;
           xyz:postalCode      ?adrPlz ;
-          xyz:addressLocality ?adrOrt .
+          xyz:addressLocality ?adrOrt ;
+          xyz:latitude        ?latitude ;
+          xyz:longitude       ?longitude .
 }
 WHERE {
-    ?orig ?p ?o .
+    ?orig xyz:id ?id ; ?p ?o .
     FILTER NOT EXISTS { ?orig a fx:root }
+    BIND(IRI(CONCAT(STR(cdp:), "caritas-", STR(?id))) AS ?org)
     OPTIONAL {
-        ?orig xyz:Guid ?guid .
-        BIND(IRI(CONCAT(STR(cdp:), "caritas-", ?guid)) AS ?org)
-
-        # Address entity from the Teaser ("<street> - <PLZ> <city>", split anchored
-        # on the PLZ) — the only address extraction; the org itself just links via
-        # cdp:locatedAt. Street is Str.-expanded for display,
-        # then lowercased / diacritics folded / punctuation dropped onto
-        # cdp:matchString, the match step's exact comparison surface. The IRI is
-        # content-addressed on matchString + PLZ so formatting variants collapse.
+        ?orig xyz:street ?street ; xyz:zipCode ?adrPlz ; xyz:city ?adrOrt .
+        FILTER(STRLEN(STR(?street)) > 0 && REGEX(STR(?adrPlz), "^\\d{5}$") && STRLEN(STR(?adrOrt)) > 0)
+        BIND(REPLACE(REPLACE(REPLACE(?street, "[\u00A0\\s]+", " "), "([Ss])tr\\.\\s*", "$1traße "), "^ +| +$", "") AS ?adrStreetA)
+        BIND(REPLACE(REPLACE(REPLACE(REPLACE(?adrStreetA, "([Ss])trasse", "$1traße"), "(\\d+) ([a-zA-Z])$", "$1$2"), "(\\d) ?[-/] ?(\\d)", "$1-$2"), "(^|\\s)straße", "$1Straße") AS ?adrStreet)
+        BIND(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LCASE(?adrStreet), "ä", "ae"), "ö", "oe"), "ü", "ue"), "ß", "ss"), "[^a-z0-9]", "") AS ?adrNorm)
+        BIND(IRI(CONCAT(STR(cdp:), "caritas-addr-", SUBSTR(SHA1(CONCAT(?adrNorm, "|", STR(?adrPlz))), 1, 12))) AS ?addr)
         OPTIONAL {
-            ?orig xyz:Teaser ?teaser .
-            FILTER(isLiteral(?teaser) && REGEX(?teaser, "^.+ - \\d{5} .+$"))
-            BIND(REPLACE(?teaser, "^(.*) - (\\d{5}) (.*)$", "$2") AS ?adrPlz)
-            BIND(REPLACE(?teaser, "^(.*) - (\\d{5}) (.*)$", "$3") AS ?adrOrt)
-            BIND(REPLACE(REPLACE(REPLACE(REPLACE(?teaser, "^(.*) - (\\d{5}) (.*)$", "$1"), "[\u00A0\\s]+", " "), "([Ss])tr\\.\\s*", "$1traße "), "^ +| +$", "") AS ?adrStreetA)
-            # Strasse → Straße (a standalone "straße" is capitalised, compounds like Bellermannstraße stay lower); house-number letter attached ("33 a" → "33a"), number
-            # ranges canonicalised to hyphen ("5 - 11" → "5-11", "128/129" → "128-129") —
-            # display only; matchString is invariant.
-            BIND(REPLACE(REPLACE(REPLACE(REPLACE(?adrStreetA, "([Ss])trasse", "$1traße"), "(\\d+) ([a-zA-Z])$", "$1$2"), "(\\d) ?[-/] ?(\\d)", "$1-$2"), "(^|\\s)straße", "$1Straße") AS ?adrStreet0)
-            BIND(IF(?adrStreet0 != "", ?adrStreet0, ?noAddr) AS ?adrStreet)
-            BIND(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LCASE(?adrStreet), "ä", "ae"), "ö", "oe"), "ü", "ue"), "ß", "ss"), "[^a-z0-9]", "") AS ?adrNorm)
-            BIND(IRI(CONCAT(STR(cdp:), "caritas-addr-", SUBSTR(SHA1(CONCAT(?adrNorm, "|", ?adrPlz)), 1, 12))) AS ?addr)
+            ?orig xyz:geoCoordinate [ xyz:latitude ?latitude ; xyz:longitude ?longitude ] .
+            FILTER(?latitude >= -90 && ?latitude <= 90 && ?longitude >= -180 && ?longitude <= 180 &&
+                   (?latitude != 0 || ?longitude != 0))
         }
     }
-    BIND(COALESCE(?org, ?orig) AS ?subj)
 }

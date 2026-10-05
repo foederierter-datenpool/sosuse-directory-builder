@@ -4,10 +4,10 @@
   "type": "module",
   "scripts": {
     "test": "node --test scripts/*.test.js",
-    "pipeline": "node --env-file-if-exists=.env node_modules/@directory-builder/core/bin/cli.js",
+    "pipeline": "node --env-file-if-exists=.env --env-file-if-exists=.env.local node_modules/@directory-builder/core/bin/cli.js",
     "publish:pages": "node scripts/publish-pages.js",
-    "ingest": "directory-builder ingest",
-    "federate": "node --env-file-if-exists=.env node_modules/@directory-builder/core/bin/cli.js federate",
+    "ingest": "node --env-file-if-exists=.env --env-file-if-exists=.env.local node_modules/@directory-builder/core/bin/cli.js ingest",
+    "federate": "node --env-file-if-exists=.env --env-file-if-exists=.env.local node_modules/@directory-builder/core/bin/cli.js federate",
     "fuseki": "../directory-api/gradlew -p ../directory-api fusekiDist -q && java -jar ../directory-api/build/fuseki/directory-fuseki.jar .",
     "validate": "directory-builder validate",
     "vocabulary:build": "directory-builder vocabulary",
@@ -15,6 +15,7 @@
     "webapp:build": "directory-builder webapp build --base /sosuse-directory-builder/"
   },
   "dependencies": {
-    "@directory-builder/core": "^0.12.1"
+    "@directory-builder/core": "^0.12.1",
+    "html-to-text": "10.0.1"
   }
 }

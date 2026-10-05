@@ -59,10 +59,21 @@ await pipeline.run() // ingest + federate
 ```
 Outputs &rarr; `data/`
 
-`pipeline` and `federate` load the committed `.env` from this directory.
-It contains non-secret geocoder defaults; shell/container settings take precedence.
-Both commands write local output. Publishing to GitHub requires the separate
+`pipeline`, `ingest` and `federate` load the committed `.env` and, when present,
+the ignored `.env.local` from this directory. The committed file contains
+non-secret geocoder defaults; shell/container settings take precedence.
+These commands write local output. Publishing to GitHub requires the separate
 `npm run publish:pages` command.
+
+Caritas fetching requires `CARITAS_API_KEY`. Put it in the ignored `.env.local`
+for local runs, or set it in the runner's environment. Do not put it in the
+committed `.env`. The configured CariNet URL points to the test service, and
+the federation still uses the 19 Berlin postcodes. The production URL is
+`https://apicms.carinet.de/api/socialservice`.
+
+The Caritas fetch keeps the original HTML description and adds a plain-text
+version for `schema:description`. Its supplied coordinates are mapped to
+addresses; enrichment uses them before consulting the geocache or Nominatim.
 
 The DHS fetcher deduplicates entries across the configured postal codes,
 checks HTTP status and page content, and retries transient failures. It downloads

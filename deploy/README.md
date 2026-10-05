@@ -33,15 +33,19 @@ In Coolify:
 2. Repository: `https://github.com/foederierter-datenpool/sosuse-directory-builder`.
 3. Branch: `main`; server: `cdl-federation`.
 4. Build Pack: **Docker Compose**; Base Directory: `/`; Compose Location: `/compose.yaml`.
-5. In **Environment Variables**, set the Production **`GH_PAGES_TOKEN`** to your token. Enable
-   Runtime and disable Build Variable if those controls are shown.
+5. In **Environment Variables**, set the Production **`GH_PAGES_TOKEN`** to your token and
+   **`PIPELINE_CARITAS_API_KEY`** to the CariNet API key. Enable Runtime and disable Build
+   Variable for both if those controls are shown.
 6. Under **Advanced**, disable **Inject Build Args to Dockerfile**; this image needs no build arguments.
 7. Deploy. The `pipeline` container should stay running. Leave domains and port
    mappings empty; the named volume is declared in the Compose file.
 
-Compose passes `GH_PAGES_TOKEN` into the container as `GITHUB_PUSH_TOKEN`.
+Compose passes `GH_PAGES_TOKEN` into the container as `GITHUB_PUSH_TOKEN` and
+`PIPELINE_CARITAS_API_KEY` as `CARITAS_API_KEY`. The local `.env.local` is not
+needed in Coolify.
 The separate names avoid a Coolify 4.3.1 UI bug that makes Compose environment
-keys read-only. Edit `GH_PAGES_TOKEN`; leave the managed `GITHUB_PUSH_TOKEN` row alone.
+keys read-only. Edit `GH_PAGES_TOKEN` and `PIPELINE_CARITAS_API_KEY`; leave their
+managed container environment rows alone.
 The reference allows an empty value during image builds because Coolify parses
 Compose without runtime secrets at that stage. The container checks for a nonempty
 token at startup and exits with an explanatory error if it is missing.

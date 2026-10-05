@@ -7,6 +7,7 @@ services:
     restart: unless-stopped
     environment:
       GITHUB_PUSH_TOKEN: ${GH_PAGES_TOKEN:-}
+      CARITAS_API_KEY: ${PIPELINE_CARITAS_API_KEY:-}
       GEOCODE_ENDPOINT: ${PIPELINE_GEOCODE_ENDPOINT:-http://nominatim:8080/search}
       GEOCODE_DELAY_MS: ${PIPELINE_GEOCODE_DELAY_MS:-0}
       GEOCODE_DATASET: ${PIPELINE_GEOCODE_DATASET:-}

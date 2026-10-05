@@ -78,7 +78,8 @@ cdf:parentOrgClassification
     rdfs:label "Adresse"@de ;
     # The Match lane starts deselected (toggle it back on via the lanes dropdown).
     :hiddenByDefault true ;
-    :hasTargetField :t-identifier, :t-streetAddress, :t-postalCode, :t-locality, :t-country .
+    :hasTargetField :t-identifier, :t-streetAddress, :t-postalCode, :t-locality, :t-country,
+                    :t-latitude, :t-longitude .
 
 # :typeDerivation: :adopted = upstream, :overridden = deliberate deviation,
 # :local = our choice where upstream leaves the type open or the term is ours.
@@ -124,6 +125,16 @@ cdf:parentOrgClassification
     sh:datatype      xsd:string ;
     :typeDerivation  :adopted .
 
+:t-latitude a :TargetField ;
+    :targetPredicate schema:latitude ;
+    sh:datatype      xsd:double ;
+    :typeDerivation  :adopted .
+
+:t-longitude a :TargetField ;
+    :targetPredicate schema:longitude ;
+    sh:datatype      xsd:double ;
+    :typeDerivation  :adopted .
+
 :t-country a :TargetField ;
     :targetPredicate schema:addressCountry ;
     sh:datatype      xsd:string ;
@@ -157,7 +168,7 @@ cdf:parentOrgClassification
     :targetPredicate schema:mainEntityOfPage ;
     sh:datatype      xsd:string ;
     :typeDerivation  :overridden ;
-    rdfs:comment     "Upstream expects CreativeWork or URL; Caritas supplies search paths needing URL extraction."@en .
+    rdfs:comment     "Uses text URLs where a source provides a detail page."@en .
 
 :t-category a :TargetField ;
     :targetPredicate schema:category ;
@@ -235,7 +246,7 @@ cdf:parentOrgClassification
     sh:datatype      xsd:string ;
     :typeDerivation  :local .
 
-# Temporal fields, all unmapped for now
+# Temporal fields
 :t-harvestedAt a :TargetField ;
     :targetPredicate prov:generatedAtTime ;
     sh:datatype      xsd:dateTime ;
@@ -251,7 +262,7 @@ cdf:parentOrgClassification
     :targetPredicate dct:modified ;
     sh:nodeKind      sh:Literal ;
     :typeDerivation  :local ;
-    rdfs:comment     "DCMI allows dates, timestamps or periods. Datatype awaits a precision choice; field unmapped."@en .
+    rdfs:comment     "CariNet supplies a timestamp literal; no datatype constraint is imposed here."@en .
 
 :t-sourceReviewed a :TargetField ;
     :targetPredicate schema:lastReviewed ;
@@ -263,45 +274,50 @@ cdf:parentOrgClassification
 :caritasSource a :Source ;
     rdfs:label    "Caritas" ;
     skos:notation "ca" ;
-    :fetchUrl     "https://www.caritas.de/Api/search/searchbyquery" ;
+    :fetchUrl     "https://apicms-test.carinet.de/api/socialservice" ;
     :retrieval    "API" ;
     :format       ft:JSON ;
     :hasEntity  :caritas-einrichtung, :caritas-address .
 
 :caritas-einrichtung a :SourceEntity ;
     rdfs:label "Einrichtung" ;
-    :hasField   :caritas-Categories, :caritas-ContentType, :caritas-ContentTypeGuid, :caritas-Date, :caritas-Distance,
-                :caritas-Format, :caritas-Guid, :caritas-Index, :caritas-LeadLine, :caritas-Link,
-                :caritas-OnlineConsultingUrl, :caritas-SearchResultHtml, :caritas-SubTitle, :caritas-Teaser,
-                :caritas-Title, :caritas-ViewType .
+    :hasField   :caritas-id, :caritas-title, :caritas-subTitle, :caritas-number,
+                :caritas-street, :caritas-zipCode, :caritas-city, :caritas-countryState,
+                :caritas-eMail, :caritas-phone, :caritas-officeHours, :caritas-description,
+                :caritas-descriptionText,
+                :caritas-internetAddress, :caritas-zsId, :caritas-geoCoordinate,
+                :caritas-modificationTimestamp .
 
-:caritas-Categories          a :SourceField ; :fieldPath "Categories"          .
-:caritas-ContentType         a :SourceField ; :fieldPath "ContentType"         .
-:caritas-ContentTypeGuid     a :SourceField ; :fieldPath "ContentTypeGuid"     .
-:caritas-Date                a :SourceField ; :fieldPath "Date"                .
-:caritas-Distance            a :SourceField ; :fieldPath "Distance"            .
-:caritas-Format              a :SourceField ; :fieldPath "Format"              .
-:caritas-Guid                a :SourceField ; :fieldPath "Guid"                .
-:caritas-Index               a :SourceField ; :fieldPath "Index"               .
-:caritas-LeadLine            a :SourceField ; :fieldPath "LeadLine"            .
-:caritas-Link                a :SourceField ; :fieldPath "Link"                .
-:caritas-OnlineConsultingUrl a :SourceField ; :fieldPath "OnlineConsultingUrl" .
-:caritas-SearchResultHtml    a :SourceField ; :fieldPath "SearchResultHtml"    .
-:caritas-SubTitle            a :SourceField ; :fieldPath "SubTitle"            .
-:caritas-Teaser              a :SourceField ; :fieldPath "Teaser"              .
-:caritas-Title               a :SourceField ; :fieldPath "Title"               .
-:caritas-ViewType            a :SourceField ; :fieldPath "ViewType"            .
+:caritas-id                    a :SourceField ; :fieldPath "id"                    .
+:caritas-title                 a :SourceField ; :fieldPath "title"                 .
+:caritas-subTitle              a :SourceField ; :fieldPath "subTitle"              .
+:caritas-number                a :SourceField ; :fieldPath "number"                .
+:caritas-street                a :SourceField ; :fieldPath "street"                .
+:caritas-zipCode               a :SourceField ; :fieldPath "zipCode"               .
+:caritas-city                  a :SourceField ; :fieldPath "city"                  .
+:caritas-countryState          a :SourceField ; :fieldPath "countryState"          .
+:caritas-eMail                 a :SourceField ; :fieldPath "eMail"                 .
+:caritas-phone                 a :SourceField ; :fieldPath "phone"                 .
+:caritas-officeHours           a :SourceField ; :fieldPath "officeHours"           .
+:caritas-description           a :SourceField ; :fieldPath "description"           .
+:caritas-descriptionText       a :SourceField ; :fieldPath "descriptionText"       ; :derivedFrom :caritas-description .
+:caritas-internetAddress       a :SourceField ; :fieldPath "internetAddress"       .
+:caritas-zsId                  a :SourceField ; :fieldPath "zsId"                  .
+:caritas-geoCoordinate         a :SourceField ; :fieldPath "geoCoordinate"         .
+:caritas-modificationTimestamp a :SourceField ; :fieldPath "modificationTimestamp" .
 
-# Address entities, minted by extract from the Teaser (anchor-on-PLZ split).
-# :derivedFrom names a derived field's raw origin — the Map view starts the
-# flow there instead of pretending the field came off the wire.
+# Address entities keep the same normalised street + postcode identity as the
+# other sources. Their fields now come directly from the API address fields.
 :caritas-address a :SourceEntity ;
     rdfs:label "Adresse" ;
-    :hasField :caritas-addr-street, :caritas-addr-plz, :caritas-addr-ort .
+    :hasField :caritas-addr-street, :caritas-addr-plz, :caritas-addr-ort,
+              :caritas-addr-latitude, :caritas-addr-longitude .
 
-:caritas-addr-street a :SourceField ; :fieldPath "streetAddress"   ; :derivedFrom :caritas-Teaser .
-:caritas-addr-plz    a :SourceField ; :fieldPath "postalCode"      ; :derivedFrom :caritas-Teaser .
-:caritas-addr-ort    a :SourceField ; :fieldPath "addressLocality" ; :derivedFrom :caritas-Teaser .
+:caritas-addr-street a :SourceField ; :fieldPath "streetAddress"   ; :derivedFrom :caritas-street  .
+:caritas-addr-plz    a :SourceField ; :fieldPath "postalCode"      ; :derivedFrom :caritas-zipCode .
+:caritas-addr-ort    a :SourceField ; :fieldPath "addressLocality" ; :derivedFrom :caritas-city    .
+:caritas-addr-latitude  a :SourceField ; :fieldPath "latitude"  ; :derivedFrom :caritas-geoCoordinate .
+:caritas-addr-longitude a :SourceField ; :fieldPath "longitude" ; :derivedFrom :caritas-geoCoordinate .
 
 # -------------------------------------------------------------------------
 
@@ -497,11 +513,15 @@ cdf:parentOrgClassification
     :fromSource    :caritasSource ;
     :toTarget      :einrichtungSchema ;
     :hasFieldMapping
-        [ :from :caritas-Guid     ; :to :t-identifier    ] ,
-        [ :from :caritas-Title    ; :to :t-name          ] ,
-        [ :from :caritas-SubTitle ; :to :t-alternateName ] ,
-        [ :from :caritas-LeadLine ; :to :t-category      ] ,
-        [ :from :caritas-Link     ; :to :t-detailUrl     ] ;
+        [ :from :caritas-id                    ; :to :t-identifier    ] ,
+        [ :from :caritas-title                 ; :to :t-name          ] ,
+        [ :from :caritas-subTitle              ; :to :t-alternateName ] ,
+        [ :from :caritas-descriptionText       ; :to :t-description   ] ,
+        [ :from :caritas-phone                 ; :to :t-telephone     ] ,
+        [ :from :caritas-eMail                 ; :to :t-email         ] ,
+        [ :from :caritas-internetAddress       ; :to :t-homepage      ] ,
+        [ :from :caritas-officeHours           ; :to :t-openingHours  ] ,
+        [ :from :caritas-modificationTimestamp ; :to :t-sourceModified ] ;
     :hasRelationship
         [ :sourcePredicate :locatedAt ; :toTargetField :t-address ; :toTargetSchema :adresseSchema ] .
 
@@ -511,7 +531,9 @@ cdf:parentOrgClassification
     :hasFieldMapping
         [ :from :caritas-addr-street ; :to :t-streetAddress ] ,
         [ :from :caritas-addr-plz    ; :to :t-postalCode    ] ,
-        [ :from :caritas-addr-ort    ; :to :t-locality      ] .
+        [ :from :caritas-addr-ort       ; :to :t-locality      ] ,
+        [ :from :caritas-addr-latitude  ; :to :t-latitude      ] ,
+        [ :from :caritas-addr-longitude ; :to :t-longitude     ] .
 
 # Sozialplattform is offer-first: the extract step splits each row into an office
 # org + an offer service (see sozialplattform.sparql), so it has two mappings.
