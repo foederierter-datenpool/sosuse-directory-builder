@@ -6,7 +6,8 @@ PREFIX cdp: <https://civic-data.de/pipeline#>
 PREFIX fx:  <http://sparql.xyz/facade-x/ns/>
 
 CONSTRUCT {
-    ?org ?p ?o .
+    ?org ?p ?o ;
+         xyz:detailUrl ?detailUrl .
     ?org cdp:fromSource   cdp:caritasSource ;
          cdp:targetSchema cdp:einrichtungSchema ;
          cdp:locatedAt    ?addr .
@@ -23,6 +24,11 @@ WHERE {
     ?orig xyz:id ?id ; ?p ?o .
     FILTER NOT EXISTS { ?orig a fx:root }
     BIND(IRI(CONCAT(STR(cdp:), "caritas-", STR(?id))) AS ?org)
+    OPTIONAL {
+        ?orig xyz:number ?number .
+        FILTER(REGEX(STR(?number), "^[0-9]+$"))
+        BIND(CONCAT("https://www.caritas.de/adressen/", STR(?number)) AS ?detailUrl)
+    }
     OPTIONAL {
         ?orig xyz:street ?street ; xyz:zipCode ?adrPlz ; xyz:city ?adrOrt .
         FILTER(STRLEN(STR(?street)) > 0 && REGEX(STR(?adrPlz), "^\\d{5}$") && STRLEN(STR(?adrOrt)) > 0)

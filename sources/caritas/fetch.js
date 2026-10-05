@@ -10,8 +10,11 @@ const apiKey = process.env.CARITAS_API_KEY
 if (!apiKey) throw new Error("Caritas requires CARITAS_API_KEY in the environment")
 
 const PAGE_SIZE = 100
+const MAX_PAGINATION_ATTEMPTS = 2
 const headers = { Authorization: `ApiKey ${apiKey}`, client_id: "socialservice", Accept: "application/json" }
 const plainText = compile({ wordwrap: false, selectors: [{ selector: "a", options: { ignoreHref: true } }] })
+
+class PaginationChangedError extends Error {}
 
 async function page(postalCode, start) {
     const url = new URL(FETCH_URL)
@@ -34,33 +37,45 @@ async function page(postalCode, start) {
         || records.length > PAGE_SIZE || records.some(record => !record?.id))
         throw new Error(`Caritas ${postalCode ?? "all"} page ${start}: invalid response`)
     if (start < total && records.length === 0)
-        throw new Error(`Caritas ${postalCode ?? "all"} page ${start}: empty page before total ${total}`)
+        throw new PaginationChangedError(`Caritas ${postalCode ?? "all"} page ${start}: empty page before total ${total}`)
     return { total, records }
+}
+
+async function fetchPostalCode(postalCode) {
+    for (let attempt = 1; attempt <= MAX_PAGINATION_ATTEMPTS; attempt++) {
+        let start = 0
+        let total
+        const seen = new Map()
+        try {
+            do {
+                const result = await page(postalCode, start)
+                if (total != null && result.total !== total)
+                    throw new PaginationChangedError(`Caritas ${postalCode ?? "all"}: total changed during pagination`)
+                total = result.total
+                for (const record of result.records) seen.set(record.id, record)
+                start += result.records.length
+            } while (start < total)
+            if (seen.size !== total)
+                throw new PaginationChangedError(`Caritas ${postalCode ?? "all"}: received ${seen.size} unique records, expected ${total}`)
+            return seen
+        } catch (error) {
+            if (!(error instanceof PaginationChangedError) || attempt === MAX_PAGINATION_ATTEMPTS) throw error
+            console.warn(`  ${error.message}; retrying ${postalCode ?? "all"} from the first page`)
+        }
+    }
 }
 
 // Keep one raw JSON file so the lift step starts one JVM. The API returns
 // addresses, identified by id; postcode queries can overlap.
 const byId = new Map()
 for (const postalCode of postalCodes.length ? postalCodes : [undefined]) {
-    let start = 0
-    let total
-    const seen = new Set()
-    do {
-        const result = await page(postalCode, start)
-        if (total != null && result.total !== total)
-            throw new Error(`Caritas ${postalCode ?? "all"}: total changed during pagination`)
-        total = result.total
-        for (const record of result.records) {
-            const descriptionText = plainText(record.description || "").trim()
-            if (descriptionText) record.descriptionText = descriptionText
-            seen.add(record.id)
-            byId.set(record.id, record)
-        }
-        start += result.records.length
-    } while (start < total)
-    if (seen.size !== total)
-        throw new Error(`Caritas ${postalCode ?? "all"}: received ${seen.size} unique records, expected ${total}`)
-    console.log(`  ${postalCode ?? "all"}: ${total} records (running total ${byId.size})`)
+    const records = await fetchPostalCode(postalCode)
+    for (const record of records.values()) {
+        const descriptionText = plainText(record.description || "").trim()
+        if (descriptionText) record.descriptionText = descriptionText
+        byId.set(record.id, record)
+    }
+    console.log(`  ${postalCode ?? "all"}: ${records.size} records (running total ${byId.size})`)
 }
 
 fs.mkdirSync(OUT_DIR, { recursive: true })

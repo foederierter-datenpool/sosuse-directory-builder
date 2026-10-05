@@ -72,8 +72,10 @@ the federation still uses the 19 Berlin postcodes. The production URL is
 `https://apicms.carinet.de/api/socialservice`.
 
 The Caritas fetch keeps the original HTML description and adds a plain-text
-version for `schema:description`. Its supplied coordinates are mapped to
-addresses; enrichment uses them before consulting the geocache or Nominatim.
+version for `schema:description`. Extraction derives each detail-page URL from
+the API's `number` field. Supplied coordinates are mapped to addresses;
+enrichment uses them before consulting the geocache or Nominatim. This API
+response has no category field, so Caritas does not supply `schema:category`.
 
 The DHS fetcher deduplicates entries across the configured postal codes,
 checks HTTP status and page content, and retries transient failures. It downloads
