@@ -89,9 +89,9 @@ one file per page for extraction.
 ### Geocoding
 
 Run `npm run federate` to geocode existing ingest data, or `npm run pipeline`
-to fetch and ingest again. The committed `.env` selects the **Berlin-only**
-pilot on port 8089. After importing Germany, change its endpoint to port 8088
-and dataset to `germany`. Other geocoding settings use core's defaults.
+to fetch and ingest again. The committed `.env` selects the local Germany
+geocoder on port 8088 and stops if it is unavailable. Start the Germany
+Nominatim service before a local run. Other settings use core's defaults.
 
 SoSuSe enables geocoding in `config/federation.ttl` and keeps results in
 `registry/geocache.json`. A core version with local geocoding support (or a
