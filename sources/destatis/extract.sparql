@@ -30,9 +30,7 @@ CONSTRUCT {
     ?row xyz:Beratungsstelle ?nameRaw ;
          xyz:PLZ             ?plzRaw .
     BIND(STR(?plzRaw) AS ?plz)
-    # DEV scoping — keep only the federation's run-param PLZs (Bezirk Mitte plus
-    # adjacents), so the national list lines up with the other Berlin-scoped
-    # sources. Drop this FILTER to ingest all of Germany.
+    # Keep the static workbook aligned with the configured Berlin source scope.
     FILTER(?plz IN ("10115", "10117", "10119", "10178", "10365", "10435", "10551",
         "10557", "10559", "10785", "10963", "10969", "13347", "13349", "13353",
         "13355", "13357", "13359", "13407"))

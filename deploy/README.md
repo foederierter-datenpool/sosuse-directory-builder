@@ -68,10 +68,13 @@ Coolify's managed container environment keys.
 | `PIPELINE_GEOCODE_DATASET` | unset | `GEOCODE_DATASET` |
 | `PIPELINE_GEOCODE_RETRY_MISSES` | `false` | `GEOCODE_RETRY_MISSES` |
 | `PIPELINE_GEOCODE_CACHE_ONLY` | `false` | `GEOCODE_CACHE_ONLY` |
+| `PIPELINE_GEOCODE_REQUIRE_LOCAL` | `false` | `GEOCODE_REQUIRE_LOCAL` |
 
 The runner checks the address cache first, then probes the preferred service
 once when needed. If unavailable, or if it fails mid-run, public Nominatim is
 used with a minimum 1100 ms delay. Valid empty results remain cached misses.
+Set `PIPELINE_GEOCODE_REQUIRE_LOCAL=true` when a run must stop instead of
+falling back to public Nominatim; use this for nationwide geocoding.
 Use a shared server geocoder for recurring national runs; public bulk jobs
 are subject to [Nominatim's usage policy](https://operations.osmfoundation.org/policies/nominatim/),
 including four requests per minute for recurring jobs (`PIPELINE_GEOCODE_DELAY_MS=15000`).
