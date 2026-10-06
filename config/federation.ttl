@@ -18,9 +18,6 @@
     :hasSource       :caritasSource, :sozialplattformSource, :dhsSource, :awoSource, :destatisSource ;
     :hasTargetSchema :traegerSchema, :einrichtungSchema, :angebotSchema, :adresseSchema ;
     :harvestingModeActive false ;
-    :hasRunParam     [ :name "plz" ; :value "10115", "10117", "10119", "10178", "10365",
-                       "10435", "10551", "10557", "10559", "10785", "10963", "10969", "13347",
-                       "13349", "13353", "13355", "13357", "13359", "13407" ] ;
     :hasExporter     "sozialplattform" ;
     :repository      "https://github.com/foederierter-datenpool/sosuse-directory-builder" ;
     # Where the webapp is deployed: the webapp build takes its vite base from
@@ -273,8 +270,9 @@ cdf:parentOrgClassification
 
 :caritasSource a :Source ;
     rdfs:label    "Caritas" ;
+    :coverageLabel "Germany" ;
     skos:notation "ca" ;
-    :fetchUrl     "https://apicms-test.carinet.de/api/socialservice" ;
+    :fetchUrl     "https://apicms.carinet.de/api/socialservice" ;
     :retrieval    "API" ;
     :format       ft:JSON ;
     :hasEntity  :caritas-einrichtung, :caritas-address .
@@ -324,6 +322,7 @@ cdf:parentOrgClassification
 
 :sozialplattformSource a :Source ;
     rdfs:label    "Sozialplattform" ;
+    :coverageLabel "Germany" ;
     skos:notation "sp" ;
     :fetchUrl     "https://sozialplattform.de/content/de/api/v1/consultation/search" ;
     :retrieval    "API" ;
@@ -382,6 +381,7 @@ cdf:parentOrgClassification
 
 :dhsSource a :Source ;
     rdfs:label    "Deutsche Hauptstelle für Suchtfragen (DHS)" ;
+    :coverageLabel "Germany" ;
     skos:notation "dhs" ;
     # entryIds are stable and distinct co-located programs (vista WIGWAM
     # Connect/Support/ZERO) would otherwise fuzzy-merge; true DHS-internal
@@ -428,6 +428,7 @@ cdf:parentOrgClassification
 
 :awoSource a :Source ;
     rdfs:label    "Arbeiterwohlfahrt (AWO)" ;
+    :coverageLabel "Berlin-Mitte and adjacent postcodes (supplied files)" ;
     skos:notation "awo" ;
     :dedupWithinSource false ;
     :retrieval    "Files" ;
@@ -480,6 +481,7 @@ cdf:parentOrgClassification
 
 :destatisSource a :Source ;
     rdfs:label    "Schuldnerberatung (Destatis)" ;
+    :coverageLabel "Germany" ;
     skos:notation "dsb" ;
     rdfs:comment  "Adressliste der Beratungsstellen in der Überschuldungsstatistik, aus der Adressdatenbank des Statistischen Bundesamtes" ;
     :retrieval    "Files" ;

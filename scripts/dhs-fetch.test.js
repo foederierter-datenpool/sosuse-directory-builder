@@ -9,6 +9,12 @@ const baseUrl = "https://dhs.example.test/directory/"
 const detailUrl = (id) => `${baseUrl}?tx_wwdhseinrichtung2_fe1%5Baction%5D=show&tx_wwdhseinrichtung2_fe1%5Bentry%5D=${id}&tail=x`
 const escaped = (url) => url.replaceAll("&", "&amp;")
 const listing = (...ids) => `<div class="tx-ww-dhs-einrichtung2">${ids.map(id => `<a href="${escaped(detailUrl(id))}">Entry</a>`).join("")}</div>`
+const nationalListing = (ids, total, page) => {
+    const next = page < Math.ceil(total / 15)
+        ? `<a href="${escaped(`${baseUrl}?tx_wwdhseinrichtung2_fe1%5Baction%5D=list&tx_wwdhseinrichtung2_fe1%5Bentrys%5D%5BcurrentPage%5D=${page + 1}&cHash=test`)}">Next</a>`
+        : ""
+    return `<div class="tx-ww-dhs-einrichtung2"><div id="wwdhseinrichtung2_startresults"><p><strong>${total}</strong> Einträge sind gefunden worden.</p></div>${listing(...ids)}${next}</div>`
+}
 const detail = (id, canonical = false) => `<html><head>${canonical ? `<link rel="canonical" href="${escaped(detailUrl(id))}">` : ""}</head><body><div class="entrylong"><h3>Facility ${id}</h3></div></body></html>`
 
 function fixture(t, respond) {
@@ -19,7 +25,9 @@ function fixture(t, respond) {
     t.mock.method(globalThis, "fetch", async (input) => {
         const url = new URL(input)
         const id = url.searchParams.get("tx_wwdhseinrichtung2_fe1[entry]")
-        const key = id ? `detail:${id}` : `search:${url.searchParams.get("tx_wwdhseinrichtung2_fe1[plzort]")}`
+        const plz = url.searchParams.get("tx_wwdhseinrichtung2_fe1[plzort]")
+        const page = url.searchParams.get("tx_wwdhseinrichtung2_fe1[entrys][currentPage]")
+        const key = id ? `detail:${id}` : `search:${plz ?? `all:${page}`}`
         const count = (calls.get(key) ?? 0) + 1
         calls.set(key, count)
         const { body, status = 200 } = respond(key, count, url)
@@ -72,12 +80,28 @@ test("DHS rejects unexpected HTTP-200 search or detail pages after bounded retri
     })
 })
 
-test("DHS rejects an empty discovery or a detail page without a usable canonical-link location", async (t) => {
-    for (const scenario of ["empty", "missing head"]) await t.test(scenario, async (t) => {
-        const { outDir, run } = fixture(t, key => key.startsWith("search:")
-            ? { body: scenario === "empty" ? listing() : listing(1) }
-            : { body: '<div class="entrylong">Facility</div>' })
-        await assert.rejects(run(["10115"]), scenario === "empty" ? /no detail pages/ : /head missing/)
-        assert.deepEqual(fs.readdirSync(outDir), [])
+test("DHS rejects an empty result page", async (t) => {
+    const { outDir, run } = fixture(t, () => ({ body: listing() }))
+    await assert.rejects(run(["10115"]), /no detail pages/)
+    assert.deepEqual(fs.readdirSync(outDir), [])
+})
+
+test("DHS paginates a national search and keeps only mapped detail markup", async (t) => {
+    const ids = Array.from({ length: 17 }, (_, i) => i + 1)
+    const { outDir, calls, run } = fixture(t, key => {
+        if (key === "search:all:1") return { body: nationalListing(ids.slice(0, 15), 17, 1) }
+        if (key === "search:all:2") return { body: nationalListing(ids.slice(15), 17, 2) }
+        const id = key.split(":")[1]
+        return { body: detail(id) + "<script>" + "x".repeat(5000) + "</script>" }
     })
+    const result = await run([])
+    assert.equal(result.written, 17)
+    assert.equal(calls.get("search:all:1"), 1)
+    assert.equal(calls.get("search:all:2"), 1)
+    const files = fs.readdirSync(outDir)
+    assert.equal(files.length, 9)
+    const first = fs.readFileSync(path.join(outDir, files[0]), "utf8")
+    assert.ok(first.includes('class="entrylong"'))
+    assert.ok(!first.includes("<script>"))
+    assert.ok(first.includes("rel=\"canonical\""))
 })

@@ -67,9 +67,14 @@ These commands write local output. Publishing to GitHub requires the separate
 
 Caritas fetching requires `CARITAS_API_KEY`. Put it in the ignored `.env.local`
 for local runs, or set it in the runner's environment. Do not put it in the
-committed `.env`. The configured CariNet URL points to the test service, and
-the federation still uses the 19 Berlin postcodes. The production URL is
-`https://apicms.carinet.de/api/socialservice`.
+committed `.env`. The configured CariNet URL points to the production service.
+Completed Caritas API pages are saved under the ignored
+`data/ingest/checkpoints/caritas/` directory. If a fetch is interrupted,
+rerun `npm run ingest`: it checks the first page and total before reusing saved
+pages. Changed first-page IDs or a changed total start a fresh fetch. The
+checkpoint is removed after the complete raw file is written.
+For large result sets, the fetcher reads from both ends of CariNet's title
+sort and requires the reported number of distinct IDs before writing output.
 
 The Caritas fetch keeps the original HTML description and adds a plain-text
 version for `schema:description`. Extraction derives each detail-page URL from
@@ -77,21 +82,26 @@ the API's `number` field. Supplied coordinates are mapped to addresses;
 enrichment uses them before consulting the geocache or Nominatim. This API
 response has no category field, so Caritas does not supply `schema:category`.
 
-The DHS fetcher deduplicates entries across the configured postal codes,
-checks HTTP status and page content, and retries transient failures. It downloads
-up to three detail pages concurrently and fails the harvest if any discovered
-detail page cannot be retrieved and verified.
+The federation is configured to retrieve Germany-wide Caritas, Sozialplattform
+and DHS records and to extract the nationwide Destatis workbook. The supplied
+AWO files cover Berlin-Mitte and adjacent postcodes. The Sources page shows
+each source's declared coverage.
 
-DHS groups up to 50 HTML pages per file to reduce Java process launches during
-lift. Core detects these chunks automatically and splits the lifted RDF into
-one file per page for extraction.
+The DHS fetcher traverses the national search pages, deduplicates entry IDs,
+checks HTTP status and page content, and retries transient failures. It downloads
+up to three detail pages concurrently and keeps the detail section needed for
+extraction. A missing detail page fails the harvest.
+
+DHS groups up to 50 compact HTML records per file to reduce Java process
+launches during lift. Core splits the lifted RDF into one file per page for
+extraction.
 
 ### Geocoding
 
 Run `npm run federate` to geocode existing ingest data, or `npm run pipeline`
-to fetch and ingest again. The committed `.env` selects the local Germany
-geocoder on port 8088 and stops if it is unavailable. Start the Germany
-Nominatim service before a local run. Other settings use core's defaults.
+to fetch and ingest again. The committed `.env` requires a ready local Germany
+Nominatim service on port 8088; the pipeline stops if it is unavailable. Other
+settings use core's defaults.
 
 SoSuSe enables geocoding in `config/federation.ttl` and keeps results in
 `registry/geocache.json`. A core version with local geocoding support (or a

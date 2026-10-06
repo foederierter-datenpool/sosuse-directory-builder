@@ -1,37 +1,42 @@
 import path from "path"
 import fs from "fs"
+import { pathToFileURL } from "node:url"
 
-const OUT_DIR = process.argv[2]
-const BASE_URL = process.argv[3]
-const { plz: PLZS = [] } = JSON.parse(process.argv[4] || "{}")
 const PER_PAGE = 100
 
-const fetchPage = async (plz, page) => {
-    const url = `${BASE_URL}?place=${plz}&page=${page}&itemsPerPage=${PER_PAGE}`
-    const res = await fetch(url)
+const fetchPage = async (baseUrl, page) => {
+    const url = new URL(baseUrl)
+    url.searchParams.set("page", String(page))
+    url.searchParams.set("itemsPerPage", String(PER_PAGE))
+    const res = await fetch(url, { signal: AbortSignal.timeout(30_000) })
     if (!res.ok) throw new Error(`Page ${page}: HTTP ${res.status}`)
     const json = await res.json()
     if (json.status !== "success") throw new Error(`Page ${page}: API status ${json.status}`)
-    return json.data
+    if (!Number.isSafeInteger(Number(json.data?.total)) || Number(json.data.total) < 0 || !Array.isArray(json.data.items))
+        throw new Error(`Page ${page}: invalid response`)
+    return { total: Number(json.data.total), items: json.data.items }
 }
 
-fs.mkdirSync(OUT_DIR, { recursive: true })
-
-// One merged file, not one per PLZ: the lift step spawns a JVM per raw file, so
-// per-PLZ output would multiply JVM starts. Offers are deduped by offer_id (one
-// office can serve several PLZ queries).
-const byId = new Map()
-for (const plz of PLZS) {
-    const first = await fetchPage(plz, 1)
-    const totalPages = Math.ceil(first.total / PER_PAGE)
-    const items = [...first.items]
-    for (let page = 2; page <= totalPages; page++) {
-        items.push(...(await fetchPage(plz, page)).items)
+export async function fetchSozialplattform({ outDir, baseUrl }) {
+    // One raw file keeps the lift to one JVM start.
+    const byId = new Map()
+    const first = await fetchPage(baseUrl, 1)
+    const total = first.total
+    const totalPages = Math.ceil(total / PER_PAGE)
+    for (let page = 1; page <= Math.max(1, totalPages); page++) {
+        const { total: pageTotal, items } = page === 1 ? first : await fetchPage(baseUrl, page)
+        if (pageTotal !== total || items.length > PER_PAGE || items.some(item => item?.offer_id == null))
+            throw new Error(`Page ${page}: inconsistent response`)
+        for (const item of items) byId.set(item.offer_id, item)
     }
-    for (const it of items) byId.set(it.offer_id, it)
-    console.log(`  ${plz}: ${items.length} items (${totalPages} pages), running total ${byId.size}`)
+    if (byId.size !== total) throw new Error(`Received ${byId.size} unique offers, expected ${total}`)
+
+    fs.mkdirSync(outDir, { recursive: true })
+    const outPath = path.join(outDir, "sozialplattform.json")
+    fs.writeFileSync(outPath, JSON.stringify([...byId.values()], null, 2))
+    console.log(`  ${byId.size} unique offers (${totalPages} pages) → ${outPath}`)
+    return { count: byId.size, outPath }
 }
 
-const outPath = path.join(OUT_DIR, "sozialplattform.json")
-fs.writeFileSync(outPath, JSON.stringify([...byId.values()], null, 2))
-console.log(`  ${byId.size} unique offers → ${outPath}`)
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href)
+    await fetchSozialplattform({ outDir: process.argv[2], baseUrl: process.argv[3] })

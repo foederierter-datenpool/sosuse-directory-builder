@@ -30,10 +30,6 @@ CONSTRUCT {
     ?row xyz:Beratungsstelle ?nameRaw ;
          xyz:PLZ             ?plzRaw .
     BIND(STR(?plzRaw) AS ?plz)
-    # Keep the static workbook aligned with the configured Berlin source scope.
-    FILTER(?plz IN ("10115", "10117", "10119", "10178", "10365", "10435", "10551",
-        "10557", "10559", "10785", "10963", "10969", "13347", "13349", "13353",
-        "13355", "13357", "13359", "13407"))
     OPTIONAL { ?row xyz:Strasse    ?strasseRaw    }
     OPTIONAL { ?row xyz:Stadt      ?stadtRaw      }
     OPTIONAL { ?row xyz:Bundesland ?bundeslandRaw }
