@@ -18,7 +18,7 @@ export function githubAuth(remote) {
 
 const roots = ["package.json", ".github/workflows/deploy.yml", "config", "data",
     "webapp/content", "webapp/exporters"]
-const excluded = ["data/ingest/raw", "data/ingest/lifted"]
+const excluded = ["data/ingest/raw", "data/ingest/lifted", "data/ingest/checkpoints"]
 const snapshotGitignore = "# Publication snapshots are generated with git add --force.\n"
     + "# Ignore untracked files left behind when switching from the source branch.\n*\n"
 
@@ -40,6 +40,7 @@ export function prepareSnapshot(root, destination) {
             filter(file) {
                 const relative = path.relative(root, file).split(path.sep).join("/")
                 if (excluded.some((p) => relative === p || relative.startsWith(`${p}/`))) return false
+                if (relative.startsWith("data/") && path.extname(file) === ".log") return false
                 if (relative !== ".github/workflows/deploy.yml" && relative.split("/").some((p) => p.startsWith("."))) return false
                 // Do not carry over indexes that link to excluded files.
                 if (relative.startsWith("data/") && path.basename(file) === "index.html") return false

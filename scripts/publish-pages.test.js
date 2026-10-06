@@ -30,6 +30,8 @@ test("dry-run stages only publication inputs and leaves local data intact", (t) 
         "data/pipeline/extracted/source.ttl", "data/pipeline/preparation/source.ttl",
         "webapp/content/about.md", "webapp/exporters/example.js"]
     const excluded = ["data/ingest/raw/source.json", "data/ingest/lifted/source.ttl",
+        "data/ingest/checkpoints/caritas/page.json", "data/ingest/ingest.log",
+        "data/ingest/repair-run.log",
         "data/.cache/secret", "data/index.html", "data/pipeline/index.html",
         "config/.env", "sources/source/fetch.js", "webapp/dist/index.html"]
     for (const file of [...retained, ...excluded]) write(file, file)
