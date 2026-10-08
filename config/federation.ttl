@@ -18,6 +18,7 @@
     :hasSource       :caritasSource, :sozialplattformSource, :dhsSource, :awoSource, :destatisSource ;
     :hasTargetSchema :traegerSchema, :einrichtungSchema, :angebotSchema, :adresseSchema ;
     :harvestingModeActive false ;
+    :webappChunking   true ;
     :hasExporter     "sozialplattform" ;
     :repository      "https://github.com/foederierter-datenpool/sosuse-directory-builder" ;
     # Where the webapp is deployed: the webapp build takes its vite base from
