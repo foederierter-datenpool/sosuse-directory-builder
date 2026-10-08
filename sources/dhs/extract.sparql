@@ -1,6 +1,5 @@
-# DHS publishes one HTML detail page per entry. The canonical <link> in <head>
-# carries the entry ID; the org content lives inside <div class="entrylong">.
-# This query runs once per lifted detail page, so there's exactly one of each.
+# Each compact lifted DHS page contains one entry. The canonical <link> carries
+# its ID; the organisation's fields are inside <div class="entrylong">.
 
 PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xhtml: <http://www.w3.org/1999/xhtml#>
@@ -32,15 +31,12 @@ CONSTRUCT {
     ?entry a xhtml:div ; xhtml:class "entrylong" .
 
     OPTIONAL {
-        ?entry (!<urn:_>)+ ?h3 .
         ?h3 a xhtml:h3 ; html:innerText ?name .
     }
     OPTIONAL {
-        ?entry (!<urn:_>)+ ?dep .
         ?dep a xhtml:p ; xhtml:class "titelext" ; html:innerText ?department .
     }
     {
-        ?entry (!<urn:_>)+ ?span .
         ?span a xhtml:span ; xhtml:class ?className ; html:innerText ?raw .
         FILTER(?className IN ("strasse", "plzort", "telefon", "email", "website"))
         BIND(IRI(CONCAT(STR(xyz:), ?className)) AS ?predicate)
@@ -56,7 +52,6 @@ CONSTRUCT {
     {
         # Labelled <p class="…"><strong>Label</strong><br>value…</p> blocks.
         # innerText concatenates label and value with a space; strip the label.
-        ?entry (!<urn:_>)+ ?p .
         ?p a xhtml:p ; xhtml:class ?className ; html:innerText ?fullText .
         FILTER(?className IN ("art", "barrierefrei", "angebote", "zielgruppe", "zeiten", "traeger", "arbeit"))
         ?p rdf:_1 ?strong .
@@ -73,9 +68,7 @@ CONSTRUCT {
     # step's exact comparison surface. The IRI is content-addressed on
     # matchString + PLZ so formatting variants collapse onto one IRI.
     OPTIONAL {
-        ?entry (!<urn:_>)+ ?sSpan .
         ?sSpan a xhtml:span ; xhtml:class "strasse" ; html:innerText ?strasseRaw .
-        ?entry (!<urn:_>)+ ?poSpan .
         ?poSpan a xhtml:span ; xhtml:class "plzort" ; html:innerText ?plzort .
         FILTER(REGEX(?plzort, "^\\d{5} "))
         BIND(STRBEFORE(?plzort, " ") AS ?adrPlz)
