@@ -5,12 +5,14 @@ image and downloads one `pipeline-data` archive during the build. Every publishe
 file except `data/directory.ttl` and those under `data/pipeline/extracted/` and
 `data/pipeline/preparation/` becomes a named graph;
 only `data/directory.ttl` populates the default graph.
-The API download serves that local directory snapshot. Fuseki loads the graphs into memory at startup. Both
-containers use the same image. Rebuild to refresh them; a restart reloads the same data.
+The API download serves that local directory snapshot. Fuseki imports the graphs into a disk-backed TDB2 database. Both
+containers use the same image. Rebuild to refresh them; a restart reuses the same database.
 
-Fuseki has an 8 GB container limit with a 6 GB Java heap for the nationwide
-snapshot. Allow this memory in addition to the API's 512 MB and other services.
-Its health check allows five minutes for the graphs to load before counting failures.
+Fuseki has a 1 GB container limit and a 512 MB Java heap. The `fuseki-data` volume
+retains its database across restarts and deployments. Startup reuses an unchanged
+snapshot or imports changed files transactionally before serving queries. Its
+health check allows 30 minutes for an import before counting failures; readiness
+ends the wait immediately. Allow memory for the API's 512 MB and other services too.
 
 For local Fuseki, with `directory-api` checked out beside this repository and
 JDK 25 installed, run from the sosuse repository:
@@ -21,9 +23,9 @@ npm run fuseki
 
 Run `npm run pipeline` first if `data/directory.ttl` is missing. The endpoint is
 `http://localhost:3030/directory/sparql`. Ctrl+C stops it; restart after a pipeline run.
-Local execution reads the pipeline files in place. Docker builds download and unpack
+Local execution imports the pipeline files into `data/.fuseki/`. Docker builds download and unpack
 `SNAPSHOT_URL` from Compose. Both run the same `directory-fuseki.jar` launcher and use the
-same graph selection, without copying data into a second local dataset.
+same graph selection.
 
 First push directory-api, wait for **Build API image**, and make its GitHub container
 package **Public**. Push this sosuse configuration too.
@@ -95,7 +97,8 @@ After a pipeline run pushes `pipeline-data`, deploy the API again with a build.
 The Compose configuration disables build caching and pulls the current API base
 image, so an unchanged sosuse commit can still produce a fresh snapshot. A failed
 or empty download fails the build; invalid Turtle prevents Fuseki from starting.
-No token or persistent volume is needed: the snapshot is included in the image.
+No token is needed: the snapshot is included in the image. Compose creates the
+database volume automatically. Keep it when redeploying to reuse the indexes.
 
 The API can reach Fuseki internally at `http://fuseki:3030/directory/sparql`.
 Fuseki allows read-only queries, with a 30-second timeout and no outbound SERVICE calls.
