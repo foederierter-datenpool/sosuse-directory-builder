@@ -8,6 +8,10 @@ only `data/directory.ttl` populates the default graph.
 The API download serves that local directory snapshot. Fuseki loads the graphs into memory at startup. Both
 containers use the same image. Rebuild to refresh them; a restart reloads the same data.
 
+Fuseki has an 8 GB container limit with a 6 GB Java heap for the nationwide
+snapshot. Allow this memory in addition to the API's 512 MB and other services.
+Its health check allows five minutes for the graphs to load before counting failures.
+
 For local Fuseki, with `directory-api` checked out beside this repository and
 JDK 25 installed, run from the sosuse repository:
 

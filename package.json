@@ -15,7 +15,7 @@
     "webapp:build": "directory-builder webapp build --base /sosuse-directory-builder/"
   },
   "dependencies": {
-    "@directory-builder/core": "^0.13.0",
+    "@directory-builder/core": "^0.13.1",
     "html-to-text": "10.0.1",
     "htmlparser2": "10.1.0"
   }

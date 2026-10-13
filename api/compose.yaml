@@ -23,7 +23,13 @@ services:
     pull_policy: never
     entrypoint: ["java", "-jar", "/app/fuseki/directory-fuseki.jar"]
     command: ["/app/snapshot"]
-    mem_limit: 512m
+    environment:
+      JAVA_TOOL_OPTIONS: -Xmx6g
+    mem_limit: 8g
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "--fail", "--silent", "http://localhost:3030/directory/sparql?query=ASK%7B%7D"]
+      start_period: 5m
+      interval: 10s
+      timeout: 5s
+      retries: 6
