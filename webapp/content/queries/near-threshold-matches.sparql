@@ -1,0 +1,21 @@
+PREFIX cdp: <https://civic-data.de/pipeline#>
+
+# Input: an absolute score margin. These are review candidates, not proven errors.
+SELECT DISTINCT ?entity ?a ?b ?score ?threshold ?predicate ?similarity ?valueA ?valueB WHERE {
+  VALUES ?margin { 0.05 }
+  GRAPH <urn:directory:config/federation.ttl> {
+    ?rule a cdp:MatchRule ; cdp:forTarget/cdp:targetClass ?class ;
+          cdp:minScore ?threshold ; cdp:hasWeightedCriterion ?weighted .
+  }
+  ?entity a ?class .
+  GRAPH <urn:directory:data/pipeline/matches.ttl> {
+    ?entity cdp:hasMatchEvidence ?evidence .
+    ?evidence cdp:pair ?a, ?b ; cdp:aggregateScore ?score ; cdp:onCriterion ?criterion .
+    ?criterion cdp:on ?predicate ; cdp:similarity ?similarity ;
+               cdp:valueA ?valueA ; cdp:valueB ?valueB .
+    FILTER(STR(?a) < STR(?b))
+  }
+  FILTER(?score >= ?threshold && ?score < ?threshold + ?margin)
+}
+ORDER BY (?score - ?threshold) ?entity ?a ?b
+LIMIT 20

@@ -1,0 +1,21 @@
+PREFIX cdp: <https://civic-data.de/pipeline#>
+
+# Input: a matched entity IRI. Only accepted evidence edges are available.
+SELECT ?a ?b ?manual ?aggregate ?algorithm ?predicate ?similarity ?valueA ?valueB WHERE {
+  VALUES ?entity { <https://civic-data.de/federated-directory#org-dcd15d72996f> }
+  GRAPH <urn:directory:data/pipeline/matches.ttl> {
+    ?entity cdp:hasMatchEvidence ?evidence .
+    ?evidence cdp:pair ?a, ?b .
+    FILTER(STR(?a) < STR(?b))
+    OPTIONAL { ?evidence cdp:viaManualMatch ?manual }
+    OPTIONAL { ?evidence cdp:aggregateScore ?aggregate }
+    OPTIONAL { ?evidence cdp:similarityAlgorithm ?algorithm }
+    OPTIONAL {
+      ?evidence cdp:onCriterion ?criterion .
+      ?criterion cdp:on ?predicate ; cdp:similarity ?similarity ;
+                 cdp:valueA ?valueA ; cdp:valueB ?valueB .
+    }
+  }
+}
+ORDER BY ?a ?b ?predicate
+LIMIT 100

@@ -1,8 +1,22 @@
 PREFIX schema: <http://schema.org/>
-PREFIX cdf: <https://civic-data.de/federated-directory#>
+PREFIX org: <http://www.w3.org/ns/org#>
 
-SELECT ?entity (SAMPLE(?name) AS ?title) WHERE {
-    ?entity schema:name ?name .
+# Input: a case-insensitive substring. This searches names, not service categories.
+SELECT DISTINCT ?facility ?name ?postalCode ?locality WHERE {
+  {
+    SELECT ?facility ?name WHERE {
+      VALUES ?search { "sucht" }
+      ?facility a org:OrganizationalUnit ; schema:name ?name .
+      FILTER(CONTAINS(LCASE(STR(?name)), LCASE(?search)))
+    }
+    ORDER BY LCASE(STR(?name)) ?facility
+    LIMIT 20
+  }
+  OPTIONAL {
+    ?facility schema:address ?address .
+    OPTIONAL { ?address schema:postalCode ?postalCode }
+    OPTIONAL { ?address schema:addressLocality ?locality }
+  }
 }
-GROUP BY ?entity
-ORDER BY ?title
+ORDER BY LCASE(STR(?name)) ?facility
+LIMIT 20

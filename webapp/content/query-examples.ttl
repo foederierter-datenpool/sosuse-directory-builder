@@ -28,10 +28,15 @@ ORDER BY DESC(?entities)""" .
 PREFIX org: <http://www.w3.org/ns/org#>
 
 SELECT ?einrichtung ?name ?category ?street ?postalCode ?locality WHERE {
-    ?einrichtung a org:OrganizationalUnit ;
-        schema:name ?name ;
-        schema:address ?address .
-    ?address schema:streetAddress ?street .
+    {
+        SELECT ?einrichtung ?name ?address WHERE {
+            ?einrichtung a org:OrganizationalUnit ;
+                schema:name ?name ; schema:address ?address .
+        }
+        ORDER BY LCASE(STR(?name)) ?einrichtung
+        LIMIT 100
+    }
+    OPTIONAL { ?address schema:streetAddress ?street }
     OPTIONAL { ?einrichtung schema:category ?category }
     OPTIONAL { ?address schema:postalCode ?postalCode }
     OPTIONAL { ?address schema:addressLocality ?locality }
@@ -54,6 +59,12 @@ SELECT ?postalCode ?locality (COUNT(DISTINCT ?einrichtung) AS ?facilities) WHERE
 GROUP BY ?postalCode ?locality
 ORDER BY ?postalCode ?locality""" .
 
+
+:byPostcode a cdp:QueryExample ;
+    cdp:order 4 ;
+    rdfs:label "Einrichtungen, Kontakte und Angebote nach PLZ"@de ;
+    cdp:queryFile "webapp/content/queries/by-postcode.sparql" .
+
 :servicesVisual a cdp:QueryExample ;
     cdp:order 101 ;
     rdfs:label "Angebote mit Anbieter"@de ;
@@ -72,3 +83,58 @@ ORDER BY ?postalCode ?locality""" .
           cdp:visualTo cdp:adresseSchema ],
         [ cdp:visualThrough cdp:t-parentOrganization ;
           cdp:visualTo cdp:traegerSchema ] .
+
+:graphs a cdp:QueryExample ;
+    cdp:order 9 ;
+    rdfs:label "Benannte Graphen anzeigen"@de ;
+    cdp:queryFile "webapp/content/queries/graphs.sparql" .
+
+:search-by-name a cdp:QueryExample ;
+    cdp:order 10 ;
+    rdfs:label "Einrichtungen nach Name suchen"@de ;
+    cdp:queryFile "webapp/content/queries/search-by-name.sparql" .
+
+:within-bounds a cdp:QueryExample ;
+    cdp:order 11 ;
+    rdfs:label "Einrichtungen im Kartenausschnitt"@de ;
+    cdp:queryFile "webapp/content/queries/within-bounds.sparql" .
+
+:sources-of a cdp:QueryExample ;
+    cdp:order 12 ;
+    rdfs:label "Quellen einer Entität"@de ;
+    cdp:queryFile "webapp/content/queries/sources-of.sparql" .
+
+:multi-source-entities a cdp:QueryExample ;
+    cdp:order 13 ;
+    rdfs:label "Einrichtungen in mehreren Quellen"@de ;
+    cdp:queryFile "webapp/content/queries/multi-source-entities.sparql" .
+
+:explain-value a cdp:QueryExample ;
+    cdp:order 14 ;
+    rdfs:label "Herkunft eines Werts"@de ;
+    cdp:queryFile "webapp/content/queries/explain-value.sparql" .
+
+:competing-values a cdp:QueryExample ;
+    cdp:order 15 ;
+    rdfs:label "Werte vor und nach Resolve vergleichen"@de ;
+    cdp:queryFile "webapp/content/queries/competing-values.sparql" .
+
+:value-variation a cdp:QueryExample ;
+    cdp:order 16 ;
+    rdfs:label "Wertabweichungen nach Quelle zählen"@de ;
+    cdp:queryFile "webapp/content/queries/value-variation.sparql" .
+
+:match-evidence a cdp:QueryExample ;
+    cdp:order 17 ;
+    rdfs:label "Matching-Nachweise einer Entität"@de ;
+    cdp:queryFile "webapp/content/queries/match-evidence.sparql" .
+
+:near-threshold-matches a cdp:QueryExample ;
+    cdp:order 18 ;
+    rdfs:label "Matches nahe dem Schwellenwert"@de ;
+    cdp:queryFile "webapp/content/queries/near-threshold-matches.sparql" .
+
+:source-status a cdp:QueryExample ;
+    cdp:order 19 ;
+    rdfs:label "Quellen, Bestände und Abrufzeiten"@de ;
+    cdp:queryFile "webapp/content/queries/source-status.sparql" .

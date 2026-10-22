@@ -1,0 +1,20 @@
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX schema: <http://schema.org/>
+PREFIX org: <http://www.w3.org/ns/org#>
+
+# Multiple sources describe this entity; that does not mean they confirm every value.
+SELECT ?entity ?name (COUNT(DISTINCT ?source) AS ?sourceCount)
+       (GROUP_CONCAT(DISTINCT STR(?source); SEPARATOR="; ") AS ?sources)
+WHERE {
+  ?entity a org:OrganizationalUnit ; schema:name ?name .
+  GRAPH <urn:directory:data/pipeline/matches.ttl> {
+    ?entity cdp:hasMember ?record .
+  }
+  GRAPH <urn:directory:data/pipeline/mapped.ttl> {
+    ?record cdp:fromSource ?source .
+  }
+}
+GROUP BY ?entity ?name
+HAVING(COUNT(DISTINCT ?source) > 1)
+ORDER BY DESC(?sourceCount) ?entity
+LIMIT 20

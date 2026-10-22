@@ -1,164 +1,229 @@
-## SPARQL: native access to the directory
+## Query the directory
 
-The SPARQL endpoint is the most complete way to access the published federated directory: query entities and relationships directly, selecting the fields and connections you need. Results can be returned as JSON or RDF, including Turtle.
+SoSuSe combines Träger (organisations), Einrichtungen (facilities), Angebote (services)
+and postal addresses. Search for a facility, follow its services and relationships,
+and inspect the sources behind its values.
 
-See also the [query examples in this webapp](#/query).
+| Interface | Use it for |
+| --- | --- |
+| [SPARQL endpoint](https://sosuse.correlaid.org/directory/sparql?query=ASK%7B%7D) | Search, graph relationships, source attribution and diagnostics |
+| [REST / Swagger](https://sosuse.correlaid.org/swagger-ui.html) | Discover collections, browse entities and follow item links |
+| [GraphQL / GraphiQL](https://sosuse.correlaid.org/graphiql) | Select nested fields from the finished directory |
+| [Turtle snapshot](https://sosuse.correlaid.org/directory.ttl) | Work locally with the finished directory |
 
-Endpoint: `https://sosuse.correlaid.org/directory/sparql`
+### Query examples
 
-<a href="https://sosuse.correlaid.org/directory/sparql?query=ASK%7B%7D" target="_blank" rel="noopener noreferrer">Try an ASK query</a>, or count Einrichtungen:
+Each example opens and runs in the [Query editor](#/query). Edit its `VALUES`
+inputs and press the play button to run it again. Queries use this directory's
+SPARQL endpoint, including the named graphs for sources, provenance and matching.
+
+| Example | Inputs | Results |
+| --- | --- | --- |
+| [Name search](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23search-by-name&run=1) | Name substring | Facility IRI, name, postcode and locality; at most 20 rows |
+| [Postcode search](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23byPostcode&run=1) | Exact postcode as text | Facility, address, contact lists and optional linked service; at most 50 rows |
+| [Bounding-box search](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23within-bounds&run=1) | South, north, west, east | Facility, coordinates and address; at most 50 rows |
+| [Source records](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23sources-of&run=1) | Entity IRI | Source label, record IRI, original name and detail page where supplied |
+| [Value origins](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23explain-value&run=1) | Entity IRI and predicate IRI | Current value, immediate origin, contributing source record and inheritance rule where traceable |
+| [Competing values](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23competing-values&run=1) | Entity IRI and predicate IRI | Original values, source records, configured strategy and whether each value survives unchanged |
+| [Sources and harvest dates](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23source-status&run=1) | None | Coverage, source-record counts and ingest timestamps |
+
+Keep the returned entity IRIs to follow a search result through its source records
+and original values. Missing fields remain missing information.
+
+### Query from another application
+
+Send SPARQL to the endpoint as a `query` parameter, for example:
 
 ```sh
-curl --get \
-  --data-urlencode 'query=SELECT (COUNT(DISTINCT ?place) AS ?count) WHERE { ?place a <http://www.w3.org/ns/org#OrganizationalUnit> }' \
+curl --fail-with-body --max-time 35 --get \
+  --data-urlencode 'query=SELECT ?entity ?name WHERE { ?entity <http://schema.org/name> ?name } LIMIT 20' \
   -H 'Accept: application/sparql-results+json' \
   https://sosuse.correlaid.org/directory/sparql
 ```
 
-Using the `SERVICE` keyword, you can query this endpoint from any SPARQL editor connected to a server that supports federated queries. <a href="https://www.govdata.de/sparql-assistent#query=SELECT%20(COUNT(DISTINCT%20%3Fplace)%20AS%20%3Fcount)%20WHERE%20%7B%0A%20%20SERVICE%20%3Chttps%3A%2F%2Fsosuse.correlaid.org%2Fdirectory%2Fsparql%3E%20%7B%0A%20%20%20%20%3Fplace%20a%20%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Forg%23OrganizationalUnit%3E%20.%0A%20%20%7D%0A%7D&amp;endpoint=https%3A%2F%2Fwww.govdata.de%2Fsparql&amp;requestMethod=GET&amp;tabTitle=Sosuse&amp;headers=%7B%7D&amp;contentTypeConstruct=application%2Fn-triples%2C*%2F*%3Bq%3D0.9&amp;contentTypeSelect=application%2Fsparql-results%2Bjson%2C*%2F*%3Bq%3D0.9&amp;outputFormat=table" target="_blank" rel="noopener noreferrer">Try it in GovData’s SPARQL assistant</a>.
+Results use standard SPARQL JSON: `head.vars` lists columns and
+`results.bindings` contains rows. An absent optional binding means no value was
+found; it is not an empty string or a negative answer.
 
-### Default and named graphs
+The endpoint allows cross-origin requests and read-only queries, with a 30-second
+timeout and no outbound `SERVICE` calls. The Query editor displays which endpoint
+it uses.
 
-Queries without `GRAPH` read only the finished `directory.ttl`. Other included Turtle
-files are available as separate named graphs, including intermediate values,
-provenance and configuration. Files under `data/pipeline/extracted/` and
-`data/pipeline/preparation/` remain available as downloads but are excluded from
-Fuseki. Graphs are refreshed when the API is rebuilt.
+### Search and location details
 
-<details>
-<summary>Discover named graphs</summary>
+Name search uses a case-insensitive substring. “Sucht” can find names containing
+that word, but cannot identify every addiction-related service. Category coverage
+varies by source.
 
-Names follow file paths: `data/pipeline/merged.ttl` becomes
-`urn:directory:data/pipeline/merged.ttl`, and `config/federation.ttl` becomes
-`urn:directory:config/federation.ttl`. `directory.ttl` is only in the default graph.
-This query lists the populated graphs in the running endpoint:
+Postcode search keeps facilities even when contacts or explicitly linked services
+are absent. A facility with several services produces several rows. Contact values
+are joined with `; ` for display; use REST properties for separate RDF values.
+Empty contact lists mean no value was found. Some facility contacts are inherited
+from their Träger and may reach a head office.
+An absent Angebot does not mean the facility offers no support.
 
-```sparql
-SELECT ?graph (COUNT(*) AS ?triples) WHERE {
-  GRAPH ?graph { ?s ?p ?o }
-}
-GROUP BY ?graph
-ORDER BY ?graph
-```
+The bounding-box example is a rectangular geographic filter, not a radius or
+nearest-first ranking. It includes only facilities whose addresses have coordinates.
+It cannot establish travel distance, accessibility or whether a service is open now.
 
-</details>
+## Sources, provenance and matching
 
-Run the following examples against the SPARQL endpoint above. The webapp's Query
-page loads the finished directory only; these named graphs live on the server.
+Queries without `GRAPH` read only the finished `directory.ttl`. Other published
+Turtle files are separate named graphs. Their names follow file paths:
 
-<details>
-<summary>Query one graph or several graphs</summary>
+| Graph | Contents |
+| --- | --- |
+| `urn:directory:data/pipeline/mapped.ttl` | Source records mapped to common predicates, including their source IRIs |
+| `urn:directory:data/pipeline/matches.ttl` | Cluster membership and accepted matching evidence |
+| `urn:directory:data/pipeline/merged.ttl` | Combined values before corrections and resolution |
+| `urn:directory:data/pipeline/resolved.ttl` | Resolved values before inheritance and geocoding |
+| `urn:directory:data/provenance.ttl` | Statement annotations and inheritance origins |
+| `urn:directory:config/federation.ttl` | Sources, coverage, target fields and processing rules |
+| `urn:directory:config/curation.ttl` | Explicit matches, exclusions and value corrections |
+| `urn:directory:data/ingest/ingest-log.ttl` | Harvest observations and ingest start/end |
+| `urn:directory:data/catalog.ttl` | Publication metadata, including snapshot date |
+| `urn:directory:data/target-vocabulary.ttl` | Target vocabulary and validation shapes |
 
-Read opening hours before resolution from one graph:
+Extracted and preparation files are downloadable but are not imported into Fuseki.
+Graph availability follows the published snapshot.
+[Discover populated graphs in Query](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23graphs&run=1).
 
-```sparql
-PREFIX schema: <http://schema.org/>
-SELECT ?entity ?hours WHERE {
-  GRAPH <urn:directory:data/pipeline/merged.ttl> {
-    ?entity schema:openingHours ?hours
-  }
-}
-LIMIT 20
-```
+### Which sources describe an entity?
 
-Read both merged and resolved values, keeping the graph name in each result:
+[Source records](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23sources-of&run=1) follows `cdp:hasMember`
+from an entity to its contributing records, then reads their `cdp:fromSource`.
+It also returns source-specific detail pages before resolution selects one.
+The example entity is a Berlin facility; replace it with an IRI returned by search.
 
-```sparql
-PREFIX schema: <http://schema.org/>
-SELECT ?graph ?hours WHERE {
-  VALUES ?entity { <https://civic-data.de/federated-directory#org-3fd74b2d37fb> }
-  VALUES ?graph {
-    <urn:directory:data/pipeline/merged.ttl>
-    <urn:directory:data/pipeline/resolved.ttl>
-  }
-  GRAPH ?graph { ?entity schema:openingHours ?hours }
-}
-```
+[Multi-source facilities](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23multi-source-entities&run=1)
+returns 20 facilities described by more than one source, with distinct source
+counts and source IRIs. This is useful for exploring overlap. Membership does
+not mean every source confirms every field, and a match can be wrong.
 
-Separate `GRAPH` blocks can also join facts across graphs, as in the provenance examples below.
+### Where did a value come from?
 
-</details>
+[Explain a value](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23explain-value&run=1) starts with a current
+value, finds its RDF 1.2 statement annotation (`rdf:reifies`), and follows
+`prov:wasDerivedFrom`. For inheritance it also follows one hop from the parent
+entity's statement to its source record. `step` and `inheritanceRule` identify
+that derivation when present.
 
-<details>
-<summary>Where did a particular statement come from?</summary>
-
-Select a statement from the default graph, then look up its RDF 1.2 annotation
-(`rdf:reifies`) in the provenance graph. Replace the entity and predicate to inspect another fact.
-
-```sparql
-PREFIX schema: <http://schema.org/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX prov: <http://www.w3.org/ns/prov#>
-SELECT ?value ?derivedFrom ?step WHERE {
-  VALUES (?entity ?predicate) {
-    (<https://civic-data.de/federated-directory#org-3fd74b2d37fb> schema:openingHours)
-  }
-  ?entity ?predicate ?value .
-  GRAPH <urn:directory:data/provenance.ttl> {
-    ?annotation rdf:reifies <<( ?entity ?predicate ?value )>> ;
-                prov:wasDerivedFrom ?derivedFrom .
-    OPTIONAL { ?annotation prov:wasGeneratedBy ?step }
-  }
-}
-```
-
-For a particular value, add `VALUES ?value { "the exact value" }`, including its
-language tag or datatype if present. `derivedFrom` identifies the source record,
-or another directory entity when the value was inherited during enrichment.
-Corrected or concatenated values may have no exact statement annotation; inspect
-their original merged values instead.
-
-</details>
-
-<details>
-<summary>Which opening-hours values disagreed before resolution?</summary>
-
-`merged.ttl` retains the original competing values. Join their annotations to source
-records and check whether each value appears unchanged in the finished directory:
+Try the example's name first. For inherited values, use a service IRI and
+`schema:openingHours`, `schema:audience` or `schema:areaServed`, or a facility
+with inherited contact details. For a concrete example, change the `VALUES` row to:
 
 ```sparql
-PREFIX schema: <http://schema.org/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX cdp: <https://civic-data.de/pipeline#>
-SELECT ?value ?sourceRecord ?source
-       (EXISTS { ?entity schema:openingHours ?value } AS ?inDirectory)
-WHERE {
-  VALUES ?entity { <https://civic-data.de/federated-directory#org-3fd74b2d37fb> }
-  GRAPH <urn:directory:data/pipeline/merged.ttl> {
-    ?entity schema:openingHours ?value
-  }
-  GRAPH <urn:directory:data/provenance.ttl> {
-    ?annotation rdf:reifies <<( ?entity schema:openingHours ?value )>> ;
-                prov:wasDerivedFrom ?sourceRecord .
-  }
-  OPTIONAL {
-    GRAPH <urn:directory:data/pipeline/mapped.ttl> {
-      ?sourceRecord cdp:fromSource ?source
-    }
-  }
-}
+(<https://civic-data.de/federated-directory#service-00163aaaeddb> schema:audience)
 ```
 
-In the current snapshot, this entity has two schedules from two DHS records; one
-is retained. Differences can also reflect complementary information or a mistaken
-entity match, rather than a factual contradiction. The resolver's choice is not a
-judgment of which source is correct.
+This follows the inherited audience through its facility to DHS record `dhs-4050`.
+Example IRIs apply to their snapshot. A parent link alone does not establish
+inheritance: values supplied directly take precedence.
 
-Find other entities with multiple opening-hours values:
+| Value kind | What the provenance query can show |
+| --- | --- |
+| Original value preserved by resolution | Contributing source record(s) |
+| Inherited value | Parent entity and, when its original statement is annotated, the source record |
+| Concatenated or corrected value | An exact annotation may be absent; inspect original merged values and curation |
+| Geocoded coordinates | No per-coordinate source-record annotation; `cdp:geocodedAs` records some adjusted lookup strings only |
 
-```sparql
-PREFIX schema: <http://schema.org/>
-SELECT ?entity (COUNT(DISTINCT ?value) AS ?values) WHERE {
-  GRAPH <urn:directory:data/pipeline/merged.ttl> {
-    ?entity schema:openingHours ?value
-  }
-}
-GROUP BY ?entity
-HAVING (COUNT(DISTINCT ?value) > 1)
-```
+No result is not proof that a value has no origin. These are limits of the
+published annotations. Resolver configuration describes the strategy, not a
+recorded explanation of each individual choice.
 
-</details>
+### Compare values before and after resolution
+
+[Competing values](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23competing-values&run=1) reads the
+original merged values, attaches their source records, and checks whether each
+exact RDF term remains in the finished directory. Change the predicate from
+`schema:name` to `schema:openingHours` to inspect schedules.
+
+`presentUnchanged = false` can mean a value was replaced, corrected or combined
+into another literal. It does not mean the value was judged false. The strategy
+column comes from the configuration. Inspect `ValueCorrection` entries in the
+curation graph for explicit corrections, and use [Merge](#/merge) to browse the
+same kinds of differences visually.
+
+### Count value variation across the corpus
+
+[Value variation](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23value-variation&run=1) takes **one
+literal-valued predicate** and returns an entity count for each observed scope:
+
+- One source record carrying several values.
+- Several records from one source carrying different values.
+- Different sets of values supplied by different sources.
+- Several sources supplying the same multi-value set.
+
+Source sets are compared as RDF terms, including language and datatype. A missing
+field in another source is not counted as a disagreement. The query excludes
+record identifiers, source attribution, detail links, dates and coordinates.
+It also reads the configured `keepAll` / `concatenateAll` strategies and
+`multiValued` declarations so intentional multiplicity is excluded.
+
+This compares mapped literal values grouped by match membership. It does not
+measure factual contradictions, remaining manual work or matching accuracy.
+Formatting, complementary descriptions and mistaken matches can all produce
+variation. Coordinates need a paired latitude/longitude check of their own.
+If no qualifying variation exists, the result is empty rather than a zero row.
+
+Keep this query scoped to one predicate, such as `schema:name` or
+`schema:openingHours`. A corpus-wide aggregation over all predicates can exceed
+the server timeout. Adding `LIMIT` does not reduce the work needed to compute
+an aggregate. For repeated analysis, work from a local snapshot.
+
+### Why were records matched?
+
+[Matching evidence](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23match-evidence&run=1) returns accepted
+record pairs, manual-match markers, aggregate scores and per-criterion values.
+The example includes a curated match. Replace the entity IRI to inspect an
+automatic match, or browse [Match](#/match).
+
+[Matches near their threshold](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23near-threshold-matches&run=1)
+returns 20 accepted fuzzy-match evidence rows within `0.05` of their rule's
+configured minimum. It is a review queue: a near-threshold match can be correct,
+and a high-scoring match can still combine different services at one address.
+
+Exact-key address rules have no weighted score; their aggregate is `0.000` even
+when their hard criteria pass. Only accepted evidence is published. Rejected
+candidates and source-guard blocks are not available in `matches.ttl`.
+
+## Snapshot, coverage and operating limits
+
+[Source status](#/query?example=https%3A%2F%2Fcivic-data.de%2Fsosuse%2Fquery-example%23source-status&run=1) returns one row per
+source with its coverage, source-record count and harvest observation. Counts
+include every mapped entity type, not just facilities. Static-file ingestion
+times describe when a file was copied; `staticCommittedAt` is its repository date,
+not proof of when its contents were collected.
+
+The catalog's `dct:modified` dates the publication, not every source record.
+An entity's `dct:modified` is currently selected by the generic longest-value
+resolver; it must not be interpreted as the newest contributing timestamp.
+Likewise, the resolved `schema:mainEntityOfPage` retains one detail page, not
+all source citations. Use the source-records example for those links.
+
+Coverage is uneven: Caritas covers CariNet listings, including Kitas and other
+organisation types, and its API supplies no mapped category. AWO covers the
+supplied Berlin-Mitte and adjacent-postcode files. Other source declarations
+indicate national scope, not completeness. The data is predominantly German.
+The absence of a result is not evidence that support is unavailable in an area.
+
+Entity IRIs are deterministic but have no guaranteed stability across snapshots:
+the persistent identity registry is disabled. Changes in matching can split or
+combine entities and change their IRIs. Keep source-record links and identify
+which snapshot an analysis used. REST pagination applies within one snapshot.
+
+The webapp and API update separately. Compare their `directory.ttl` downloads
+with SHA-256 when snapshot agreement matters; equal counts alone are insufficient.
+The [Download page](#/download) provides the webapp's file, while the API serves
+its own [directory snapshot](https://sosuse.correlaid.org/directory.ttl).
+The harvest run IRI and timestamps provide additional context.
+
+Keep interactive calls bounded, cache repeated results and avoid parallel corpus
+aggregations on the shared endpoint. For heavier analysis, use the full Turtle
+files from [Pipeline](#/pipeline) and run your own copy using the
+[SoSuSe API setup](https://github.com/foederierter-datenpool/sosuse-directory-builder/tree/main/api)
+and [directory-api](https://github.com/foederierter-datenpool/directory-api).
+A local copy of `directory.ttl` alone supports search but not provenance or match queries.
 
 ## REST API: convenience access
 

@@ -1,0 +1,26 @@
+PREFIX schema: <http://schema.org/>
+PREFIX org: <http://www.w3.org/ns/org#>
+
+# Input: an exact postcode, kept as text to preserve leading zeroes.
+# Contacts and explicitly linked services are optional.
+SELECT ?facility ?name ?street ?postalCode ?locality
+       (GROUP_CONCAT(DISTINCT STR(?telephone); SEPARATOR="; ") AS ?phones)
+       (GROUP_CONCAT(DISTINCT STR(?email); SEPARATOR="; ") AS ?emails)
+       ?service ?serviceName
+WHERE {
+  VALUES ?postalCode { "10551" }
+  ?facility a org:OrganizationalUnit ;
+            schema:name ?name ; schema:address ?address .
+  ?address schema:postalCode ?postalCode .
+  OPTIONAL { ?address schema:streetAddress ?street }
+  OPTIONAL { ?address schema:addressLocality ?locality }
+  OPTIONAL { ?facility schema:telephone ?telephone }
+  OPTIONAL { ?facility schema:email ?email }
+  OPTIONAL {
+    ?service a schema:Service ; schema:provider ?facility .
+    OPTIONAL { ?service schema:name ?serviceName }
+  }
+}
+GROUP BY ?facility ?name ?street ?postalCode ?locality ?service ?serviceName
+ORDER BY LCASE(STR(?name)) ?facility ?service
+LIMIT 50

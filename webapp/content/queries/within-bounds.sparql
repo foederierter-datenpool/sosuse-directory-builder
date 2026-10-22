@@ -1,0 +1,18 @@
+PREFIX schema: <http://schema.org/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Input: south, north, west and east bounds in decimal degrees (Berlin example).
+# A bounding box is not a radius or a distance ranking.
+SELECT DISTINCT ?facility ?name ?latitude ?longitude ?street ?postalCode WHERE {
+  VALUES (?south ?north ?west ?east) { (52.50 52.54 13.36 13.43) }
+  ?facility a org:OrganizationalUnit ;
+            schema:name ?name ; schema:address ?address .
+  ?address schema:latitude ?latitude ; schema:longitude ?longitude .
+  FILTER(xsd:double(?latitude) >= ?south && xsd:double(?latitude) <= ?north &&
+         xsd:double(?longitude) >= ?west && xsd:double(?longitude) <= ?east)
+  OPTIONAL { ?address schema:streetAddress ?street }
+  OPTIONAL { ?address schema:postalCode ?postalCode }
+}
+ORDER BY ?facility
+LIMIT 50

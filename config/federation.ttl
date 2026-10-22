@@ -19,6 +19,7 @@
     :hasTargetSchema :traegerSchema, :einrichtungSchema, :angebotSchema, :adresseSchema ;
     :harvestingModeActive false ;
     :webappChunking   true ;
+    :queryEndpoint   "https://sosuse.correlaid.org/directory/sparql" ;
     :hasExporter     "sozialplattform" ;
     :repository      "https://github.com/foederierter-datenpool/sosuse-directory-builder" ;
     # Where the webapp is deployed: the webapp build takes its vite base from
