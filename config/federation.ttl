@@ -154,12 +154,14 @@ cdf:parentOrgClassification
 :t-email a :TargetField ;
     :targetPredicate schema:email ;
     sh:datatype      xsd:string ;
-    :typeDerivation  :adopted .
+    :typeDerivation  :adopted ;
+    :multiValued     true .
 
 :t-homepage a :TargetField ;
     :targetPredicate foaf:homepage ;
     sh:datatype      xsd:string ;
     :typeDerivation  :overridden ;
+    :multiValued     true ;
     rdfs:comment     "FOAF expects Document links; source URLs remain text, some without a scheme."@en .
 
 :t-detailUrl a :TargetField ;
@@ -712,6 +714,8 @@ cdf:parentOrgClassification
     :hasOverride     [ :on schema:availableService ; :strategy :concatenateAll ] ,
                      [ :on schema:category         ; :strategy :concatenateAll ] ,
                      [ :on schema:telephone        ; :strategy :keepAll ] ,
+                     [ :on schema:email            ; :strategy :keepAll ] ,
+                     [ :on foaf:homepage           ; :strategy :keepAll ] ,
                      [ :on dct:language            ; :strategy :keepAll ] .
 
 # ---- Enrich -------------------------------------------------------------

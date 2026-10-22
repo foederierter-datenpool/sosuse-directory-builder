@@ -85,6 +85,15 @@ response has no category field, so Caritas does not supply `schema:category`.
 Caritas extraction converts HTML and encoded characters in names, opening hours,
 and description text to plain text, preserving paragraphs in longer fields.
 
+Contact extraction splits unambiguous email and website lists and normalizes
+complete German telephone numbers to `+49` format. Explicit extensions are kept;
+ambiguous shorthand and questionable values remain available for review. Email
+addresses and homepages retain multiple values through resolution.
+
+Run `npm run check:contacts` after federation to write
+`data/pipeline/contact-issues.json`, listing questionable contact fields and
+postcodes from the extracted data. The report does not alter values.
+
 The federation is configured to retrieve Germany-wide Caritas, Sozialplattform
 and DHS records and to extract the nationwide Destatis workbook. The supplied
 AWO files cover Berlin-Mitte and adjacent postcodes. The Sources page shows

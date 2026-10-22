@@ -1,4 +1,5 @@
 import { compile } from "html-to-text"
+import prepareContacts from "../contacts.js"
 
 const XYZ = "http://sparql.xyz/facade-x/data/"
 const fields = new Set(["title", "subTitle", "officeHours", "descriptionText"].map(name => XYZ + name))
@@ -11,7 +12,7 @@ const text = compile({
 })
 
 export default function* prepare(quads, df) {
-    for (const q of quads) {
+    for (const q of prepareContacts(quads, df)) {
         if (q.object.termType !== "Literal" || !fields.has(q.predicate.value) || !html.test(q.object.value)) {
             yield q
             continue

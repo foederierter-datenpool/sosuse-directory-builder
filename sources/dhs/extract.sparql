@@ -42,12 +42,9 @@ CONSTRUCT {
         ?span a xhtml:span ; xhtml:class ?className ; html:innerText ?raw .
         FILTER(?className IN ("strasse", "plzort", "telefon", "email", "website"))
         BIND(IRI(CONCAT(STR(xyz:), ?className)) AS ?predicate)
-        # telefon carries labels like "Tel.: ", "Fax.: ", "Mobil: " that are stripped,
-        # then the number is normalised to digits (keep a leading +) so separator
-        # variants of one number ("030 447213-53" / "03044721353") collapse —
-        # telephone resolves with :keepAll. email de-obfuscates "(at)" to "@".
+        # Keep phone labels and separators for contact parsing in extract.js.
         BIND(REPLACE(REPLACE(?raw, "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?clean)
-        BIND(IF(?className = "telefon", REPLACE(REPLACE(?clean, "^(Tel|Fax|Mobil)\\.?:\\s*", ""), "[^0-9+]", ""),
+        BIND(IF(?className = "telefon", ?raw,
              IF(?className = "email",   REPLACE(?clean, "\\(at\\)", "@"),
              ?clean)) AS ?value)
     }

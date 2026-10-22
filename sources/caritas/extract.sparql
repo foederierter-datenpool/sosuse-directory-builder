@@ -23,7 +23,7 @@ CONSTRUCT {
 WHERE {
     ?orig xyz:id ?id ; ?p ?raw .
     FILTER NOT EXISTS { ?orig a fx:root }
-    BIND(IF(isLiteral(?raw) && ?p IN (xyz:title, xyz:subTitle, xyz:eMail, xyz:phone, xyz:internetAddress),
+    BIND(IF(isLiteral(?raw) && ?p IN (xyz:title, xyz:subTitle),
         REPLACE(REPLACE(STR(?raw), "[\u00A0\\s]+", " "), "^ +| +$", ""), ?raw) AS ?o)
     BIND(IRI(CONCAT(STR(cdp:), "caritas-", STR(?id))) AS ?org)
     OPTIONAL {

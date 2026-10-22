@@ -10,6 +10,7 @@
     "federate": "node --max-old-space-size=6144 --env-file-if-exists=.env --env-file-if-exists=.env.local node_modules/@directory-builder/core/bin/cli.js federate",
     "fuseki": "../directory-api/gradlew -p ../directory-api fusekiDist -q && java -jar ../directory-api/build/fuseki/directory-fuseki.jar .",
     "validate": "directory-builder validate",
+    "check:contacts": "node scripts/check-contacts.js",
     "vocabulary:build": "directory-builder vocabulary",
     "webapp": "directory-builder webapp",
     "webapp:build": "directory-builder webapp build --base /sosuse-directory-builder/"
