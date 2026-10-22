@@ -46,8 +46,8 @@ WHERE {
     ?item xyz:offer_id ?offerIdRaw .
     BIND(IRI(CONCAT(STR(cdp:), "sp-service-", STR(?offerIdRaw))) AS ?service)
 
-    # Office identity: a hash of its whitespace-normalised title + short address,
-    # because the source carries no office id. Repeated offices → one org IRI.
+    # Office identity uses the whitespace-collapsed source title + short address,
+    # before trimming display values. The source carries no office id.
     OPTIONAL { ?item xyz:office_title         ?otitleRaw }
     OPTIONAL { ?item xyz:office_address_short ?oaddrRaw }
     BIND(REPLACE(COALESCE(STR(?otitleRaw), ""), "[\u00A0\\s]+", " ") AS ?otitle)
@@ -66,15 +66,15 @@ WHERE {
         # collapse; every other scalar just gets its NBSP/whitespace runs collapsed.
         BIND(IF(?fieldP = xyz:office_phone,
                 REPLACE(STR(?fieldRaw), "[^0-9+]", ""),
-                STRDT(REPLACE(STR(?fieldRaw), "[\u00A0\\s]+", " "), datatype(?fieldRaw))) AS ?fieldVal)
+                STRDT(REPLACE(REPLACE(STR(?fieldRaw), "[\u00A0\\s]+", " "), "^ +| +$", ""), datatype(?fieldRaw))) AS ?fieldVal)
     }
 
     # office_address sub-fields, feeding the address entity below. Explicit
     # (single-valued) so they don't multiply the routing rows above.
     OPTIONAL { ?item xyz:office_address/xyz:address_line1 ?al1 . BIND(REPLACE(STR(?al1), "[\u00A0\\s]+", " ") AS ?addrLine1) }
     OPTIONAL { ?item xyz:office_address/xyz:postal_code   ?aplz . BIND(REPLACE(STR(?aplz), "[\u00A0\\s]+", " ") AS ?addrPlz) }
-    OPTIONAL { ?item xyz:office_address/xyz:locality      ?aloc . BIND(REPLACE(STR(?aloc), "[\u00A0\\s]+", " ") AS ?addrLocality) }
-    OPTIONAL { ?item xyz:office_address/xyz:country_code  ?acc  . BIND(REPLACE(STR(?acc),  "[\u00A0\\s]+", " ") AS ?addrCountry) }
+    OPTIONAL { ?item xyz:office_address/xyz:locality      ?aloc . BIND(REPLACE(REPLACE(STR(?aloc), "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?addrLocality) }
+    OPTIONAL { ?item xyz:office_address/xyz:country_code  ?acc  . BIND(REPLACE(REPLACE(STR(?acc),  "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?addrCountry) }
 
     # Address entity: Str. expanded for display, then lowercased / diacritics folded /
     # punctuation dropped onto cdp:matchString, the match step's exact comparison

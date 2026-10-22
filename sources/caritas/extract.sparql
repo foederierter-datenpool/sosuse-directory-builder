@@ -21,8 +21,10 @@ CONSTRUCT {
           xyz:longitude       ?longitude .
 }
 WHERE {
-    ?orig xyz:id ?id ; ?p ?o .
+    ?orig xyz:id ?id ; ?p ?raw .
     FILTER NOT EXISTS { ?orig a fx:root }
+    BIND(IF(isLiteral(?raw) && ?p IN (xyz:title, xyz:subTitle, xyz:eMail, xyz:phone, xyz:internetAddress),
+        REPLACE(REPLACE(STR(?raw), "[\u00A0\\s]+", " "), "^ +| +$", ""), ?raw) AS ?o)
     BIND(IRI(CONCAT(STR(cdp:), "caritas-", STR(?id))) AS ?org)
     OPTIONAL {
         ?orig xyz:number ?number .
@@ -30,8 +32,9 @@ WHERE {
         BIND(CONCAT("https://www.caritas.de/adressen/", STR(?number)) AS ?detailUrl)
     }
     OPTIONAL {
-        ?orig xyz:street ?street ; xyz:zipCode ?adrPlz ; xyz:city ?adrOrt .
-        FILTER(STRLEN(STR(?street)) > 0 && REGEX(STR(?adrPlz), "^\\d{5}$") && STRLEN(STR(?adrOrt)) > 0)
+        ?orig xyz:street ?street ; xyz:zipCode ?adrPlz ; xyz:city ?city .
+        FILTER(STRLEN(STR(?street)) > 0 && REGEX(STR(?adrPlz), "^\\d{5}$") && STRLEN(STR(?city)) > 0)
+        BIND(REPLACE(REPLACE(STR(?city), "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?adrOrt)
         BIND(REPLACE(REPLACE(REPLACE(?street, "[\u00A0\\s]+", " "), "([Ss])tr\\.\\s*", "$1traße "), "^ +| +$", "") AS ?adrStreetA)
         BIND(REPLACE(REPLACE(REPLACE(REPLACE(?adrStreetA, "([Ss])trasse", "$1traße"), "(\\d+) ([a-zA-Z])$", "$1$2"), "(\\d) ?[-/] ?(\\d)", "$1-$2"), "(^|\\s)straße", "$1Straße") AS ?adrStreet)
         BIND(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LCASE(?adrStreet), "ä", "ae"), "ö", "oe"), "ü", "ue"), "ß", "ss"), "[^a-z0-9]", "") AS ?adrNorm)

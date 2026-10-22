@@ -68,7 +68,7 @@ WHERE {
     # whitespace collapsed. isLiteral skips nested arrays and the xyz:null IRI.
     ?node ?p ?raw .
     FILTER(isLiteral(?raw))
-    BIND(STRDT(REPLACE(STR(?raw), "[\u00A0\\s]+", " "), datatype(?raw)) AS ?scalar)
+    BIND(STRDT(REPLACE(REPLACE(STR(?raw), "[\u00A0\\s]+", " "), "^ +| +$", ""), datatype(?raw)) AS ?scalar)
 
     # Address from the locations_filtered table — an (org, location) assignment
     # table (the same location id recurs once per assigned org) — joined on
@@ -79,7 +79,8 @@ WHERE {
     OPTIONAL {
         ?locNode xyz:organisation_id ?id ;
                  xyz:plz              ?plz ;
-                 xyz:ort              ?ort .
+                 xyz:ort              ?ortRaw .
+        BIND(REPLACE(REPLACE(STR(?ortRaw), "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?ort)
         OPTIONAL { ?locNode xyz:adresse  ?adresse }
         OPTIONAL { ?locNode xyz:ortsteil ?ortsteil }
         OPTIONAL { ?locNode xyz:id       ?locId }
@@ -107,7 +108,7 @@ WHERE {
     OPTIONAL {
         ?node xyz:services/rdf:_1/xyz:bagfw_category ?cat .
         ?cat xyz:nummer ?cnum ; xyz:name ?cname .
-        BIND(CONCAT(STR(?cnum), " ", STR(?cname)) AS ?category)
+        BIND(REPLACE(REPLACE(CONCAT(STR(?cnum), " ", STR(?cname)), "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?category)
     }
 
     # One service entity per services[] element (rdf:_N container members): its
@@ -128,7 +129,8 @@ WHERE {
         # location embedded in the service, so it pins to the right node.
         OPTIONAL {
             ?svcNode xyz:location_id ?svcLocId .
-            ?svcLoc xyz:id ?svcLocId ; xyz:ort ?svcArea .
+            ?svcLoc xyz:id ?svcLocId ; xyz:ort ?svcAreaRaw .
+            BIND(REPLACE(REPLACE(STR(?svcAreaRaw), "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?svcArea)
         }
     }
 
@@ -145,7 +147,8 @@ WHERE {
         ?fbArr ?fbMember ?fbSvcNode .
         FILTER(STRSTARTS(STR(?fbMember), "http://www.w3.org/1999/02/22-rdf-syntax-ns#_"))
         ?fbSvcNode xyz:location_id ?fbLocId .
-        ?fbLoc xyz:id ?fbLocId ; xyz:ort ?fbOrt .
+        ?fbLoc xyz:id ?fbLocId ; xyz:ort ?fbOrtRaw .
+        BIND(REPLACE(REPLACE(STR(?fbOrtRaw), "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?fbOrt)
         MINUS { [] xyz:organisation_id ?id ; xyz:plz [] ; xyz:ort [] }
         OPTIONAL { ?fbLoc xyz:plz     ?fbPlz     }
         OPTIONAL { ?fbLoc xyz:adresse ?fbAdresse }

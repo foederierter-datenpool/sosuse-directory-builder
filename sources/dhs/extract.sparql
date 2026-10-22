@@ -31,10 +31,12 @@ CONSTRUCT {
     ?entry a xhtml:div ; xhtml:class "entrylong" .
 
     OPTIONAL {
-        ?h3 a xhtml:h3 ; html:innerText ?name .
+        ?h3 a xhtml:h3 ; html:innerText ?nameRaw .
+        BIND(REPLACE(REPLACE(?nameRaw, "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?name)
     }
     OPTIONAL {
-        ?dep a xhtml:p ; xhtml:class "titelext" ; html:innerText ?department .
+        ?dep a xhtml:p ; xhtml:class "titelext" ; html:innerText ?departmentRaw .
+        BIND(REPLACE(REPLACE(?departmentRaw, "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?department)
     }
     {
         ?span a xhtml:span ; xhtml:class ?className ; html:innerText ?raw .
@@ -44,9 +46,10 @@ CONSTRUCT {
         # then the number is normalised to digits (keep a leading +) so separator
         # variants of one number ("030 447213-53" / "03044721353") collapse —
         # telephone resolves with :keepAll. email de-obfuscates "(at)" to "@".
-        BIND(IF(?className = "telefon", REPLACE(REPLACE(?raw, "^(Tel|Fax|Mobil)\\.?:\\s*", ""), "[^0-9+]", ""),
-             IF(?className = "email",   REPLACE(?raw, "\\(at\\)", "@"),
-             ?raw)) AS ?value)
+        BIND(REPLACE(REPLACE(?raw, "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?clean)
+        BIND(IF(?className = "telefon", REPLACE(REPLACE(?clean, "^(Tel|Fax|Mobil)\\.?:\\s*", ""), "[^0-9+]", ""),
+             IF(?className = "email",   REPLACE(?clean, "\\(at\\)", "@"),
+             ?clean)) AS ?value)
     }
     UNION
     {
@@ -72,7 +75,7 @@ CONSTRUCT {
         ?poSpan a xhtml:span ; xhtml:class "plzort" ; html:innerText ?plzort .
         FILTER(REGEX(?plzort, "^\\d{5} "))
         BIND(STRBEFORE(?plzort, " ") AS ?adrPlz)
-        BIND(STRAFTER(?plzort, " ")  AS ?adrOrt)
+        BIND(REPLACE(REPLACE(STRAFTER(?plzort, " "), "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?adrOrt)
         BIND(REPLACE(REPLACE(REPLACE(STR(?strasseRaw), "[\u00A0\\s]+", " "), "([Ss])tr\\.\\s*", "$1traße "), "^ +| +$", "") AS ?adrStreetA)
         # Strasse → Straße (a standalone "straße" is capitalised, compounds like Bellermannstraße stay lower); house-number letter attached ("33 a" → "33a"), number
         # ranges canonicalised to hyphen ("5 - 11" → "5-11", "128/129" → "128-129") —

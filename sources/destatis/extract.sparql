@@ -15,7 +15,7 @@ CONSTRUCT {
          cdp:targetSchema cdp:einrichtungSchema ;
          cdp:locatedAt    ?addr ;
          xyz:refId        ?id ;
-         xyz:name         ?nameRaw ;
+         xyz:name         ?name ;
          xyz:bundesland   ?bundeslandRaw ;
          xyz:strasse      ?strasseRaw ;
          xyz:plz          ?plz ;
@@ -34,8 +34,10 @@ CONSTRUCT {
     OPTIONAL { ?row xyz:Stadt      ?stadtRaw      }
     OPTIONAL { ?row xyz:Bundesland ?bundeslandRaw }
 
+    # Hash the source text so display cleanup does not change record identity.
     BIND(SUBSTR(SHA1(CONCAT(STR(?nameRaw), "|", ?plz, "|", STR(COALESCE(?strasseRaw, "")))), 1, 12) AS ?id)
     BIND(IRI(CONCAT(STR(cdp:), "destatis-", ?id)) AS ?org)
+    BIND(REPLACE(REPLACE(STR(?nameRaw), "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?name)
 
     # Address entity: whitespace collapsed and Str. expanded for display, then
     # lowercased / diacritics folded / punctuation dropped onto cdp:matchString,
@@ -44,7 +46,7 @@ CONSTRUCT {
     # street mints nothing: the IF picks the never-bound ?noAddr, erroring the
     # whole address chain away (the org then just carries no cdp:locatedAt).
     BIND(?plz AS ?adrPlz)
-    BIND(?stadtRaw AS ?adrOrt)
+    BIND(REPLACE(REPLACE(STR(?stadtRaw), "[\u00A0\\s]+", " "), "^ +| +$", "") AS ?adrOrt)
     BIND(REPLACE(REPLACE(REPLACE(STR(?strasseRaw), "[\u00A0\\s]+", " "), "([Ss])tr\\.\\s*", "$1traße "), "^ +| +$", "") AS ?adrStreetA)
     # Strasse → Straße (a standalone "straße" is capitalised, compounds like Bellermannstraße stay lower); house-number letter attached ("33 a" → "33a"), number
     # ranges canonicalised to hyphen ("5 - 11" → "5-11", "128/129" → "128-129") —
