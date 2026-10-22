@@ -275,6 +275,7 @@ cdf:parentOrgClassification
     rdfs:label    "Caritas" ;
     :coverageLabel "Germany" ;
     skos:notation "ca" ;
+    :dedupWithinSource false ;
     :fetchUrl     "https://apicms.carinet.de/api/socialservice" ;
     :retrieval    "API" ;
     :format       ft:JSON ;
@@ -386,9 +387,8 @@ cdf:parentOrgClassification
     rdfs:label    "Deutsche Hauptstelle für Suchtfragen (DHS)" ;
     :coverageLabel "Germany" ;
     skos:notation "dhs" ;
-    # entryIds are stable and distinct co-located programs (vista WIGWAM
-    # Connect/Support/ZERO) would otherwise fuzzy-merge; true DHS-internal
-    # duplicates still cluster via cross-source bridges (e.g. Birkenstube).
+    # Distinct entryIds keep co-located programs separate during fuzzy matching.
+    # Confirmed DHS-internal duplicates require curated owl:sameAs pairs.
     :dedupWithinSource false ;
     :fetchUrl     "https://www.dhs.de/service/suchthilfeverzeichnis/" ;
     :retrieval    "API" ;
