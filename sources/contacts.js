@@ -39,6 +39,7 @@ function phone(value) {
             return result([value], "Ambiguous telephone list or extension")
     }
     number = number.replace(/[\s()./-]/g, "").replace(/^00/, "+")
+    if (number.startsWith("+4900")) return result([value], "Ambiguous German country or area code")
     if (number.startsWith("+49")) number = number.replace(/^\+490/, "+49")
     else if (/^0\d{5,}$/.test(number)) number = `+49${number.slice(1)}`
     if (!/^\+[1-9]\d{5,14}$/.test(number) && !/^\d{3,5}$/.test(number))

@@ -32,7 +32,8 @@ test("phones normalize without joining lists or losing extension shorthand", () 
     assert.deepEqual(cleanContact("phone", "tel:+4930123456;ext=7").values, ["+4930123456 ext. 7"])
     assert.deepEqual(cleanContact("phone", "030 123456 / 040 987654").values, ["+4930123456", "+4940987654"])
     assert.deepEqual(cleanContact("phone", "+43 1 234567").values, ["+431234567"])
-    for (const value of ["030 1234-30/-33", "+49 (06506) 899-0,-105", "030/01234", "030123456/654321", "Fax.: 030 123456"]) {
+    for (const value of ["030 1234-30/-33", "+49 (06506) 899-0,-105", "030/01234", "030123456/654321",
+        "+49 (00211) 17520880", "+49 (0049) 45179923-0", "Fax.: 030 123456"]) {
         const result = cleanContact("phone", value)
         assert.ok(result.issue)
         assert.deepEqual(result.values, [value])
