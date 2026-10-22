@@ -12,7 +12,7 @@ and holds no engine or webapp code — only what is specific to this federation:
   `owl:differentFrom` pairs and `:ValueCorrection` entries.
 - **Per-source code** lives in `sources/<name>/`: a `fetch.js` (how to get the
   data), an `extract.sparql` (how to extract entities from its lifted RDF),
-  optional `transform-*.sparql`, and committed `static/` files for sources
+  optional `extract.js` postprocessing, `transform-*.sparql`, and committed `static/` files for sources
   without an API.
 - **Webapp material** lives in `webapp/`: the About page prose, the Query
   page's starting query, and the exporters the Download page loads at runtime.
@@ -81,6 +81,9 @@ version for `schema:description`. Extraction derives each detail-page URL from
 the API's `number` field. Supplied coordinates are mapped to addresses;
 enrichment uses them before consulting the geocache or Nominatim. This API
 response has no category field, so Caritas does not supply `schema:category`.
+
+Caritas extraction converts HTML and encoded characters in names, opening hours,
+and description text to plain text, preserving paragraphs in longer fields.
 
 The federation is configured to retrieve Germany-wide Caritas, Sozialplattform
 and DHS records and to extract the nationwide Destatis workbook. The supplied

@@ -1,5 +1,5 @@
 # Keep the CariNet address GUID as the Caritas entity IRI. The API supplies
-# structured address fields, so no text parsing is needed.
+# structured address fields.
 
 PREFIX xyz: <http://sparql.xyz/facade-x/data/>
 PREFIX cdp: <https://civic-data.de/pipeline#>
