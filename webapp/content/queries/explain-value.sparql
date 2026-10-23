@@ -1,0 +1,35 @@
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+# Inputs: a directory entity and predicate. All current values are inspected.
+# One inheritance hop is followed when the immediate origin is a parent entity.
+SELECT DISTINCT ?value ?derivedFrom ?sourceRecord ?source ?step ?inheritanceRule WHERE {
+  VALUES (?entity ?predicate) {
+    (<https://civic-data.de/federated-directory#org-dcd15d72996f> schema:name)
+  }
+  ?entity ?predicate ?value .
+  BIND(<<( ?entity ?predicate ?value )>> AS ?statement)
+  GRAPH <urn:directory:data/provenance.ttl> {
+    ?annotation rdf:reifies ?statement ;
+                prov:wasDerivedFrom ?derivedFrom .
+    OPTIONAL { ?annotation prov:wasGeneratedBy ?step }
+    OPTIONAL { ?annotation cdp:appliedRule ?inheritanceRule }
+  }
+  BIND(<<( ?derivedFrom ?predicate ?value )>> AS ?parentStatement)
+  OPTIONAL {
+    GRAPH <urn:directory:data/provenance.ttl> {
+      ?parentAnnotation rdf:reifies ?parentStatement ;
+                        prov:wasDerivedFrom ?parentRecord .
+    }
+  }
+  BIND(COALESCE(?parentRecord, ?derivedFrom) AS ?sourceRecord)
+  OPTIONAL {
+    GRAPH <urn:directory:data/pipeline/mapped.ttl> {
+      ?sourceRecord cdp:fromSource ?source .
+    }
+  }
+}
+ORDER BY ?source ?sourceRecord
+LIMIT 100

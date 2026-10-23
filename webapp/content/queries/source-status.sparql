@@ -1,0 +1,27 @@
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Source-record counts include addresses, facilities, services and organisations.
+# A static file's fetch time is its local ingestion time, not its content date.
+SELECT ?source ?label ?coverage ?records ?run ?ingestStarted ?ingestEnded ?fetchedAt ?staticCommittedAt WHERE {
+  {
+    SELECT ?source (COUNT(DISTINCT ?record) AS ?records) WHERE {
+      GRAPH <urn:directory:data/pipeline/mapped.ttl> {
+        ?record cdp:fromSource ?source .
+      }
+    }
+    GROUP BY ?source
+  }
+  GRAPH <urn:directory:config/federation.ttl> {
+    ?source rdfs:label ?label .
+    OPTIONAL { ?source cdp:coverageLabel ?coverage }
+  }
+  GRAPH <urn:directory:data/ingest/ingest-log.ttl> {
+    ?run a cdp:IngestRun ; prov:startedAtTime ?ingestStarted ;
+         prov:endedAtTime ?ingestEnded ; cdp:harvested ?observation .
+    ?observation cdp:ofSource ?source ; prov:atTime ?fetchedAt .
+    OPTIONAL { ?observation cdp:staticCommittedAt ?staticCommittedAt }
+  }
+}
+ORDER BY ?source

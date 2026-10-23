@@ -1,0 +1,21 @@
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+
+# Input: an entity IRI from search or the REST API, not a source-record IRI.
+SELECT DISTINCT ?entity ?record ?source ?sourceLabel ?recordName ?detailPage WHERE {
+  VALUES ?entity { <https://civic-data.de/federated-directory#org-dcd15d72996f> }
+  GRAPH <urn:directory:data/pipeline/matches.ttl> {
+    ?entity cdp:hasMember ?record .
+  }
+  GRAPH <urn:directory:data/pipeline/mapped.ttl> {
+    ?record cdp:fromSource ?source .
+    OPTIONAL { ?record schema:name ?recordName }
+    OPTIONAL { ?record schema:mainEntityOfPage ?detailPage }
+  }
+  GRAPH <urn:directory:config/federation.ttl> {
+    ?source rdfs:label ?sourceLabel .
+  }
+}
+ORDER BY ?source ?record
+LIMIT 100

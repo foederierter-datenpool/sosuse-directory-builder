@@ -1,0 +1,92 @@
+@prefix :       <https://civic-data.de/pipeline#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
+
+# ---- Same-as assertions -------------------------------------------------
+
+# The Sozialplattform side is the *office org* (cdp:sp-org-<hash>), since SP
+# is offer-first and the office has no id — its IRI hashes office_title +
+# office_address_short, so recompute these if the SP source text for the office
+# changes (look up the office via its service's cdp:providedBy in extracted/sp.ttl).
+
+# "Hart am LimiT (HaLT)" (caritas) <> "Projekt HaLT" office (sozialplattform)
+:caritas-d7c63113-1707-4d68-b764-5bcafe96597f
+    owl:sameAs :sp-org-19021420bffa .
+
+# "ZENTRUM FÜR VERHALTENSSUCHT - Frühintervention, Beratung und Nachsorge (Café Beispiellos + Lost in Space)" (caritas) <> "Cafe Beispiellos / Lost in Space Beratungsstelle für Glücksspiel-, Computerspiel- und Internetsüchtige und deren Angehörige" (sozialplattform)
+:sp-org-f0014df88f6e
+    owl:sameAs :caritas-e5486914-965e-40b6-9d06-e94f3dcc8d3e .
+
+# AWO's two Schuldnerberatung listings are the same service entered twice
+# ("Schuldner- und Insolvenzberatung" / "Schuldnerberatung und
+# Insolvenzberatung", both Badstr. 33). AWO no longer self-dedups
+# (:dedupWithinSource false), so assert the merge explicitly.
+:awo-8858 owl:sameAs :awo-8862 .
+
+# "Drogenberatung Nord" (awo, via Stiftung SPI) <> "Drogenhilfe Nord" (dhs).
+# Same facility: identical address (Alt-Reinickendorf 23-24, 13407), and the
+# DHS entry's department field is "Drogenberatung Nord" with stiftung-spi.de
+# contact. The fuzzy score misses by a hair (0.545 < minScore 0.55) because
+# "Beratung"/"Hilfe" defeats token matching.
+:awo-8936 owl:sameAs :dhs-4514 .
+
+# "Rathenower Straße 16, Haus H" (dhs) <> "Rathenower Straße 16 H" (sp): one
+# address — Notdienst Berlin e.V.'s Krisenwohnung sits there in both sources
+# (the org level already merges as one cluster). Address matching is exact by
+# design, and "Haus H" vs "H" is beyond safe normalisation, so assert it.
+# Both IRIs hash the normalised street + PLZ — recompute if the source
+# spellings change (find them via cdp:locatedAt in the extracted TTLs).
+:dhs-addr-4cdda2d52df7 owl:sameAs :sp-addr-83d6984a5f24 .
+
+# "Stromstra0e 47" (dhs — a digit-zero typo for ß in the source) <> "Stromstraße
+# 47" (sp): vista's Ambulante Suchtberatung Mitte, 10551. Without this the
+# einrichtung pair (dhs-6270 / sp-org-5aacf2d3fe99) can't share its address.
+:dhs-addr-e54acf42273a owl:sameAs :sp-addr-607e9bd3af5b .
+
+# "Genter Straße 63" (dhs) <> "Genter Straße 63 4.OG" (sp): one building —
+# the floor marker is sub-address detail, beyond safe normalisation like
+# "Haus H" above. Betreutes Wohnen (dhs-5284 / sp-org-efa46a4192f8).
+:dhs-addr-256021bff712 owl:sameAs :sp-addr-43cf6d0f7743 .
+
+# ---- Different-from assertions --------------------------------------------
+
+# Caritas's "Mitarbeiterseite Arbeitsrechtliche Kommission Deutscher
+# Caritasverband" (Reinhardtstraße 44 — a staff webpage, not a facility) is
+# not the "Deutscher Caritasverband e.V." Hauptvertretung (Reinhardtstraße 13).
+# token_set_ratio barely registers house numbers (44 vs 13 still scores 0.91),
+# so the pair clears the street gate and merges at 0.642 without this veto.
+:caritas-d166b142-baff-44e8-918a-2eabfcb7d154
+    owl:differentFrom :caritas-e008b4d6-1757-4d52-87aa-f941d6fd9243 .
+
+# Destatis's "Caritasverband f. d. Erzbistum Berlin e.V. - Schuldnerberatung"
+# (Große Hamburger Str. 18) is a debt-counselling centre, not the Caritas
+# *Sucht*beratung / Suchtzentrum Mitte the other sources place at that same
+# building. token_set_ratio rides the shared "Caritasverband … Erzbistum Berlin"
+# tokens (0.76 vs the two caritas records, 0.90 vs dhs-4529) and the shared
+# address gates it in, so it needs vetoing against each co-located member it
+# links to. The Destatis IRI hashes name+PLZ+street — recompute if that row's
+# text changes (find it via xyz:name in extracted/destatis.ttl).
+:destatis-ce87403fd44c
+    owl:differentFrom :caritas-73689048-ab16-478e-9814-9ad2a9c5d45e ,
+                      :caritas-f1da2711-9e0c-4498-988c-ab324f0c555e ,
+                      :dhs-4529 .
+
+# ---- Value corrections ----------------------------------------------------
+
+# SP misspells Notdienst Berlin's "Krisenwohnung", and the typo would win the
+# alphabetic sort. Resolve rewrites :wrong to :right on the pinned record's
+# cluster; the SP IRI hashes the misspelt title, so this expires with the typo.
+[] a :ValueCorrection ;
+    :entity :sp-org-5ffca2009b09 ;
+    :on     schema:name ;
+    :wrong  "Kriesenwohnung" ;
+    :right  "Krisenwohnung" .
+
+# DHS's digit-zero typo (the sameAs above): SP carries the correct spelling,
+# but both literals are 14 chars, so the typo wins the alphabetic tie-break.
+# Rewriting it collapses the conflict — and lets the geocoder find the street.
+[] a :ValueCorrection ;
+    :entity :dhs-addr-e54acf42273a ;
+    :on     schema:streetAddress ;
+    :wrong  "Stromstra0e 47" ;
+    :right  "Stromstraße 47" .

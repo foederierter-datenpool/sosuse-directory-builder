@@ -1,0 +1,69 @@
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX schema: <http://schema.org/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+# Input: ONE literal-valued predicate. This is a diagnostic, not a conflict rate.
+# Read source literals through match memberships to avoid scanning RDF annotations.
+SELECT ?predicate ?scope (COUNT(*) AS ?entities) WHERE {
+  {
+    SELECT ?entity ?predicate
+           (COUNT(DISTINCT ?value) AS ?values)
+           (COUNT(DISTINCT ?record) AS ?records)
+           (COUNT(DISTINCT ?source) AS ?sources)
+    WHERE {
+      VALUES ?predicate { schema:name }
+      FILTER(?predicate NOT IN (schema:identifier, cdp:fromSource,
+        schema:mainEntityOfPage, dct:created, dct:modified, prov:generatedAtTime,
+        schema:lastReviewed, schema:latitude, schema:longitude))
+      GRAPH <urn:directory:data/pipeline/matches.ttl> {
+        ?entity cdp:hasMember ?record .
+      }
+      GRAPH <urn:directory:data/pipeline/mapped.ttl> {
+        ?record cdp:fromSource ?source ; ?predicate ?value .
+        FILTER(isLiteral(?value))
+      }
+    }
+    GROUP BY ?entity ?predicate
+    HAVING(COUNT(DISTINCT ?value) > 1)
+  }
+  GRAPH <urn:directory:config/federation.ttl> {
+    ?resolve a cdp:ResolveRule ; cdp:defaultStrategy ?default .
+  }
+  OPTIONAL {
+    GRAPH <urn:directory:config/federation.ttl> {
+      ?resolve cdp:hasOverride [ cdp:on ?predicate ; cdp:strategy ?override ] .
+    }
+  }
+  BIND(COALESCE(?override, ?default) AS ?strategy)
+  FILTER(?strategy NOT IN (cdp:keepAll, cdp:concatenateAll))
+  FILTER NOT EXISTS {
+    GRAPH <urn:directory:config/federation.ttl> {
+      ?field cdp:targetPredicate ?predicate ; cdp:multiValued true .
+    }
+  }
+  BIND(EXISTS {
+    GRAPH <urn:directory:data/pipeline/matches.ttl> {
+      ?entity cdp:hasMember ?a, ?b .
+    }
+    GRAPH <urn:directory:data/pipeline/mapped.ttl> {
+      ?a cdp:fromSource ?sourceA ; ?predicate ?valueA .
+      ?b cdp:fromSource ?sourceB ; ?predicate ?valueB .
+    }
+    FILTER(?sourceA != ?sourceB)
+    FILTER NOT EXISTS {
+      GRAPH <urn:directory:data/pipeline/matches.ttl> {
+        ?entity cdp:hasMember ?other .
+      }
+      GRAPH <urn:directory:data/pipeline/mapped.ttl> {
+        ?other cdp:fromSource ?sourceB ; ?predicate ?valueA .
+      }
+    }
+  } AS ?differentSourceValueSets)
+  BIND(IF(?sources = 1,
+    IF(?records = 1, "one record", "several records, one source"),
+    IF(?differentSourceValueSets, "different source value sets", "same value set across sources"))
+    AS ?scope)
+}
+GROUP BY ?predicate ?scope
+ORDER BY ?scope

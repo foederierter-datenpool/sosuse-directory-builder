@@ -1,0 +1,35 @@
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+# Inputs: one entity and predicate. The boolean tests exact RDF-term preservation.
+SELECT DISTINCT ?value ?sourceRecord ?source ?strategy
+       (EXISTS { ?entity ?predicate ?value } AS ?presentUnchanged)
+WHERE {
+  VALUES (?entity ?predicate) {
+    (<https://civic-data.de/federated-directory#org-dcd15d72996f> schema:name)
+  }
+  GRAPH <urn:directory:data/pipeline/merged.ttl> {
+    ?entity ?predicate ?value .
+  }
+  BIND(<<( ?entity ?predicate ?value )>> AS ?statement)
+  GRAPH <urn:directory:data/provenance.ttl> {
+    ?annotation rdf:reifies ?statement ;
+                prov:wasDerivedFrom ?sourceRecord .
+  }
+  GRAPH <urn:directory:data/pipeline/mapped.ttl> {
+    ?sourceRecord cdp:fromSource ?source .
+  }
+  GRAPH <urn:directory:config/federation.ttl> {
+    ?resolve a cdp:ResolveRule ; cdp:defaultStrategy ?default .
+  }
+  OPTIONAL {
+    GRAPH <urn:directory:config/federation.ttl> {
+      ?resolve cdp:hasOverride [ cdp:on ?predicate ; cdp:strategy ?override ] .
+    }
+  }
+  BIND(COALESCE(?override, ?default) AS ?strategy)
+}
+ORDER BY ?value ?source
+LIMIT 100

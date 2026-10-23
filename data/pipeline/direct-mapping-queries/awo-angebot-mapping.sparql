@@ -1,0 +1,31 @@
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX cdf: <https://civic-data.de/federated-directory#>
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+INSERT {
+    GRAPH <urn:mapped> {
+        ?entity a schema:Service ; cdp:fromSource cdp:awoSource .
+        ?entity schema:identifier ?id .
+        ?entity schema:category ?name .
+        ?entity cdf:bagfwId ?nummer .
+        ?entity schema:areaServed ?areaServed .
+    }
+} WHERE {
+    GRAPH <urn:source:awo> {
+        ?entity cdp:fromSource cdp:awoSource .
+        OPTIONAL { ?entity cdp:targetSchema ?_ts }
+        FILTER(!bound(?_ts) || ?_ts = cdp:angebotSchema)
+        OPTIONAL {
+    { ?entity xyz:id ?id . FILTER(isLiteral(?id) && REPLACE(STR(?id), "\\s+", "") != "") }
+    UNION
+    { ?entity xyz:areaServed ?areaServed . FILTER(isLiteral(?areaServed) && REPLACE(STR(?areaServed), "\\s+", "") != "") }
+    UNION
+    { ?entity xyz:bagfw_category ?_p0 . ?_p0 xyz:name ?name . FILTER(isLiteral(?name) && REPLACE(STR(?name), "\\s+", "") != "") }
+    UNION
+    { ?entity xyz:bagfw_category ?_p0 . ?_p0 xyz:nummer ?nummer . FILTER(isLiteral(?nummer) && REPLACE(STR(?nummer), "\\s+", "") != "") }
+  }
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "sosuse-directory-builder",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test scripts/*.test.js",
+    "pipeline": "node --max-old-space-size=6144 --env-file-if-exists=.env --env-file-if-exists=.env.local node_modules/@directory-builder/core/bin/cli.js",
+    "publish:pages": "node scripts/publish-pages.js",
+    "ingest": "node --env-file-if-exists=.env --env-file-if-exists=.env.local node_modules/@directory-builder/core/bin/cli.js ingest",
+    "federate": "node --max-old-space-size=6144 --env-file-if-exists=.env --env-file-if-exists=.env.local node_modules/@directory-builder/core/bin/cli.js federate",
+    "fuseki": "../directory-api/gradlew -p ../directory-api fusekiDist -q && java -jar ../directory-api/build/fuseki/directory-fuseki.jar .",
+    "validate": "directory-builder validate",
+    "check:contacts": "node scripts/check-contacts.js",
+    "vocabulary:build": "directory-builder vocabulary",
+    "webapp": "directory-builder webapp",
+    "webapp:build": "directory-builder webapp build --base /sosuse-directory-builder/"
+  },
+  "dependencies": {
+    "@directory-builder/core": "^0.13.2",
+    "html-to-text": "10.0.1",
+    "htmlparser2": "10.1.0"
+  }
+}

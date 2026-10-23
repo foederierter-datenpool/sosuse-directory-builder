@@ -1,0 +1,49 @@
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX cdp: <https://civic-data.de/pipeline#>
+PREFIX cdf: <https://civic-data.de/federated-directory#>
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+INSERT {
+    GRAPH <urn:mapped> {
+        ?entity a <http://www.w3.org/ns/org#OrganizationalUnit> ; cdp:fromSource cdp:caritasSource .
+        ?entity schema:identifier ?id .
+        ?entity schema:name ?title .
+        ?entity schema:alternateName ?subTitle .
+        ?entity schema:email ?eMail .
+        ?entity schema:telephone ?phone .
+        ?entity schema:openingHours ?officeHours .
+        ?entity schema:description ?descriptionText .
+        ?entity schema:mainEntityOfPage ?detailUrl .
+        ?entity foaf:homepage ?internetAddress .
+        ?entity dct:modified ?modificationTimestamp .
+    }
+} WHERE {
+    GRAPH <urn:source:caritas> {
+        ?entity cdp:fromSource cdp:caritasSource .
+        OPTIONAL { ?entity cdp:targetSchema ?_ts }
+        FILTER(!bound(?_ts) || ?_ts = cdp:einrichtungSchema)
+        OPTIONAL {
+    { ?entity xyz:id ?id . FILTER(isLiteral(?id) && REPLACE(STR(?id), "\\s+", "") != "") }
+    UNION
+    { ?entity xyz:title ?title . FILTER(isLiteral(?title) && REPLACE(STR(?title), "\\s+", "") != "") }
+    UNION
+    { ?entity xyz:subTitle ?subTitle . FILTER(isLiteral(?subTitle) && REPLACE(STR(?subTitle), "\\s+", "") != "") }
+    UNION
+    { ?entity xyz:eMail ?eMail . FILTER(isLiteral(?eMail) && REPLACE(STR(?eMail), "\\s+", "") != "") }
+    UNION
+    { ?entity xyz:phone ?phone . FILTER(isLiteral(?phone) && REPLACE(STR(?phone), "\\s+", "") != "") }
+    UNION
+    { ?entity xyz:officeHours ?officeHours . FILTER(isLiteral(?officeHours) && REPLACE(STR(?officeHours), "\\s+", "") != "") }
+    UNION
+    { ?entity xyz:descriptionText ?descriptionText . FILTER(isLiteral(?descriptionText) && REPLACE(STR(?descriptionText), "\\s+", "") != "") }
+    UNION
+    { ?entity xyz:detailUrl ?detailUrl . FILTER(isLiteral(?detailUrl) && REPLACE(STR(?detailUrl), "\\s+", "") != "") }
+    UNION
+    { ?entity xyz:internetAddress ?internetAddress . FILTER(isLiteral(?internetAddress) && REPLACE(STR(?internetAddress), "\\s+", "") != "") }
+    UNION
+    { ?entity xyz:modificationTimestamp ?modificationTimestamp . FILTER(isLiteral(?modificationTimestamp) && REPLACE(STR(?modificationTimestamp), "\\s+", "") != "") }
+  }
+    }
+}
